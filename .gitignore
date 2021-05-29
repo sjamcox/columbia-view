@@ -1,0 +1,12 @@
+# Dependency directories
+node_modules/
+
+# Next.js build output
+.next
+out
+
+# dotenv environment variables file
+.env
+.env.test
+
+.DS_Store
