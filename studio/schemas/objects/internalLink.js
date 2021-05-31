@@ -8,7 +8,7 @@ export default {
       type: 'reference',
       title: 'Reference',
       to: [
-        { type: 'page' },
+        { type: 'landingPage' },
         { type: 'series' },
         { type: 'sermon' },
       ]
