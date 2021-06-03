@@ -23,8 +23,9 @@ export default {
       type: 'array',
       title: 'Page Sections',
       of: [
+        { type: 'simpleContent' },
         { type: 'imageBlock' },
-        { type: 'textSection' },
+        { type: 'heroBanner' },
       ],
     },
     {

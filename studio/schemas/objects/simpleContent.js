@@ -1,17 +1,12 @@
 export default {
   type: 'object',
-  name: 'textSection',
-  title: 'Text',
+  name: 'simpleContent',
+  title: 'Simple Content',
   fields: [
     {
       name: 'label',
       type: 'string',
       title: 'Label',
-    },
-    {
-      name: 'heading',
-      type: 'string',
-      title: 'Heading',
     },
     {
       name: 'text',

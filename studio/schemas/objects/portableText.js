@@ -1,7 +1,7 @@
 export default {
   name: 'portableText',
   type: 'array',
-  title: 'Simple Content',
+  title: 'Portable Text',
   of: [
     {
       type: 'block',
@@ -11,6 +11,9 @@ export default {
           { type: 'internalLink' }
         ]
       }
+    },
+    {
+      type: 'image'
     }
   ]
 }

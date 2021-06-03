@@ -9,8 +9,6 @@ export default {
       title: 'Reference',
       to: [
         { type: 'landingPage' },
-        { type: 'series' },
-        { type: 'sermon' },
       ]
     }
   ]
