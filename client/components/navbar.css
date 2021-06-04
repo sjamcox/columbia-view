@@ -1,0 +1,26 @@
+@media (max-width: 320px) {
+  #NameLogo {
+    display: none;
+  }
+  .Link {
+    display: none;
+  }
+  #HamMenu {
+    display: inline-block
+  }
+}
+@media (max-width: 768px) {
+  #NameLogo {
+    display: inline-block
+  }
+  .Link {
+    display: none;
+  }
+}
+#HamMenu {
+  display: none;
+}
+.Navbar {
+  display: flex;
+
+}

@@ -1,8 +1,13 @@
+import Navbar from '../components/navbar.jsx'
+
 const Index = () => {
   return (
-    <div>
-      <p>Hello world!</p>
-    </div>
+    <>
+      <Navbar links={['Ministries', 'Other']}/>
+      <div>
+        <p>Hello world!</p>
+      </div>
+    </>
   )
 }
 
