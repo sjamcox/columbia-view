@@ -6,6 +6,7 @@ import landingPage from './documents/landingPage'
 import menu from './documents/menu'
 
 // Object types
+import button from './objects/button'
 import heroBanner from './objects/heroBanner'
 import imageBlock from './objects/imageBlock'
 import internalLink from './objects/internalLink'
@@ -17,6 +18,7 @@ import simpleContent from './objects/simpleContent'
 export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
+    button,
     heroBanner,
     imageBlock,
     internalLink,
