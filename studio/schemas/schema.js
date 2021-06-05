@@ -7,6 +7,7 @@ import menu from './documents/menu'
 
 // Object types
 import button from './objects/button'
+import gridContent from './objects/gridContent'
 import heroBanner from './objects/heroBanner'
 import imageBlock from './objects/imageBlock'
 import internalLink from './objects/internalLink'
@@ -20,6 +21,7 @@ export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     button,
+    gridContent,
     heroBanner,
     imageBlock,
     internalLink,

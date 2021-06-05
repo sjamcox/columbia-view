@@ -23,9 +23,10 @@ export default {
       type: 'array',
       title: 'Page Sections',
       of: [
-        { type: 'simpleContent' },
         { type: 'heroBanner' },
         { type: 'smallBanner' },
+        { type: 'gridContent' },
+        { type: 'simpleContent' },
       ],
     },
     {
