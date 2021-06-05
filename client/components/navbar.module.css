@@ -1,18 +1,11 @@
-@media (max-width: 320px) {
-  .hamMenu {
-    display: none;
-  }
-  .linksContainer {
-    display: inline-block;
-  }
+.linkContainer {
+  display: none;
 }
-@media (max-width: 768px) {
-  .hamMenu {
-    display: none;
-  }
-  .linksContainer {
-    display: inline-block;
-  }
+.logoName {
+  display: none;
+}
+.hamMenu {
+  display: inline-block;
 }
 .nav {
   width: 100%;
@@ -26,7 +19,7 @@
   padding: 5px;
 }
 .menu {
-  background-color: brown;
+  background-color: rgb(155, 153, 139);
   position: absolute;
   right: 0;
   top: 50px;
@@ -34,7 +27,16 @@
   flex-direction: column;
   border-radius: 5px;
 }
-.linksContainer {
-  display: none;
+@media (min-width: 320px) {
+  .logoName {
+    display: inline-block;
+  }
 }
-
+@media (min-width: 768px) {
+  .linkContainer {
+    display: inline-block;
+  }
+  .hamMenu {
+    display: none;
+  }
+}

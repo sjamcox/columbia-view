@@ -5,8 +5,10 @@ import Image from 'next/image'
 
 const Navbar = ({ links }) => {
   const [showMenu, setShowMenu] = useState(false);
-  const openMenu = () => {
+  const openMenu = (e) => {
     setShowMenu(true)
+    e.stopPropagation()
+    document.addEventListener('click', closeMenu)
   }
   const closeMenu = () => {
     setShowMenu(false)
@@ -21,9 +23,11 @@ const Navbar = ({ links }) => {
   return (
   <div className={styles.nav}>
 
-    <div className="LogoContainter">
-      <Image className={styles.img} src="/logo.png" width="50px" height="50px" alt="logo"/>
-      <Image className={styles.img} src="/logo.png" width="50px" height="50px" alt="logoName" />
+    <div className="LogoContainer">
+      <Image src="/logo.png" width="50px" height="50px" alt="logo"/>
+      <div className={styles.logoName}>
+        <Image src="/logo.png" width="50px" height="50px" alt="logoName" />
+      </div>
     </div>
 
     <div className={styles.linkContainer}>
