@@ -24,7 +24,6 @@ export default {
       title: 'Page Sections',
       of: [
         { type: 'simpleContent' },
-        { type: 'imageBlock' },
         { type: 'heroBanner' },
         { type: 'smallBanner' },
       ],
