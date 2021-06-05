@@ -17,13 +17,14 @@ const Navbar = ({ links }) => {
 
   const linkTags = links.map((link,i) => (
     <Link key={i} className={styles.link} href={`/${link}`}>
-      <p className={styles.p}>{link}</p>
+      <div className={styles.p}>{link}</div>
     </Link>
   ))
+
   return (
   <div className={styles.nav}>
 
-    <div className="LogoContainer">
+    <div className={styles.logoContainer}>
       <Image src="/logo.png" width="50px" height="50px" alt="logo"/>
       <div className={styles.logoName}>
         <Image src="/logo.png" width="50px" height="50px" alt="logoName" />
