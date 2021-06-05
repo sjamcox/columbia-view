@@ -26,6 +26,7 @@ export default {
         { type: 'simpleContent' },
         { type: 'imageBlock' },
         { type: 'heroBanner' },
+        { type: 'smallBanner' },
       ],
     },
     {
