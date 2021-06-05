@@ -14,6 +14,10 @@ export default {
     {
       name: 'Description',
       type: 'text'
+    },
+    {
+      name: 'Button',
+      type: 'button'
     }
   ]
 }
