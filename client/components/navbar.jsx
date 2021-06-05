@@ -22,18 +22,18 @@ const Navbar = ({ links }) => {
   ))
 
   return (
-  <div className={styles.nav}>
+    <div className={styles.nav}>
 
-    <div className={styles.logoContainer}>
-      <Image src="/logo.png" width="50px" height="50px" alt="logo"/>
-      <div className={styles.logoName}>
-        <Image src="/logo.png" width="50px" height="50px" alt="logoName" />
+      <div className={styles.logoContainer}>
+        <Image src="/logo.png" width="50px" height="50px" alt="logo" />
+        <div className={styles.logoName}>
+          <Image src="/logo.png" width="50px" height="50px" alt="logoName" />
+        </div>
       </div>
-    </div>
 
-    <div className={styles.linkContainer}>
-      {linkTags}
-    </div>
+      <div className={styles.linkContainer}>
+        {linkTags}
+      </div>
 
       <div
         className={styles.hamMenu}
@@ -52,9 +52,8 @@ const Navbar = ({ links }) => {
         )}
       </div>
 
-  </div>
-
-)
+    </div>
+  )
 }
 
 export default Navbar
