@@ -1,0 +1,40 @@
+@media (max-width: 320px) {
+  .hamMenu {
+    display: none;
+  }
+  .linksContainer {
+    display: inline-block;
+  }
+}
+@media (max-width: 768px) {
+  .hamMenu {
+    display: none;
+  }
+  .linksContainer {
+    display: inline-block;
+  }
+}
+.nav {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.p {
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px;
+}
+.menu {
+  background-color: brown;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.linksContainer {
+  display: none;
+}
+
