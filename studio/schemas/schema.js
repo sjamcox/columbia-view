@@ -14,6 +14,7 @@ import link from './objects/link'
 import menuItem from './objects/menuItem'
 import portableText from './objects/portableText'
 import simpleContent from './objects/simpleContent'
+import smallBanner from './objects/smallBanner'
 
 export default createSchema({
   name: 'default',
@@ -27,6 +28,7 @@ export default createSchema({
     menu,
     menuItem,
     portableText,
-    simpleContent
+    simpleContent,
+    smallBanner
   ]),
 })
