@@ -23,10 +23,11 @@ export default {
       type: 'array',
       title: 'Page Sections',
       of: [
-        { type: 'simpleContent' },
-        { type: 'imageBlock' },
         { type: 'heroBanner' },
         { type: 'smallBanner' },
+        { type: 'gridContent' },
+        { type: 'splitLayout' },
+        { type: 'simpleContent' }
       ],
     },
     {
