@@ -23,6 +23,7 @@ export default {
       type: 'array',
       of: [
         { type: 'simpleContent' }
+        { type: 'youtube' }
       ]
     },
     {
@@ -30,6 +31,7 @@ export default {
       type: 'array',
       of: [
         { type: 'simpleContent' }
+        { type: 'youtube' }
       ]
     }
   ]
