@@ -17,6 +17,7 @@ import portableText from './objects/portableText'
 import simpleContent from './objects/simpleContent'
 import smallBanner from './objects/smallBanner'
 import splitLayout from './objects/splitLayout'
+import youtube from './objects/youtube'
 
 export default createSchema({
   name: 'default',
@@ -33,6 +34,7 @@ export default createSchema({
     portableText,
     simpleContent,
     smallBanner,
-    splitLayout
+    splitLayout,
+    youtube
   ]),
 })

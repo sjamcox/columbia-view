@@ -12,8 +12,7 @@ export default {
         ]
       }
     },
-    {
-      type: 'image'
-    }
+    { type: 'image' },
+    { type: 'youtube' }
   ]
 }

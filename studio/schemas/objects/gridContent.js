@@ -22,7 +22,8 @@ export default {
       name: 'content',
       type: 'array',
       of: [
-        { type: 'simpleContent' }
+        { type: 'simpleContent' },
+        { type: 'youtube' },
       ]
     }
   ]

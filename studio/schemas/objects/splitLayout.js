@@ -22,14 +22,16 @@ export default {
       name: 'columnOne',
       type: 'array',
       of: [
-        { type: 'simpleContent' }
+        { type: 'simpleContent' },
+        { type: 'youtube' }
       ]
     },
     {
       name: 'columnTwo',
       type: 'array',
       of: [
-        { type: 'simpleContent' }
+        { type: 'simpleContent' },
+        { type: 'youtube' }
       ]
     }
   ]
