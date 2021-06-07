@@ -16,6 +16,7 @@ import menuItem from './objects/menuItem'
 import portableText from './objects/portableText'
 import simpleContent from './objects/simpleContent'
 import smallBanner from './objects/smallBanner'
+import splitLayout from './objects/splitLayout'
 
 export default createSchema({
   name: 'default',
@@ -31,6 +32,7 @@ export default createSchema({
     menuItem,
     portableText,
     simpleContent,
-    smallBanner
+    smallBanner,
+    splitLayout
   ]),
 })

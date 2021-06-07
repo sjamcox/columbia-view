@@ -26,7 +26,8 @@ export default {
         { type: 'heroBanner' },
         { type: 'smallBanner' },
         { type: 'gridContent' },
-        { type: 'simpleContent' },
+        { type: 'splitLayout' },
+        { type: 'simpleContent' }
       ],
     },
     {
