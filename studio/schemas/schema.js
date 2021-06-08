@@ -5,6 +5,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import landingPage from './documents/landingPage'
 import mainNavigation from './documents/mainNavigation'
 import siteSettings from './documents/siteSettings'
+import socialAccounts from './documents/socialAccounts'
 
 // Object types
 import button from './objects/button'
@@ -19,7 +20,6 @@ import photoTile from './objects/photoTile'
 import portableText from './objects/portableText'
 import simpleContent from './objects/simpleContent'
 import smallBanner from './objects/smallBanner'
-import socialBlock from './objects/socialBlock'
 import splitLayout from './objects/splitLayout'
 import youtube from './objects/youtube'
 
@@ -41,7 +41,7 @@ export default createSchema({
     simpleContent,
     siteSettings,
     smallBanner,
-    socialBlock,
+    socialAccounts,
     splitLayout,
     youtube
   ]),

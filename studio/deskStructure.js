@@ -24,8 +24,15 @@ export default () => {
                     .schemaType('mainNavigation')
                     .documentId('mainNavigation')
                 ),
+              S.listItem()
+                .title('Social Accounts')
+                .child(
+                  S.document()
+                    .schemaType('socialAccounts')
+                    .documentId('socialAccounts')
+                ),
             ])
         ),
-        ...S.documentTypeListItems().filter(listItem => !['siteSettings', 'mainNavigation'].includes(listItem.getId()))
+        ...S.documentTypeListItems().filter(listItem => !['siteSettings', 'mainNavigation', 'socialAccounts'].includes(listItem.getId()))
       ])
 }

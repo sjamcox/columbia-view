@@ -25,7 +25,6 @@ export default {
         { type: 'simpleContent' },
         { type: 'photoTile' },
         { type: 'youtube' },
-        { type: 'socialBlock' }
       ]
     }
   ]

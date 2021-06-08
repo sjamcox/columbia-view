@@ -1,7 +1,8 @@
 export default {
-  name: 'socialBlock',
-  type: 'object',
-  title: 'Social Block',
+  name: 'socialAccounts',
+  title: 'Social Accounts',
+  type: 'document',
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   fields: [
     {
       name: 'facebookUrl',

@@ -31,7 +31,6 @@ export default {
       type: 'array',
       of: [
         { type: 'simpleContent' },
-        { type: 'socialBlock' },
         { type: 'youtube' }
       ]
     }
