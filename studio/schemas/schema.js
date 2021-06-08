@@ -8,6 +8,7 @@ import siteSettings from './documents/siteSettings'
 
 // Object types
 import button from './objects/button'
+import ctaBanner from './objects/ctaBanner'
 import gridContent from './objects/gridContent'
 import heroBanner from './objects/heroBanner'
 import imageBlock from './objects/imageBlock'
@@ -25,6 +26,7 @@ export default createSchema({
   name: 'default',
   types: schemaTypes.concat([
     button,
+    ctaBanner,
     gridContent,
     heroBanner,
     imageBlock,
