@@ -25,6 +25,7 @@ export default {
       of: [
         { type: 'heroBanner' },
         { type: 'smallBanner' },
+        { type: 'ctaBanner' },
         { type: 'gridContent' },
         { type: 'splitLayout' },
         { type: 'simpleContent' }
