@@ -3,7 +3,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
 import landingPage from './documents/landingPage'
-import menu from './documents/menu'
+import mainNavigation from './documents/mainNavigation'
+import siteSettings from './documents/siteSettings'
 
 // Object types
 import button from './objects/button'
@@ -30,10 +31,11 @@ export default createSchema({
     internalLink,
     link,
     landingPage,
-    menu,
+    mainNavigation,
     menuItem,
     portableText,
     simpleContent,
+    siteSettings,
     smallBanner,
     socialBlock,
     splitLayout,
