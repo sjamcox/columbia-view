@@ -24,6 +24,17 @@ export default {
       title: 'Logomark',
       type: 'imageBlock',
       description: 'Icon to be used in mobile menu'
+    },
+    {
+      name: 'favicon',
+      title: 'Favicon',
+      type: 'image',
+      description: 'Small con to be used in browser tabs. Should be .ico format.'
+    },
+    {
+      name: 'rssFeed',
+      title: 'RSS Feed URL',
+      type: 'url'
     }
   ]
 }
