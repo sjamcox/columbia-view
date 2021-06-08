@@ -23,8 +23,9 @@ export default {
       type: 'array',
       of: [
         { type: 'simpleContent' },
-        { type: 'socialBlock' },
+        { type: 'photoTile' },
         { type: 'youtube' },
+        { type: 'socialBlock' }
       ]
     }
   ]
