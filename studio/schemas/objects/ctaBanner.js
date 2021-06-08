@@ -11,7 +11,8 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'simpleContent'
+      type: 'simpleContent',
+      validation: rule => rule.required()
     },
     {
       name: 'link',
@@ -25,7 +26,8 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'imageBlock'
+      type: 'imageBlock',
+      validation: rule => rule.required()
     },
     {
       name: 'imageAlignment',
@@ -35,7 +37,8 @@ export default {
         list: ['Left', 'Right'],
         layout: 'radio',
         direction: 'horizontal'
-      }
+      },
+      validation: rule => rule.required()
     },
   ]
 }
