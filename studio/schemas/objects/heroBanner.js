@@ -4,19 +4,23 @@ export default {
   title: 'Hero Banner',
   fields: [
     {
-      name: 'Image',
+      name: 'image',
+      title: 'Image',
       type: 'imageBlock'
     },
     {
-      name: 'Heading',
+      name: 'heading',
+      title: 'Heading',
       type: 'string'
     },
     {
-      name: 'Description',
+      name: 'description',
+      title: 'Description',
       type: 'text'
     },
     {
-      name: 'Button',
+      name: 'button',
+      title: 'Button',
       type: 'button'
     }
   ]
