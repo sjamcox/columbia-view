@@ -1,25 +1,40 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import styles from './NavBar.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Navbar = ({ links }) => {
+export const NavBar = ({ items }) => {
+
   const [showMenu, setShowMenu] = useState(false);
+
   const openMenu = (e) => {
     setShowMenu(true)
     e.stopPropagation()
     document.addEventListener('click', closeMenu)
   }
+
   const closeMenu = () => {
     setShowMenu(false)
     document.removeEventListener('click', closeMenu)
   }
 
-  const linkTags = links.map((link,i) => (
-    <Link key={i} className={styles.link} href={`/${link}`}>
-      <div className={styles.p}>{link}</div>
-    </Link>
-  ))
+  const menu = items.map(({ children, link }) => {
+
+    if (children) {
+      return children.map(({ link }) => (
+        <Link key={link.slug} className={styles.link} href={`/${link.slug}`}>
+          <p className={styles.p}>{ link.title }</p>
+        </Link>
+      ))
+    }
+
+    return (
+      <Link key={link.slug} className={styles.link} href={`/${link.slug}`}>
+        <p className={styles.p}>{ link.title }</p>
+      </Link>
+    )
+
+  })
 
   return (
     <div className={styles.nav}>
@@ -32,7 +47,7 @@ const Navbar = ({ links }) => {
       </div>
 
       <div className={styles.linkContainer}>
-        {linkTags}
+        {menu}
       </div>
 
       <div
@@ -55,5 +70,3 @@ const Navbar = ({ links }) => {
     </div>
   )
 }
-
-export default Navbar

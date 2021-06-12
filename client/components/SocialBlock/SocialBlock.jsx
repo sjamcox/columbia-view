@@ -1,4 +1,3 @@
-import React from 'react'
 import { FacebookFilled, InstagramFilled, TwitterSquareFilled, YoutubeFilled } from '@ant-design/icons'
 
 export const SocialBlock = ({ links }) => {
