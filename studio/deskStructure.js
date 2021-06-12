@@ -11,18 +11,25 @@ export default () => {
             .title('Settings Documents')
             .items([
               S.listItem()
-                .title('Site Settings')
-                .child(
-                  S.document()
-                    .schemaType('siteSettings')
-                    .documentId('siteSettings'),
-                ),
-              S.listItem()
                 .title('Main Navigation')
                 .child(
                   S.document()
                     .schemaType('mainNavigation')
                     .documentId('mainNavigation')
+                ),
+              S.listItem()
+                .title('Footer')
+                .child(
+                  S.document()
+                    .schemaType('footer')
+                    .documentId('footer')
+                ),
+              S.listItem()
+                .title('Site Settings')
+                .child(
+                  S.document()
+                    .schemaType('siteSettings')
+                    .documentId('siteSettings'),
                 ),
               S.listItem()
                 .title('Social Accounts')
@@ -33,6 +40,6 @@ export default () => {
                 ),
             ])
         ),
-        ...S.documentTypeListItems().filter(listItem => !['siteSettings', 'mainNavigation', 'socialAccounts'].includes(listItem.getId()))
+        ...S.documentTypeListItems().filter(listItem => !['siteSettings', 'mainNavigation', 'socialAccounts', 'footer'].includes(listItem.getId()))
       ])
 }

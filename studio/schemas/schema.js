@@ -2,6 +2,7 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Document types
+import footer from './documents/footer'
 import landingPage from './documents/landingPage'
 import mainNavigation from './documents/mainNavigation'
 import siteSettings from './documents/siteSettings'
@@ -28,6 +29,7 @@ export default createSchema({
   types: schemaTypes.concat([
     button,
     ctaBanner,
+    footer,
     gridContent,
     heroBanner,
     internalLink,
