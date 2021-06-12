@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styles from './navbar.module.css'
+import styles from './NavBar.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 
