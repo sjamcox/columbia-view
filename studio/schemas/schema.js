@@ -21,6 +21,7 @@ import portableText from './objects/portableText'
 import simpleContent from './objects/simpleContent'
 import smallBanner from './objects/smallBanner'
 import splitLayout from './objects/splitLayout'
+import videoSection from './objects/videoSection'
 import youtube from './objects/youtube'
 
 export default createSchema({
@@ -43,6 +44,7 @@ export default createSchema({
     smallBanner,
     socialAccounts,
     splitLayout,
+    videoSection,
     youtube
   ]),
 })

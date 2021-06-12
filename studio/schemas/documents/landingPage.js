@@ -45,7 +45,8 @@ export default {
         { type: 'ctaBanner' },
         { type: 'gridContent' },
         { type: 'splitLayout' },
-        { type: 'simpleContent' }
+        { type: 'simpleContent' },
+        { type: 'videoSection' }
       ],
     },
     {
