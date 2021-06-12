@@ -17,12 +17,12 @@ export default {
     {
       name: 'logo',
       title: 'Site Logo',
-      type: 'imageBlock'
+      type: 'image'
     },
     {
       name: 'logomark',
       title: 'Logomark',
-      type: 'imageBlock',
+      type: 'image',
       description: 'Icon to be used in mobile menu'
     },
     {

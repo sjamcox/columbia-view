@@ -11,7 +11,7 @@ export default {
     {
       name: 'backgroundImage',
       title: 'Background Image',
-      type: 'imageBlock',
+      type: 'image',
     }
   ]
 }
