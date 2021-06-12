@@ -13,6 +13,7 @@ export default {
       }
     },
     { type: 'image' },
-    { type: 'youtube' }
+    { type: 'youtube' },
+    { type: 'button' }
   ]
 }
