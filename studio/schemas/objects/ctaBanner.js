@@ -11,7 +11,7 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'simpleContent',
+      type: 'portableText',
       validation: rule => rule.required()
     },
     {
