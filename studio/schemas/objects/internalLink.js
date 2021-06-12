@@ -11,5 +11,10 @@ export default {
         { type: 'landingPage' },
       ]
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'reference.title'
+    }
+  }
 }
