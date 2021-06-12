@@ -4,26 +4,25 @@ export default {
   title: 'Menu Item',
   fields: [
     {
-      name: 'title',
-      type: 'string',
-      title: 'Menu link title',
-    },
-    {
       name: 'reference',
       type: 'reference',
-      title: 'Page Link',
+      title: 'Target Page',
       description: 'Direct link to page if there are no dropdown links',
       to: [{ type: 'landingPage' }]
     },
     {
-      name: 'links',
+      name: 'children',
       type: 'array',
-      title: 'Dropdown links',
-      description: 'List of links to appear in a dropdown under the Menu link title',
+      title: 'Children',
+      description: 'List of links to appear in a dropdown under the Target Page',
       of: [
-        { type: 'internalLink' },
-        { type: 'link' }
+        { type: 'internalLink' }
       ]
     }
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'reference.title'
+    }
+  }
 }
