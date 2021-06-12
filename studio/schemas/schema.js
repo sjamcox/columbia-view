@@ -12,7 +12,6 @@ import button from './objects/button'
 import ctaBanner from './objects/ctaBanner'
 import gridContent from './objects/gridContent'
 import heroBanner from './objects/heroBanner'
-import imageBlock from './objects/imageBlock'
 import internalLink from './objects/internalLink'
 import link from './objects/link'
 import menuItem from './objects/menuItem'
@@ -31,7 +30,6 @@ export default createSchema({
     ctaBanner,
     gridContent,
     heroBanner,
-    imageBlock,
     internalLink,
     link,
     landingPage,

@@ -6,7 +6,7 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'imageBlock'
+      type: 'image'
     },
     {
       name: 'heading',

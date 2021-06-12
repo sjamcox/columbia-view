@@ -26,7 +26,7 @@ export default {
     {
       name: 'image',
       title: 'Image',
-      type: 'imageBlock',
+      type: 'image',
       validation: rule => rule.required()
     },
     {

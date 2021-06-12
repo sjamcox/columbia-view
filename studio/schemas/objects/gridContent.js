@@ -14,7 +14,7 @@ export default {
       type: 'number',
       title: 'Number of columns',
       options: {
-        list: [2, 3, 4]
+        list: [1, 2, 3, 4]
       },
       validation: rule => rule.required()
     },
