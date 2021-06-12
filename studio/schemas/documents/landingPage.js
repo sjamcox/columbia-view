@@ -19,6 +19,23 @@ export default {
       title: 'Title',
     },
     {
+      title: 'Slug',
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        slugify: input => {
+
+          return input
+          .toLowerCase()
+          .replace(/[^A-Za-z0-9\s]/g, '')
+          .replace(/\s+/g, '-')
+          .slice(0, 200)
+        }
+      },
+      validation: rule => rule.required()
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Page Sections',
