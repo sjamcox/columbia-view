@@ -15,6 +15,7 @@
     "sanity"
   ],
   "dependencies": {
+    "@ant-design/icons": "^4.6.2",
     "@sanity/base": "^2.10.5",
     "@sanity/components": "^2.2.6",
     "@sanity/core": "^2.10.0",
