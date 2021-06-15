@@ -11,12 +11,12 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'portableText',
+      type: 'text',
       validation: rule => rule.required()
     },
     {
       name: 'link',
-      title: 'Links',
+      title: 'Link',
       type: 'array',
       of: [
         { type: 'button' },

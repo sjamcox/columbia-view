@@ -17,6 +17,16 @@ export default {
       name: 'description',
       title: 'Description',
       type: 'string'
+    },
+    {
+      name: 'link',
+      type: 'array',
+      title: 'Link',
+      of: [
+        { type: 'link' },
+        { type: 'internalLink' },
+      ],
+      validation: rule => rule.max(1)
     }
   ]
 }

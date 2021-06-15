@@ -3,6 +3,10 @@ export default {
   title: 'Featured Image',
   type: 'object',
   fields: [
-    { type: 'image' }
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'image'
+    }
   ]
 }

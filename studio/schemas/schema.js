@@ -11,6 +11,7 @@ import socialAccounts from './documents/socialAccounts'
 // Object types
 import button from './objects/button'
 import ctaBanner from './objects/ctaBanner'
+import featuredImage from './objects/featuredImage'
 import gridContent from './objects/gridContent'
 import heroBanner from './objects/heroBanner'
 import internalLink from './objects/internalLink'
@@ -29,6 +30,7 @@ export default createSchema({
   types: schemaTypes.concat([
     button,
     ctaBanner,
+    featuredImage,
     footer,
     gridContent,
     heroBanner,
