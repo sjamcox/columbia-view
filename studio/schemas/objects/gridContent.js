@@ -21,6 +21,8 @@ export default {
     {
       name: 'content',
       type: 'array',
+      title: 'Page Sections',
+      description: 'Add, edit, and reorder sections',
       of: [
         { type: 'simpleContent' },
         { type: 'photoTile' },

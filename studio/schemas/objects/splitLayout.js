@@ -23,6 +23,7 @@ export default {
       type: 'array',
       of: [
         { type: 'simpleContent' },
+        { type: 'featuredImage' },
         { type: 'youtube' }
       ]
     },
