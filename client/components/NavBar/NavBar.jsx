@@ -8,8 +8,9 @@ export const NavBar = ({ items }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const openMenu = (e) => {
-    setShowMenu(true)
     e.stopPropagation()
+    if(showMenu) { setShowMenu(false) }
+    else { setShowMenu(true) }
     document.addEventListener('click', closeMenu)
   }
 
@@ -62,7 +63,7 @@ export const NavBar = ({ items }) => {
         />
         {showMenu && (
           <div className={styles.menu}>
-            {linkTags}
+            {menu}
           </div>
         )}
       </div>
