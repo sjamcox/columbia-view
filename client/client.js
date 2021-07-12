@@ -3,6 +3,7 @@ import sanityClient from '@sanity/client'
 export const client = sanityClient({
   projectId: '9ya152ax',
   dataset: 'production',
+  apiVersion: 'v2021-06-07',
   useCdn: true // `false` if you want to ensure fresh data
 })
 
@@ -27,7 +28,7 @@ export const getSocialAccounts = () => {
 
 export const getLandingPage = (slug) => {
   const query = `
-    *[_type == 'landingPage' && slug.current == '/${slug}'][0]{
+    *[_type == 'landingPage' && slug.current == '${slug}'][0]{
       ...,
       content[]{
         ...,
