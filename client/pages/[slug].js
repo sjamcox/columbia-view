@@ -26,7 +26,6 @@ export default function LandingPage(props) {
 
 export async function getStaticProps({ params }) {
   const data = await getLandingPage(params.slug)
-  console.log(data)
   return { props: data }
 }
 
