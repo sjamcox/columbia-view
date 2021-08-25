@@ -2,6 +2,7 @@ import App from 'next/app'
 import { getMainNavigationItems, getSocialAccounts } from '../client'
 import { NavBar } from '../components/NavBar/NavBar'
 import { SocialBlock } from '../components/SocialBlock/SocialBlock'
+import '../global.css'
 
 const MyApp = ({ Component, pageProps, navProps, socialProps }) => {
   return (

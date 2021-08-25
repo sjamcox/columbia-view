@@ -1,4 +1,5 @@
 import HeroBanner from '../components/HeroBanner/HeroBanner.jsx'
+
 const Index = () => {
   return (
     <>

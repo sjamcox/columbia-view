@@ -1,7 +1,83 @@
 import { useState } from 'react'
-import styles from './NavBar.module.css'
+import styled from 'styled-components'
 import Link from 'next/link'
 import Image from 'next/image'
+import query from '../../utils/queries'
+
+const NavContainer = styled.header`
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  height: 64px;
+  width: 100%;
+  @media (${query.medium}) {
+
+  }
+  @media (${query.large}) {
+    height: 72px;
+  }
+`
+
+const NavInnerContainer = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  max-width: 1088px;
+`
+
+const LogoContainer = styled.div`
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+`
+
+const LogoMark = styled.div`
+
+  @media (${query.medium}) {
+
+  }
+  @media (${query.large}) {
+
+  }
+`
+
+const LogoText = styled.div`
+  display: none;
+  @media (${query.medium}) {
+    display: block;
+    margin-left: 18px;
+  }
+  @media (${query.large}) {
+
+  }
+`
+
+const DesktopMenu = styled.div`
+  display: none;
+  @media (${query.large}) {
+    display: block;
+  }
+`
+
+const MobileMenu = styled.div`
+  display: block;
+  @media (${query.large}) {
+    display: none;
+  }
+`
+
+const Menu = styled.nav`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+`
+
+const MenuItem = styled.p`
+  margin: 0 0 0 42px;
+  width: auto;
+`
 
 export const NavBar = ({ items }) => {
 
@@ -23,51 +99,57 @@ export const NavBar = ({ items }) => {
 
     if (children) {
       return children.map(({ link }) => (
-        <Link key={link.slug} className={styles.link} href={`/${link.slug}`}>
-          <p className={styles.p}>{ link.title }</p>
+        <Link key={link.slug} href={`/${link.slug}`}>
+          <MenuItem>{ link.title }</MenuItem>
         </Link>
       ))
     }
 
     return (
-      <Link key={link.slug} className={styles.link} href={`/${link.slug}`}>
-        <p className={styles.p}>{ link.title }</p>
+      <Link key={link.slug} href={`/${link.slug}`}>
+        <MenuItem>{ link.title }</MenuItem>
       </Link>
     )
 
   })
 
   return (
-    <div className={styles.nav}>
+    <NavContainer>
+      <NavInnerContainer>
 
-      <div className={styles.logoContainer}>
-        <Image src="/logo.png" width="50px" height="50px" alt="logo" />
-        <div className={styles.logoName}>
-          <Image src="/logo.png" width="50px" height="50px" alt="logoName" />
-        </div>
-      </div>
+        <LogoContainer>
+          <LogoMark>
+            <Image src="/cvwc-logo-dove.png" width='41' height='36' alt="logo" />
+          </LogoMark>
+          <LogoText>
+            <Image src="/cvwc-logo-text-small.png" width='159' height='42' alt="logoName" />
+          </LogoText>
+        </LogoContainer>
 
-      <div className={styles.linkContainer}>
-        {menu}
-      </div>
-
-      <div
-        className={styles.hamMenu}
-        onClick={openMenu}
-      >
-        <Image
-          src="/hamMenu.png"
-          alt="HamMenu"
-          width="50px"
-          height="50px"
-        />
-        {showMenu && (
-          <div className={styles.menu}>
+        <DesktopMenu>
+          <Menu>
             {menu}
-          </div>
-        )}
-      </div>
+          </Menu>
+        </DesktopMenu>
 
-    </div>
+        <MobileMenu>
+          <div
+            onClick={openMenu}
+          >
+            <Image
+              src="/hamMenu.png"
+              alt="HamMenu"
+              width="50px"
+              height="50px"
+            />
+            {showMenu && (
+              <div>
+                {menu}
+              </div>
+            )}
+          </div>
+        </MobileMenu>
+      </NavInnerContainer>
+    </NavContainer>
   )
 }
