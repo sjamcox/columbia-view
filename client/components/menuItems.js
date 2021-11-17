@@ -4,4 +4,4 @@ export const menu = [
   { text: 'Immigrant Connection', href: '/immigrant-connection' },
   { text: 'About', href: '/about' },
   { text: 'Give', href: '/give' },
-]
+];

@@ -6,53 +6,44 @@ import {
   IconButton,
   Grid,
   Toolbar,
-  Typography
-} from "@material-ui/core"
-import { makeStyles } from '@material-ui/styles'
-import { Close } from '@material-ui/icons'
-
-const useStyles = makeStyles({
-  toolbar: {
-    margin: '36px 12px'
-  },
-  icon: {
-    padding: '0'
-  },
-  navLink: {
-    color: '#333333',
-    fontWeight: '500',
-    textDecoration: 'none',
-  },
-})
+  Typography,
+} from '@mui/material'
+import { Close } from '@mui/icons-material'
 
 export const NavDrawer = ({ menu, open, setOpen }) => {
-
-  const classes = useStyles()
-  const linkList = menu.map(link => {
+  const linkList = menu.map((link) => {
     return (
-      <Grid item>
+      <Grid item key={link.text}>
         <Link href={link.href} key={link.text} passHref>
-          <Typography className={classes.navLink} component='a'>{link.text}</Typography>
+          <Typography
+            sx={{
+              color: '#333333',
+              fontWeight: '500',
+              textDecoration: 'none',
+            }}
+            component="a"
+          >
+            {link.text}
+          </Typography>
         </Link>
       </Grid>
     )
   })
 
   return (
-    <Drawer anchor='right' open={open} onClose={() => setOpen(false)}>
+    <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
       <Container disableGutters>
-        <Toolbar className={classes.toolbar} >
-          <Grid container direction='column' spacing={2} >
-            <Box display='flex' justifyContent='flex-end'>
-              <IconButton className={classes.icon} onClick={() => setOpen(false)}>
+        <Toolbar sx={{ margin: '36px 12px' }}>
+          <Grid container direction="column" spacing={2}>
+            <Box display="flex" justifyContent="flex-end">
+              <IconButton sx={{ padding: 0 }} onClick={() => setOpen(false)}>
                 <Close />
               </IconButton>
             </Box>
-            { linkList }
+            {linkList}
           </Grid>
         </Toolbar>
       </Container>
     </Drawer>
   )
 }
-
