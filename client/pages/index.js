@@ -11,11 +11,12 @@ import {
 import { Layout } from '../components/Layout'
 import { Hero } from '../components/Hero'
 import ReactPlayer from 'react-player'
+import testImage from '../public/test.jpg'
 
 const Index = () => (
   <Layout>
     <Hero
-      src="/../public/test.jpg"
+      src={testImage}
       alt="Alt tag"
       title="made"
       titleHighlight="new"
@@ -84,11 +85,7 @@ const Index = () => (
                   },
                 }}
               >
-                <Image
-                  src="/../public/test.jpg"
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <Image src={testImage} layout="fill" objectFit="cover" />
               </Box>
             </Box>
           </Grid>
@@ -115,11 +112,7 @@ const Index = () => (
                   },
                 }}
               >
-                <Image
-                  src="/../public/test.jpg"
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <Image src={testImage} layout="fill" objectFit="cover" />
                 <Box sx={{ position: 'absolute', bottom: 0, left: 0, p: 2 }}>
                   <Typography
                     component="h3"
@@ -141,11 +134,7 @@ const Index = () => (
                   },
                 }}
               >
-                <Image
-                  src="/../public/test.jpg"
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <Image src={testImage} layout="fill" objectFit="cover" />
                 <Box sx={{ position: 'absolute', bottom: 0, left: 0, p: 2 }}>
                   <Typography
                     component="h3"
@@ -167,11 +156,7 @@ const Index = () => (
                   },
                 }}
               >
-                <Image
-                  src="/../public/test.jpg"
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <Image src={testImage} layout="fill" objectFit="cover" />
                 <Box sx={{ position: 'absolute', bottom: 0, left: 0, p: 2 }}>
                   <Typography
                     component="h3"
@@ -193,11 +178,7 @@ const Index = () => (
                   },
                 }}
               >
-                <Image
-                  src="/../public/test.jpg"
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <Image src={testImage} layout="fill" objectFit="cover" />
                 <Box sx={{ position: 'absolute', bottom: 0, left: 0, p: 2 }}>
                   <Typography
                     component="h3"
@@ -220,7 +201,7 @@ const Index = () => (
         '& div > img': { zIndex: -100, opacity: '10%', position: 'absolute' },
       }}
     >
-      <Image src="/../public/test.jpg" layout="fill" objectFit="cover" />
+      <Image src={testImage} layout="fill" objectFit="cover" />
       <Container
         sx={{
           position: 'relative',
@@ -259,11 +240,7 @@ const Index = () => (
                   '& img': { position: 'absolute' },
                 }}
               >
-                <Image
-                  src="/../public/test.jpg"
-                  layout="fill"
-                  objectFit="cover"
-                />
+                <Image src={testImage} layout="fill" objectFit="cover" />
               </Box>
             </Grid>
           </Grid>
