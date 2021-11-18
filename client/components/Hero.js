@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { Box, Button, Container, Grid, Typography } from '@mui/material';
+import Image from 'next/image'
+import Link from 'next/link'
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
 
 export const Hero = ({
   src,
@@ -33,7 +33,7 @@ export const Hero = ({
           backgroundColor: 'rgba(0,0,0, .7)',
         }}
       ></Box>
-      <Container sx={{ position: 'relative' }}>
+      <Container sx={{ position: 'relative', px: { xs: 3 } }}>
         <Box display="flex" flexDirection="column" alignItems="flex-start">
           <Typography
             sx={{
@@ -45,7 +45,7 @@ export const Hero = ({
             component="h1"
             align="center"
           >
-            {title}{' '}
+            {title + ' '}
             <Box
               component="span"
               sx={{
@@ -63,7 +63,6 @@ export const Hero = ({
             }}
             component="p"
             variant="h5"
-            align="center"
           >
             {subtitle}
           </Typography>
@@ -81,5 +80,5 @@ export const Hero = ({
         </Box>
       </Container>
     </Grid>
-  );
-};
+  )
+}

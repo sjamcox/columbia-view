@@ -25,14 +25,27 @@ const Index = () => (
       href="/visit"
     />
     <Box component="section">
-      <Container sx={{ py: 12 }}>
+      <Container
+        sx={{
+          py: { xs: 4, md: 12 },
+          px: { xs: 3 },
+          overflow: { xs: 'hidden', md: 'visible' },
+        }}
+      >
         <Grid
           container
           display="flex"
-          direction="row"
+          direction={{ xs: 'column-reverse', md: 'row' }}
           justifyContent="space-between"
         >
-          <Grid item xs={7}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            lg={7}
+            marginTop={4}
+            sx={{ width: { xs: '100%', md: 'auto' } }}
+          >
             <Typography variant="h3" component="h2" color="primary" paragraph>
               Join us Sunday morning online or in person
             </Typography>
@@ -58,25 +71,31 @@ const Index = () => (
             </Button>
           </Grid>
           <Grid item xs={4}>
-            <Box sx={{ position: 'relative', height: '480px', width: '400px' }}>
+            <Box
+              sx={{
+                position: 'relative',
+                height: { xs: '300px', md: '480px' },
+                width: { xs: '375px', md: '400px' },
+              }}
+            >
               <Box
                 sx={{
                   position: 'absolute',
                   height: '100%',
-                  width: '100%',
+                  width: { xs: 'calc(100% - 50px)', md: '100%' },
                   bgcolor: '#BCE6FB',
-                  top: -40,
-                  left: -40,
+                  top: { xs: 0, md: -40 },
+                  left: { xs: 0, md: -40 },
                   borderRadius: '10px',
                 }}
               />
               <Box
                 sx={{
                   position: 'relative',
-                  top: 0,
-                  left: 0,
+                  top: { xs: 20, md: 0 },
+                  left: { xs: 20, md: 0 },
                   width: '100%',
-                  height: '400px',
+                  height: { xs: '260px', md: '400px' },
                   '& div': {
                     borderRadius: '10px',
                   },
