@@ -61,7 +61,7 @@ const Index = () => (
               component="a"
               size="large"
               color="secondary"
-              sx={{ color: 'white' }}
+              sx={{ color: 'white', mt: 2 }}
             >
               Visit us this Sunday
             </Button>
