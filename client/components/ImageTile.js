@@ -40,7 +40,7 @@ export default function ImageTile({ image, headline }) {
         <Typography
           component="h3"
           variant="h2"
-          sx={{ color: 'white', fontSize: { lg: 33 } }}
+          sx={{ color: 'white', fontSize: { md: 33 } }}
         >
           {headline}
         </Typography>

@@ -122,7 +122,12 @@ const Index = () => (
           <Typography component="p" variant="body1" paragraph>
             Check out the different ways to get involved
           </Typography>
-          <Grid container direction="row" spacing={2}>
+          <Grid
+            container
+            direction="row"
+            spacing={2}
+            sx={{ maxWidth: { xs: '300px', sm: 'sm', lg: '100%' } }}
+          >
             <Grid item xs={12} sm={6} lg={3}>
               <ImageTile image={testImage} headline="Sunday Worship" />
             </Grid>
