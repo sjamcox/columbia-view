@@ -1,15 +1,21 @@
 import Head from 'next/head'
 import { Layout } from '../components/Layout'
-import { Box, Card, Container, Link, Stack, Typography } from '@mui/material'
+import {
+  Box,
+  Button,
+  Card,
+  Container,
+  Link,
+  Stack,
+  Typography,
+} from '@mui/material'
 import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const RSS_URL = `https://www.spreaker.com/show/3172208/episodes/feed`
   const parser = new Parser()
-  const feed = await parser.parseURL(
-    'https://www.spreaker.com/show/3172208/episodes/feed'
-  )
+  const feed = await parser.parseURL(RSS_URL)
 
   return {
     props: {
@@ -24,12 +30,12 @@ export default function Messages({ feed }) {
       <Head>
         <title>Messages | Columbia View</title>
       </Head>
-      <Container maxWidth="md">
+      <Container maxWidth="md" sx={{ my: 5 }}>
         <Typography component="h1" variant="h1" sx={{ my: 5 }}>
           Messages
         </Typography>
         <Stack spacing={4} alignItems="center">
-          {feed.items.slice(0, 10).map((item) => {
+          {feed.items.slice(0, 5).map((item) => {
             const episode = item.enclosure.url.split('/')[5]
             return (
               <Card sx={{ p: 4 }} key={item.title}>
@@ -54,10 +60,12 @@ export default function Messages({ feed }) {
           <Link
             href="https://www.spreaker.com/show/sermons_59"
             color="secondary"
-            variant="h6"
+            variant="h5"
             sx={{ textDecoration: 'none' }}
           >
-            View all of our past messages on Spreaker
+            <Button variant="contained" color="secondary">
+              View all past messages
+            </Button>
           </Link>
         </Stack>
       </Container>
