@@ -39,7 +39,8 @@ theme.typography = {
     marginBottom: '1rem',
   },
   h1: {
-    fontSize: '3.5rem',
+    fontSize: '2.8rem',
+    lineHeight: 1.2,
     [theme.breakpoints.up('md')]: {
       fontSize: '4.2rem',
     },
@@ -49,6 +50,7 @@ theme.typography = {
   },
   h2: {
     fontSize: '2.1rem',
+    lineHeight: 1.3,
     [theme.breakpoints.up('md')]: {
       fontSize: '3.1rem',
     },
@@ -58,6 +60,7 @@ theme.typography = {
   },
   h3: {
     fontSize: '1.7rem',
+    lineHeight: 1.3,
     [theme.breakpoints.up('md')]: {
       fontSize: '2.3rem',
     },
@@ -67,6 +70,7 @@ theme.typography = {
   },
   h4: {
     fontSize: '1.4rem',
+    lineHeight: 1.3,
     [theme.breakpoints.up('md')]: {
       fontSize: '1.7rem',
     },
@@ -76,6 +80,7 @@ theme.typography = {
   },
   h5: {
     fontSize: '1.2rem',
+    lineHeight: 1.3,
     [theme.breakpoints.up('md')]: {
       fontSize: '1.3rem',
     },

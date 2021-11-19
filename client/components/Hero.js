@@ -39,30 +39,24 @@ export const Hero = ({
             sx={{
               color: 'white',
               fontWeight: 700,
-              marginBottom: 0,
+              my: { xs: 3, sm: 2 },
+              maxWidth: { xs: 280, sm: '100%', lg: 500 },
             }}
             variant="h1"
             component="h1"
-            align="center"
           >
             {title + ' '}
-            <Box
-              component="span"
-              sx={{
-                color: 'rgb(57, 171, 225)',
-              }}
-            >
-              {titleHighlight}
+            <Box component="span" sx={{ color: 'rgb(57, 171, 225)' }}>
+              {titleHighlight + ' '}
             </Box>
+            in Christ
           </Typography>
           <Typography
             sx={{
               color: 'white',
               marginBottom: 4,
-              fontSize: 20,
             }}
             component="p"
-            variant="h5"
           >
             {subtitle}
           </Typography>

@@ -1,20 +1,17 @@
+import Head from 'next/head'
 import Image from 'next/image'
-import {
-  Box,
-  Button,
-  Card,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-} from '@mui/material'
+import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
 import { Layout } from '../components/Layout'
 import { Hero } from '../components/Hero'
-import ReactPlayer from 'react-player'
+import VideoSection from '../components/VideoSection'
 import testImage from '../public/test.jpg'
+import ImageTile from '../components/ImageTile'
 
 const Index = () => (
   <Layout>
+    <Head>
+      <title>Welcome Home | Columbia View</title>
+    </Head>
     <Hero
       src={testImage}
       alt="Alt tag"
@@ -42,8 +39,7 @@ const Index = () => (
             item
             xs={12}
             md={6}
-            lg={7}
-            marginTop={4}
+            lg={6}
             sx={{ width: { xs: '100%', md: 'auto' } }}
           >
             <Typography variant="h3" component="h2" color="primary" paragraph>
@@ -70,7 +66,7 @@ const Index = () => (
               Visit us this Sunday
             </Button>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={4} sx={{ mb: { xs: 4, md: 0 } }}>
             <Box
               sx={{
                 position: 'relative',
@@ -111,8 +107,14 @@ const Index = () => (
         </Grid>
       </Container>
     </Box>
-    <Box component="section" bgcolor="lightblue">
-      <Container sx={{ py: 12 }}>
+    <Box
+      component="section"
+      sx={{
+        background:
+          'linear-gradient(180deg, rgba(188, 230, 251, 0.5) 0%, #FFFFFF 100%)',
+      }}
+    >
+      <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
         <Stack alignItems="center">
           <Typography component="h2" variant="h2">
             Columbia View Ministries
@@ -122,172 +124,94 @@ const Index = () => (
           </Typography>
           <Grid container direction="row" spacing={2}>
             <Grid item xs={12} sm={6} lg={3}>
-              <Card
-                sx={{
-                  position: 'relative',
-                  pb: '133%',
-                  '& img': {
-                    position: 'absolute',
-                  },
-                }}
-              >
-                <Image src={testImage} layout="fill" objectFit="cover" />
-                <Box sx={{ position: 'absolute', bottom: 0, left: 0, p: 2 }}>
-                  <Typography
-                    component="h3"
-                    variant="h4"
-                    sx={{ color: 'white' }}
-                  >
-                    Sunday Worship
-                  </Typography>
-                </Box>
-              </Card>
+              <ImageTile image={testImage} headline="Sunday Worship" />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <Card
-                sx={{
-                  position: 'relative',
-                  pb: '133%',
-                  '& img': {
-                    position: 'absolute',
-                  },
-                }}
-              >
-                <Image src={testImage} layout="fill" objectFit="cover" />
-                <Box sx={{ position: 'absolute', bottom: 0, left: 0, p: 2 }}>
-                  <Typography
-                    component="h3"
-                    variant="h4"
-                    sx={{ color: 'white' }}
-                  >
-                    Columbia Kids
-                  </Typography>
-                </Box>
-              </Card>
+              <ImageTile image={testImage} headline="Columbia Kids" />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <Card
-                sx={{
-                  position: 'relative',
-                  pb: '133%',
-                  '& img': {
-                    position: 'absolute',
-                  },
-                }}
-              >
-                <Image src={testImage} layout="fill" objectFit="cover" />
-                <Box sx={{ position: 'absolute', bottom: 0, left: 0, p: 2 }}>
-                  <Typography
-                    component="h3"
-                    variant="h4"
-                    sx={{ color: 'white' }}
-                  >
-                    Life Groups
-                  </Typography>
-                </Box>
-              </Card>
+              <ImageTile image={testImage} headline="Life Groups" />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <Card
-                sx={{
-                  position: 'relative',
-                  pb: '133%',
-                  '& img': {
-                    position: 'absolute',
-                  },
-                }}
-              >
-                <Image src={testImage} layout="fill" objectFit="cover" />
-                <Box sx={{ position: 'absolute', bottom: 0, left: 0, p: 2 }}>
-                  <Typography
-                    component="h3"
-                    variant="h4"
-                    sx={{ color: 'white' }}
-                  >
-                    Immigrant Connection
-                  </Typography>
-                </Box>
-              </Card>
+              <ImageTile image={testImage} headline="Immigrant Connection" />
             </Grid>
           </Grid>
         </Stack>
       </Container>
     </Box>
-    <Box
-      component="section"
-      sx={{
-        position: 'relative',
-        '& div > img': { zIndex: -100, opacity: '10%', position: 'absolute' },
-      }}
-    >
-      <Image src={testImage} layout="fill" objectFit="cover" />
-      <Container
-        sx={{
-          position: 'relative',
-          py: 12,
-          display: 'flex',
-          justifyContent: 'center',
-          zIndex: 100,
-        }}
-      >
-        <ReactPlayer url="https://www.youtube.com/watch?v=FZTROoxijGE" />
-      </Container>
-    </Box>
-    <Box
-      component="section"
-      sx={{
-        py: 12,
-      }}
-    >
-      <Container>
+    <VideoSection
+      videoUrl="https://www.youtube.com/watch?v=FZTROoxijGE"
+      image={testImage}
+    />
+    <Box component="section">
+      <Container sx={{ px: { xs: 0, md: 3 }, py: { xs: 0, md: 12 } }}>
         <Box
           sx={{
-            height: 460,
-            position: 'relative',
+            height: { xs: 'auto', md: 460 },
+            position: { xs: 'static', md: 'relative' },
             display: 'flex',
             alignItems: 'center',
+            flexDirection: { xs: 'column', md: 'row' },
           }}
         >
-          <Grid container sx={{ position: 'absolute' }}>
-            <Grid item xs={6}></Grid>
-            <Grid item xs={6} bgcolor="green">
+          <Grid
+            container
+            sx={{
+              position: { xs: 'relative', md: 'absolute' },
+              direction: 'column',
+            }}
+          >
+            <Grid item xs={0} md={6}></Grid>
+            <Grid item xs={12} md={6}>
               <Box
                 sx={{
-                  position: 'relative',
-                  height: '460px',
+                  position: { xs: 'static', md: 'relative' },
+                  height: { xs: 0, md: 460 },
+                  padding: { xs: '20%', md: 0 },
                   width: '100%',
-                  '& img': { position: 'absolute' },
+                  '& img': {
+                    position: { xs: 'static', md: 'absolute' },
+                    borderRadius: { xs: 'none', md: '10px' },
+                  },
                 }}
               >
                 <Image src={testImage} layout="fill" objectFit="cover" />
               </Box>
             </Grid>
           </Grid>
-          <Grid container sx={{ position: 'absolute' }}>
+          <Grid container sx={{ position: { xs: 'static', md: 'absolute' } }}>
             <Grid
               item
-              xs={7}
-              sx={{ bgcolor: 'rgb(14, 73, 111)', p: 4, color: 'white' }}
+              xs={12}
+              md={7}
+              sx={{
+                bgcolor: 'rgb(14, 73, 111)',
+                borderRadius: { xs: 'none', md: '10px' },
+                color: 'white',
+                p: 4,
+              }}
             >
-              <Typography component="h2" variant="h2">
-                Immigrant Connection PDX
-              </Typography>
-              <Typography>
-                Our vision is to build bridges for a hope-filled future, and our
-                mission is to provide affordable immigration legal services to
-                immigrants in our community.
-              </Typography>
-              <Button
-                variant="contained"
-                component="a"
-                size="large"
-                color="secondary"
-                sx={{ color: 'white' }}
-              >
-                Learn more about our services
-              </Button>
+              <Box sx={{ maxWidth: 500 }}>
+                <Typography component="h2" variant="h3" paragraph>
+                  Immigrant Connection PDX
+                </Typography>
+                <Typography paragraph>
+                  Our vision is to build bridges for a hope-filled future, and
+                  our mission is to provide affordable immigration legal
+                  services to immigrants in our community.
+                </Typography>
+                <Button
+                  variant="contained"
+                  component="a"
+                  size="large"
+                  color="secondary"
+                  sx={{ color: 'white', mt: 2 }}
+                >
+                  Learn more about our services
+                </Button>
+              </Box>
             </Grid>
-            <Grid item xs={5}></Grid>
+            <Grid item xs={0} md={5}></Grid>
           </Grid>
         </Box>
       </Container>
