@@ -29,7 +29,7 @@ export default function Messages({ feed }) {
           Messages
         </Typography>
         <Stack spacing={4} alignItems="center">
-          {feed.items.slice(0, 1).map((item) => {
+          {feed.items.slice(0, 10).map((item) => {
             const episode = item.enclosure.url.split('/')[5]
             return (
               <Card sx={{ p: 4 }} key={item.title}>
