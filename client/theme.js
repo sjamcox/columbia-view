@@ -12,6 +12,9 @@ export const theme = createTheme({
     text: {
       primary: 'rgb(51, 49, 50)',
     },
+    background: {
+      grey: 'rgb(231, 231, 231)',
+    },
   },
   typography: {
     fontFamily: 'Open Sans',

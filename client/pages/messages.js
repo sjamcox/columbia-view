@@ -30,7 +30,7 @@ export default function Messages({ feed }) {
       <Head>
         <title>Messages | Columbia View</title>
       </Head>
-      <Container maxWidth="md" sx={{ my: 5 }}>
+      <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Typography component="h1" variant="h1" sx={{ my: 5 }}>
           Messages
         </Typography>
@@ -39,8 +39,8 @@ export default function Messages({ feed }) {
             const episode = item.enclosure.url.split('/')[5]
             return (
               <Card sx={{ p: 4 }} key={item.title}>
-                <Stack direction="row">
-                  <Box pr={4}>
+                <Stack sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
+                  <Box pr={4} pb={2}>
                     <img src={item.itunes.image} width={128} height={128} />
                   </Box>
                   <Stack>
