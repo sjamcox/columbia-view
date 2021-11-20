@@ -25,7 +25,7 @@ export const Hero = ({
         overflow: 'hidden',
       }}
     >
-      <Image src={src} alt={alt} layout="fill" objectFit="cover" />
+      <Image src={src} alt={alt} layout="fill" objectFit="cover" priority />
       <Box
         sx={{
           position: 'absolute',

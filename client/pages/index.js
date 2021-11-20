@@ -129,16 +129,32 @@ const Index = () => (
             sx={{ maxWidth: { xs: '300px', sm: 'sm', lg: '100%' } }}
           >
             <Grid item xs={12} sm={6} lg={3}>
-              <ImageTile image={testImage} headline="Sunday Worship" />
+              <ImageTile
+                link="/ministries#sunday-worship"
+                image={testImage}
+                headline="Sunday Worship"
+              />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <ImageTile image={testImage} headline="Columbia Kids" />
+              <ImageTile
+                link="/ministries#columbia-kids"
+                image={testImage}
+                headline="Columbia Kids"
+              />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <ImageTile image={testImage} headline="Life Groups" />
+              <ImageTile
+                link="/ministries#life-groups"
+                image={testImage}
+                headline="Life Groups"
+              />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
-              <ImageTile image={testImage} headline="Immigrant Connection" />
+              <ImageTile
+                link="/immigrant-connection"
+                image={testImage}
+                headline="Immigrant Connection"
+              />
             </Grid>
           </Grid>
         </Stack>
