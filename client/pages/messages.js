@@ -38,9 +38,9 @@ export default function Messages({ feed }) {
           {feed.items.slice(0, 5).map((item) => {
             const episode = item.enclosure.url.split('/')[5]
             return (
-              <Card sx={{ p: 4 }} key={item.title}>
+              <Card sx={{ p: { xs: 3, md: 4 } }} key={item.title} elevation={4}>
                 <Stack sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
-                  <Box pr={4} pb={2}>
+                  <Box pr={{ xs: 3, sm: 6 }} pb={2}>
                     <img src={item.itunes.image} width={128} height={128} />
                   </Box>
                   <Stack>
@@ -48,10 +48,19 @@ export default function Messages({ feed }) {
                       {item.title}
                     </Typography>
                     <Typography sx={{ pb: 3 }}>{item.content}</Typography>
-                    <ReactAudioPlayer
-                      src={`https://api.spreaker.com/v2/episodes/${episode}/play.mp3`}
-                      controls
-                    />
+                    <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
+                      <ReactAudioPlayer
+                        src={`https://api.spreaker.com/v2/episodes/${episode}/play.mp3`}
+                        controls
+                      />
+                    </Box>
+                    <Box sx={{ display: { xs: 'block', sm: 'none' } }}>
+                      <ReactAudioPlayer
+                        style={{ width: '220px' }}
+                        src={`https://api.spreaker.com/v2/episodes/${episode}/play.mp3`}
+                        controls
+                      />
+                    </Box>
                   </Stack>
                 </Stack>
               </Card>
