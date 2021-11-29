@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import { Layout } from '../components/Layout'
 import blakeFamily from '../public/blake-family.webp'
 import cheneyFamily from '../public/cheney-family.webp'
@@ -162,9 +162,18 @@ export default function Ministries() {
                 <strong>Office Hours & Location</strong>
               </Typography>
               <Typography fontSize={15}>Tuesdays and Thursdays</Typography>
-              <Typography fontSize={15}>10:00 am – 4:00 pm</Typography>
               <Typography fontSize={15} paragraph>
-                Columbia View Church
+                10:00 am – 4:00 pm
+              </Typography>
+              <Typography fontSize={15} paragraph>
+                Columbia View Wesleyan Church <br />
+                16700 NE Halsey St. <br />
+                Portland, OR 97230
+              </Typography>
+              <Typography fontSize={15} paragraph>
+                <a href="tel:+19712022073">971.202.2073</a>
+                <br />
+                <a href="mailto:info.icpdx@gmail.com">info.icpdx@gmail.com</a>
               </Typography>
             </Grid>
           </Grid>
@@ -205,7 +214,6 @@ export default function Ministries() {
               <Link href="https://www.globalpartnersonline.org/missionary/wm04-0264/">
                 <Button
                   variant="contained"
-                  component="a"
                   size="large"
                   color="secondary"
                   sx={{ color: 'white' }}
