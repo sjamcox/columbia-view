@@ -12,6 +12,8 @@ import {
   Typography,
 } from '@mui/material'
 import { Layout } from '../../components/Layout'
+import VideoSection from '../../components/VideoSection'
+import testImage from '../../public/test.jpg'
 import icpdxLogo from '../../public/icpdx-logo.webp'
 import daca from '../../public/daca.webp'
 import family from '../../public/family.webp'
@@ -34,14 +36,20 @@ export default function ImmigrantConnection() {
         <title>Immigrant Connection | Columbia View</title>
       </Head>
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
-        <Box display="flex" justifyContent="center">
-          <Box width={250}>
-            <Image src={icpdxLogo} layout="responsive" priority />
-          </Box>
-        </Box>
-        <Typography component="h1" variant="h3" sx={{ mt: 5, mb: 3 }}>
-          Immigrant Connection PDX
-        </Typography>
+        <Grid container justifyContent="space-between" alignItems="flex-end">
+          <Grid item xs={12} sm={8}>
+            <Typography component="h1" variant="h2" sx={{ mt: 5, mb: 3 }}>
+              Immigrant Connection PDX
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={3}>
+            <Box display="flex" justifyContent="center" mb={3}>
+              <Box sx={{ width: { xs: 150, md: 250 } }}>
+                <Image src={icpdxLogo} layout="responsive" priority />
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
         <Typography variant="h4" paragraph>
           Our vision is to build bridges for a hope-filled future, and our
           mission is to provide affordable immigration legal services to
@@ -85,9 +93,19 @@ export default function ImmigrantConnection() {
               Portland, OR 97230
             </Typography>
             <Typography fontSize={15} paragraph>
-              <a href="tel:+19712022073">971.202.2073</a>
+              <MuiLink
+                href="tel:+19712022073"
+                sx={{ textDecoration: 'none', color: 'primary' }}
+              >
+                971.202.2073
+              </MuiLink>
               <br />
-              <a href="mailto:info.icpdx@gmail.com">info.icpdx@gmail.com</a>
+              <MuiLink
+                href="mailto:info.icpdx@gmail.com"
+                sx={{ textDecoration: 'none', color: 'primary' }}
+              >
+                info.icpdx@gmail.com
+              </MuiLink>
             </Typography>
           </Grid>
         </Grid>
@@ -243,6 +261,12 @@ export default function ImmigrantConnection() {
             </MuiLink>
           </Collapse>
         </Box>
+      </Container>
+      <VideoSection
+        videoUrl="https://www.youtube.com/watch?v=FZTROoxijGE"
+        image={testImage}
+      />
+      <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Typography variant="h4" paragraph textAlign="center" mt={6}>
           <strong>Our Team</strong>
         </Typography>
