@@ -369,7 +369,7 @@ export default function ImmigrantConnection() {
           >
             <Image src={vanessa} width="128px" height="128px" />
             <Typography mt={3} color="primary">
-              <strong>Vanessa Cisneros</strong>
+              <strong>Vanessa Cisneroz</strong>
             </Typography>
             <Typography fontSize={15}>Media</Typography>
             <Typography fontSize={15} color="#A2230A">
