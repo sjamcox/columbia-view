@@ -23,34 +23,41 @@ export default function Booking() {
           </Box>
         )}
         {!language && (
-          <>
-            <Typography component="h1" variant="h3" textAlign="center" mb={3}>
-              Schedule Your Consultation
-            </Typography>
-            <Typography textAlign="center">
-              Which language do you prefer?
-            </Typography>
-            <Box display="flex" justifyContent="center">
-              <Button
-                variant="contained"
-                size="large"
-                color="secondary"
-                sx={{ color: 'white', my: 4, mr: 4 }}
-                onClick={() => setLanguage('english')}
-              >
-                English
-              </Button>
-              <Button
-                variant="contained"
-                size="large"
-                color="secondary"
-                sx={{ color: 'white', my: 4 }}
-                onClick={() => setLanguage('spanish')}
-              >
-                Español
-              </Button>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            height="calc(80vh - 72px)"
+          >
+            <Box>
+              <Typography component="h1" variant="h2" textAlign="center" mb={3}>
+                Schedule Your Consultation
+              </Typography>
+              <Typography textAlign="center">
+                Which language do you prefer?
+              </Typography>
+              <Box display="flex" justifyContent="center">
+                <Button
+                  variant="contained"
+                  size="large"
+                  color="secondary"
+                  sx={{ color: 'white', my: 4, mr: 4 }}
+                  onClick={() => setLanguage('english')}
+                >
+                  English
+                </Button>
+                <Button
+                  variant="contained"
+                  size="large"
+                  color="secondary"
+                  sx={{ color: 'white', my: 4 }}
+                  onClick={() => setLanguage('spanish')}
+                >
+                  Español
+                </Button>
+              </Box>
             </Box>
-          </>
+          </Box>
         )}
         {language === 'english' && (
           <iframe
