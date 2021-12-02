@@ -32,6 +32,10 @@ export default function VisitUs() {
         <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
           Visit Us
         </Typography>
+        <Typography variant="h4" paragraph>
+          We're excited to have you join us for a Sunday morning worship
+          service!
+        </Typography>
         <Box id="sunday-worship" my={4}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Worship Service
@@ -74,22 +78,22 @@ export default function VisitUs() {
       <Container my={4} maxWidth="lg">
         <Grid container spacing={2}>
           <Grid item xs={7} md={8}>
-            <Box height="25vh" position="relative">
+            <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
               <Image src={testImage} layout="fill" objectFit="cover" />
             </Box>
           </Grid>
           <Grid item xs={5} md={4}>
-            <Box height="25vh" position="relative">
+            <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
               <Image src={testImage} layout="fill" objectFit="cover" />
             </Box>
           </Grid>
           <Grid item xs={5} md={4}>
-            <Box height="25vh" position="relative">
+            <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
               <Image src={testImage} layout="fill" objectFit="cover" />
             </Box>
           </Grid>
           <Grid item xs={7} md={8}>
-            <Box height="25vh" position="relative">
+            <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
               <Image src={testImage} layout="fill" objectFit="cover" />
             </Box>
           </Grid>
@@ -97,9 +101,9 @@ export default function VisitUs() {
       </Container>
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-          <Box maxWidth="md" my={4}>
+          <Box maxWidth="md" my={{ xs: 0, md: 4 }}>
             <Typography component="h2" variant="h3" textAlign="center" mb={4}>
-              What to Expect When Visiting
+              What to Expect During Your Visit
             </Typography>
             <Accordion
               expanded={expanded === 'expect'}
