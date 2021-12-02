@@ -33,6 +33,13 @@ export const theme = createTheme({
         },
       },
     },
+    MuiAccordion: {
+      styleOverrides: {
+        root: {
+          padding: '8px',
+        },
+      },
+    },
   },
 })
 

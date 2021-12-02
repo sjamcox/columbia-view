@@ -38,7 +38,7 @@ export default function Ministries() {
           become the person he intends you to be — reflecting the life and
           character of Jesus as you seek to share his heart with your people.
         </Typography>
-        <Box my={4}>
+        <Box id="sunday-worship" my={4}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Worship Service
           </Typography>
@@ -60,7 +60,15 @@ export default function Ministries() {
               <Typography fontSize={15} paragraph>
                 10:00 AM in the sanctuary
               </Typography>
-              <Typography fontSize={15}>
+              <Typography
+                fontSize={15}
+                sx={{
+                  '& a': {
+                    textDecoration: 'none',
+                    color: 'rgb(57, 171, 225)',
+                  },
+                }}
+              >
                 {`We also live stream our worship services via `}
                 <a href="https://www.facebook.com/COLUMBIAVIEW/">Facebook</a>
                 {` each Sunday`}
@@ -68,7 +76,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box my={4}>
+        <Box id="columbia-kids" my={4}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Children's Ministry
           </Typography>
@@ -91,7 +99,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box my={4}>
+        <Box id="best-years-fellowship" my={4}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Best Years Fellowship
           </Typography>
@@ -119,7 +127,7 @@ export default function Ministries() {
           </Grid>
         </Box>
 
-        <Box my={4}>
+        <Box id="life-groups" my={4}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Life Groups
           </Typography>
@@ -142,7 +150,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box my={4}>
+        <Box id="immigrant-connection" my={4}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Immigrant Connection
           </Typography>
@@ -170,7 +178,16 @@ export default function Ministries() {
                 16700 NE Halsey St. <br />
                 Portland, OR 97230
               </Typography>
-              <Typography fontSize={15} paragraph>
+              <Typography
+                fontSize={15}
+                paragraph
+                sx={{
+                  '& a': {
+                    textDecoration: 'none',
+                    color: 'rgb(57, 171, 225)',
+                  },
+                }}
+              >
                 <a href="tel:+19712022073">971.202.2073</a>
                 <br />
                 <a href="mailto:info.icpdx@gmail.com">info.icpdx@gmail.com</a>
@@ -178,7 +195,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box my={4}>
+        <Box id="youth-ministry" my={4}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Youth Ministry
           </Typography>
@@ -193,7 +210,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box my={4}>
+        <Box id="global-missions" my={4}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Global Missions
           </Typography>

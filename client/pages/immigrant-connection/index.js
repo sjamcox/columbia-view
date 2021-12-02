@@ -36,9 +36,14 @@ export default function ImmigrantConnection() {
         <title>Immigrant Connection | Columbia View</title>
       </Head>
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
-        <Grid container justifyContent="space-between" alignItems="flex-end">
+        <Grid
+          container
+          flexDirection={{ xs: 'column-reverse', sm: 'row ' }}
+          justifyContent="space-between"
+          alignItems={{ xs: 'flex-start', sm: 'flex-end' }}
+        >
           <Grid item xs={12} sm={8}>
-            <Typography component="h1" variant="h2" sx={{ mt: 5, mb: 3 }}>
+            <Typography component="h1" variant="h2" sx={{ mb: 3 }}>
               Immigrant Connection PDX
             </Typography>
           </Grid>
@@ -263,7 +268,7 @@ export default function ImmigrantConnection() {
         </Box>
       </Container>
       <VideoSection
-        videoUrl="https://www.youtube.com/watch?v=FZTROoxijGE"
+        videoUrl="https://www.youtube.com/watch?v=zBDYoLfPkwc"
         image={testImage}
       />
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
