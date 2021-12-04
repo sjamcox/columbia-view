@@ -6,16 +6,16 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Button,
   Container,
   Grid,
-  Stack,
   Typography,
-  Link,
 } from '@mui/material'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Layout } from '../components/Layout'
-import testImage from '../public/test.jpg'
+import testimony from '../public/sunday/mark-baptism-testimony.webp'
+import worship from '../public/sunday/worship-team.webp'
+import kidsSermon from '../public/sunday/sermon-in-a-sack.webp'
+import communion from '../public/sunday/sermon-communion-table.webp'
 
 export default function VisitUs() {
   const [expanded, setExpanded] = useState(false)
@@ -79,22 +79,22 @@ export default function VisitUs() {
         <Grid container spacing={2}>
           <Grid item xs={7} md={8}>
             <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
-              <Image src={testImage} layout="fill" objectFit="cover" />
+              <Image src={worship} layout="fill" objectFit="cover" />
             </Box>
           </Grid>
           <Grid item xs={5} md={4}>
             <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
-              <Image src={testImage} layout="fill" objectFit="cover" />
+              <Image src={testimony} layout="fill" objectFit="cover" />
             </Box>
           </Grid>
           <Grid item xs={5} md={4}>
             <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
-              <Image src={testImage} layout="fill" objectFit="cover" />
+              <Image src={kidsSermon} layout="fill" objectFit="cover" />
             </Box>
           </Grid>
           <Grid item xs={7} md={8}>
             <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
-              <Image src={testImage} layout="fill" objectFit="cover" />
+              <Image src={communion} layout="fill" objectFit="cover" />
             </Box>
           </Grid>
         </Grid>
