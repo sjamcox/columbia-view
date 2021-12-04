@@ -22,6 +22,7 @@
     "@mui/material": "^5.2.1",
     "@sanity/client": "^2.21.10",
     "axios": "^0.24.0",
+    "date-fns": "^2.27.0",
     "next": "^12.0.0",
     "react": "^17.0.2",
     "react-audio-player": "^0.17.0",
