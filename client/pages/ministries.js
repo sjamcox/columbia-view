@@ -38,7 +38,7 @@ export default function Ministries() {
           become the person he intends you to be — reflecting the life and
           character of Jesus as you seek to share his heart with your people.
         </Typography>
-        <Box id="sunday-worship" my={4}>
+        <Box id="sunday-worship" my={4} sx={{ scrollMarginTop: '100px' }}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Worship Service
           </Typography>
@@ -76,7 +76,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box id="columbia-kids" my={4}>
+        <Box id="columbia-kids" my={4} sx={{ scrollMarginTop: '100px' }}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Children's Ministry
           </Typography>
@@ -99,7 +99,11 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box id="best-years-fellowship" my={4}>
+        <Box
+          id="best-years-fellowship"
+          my={4}
+          sx={{ scrollMarginTop: '100px' }}
+        >
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Best Years Fellowship
           </Typography>
@@ -127,7 +131,7 @@ export default function Ministries() {
           </Grid>
         </Box>
 
-        <Box id="life-groups" my={4}>
+        <Box id="life-groups" my={4} sx={{ scrollMarginTop: '100px' }}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Life Groups
           </Typography>
@@ -150,7 +154,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box id="immigrant-connection" my={4}>
+        <Box id="immigrant-connection" my={4} sx={{ scrollMarginTop: '100px' }}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Immigrant Connection
           </Typography>
@@ -195,7 +199,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box id="youth-ministry" my={4}>
+        <Box id="youth-ministry" my={4} sx={{ scrollMarginTop: '100px' }}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Youth Ministry
           </Typography>
@@ -210,7 +214,7 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box id="global-missions" my={4}>
+        <Box id="global-missions" my={4} sx={{ scrollMarginTop: '100px' }}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Global Missions
           </Typography>

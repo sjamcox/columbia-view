@@ -3,5 +3,5 @@ export const menu = [
   { text: 'Messages', href: '/messages' },
   { text: 'Immigrant Connection', href: '/immigrant-connection' },
   { text: 'About', href: '/about' },
-  { text: 'Give', href: '/give' },
+  { text: 'Give', href: 'https://columbiaview.churchcenter.com/giving' },
 ]

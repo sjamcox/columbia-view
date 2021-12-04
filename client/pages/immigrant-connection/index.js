@@ -13,8 +13,8 @@ import {
 } from '@mui/material'
 import { Layout } from '../../components/Layout'
 import VideoSection from '../../components/VideoSection'
-import testImage from '../../public/test.jpg'
 import icpdxLogo from '../../public/icpdx/icpdx-logo.webp'
+import immigrantFamily from '../../public/icpdx/immigrant-family.webp'
 import daca from '../../public/daca.webp'
 import family from '../../public/family.webp'
 import residence from '../../public/residence.webp'
@@ -269,7 +269,7 @@ export default function ImmigrantConnection() {
       </Container>
       <VideoSection
         videoUrl="https://www.youtube.com/watch?v=zBDYoLfPkwc"
-        image={testImage}
+        image={immigrantFamily}
       />
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Typography variant="h4" paragraph textAlign="center" mt={6}>

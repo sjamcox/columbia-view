@@ -6,7 +6,6 @@ import { Layout } from '../components/Layout'
 import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
 import ImageTile from '../components/ImageTile'
-import testImage from '../public/test.jpg'
 import sermon from '../public/sunday/sermon-david-hands.webp'
 import baptism from '../public/sunday/mark-baptism.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
@@ -172,7 +171,7 @@ const Index = () => (
     </Box>
     <VideoSection
       videoUrl="https://www.youtube.com/watch?v=FZTROoxijGE"
-      image={testImage}
+      image={kids}
     />
     <Box component="section">
       <Container sx={{ px: { xs: 0, md: 3 }, py: { xs: 0, md: 12 } }}>

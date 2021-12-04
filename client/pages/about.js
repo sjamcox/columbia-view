@@ -1,20 +1,22 @@
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Stack,
-  Typography,
-  Link,
-} from '@mui/material'
+import Head from 'next/head'
+import Image from 'next/image'
+import { Box, Container, Grid, Typography, Link } from '@mui/material'
 import { Layout } from '../components/Layout'
+import david from '../public/staff/david.webp'
+import tita from '../public/staff/tita.webp'
+import barbara from '../public/staff/barbara.webp'
 
 export default function About() {
   return (
     <Layout>
-      <Container>
-        <Typography>Welcome Home!</Typography>
-        <Typography>
+      <Head>
+        <title>About | Columbia View</title>
+      </Head>
+      <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
+        <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
+          Welcome Home
+        </Typography>
+        <Typography paragraph>
           Columbia View Wesleyan Church is a church body committed to
           consistently pursuing a personal knowledge of the heart of God and
           then sharing that with our people. The Wesleyan church has had a
@@ -22,37 +24,159 @@ export default function About() {
           commitment to study, know and teach the Word of God in this great
           city.
         </Typography>
-        <Typography>
-          What can I expect on a Sunday morning? After parking in our parking
-          lot, you will walk through the main entrance double doors. You will be
-          greeted by a few smiling faces, handed our updated bulletin (info on
-          the service and upcoming events) and offered complementary coffee and
-          baked goods. Sunday morning worship service begins at 10:00 am. Our
-          people are very laid back and friendly. What do you provide for babies
-          and/or children? We have a nursery on-site for families with infants
-          and babies to utilize. We also offer a children’s Sunday School class
-          during our Sunday worship from 10:00 - 11:00 am on Sunday mornings.
-          All nursery and children volunteers are background checked and
-          trained. What should I wear? Clothes. Just come in something that
-          you’re comfortable with. Where can I park? In our parking lot that
-          wraps around the church building including the front, the right side,
-          and the rear of the church. What is the music style? We believe the
-          worship music should reflect the congregation, and therefore we offer
-          a blend of hymns and contemporary music. How big is the church? Our
-          directory has around 70 names, and on a given Sunday we will have
-          anywhere between 20-50 people.
+        <Typography component="h2" variant="h3" color="primary" mt={4}>
+          Our Mission
         </Typography>
-        <Typography>
-          David Rannabargar Lead Pastor | david.cvwc@gmail.com Serena
-          Rannabargar Missions Director Barbara Haverhill Best Year's Fellowship
-          Coordinator
+        <Typography variant="h4" my={2} paragraph>
+          Our mission is to know God’s heart and share Him with our people.
         </Typography>
-        <Typography>
-          Community Resources These are several based Portland, OR community
-          resources available to anyone in need. Each document consists of
-          multiple organizations and the direct link to their websites. Our hope
-          is that these resources will aid our community as needs arise.
+        <Typography paragraph>
+          Our mission is not a “solo” endeavor; it is a communal enterprise. All
+          are welcome to discover the God who made them, died for them, and who
+          wants an ongoing, transformative, hope-giving relationship with them.
         </Typography>
+        <Typography component="h2" variant="h3" color="primary" mt={4}>
+          Our Vision
+        </Typography>
+        <Typography variant="h4" my={2} paragraph>
+          Columbia View’s vision is five-fold:
+        </Typography>
+        <Typography paragraph>
+          <strong>We want</strong> to see people’s lives transformed through the
+          hope and holiness of Jesus Christ. We want to see the Kingdom of God
+          that Jesus described in the Sermon on the Mount (Matthew 5-7)
+          actualized in our neighborhoods, city, and across the world.
+        </Typography>
+        <Typography paragraph>
+          <strong>We want</strong> to see a church multiplication movement of
+          Christ-followers advancing new expressions of the gospel in unreached
+          corners of our city.
+        </Typography>
+        <Typography paragraph>
+          <strong>We want</strong> to see immigrant brothers and sisters
+          welcomed in the name of Jesus.
+        </Typography>
+        <Typography paragraph>
+          <strong>We want</strong> to see a multi-ethnic family of Jesus’
+          followers expressing their faith in ways that are culturally
+          meaningful to them, and yet united under our common mission of knowing
+          and sharing God’s heart.
+        </Typography>
+        <Typography paragraph>
+          <strong>We want</strong> to see individuals’ lives aligned more to the
+          way and teachings of Jesus.
+        </Typography>
+        <Typography component="h2" variant="h3" color="primary" mt={4}>
+          Beliefs and Core Values
+        </Typography>
+        <Typography variant="h4" my={2} paragraph>
+          Wesleyans believe in one God, who is Father, Son, and Holy Spirit, and
+          the Savior of all who put their faith in Him alone for eternal life.
+        </Typography>
+        <Typography paragraph>
+          <strong>We believe</strong> that those who are made new in Christ are
+          called to be holy in character and conduct and can only live this way
+          by being filled with the Lord’s Spirit.
+        </Typography>
+        <Typography paragraph>
+          <strong>We believe</strong> in the Bible and its sufficiency to
+          establish our faith and conduct.
+        </Typography>
+        <Typography paragraph>
+          <strong>We believe</strong> God wills for people everywhere to know
+          him and be made new in Christ.
+        </Typography>
+        <Typography paragraph>
+          <strong>We believe</strong> that the purpose of the Church is to
+          worship God in spirit and in truth, and to reach a lost and fallen
+          world with the gospel of Jesus Christ through its worship, witness and
+          loving deeds.
+        </Typography>
+        <Typography paragraph>
+          These terms describe the “soul of the Church”:
+          <ul>
+            <li>Biblical authority</li>
+            <li>Christlikeness</li>
+            <li>Disciple Making</li>
+            <li>Local Church-Centered</li>
+            <li>Servant Leadership</li>
+          </ul>
+        </Typography>
+        <Typography paragraph>
+          {'For a comprehensive overview of Wesleyan beliefs, please visit '}
+          <Link href="https://www.wesleyan.org/about">wesleyan.org/about</Link>.
+        </Typography>
+
+        <Box>
+          <Typography variant="h4" paragraph textAlign="center" mt={6}>
+            <strong>Our Team</strong>
+          </Typography>
+          <Grid container spacing={4}>
+            <Grid
+              item
+              mt={4}
+              xs={12}
+              sm={6}
+              md={4}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
+              <Image src={david} width="128px" height="128px" />
+              <Typography mt={3} color="primary">
+                <strong>David Rannabargar</strong>
+              </Typography>
+              <Typography fontSize={15}>Lead Pastor</Typography>
+              <Link
+                href="mailto:david.cvwc@gmail.com"
+                fontSize={15}
+                color="#A2230A"
+              >
+                david.cvwc@gmail.com
+              </Link>
+            </Grid>
+            <Grid
+              item
+              mt={4}
+              xs={12}
+              sm={6}
+              md={4}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
+              <Image src={tita} width="128px" height="128px" />
+              <Typography mt={3} color="primary">
+                <strong>Serena Rannabargar</strong>
+              </Typography>
+              <Typography fontSize={15}>Missions Director</Typography>
+            </Grid>
+            <Grid
+              item
+              mt={4}
+              xs={12}
+              sm={6}
+              md={4}
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+              }}
+            >
+              <Image src={barbara} width="128px" height="128px" />
+              <Typography mt={3} color="primary">
+                <strong>Barbara Haverhill</strong>
+              </Typography>
+              <Typography fontSize={15}>
+                Best Years Fellowship Coordinator
+              </Typography>
+            </Grid>
+          </Grid>
+        </Box>
       </Container>
     </Layout>
   )
