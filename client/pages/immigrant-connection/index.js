@@ -84,6 +84,7 @@ export default function ImmigrantConnection() {
               </Button>
             </Link>
           </Grid>
+
           <Grid item xs={12} md={3}>
             <Typography fontSize={15}>
               <strong>Office Hours & Location</strong>
@@ -112,6 +113,92 @@ export default function ImmigrantConnection() {
                 info.icpdx@gmail.com
               </MuiLink>
             </Typography>
+          </Grid>
+        </Grid>
+        <Grid container spacing={2} mt={0}>
+          <Grid item>
+            <MuiLink href="#">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                sx={{ color: 'white' }}
+              >
+                English
+              </Button>
+            </MuiLink>
+          </Grid>
+          <Grid item>
+            <MuiLink href="#">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                sx={{ color: 'white' }}
+              >
+                Español (Spanish)
+              </Button>
+            </MuiLink>
+          </Grid>
+          <Grid item>
+            <MuiLink href="#">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                sx={{ color: 'white' }}
+              >
+                한글 (Korean)
+              </Button>
+            </MuiLink>
+          </Grid>
+          <Grid item>
+            <MuiLink href="#">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                sx={{ color: 'white' }}
+              >
+                Português (Portugese)
+              </Button>
+            </MuiLink>
+          </Grid>
+          <Grid item>
+            <MuiLink href="#">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                sx={{ color: 'white' }}
+              >
+                Tagalog (Filipino)
+              </Button>
+            </MuiLink>
+          </Grid>
+          <Grid item>
+            <MuiLink href="#">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                sx={{ color: 'white' }}
+              >
+                русский (Russian)
+              </Button>
+            </MuiLink>
+          </Grid>
+          <Grid item>
+            <MuiLink href="#">
+              <Button
+                variant="contained"
+                size="large"
+                color="primary"
+                sx={{ color: 'white' }}
+              >
+                Français (French)
+              </Button>
+            </MuiLink>
           </Grid>
         </Grid>
         <Typography variant="h4" paragraph textAlign="center" mt={6}>
