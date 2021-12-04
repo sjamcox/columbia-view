@@ -14,7 +14,7 @@ import {
 import { Layout } from '../../components/Layout'
 import VideoSection from '../../components/VideoSection'
 import testImage from '../../public/test.jpg'
-import icpdxLogo from '../../public/icpdx-logo.webp'
+import icpdxLogo from '../../public/icpdx/icpdx-logo.webp'
 import daca from '../../public/daca.webp'
 import family from '../../public/family.webp'
 import residence from '../../public/residence.webp'

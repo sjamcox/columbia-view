@@ -1,11 +1,19 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
 import { Layout } from '../components/Layout'
 import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
-import testImage from '../public/test.jpg'
 import ImageTile from '../components/ImageTile'
+import testImage from '../public/test.jpg'
+import sermon from '../public/sunday/sermon-david-hands.webp'
+import baptism from '../public/sunday/mark-baptism.webp'
+import worship from '../public/sunday/worship-team-vertical.webp'
+import kids from '../public/sunday/kids-room-1.webp'
+import lifeGroup from '../public/sandra-dani.webp'
+import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
+import immigrantFamily from '../public/icpdx/immigrant-family.webp'
 
 const Index = () => (
   <Layout>
@@ -13,13 +21,13 @@ const Index = () => (
       <title>Welcome Home | Columbia View</title>
     </Head>
     <Hero
-      src={testImage}
+      src={baptism}
       alt="Alt tag"
       title="made"
       titleHighlight="new"
       subtitle="Consistently pursuing a personal knowledge of the heart of God"
       buttonText="Visit us this Sunday"
-      href="/visit"
+      href="/visit-us"
     />
     <Box component="section">
       <Container
@@ -56,15 +64,17 @@ const Index = () => (
               dignissim quis aliquam elit. Nulla aliquet urna non lorem feugiat,
               in vulputate massa hendrerit.
             </Typography>
-            <Button
-              variant="contained"
-              component="a"
-              size="large"
-              color="secondary"
-              sx={{ color: 'white', mt: 2 }}
-            >
-              Visit us this Sunday
-            </Button>
+            <Link href="/visit-us" passHref>
+              <Button
+                variant="contained"
+                component="a"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white', mt: 2 }}
+              >
+                Visit us this Sunday
+              </Button>
+            </Link>
           </Grid>
           <Grid item xs={4} sx={{ mb: { xs: 4, md: 0 } }}>
             <Box
@@ -92,7 +102,7 @@ const Index = () => (
                   left: { xs: 20, md: 0 },
                   width: '100%',
                   height: { xs: '260px', md: '400px' },
-                  '& div': {
+                  '& span': {
                     borderRadius: '10px',
                   },
                   '& img': {
@@ -100,7 +110,7 @@ const Index = () => (
                   },
                 }}
               >
-                <Image src={testImage} layout="fill" objectFit="cover" />
+                <Image src={sermon} layout="fill" objectFit="cover" />
               </Box>
             </Box>
           </Grid>
@@ -131,28 +141,28 @@ const Index = () => (
             <Grid item xs={12} sm={6} lg={3}>
               <ImageTile
                 link="/ministries#sunday-worship"
-                image={testImage}
+                image={worship}
                 headline="Sunday Worship"
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <ImageTile
                 link="/ministries#columbia-kids"
-                image={testImage}
+                image={kids}
                 headline="Columbia Kids"
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <ImageTile
                 link="/ministries#life-groups"
-                image={testImage}
+                image={lifeGroup}
                 headline="Life Groups"
               />
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <ImageTile
                 link="/immigrant-connection"
-                image={testImage}
+                image={immigrantMan}
                 headline="Immigrant Connection"
               />
             </Grid>
@@ -196,7 +206,7 @@ const Index = () => (
                   },
                 }}
               >
-                <Image src={testImage} layout="fill" objectFit="cover" />
+                <Image src={immigrantFamily} layout="fill" objectFit="cover" />
               </Box>
             </Grid>
           </Grid>
@@ -221,15 +231,17 @@ const Index = () => (
                   our mission is to provide affordable immigration legal
                   services to immigrants in our community.
                 </Typography>
-                <Button
-                  variant="contained"
-                  component="a"
-                  size="large"
-                  color="secondary"
-                  sx={{ color: 'white', mt: 2 }}
-                >
-                  Learn more about our services
-                </Button>
+                <Link href="/immigrant-connection" passHref>
+                  <Button
+                    variant="contained"
+                    component="a"
+                    size="large"
+                    color="secondary"
+                    sx={{ color: 'white', mt: 2 }}
+                  >
+                    Learn more about our services
+                  </Button>
+                </Link>
               </Box>
             </Grid>
             <Grid item xs={0} md={5}></Grid>
