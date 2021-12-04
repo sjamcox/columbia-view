@@ -6,7 +6,7 @@ import { Layout } from '../components/Layout'
 import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
 import ImageTile from '../components/ImageTile'
-import sermon from '../public/sunday/sermon-david-hands.webp'
+import sermon from '../public/sunday/sermon-david-preaching.webp'
 import baptism from '../public/sunday/mark-baptism.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
 import kids from '../public/sunday/kids-room-1.webp'
@@ -109,7 +109,7 @@ const Index = () => (
                   },
                 }}
               >
-                <Image src={sermon} layout="fill" objectFit="cover" />
+                <Image src={sermon} layout="fill" objectFit="cover" priority />
               </Box>
             </Box>
           </Grid>
@@ -170,7 +170,7 @@ const Index = () => (
       </Container>
     </Box>
     <VideoSection
-      videoUrl="https://www.youtube.com/watch?v=FZTROoxijGE"
+      videoUrl="https://www.youtube.com/watch?v=fAGhUIL-LQE"
       image={kids}
     />
     <Box component="section">
@@ -226,9 +226,8 @@ const Index = () => (
                   Immigrant Connection PDX
                 </Typography>
                 <Typography paragraph>
-                  Our vision is to build bridges for a hope-filled future, and
-                  our mission is to provide affordable immigration legal
-                  services to immigrants in our community.
+                  Providing church-based, low-cost immigration legal services in
+                  underserved communities of the Portland Metro area and beyond.
                 </Typography>
                 <Link href="/immigrant-connection" passHref>
                   <Button

@@ -47,7 +47,7 @@ export default function Ministries() {
               <Typography paragraph>
                 Every Sunday, we gather and worship through music, prayer,
                 preaching/teaching of God's word, giving, and testimony. Worship
-                for us is the response of a life that is seeing after Jesus. If
+                for us is the response of a life that is seeking after Jesus. If
                 you are a guest with us, we encourage you to come with an open
                 heart to what God may want to do in your life, and don't worry,
                 we will not embarrass or call on you during worship.
@@ -99,38 +99,6 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
-        <Box
-          id="best-years-fellowship"
-          my={4}
-          sx={{ scrollMarginTop: '100px' }}
-        >
-          <Typography component="h2" variant="h3" color="primary" paragraph>
-            Best Years Fellowship
-          </Typography>
-          <Grid container justifyContent="space-between">
-            <Grid item xs={12} md={8}>
-              <Typography paragraph>
-                Best Years Fellowship (BYF) is a great place for those
-                "seasoned" to get connected, enjoy a meal, pray, have fun, and
-                grow together through learning about the Bible with one another.
-                All are welcome to attend BYF's once-a-month Life Group!
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={3}>
-              <Typography fontSize={15}>
-                <strong>Meeting Time & Location</strong>
-              </Typography>
-              <Typography fontSize={15}>
-                Second Tuesday of each month
-              </Typography>
-              <Typography fontSize={15}>11:00 am - 12:30 pm</Typography>
-              <Typography fontSize={15}>
-                Columbia View Wesleyan Church in the Columbia Room
-              </Typography>
-            </Grid>
-          </Grid>
-        </Box>
-
         <Box id="life-groups" my={4} sx={{ scrollMarginTop: '100px' }}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Life Groups
@@ -146,10 +114,23 @@ export default function Ministries() {
             </Grid>
             <Grid item xs={12} md={3}>
               <Typography fontSize={15}>
-                <strong>Meeting Time & Location</strong>
+                <strong>Meeting Times & Locations</strong>
               </Typography>
-              <Typography fontSize={15} paragraph>
-                Throughout the week in various locations.
+              <Typography
+                fontSize={15}
+                paragraph
+                sx={{
+                  '& a': {
+                    textDecoration: 'none',
+                    color: 'rgb(57, 171, 225)',
+                  },
+                }}
+              >
+                Check{' '}
+                <Link href="https://columbiaview.churchcenter.com/groups">
+                  Planning Center
+                </Link>{' '}
+                for meeting times
               </Typography>
             </Grid>
           </Grid>

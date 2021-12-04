@@ -28,7 +28,8 @@ export default function About() {
           Our Mission
         </Typography>
         <Typography variant="h4" my={2} paragraph>
-          Our mission is to know God’s heart and share Him with our people.
+          Advancing the great commission, in the spirit of the great
+          commandment, for the flourishing of the whole community.
         </Typography>
         <Typography paragraph>
           Our mission is not a “solo” endeavor; it is a communal enterprise. All
@@ -154,26 +155,6 @@ export default function About() {
                 <strong>Serena Rannabargar</strong>
               </Typography>
               <Typography fontSize={15}>Missions Director</Typography>
-            </Grid>
-            <Grid
-              item
-              mt={4}
-              xs={12}
-              sm={6}
-              md={4}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
-            >
-              <Image src={barbara} width="128px" height="128px" />
-              <Typography mt={3} color="primary">
-                <strong>Barbara Haverhill</strong>
-              </Typography>
-              <Typography fontSize={15}>
-                Best Years Fellowship Coordinator
-              </Typography>
             </Grid>
           </Grid>
         </Box>

@@ -45,7 +45,7 @@ export default function VisitUs() {
               <Typography paragraph>
                 Every Sunday, we gather and worship through music, prayer,
                 preaching/teaching of God's word, giving, and testimony. Worship
-                for us is the response of a life that is seeing after Jesus. If
+                for us is the response of a life that is seeking after Jesus. If
                 you are a guest with us, we encourage you to come with an open
                 heart to what God may want to do in your life, and don't worry,
                 we will not embarrass or call on you during worship.
@@ -185,9 +185,8 @@ export default function VisitUs() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography>
-                  Our parking lot that wraps around the church building
-                  including the front, the right side, and the rear of the
-                  church.
+                  Our parking lot that wraps around the church building includes
+                  the front, the right side, and the rear of the church.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -228,7 +227,7 @@ export default function VisitUs() {
               <AccordionDetails>
                 <Typography>
                   Our directory has around 70 names, and on a given Sunday we
-                  will have anywhere between 20-50 people.
+                  will have anywhere between 30-50 people.
                 </Typography>
               </AccordionDetails>
             </Accordion>
