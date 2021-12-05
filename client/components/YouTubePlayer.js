@@ -22,10 +22,16 @@ export default function YouTubePlayer({ id }) {
             display: block;
             position: absolute;
             top: 0;
-            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADGCAYAAAAT+OqFAAAAdklEQVQoz42QQQ7AIAgEF/T/D+kbq/RWAlnQyyazA4aoAB4FsBSA/bFjuF1EOL7VbrIrBuusmrt4ZZORfb6ehbWdnRHEIiITaEUKa5EJqUakRSaEYBJSCY2dEstQY7AuxahwXFrvZmWl2rh4JZ07z9dLtesfNj5q0FU3A5ObbwAAAABJRU5ErkJggg==);
+            background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0.6839110644257703) 0%,
+              rgba(255, 255, 255, 0) 20%,
+              rgba(255, 255, 255, 0) 80%,
+              rgba(0, 0, 0, 0.6951155462184874) 100%
+            );
             background-position: top;
             background-repeat: repeat-x;
-            height: 60px;
+            height: 100%;
             padding-bottom: 50px;
             width: 100%;
             transition: all 0.2s cubic-bezier(0, 0, 0.2, 1);

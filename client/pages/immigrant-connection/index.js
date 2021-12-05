@@ -34,10 +34,6 @@ export default function ImmigrantConnection() {
     <Layout>
       <Head>
         <title>Immigrant Connection | Columbia View</title>
-        <meta
-          name="description"
-          content="Columbia View Wesleyan Church is a Christ-centered church where the Word of God is shared and people are loved. Advancing the great commission in the spirit of the great commandment."
-        />
       </Head>
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Grid
