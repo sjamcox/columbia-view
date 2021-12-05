@@ -79,22 +79,27 @@ export default function VisitUs() {
         <Grid container spacing={2}>
           <Grid item xs={7} md={8}>
             <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
-              <Image src={worship} layout="fill" objectFit="cover" />
+              <Image src={worship} layout="fill" objectFit="cover" priority />
             </Box>
           </Grid>
           <Grid item xs={5} md={4}>
             <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
-              <Image src={testimony} layout="fill" objectFit="cover" />
+              <Image src={testimony} layout="fill" objectFit="cover" priority />
             </Box>
           </Grid>
           <Grid item xs={5} md={4}>
             <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
-              <Image src={kidsSermon} layout="fill" objectFit="cover" />
+              <Image
+                src={kidsSermon}
+                layout="fill"
+                objectFit="cover"
+                priority
+              />
             </Box>
           </Grid>
           <Grid item xs={7} md={8}>
             <Box height={{ xs: '25vh', md: '35vh' }} position="relative">
-              <Image src={communion} layout="fill" objectFit="cover" />
+              <Image src={communion} layout="fill" objectFit="cover" priority />
             </Box>
           </Grid>
         </Grid>

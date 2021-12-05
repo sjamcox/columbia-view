@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Box, Container } from '@mui/material'
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/lazy'
 
 export default function VideoSection({ image, videoUrl }) {
   return (
