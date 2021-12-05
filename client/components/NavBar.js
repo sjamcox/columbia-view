@@ -52,10 +52,22 @@ export const NavBar = ({ menu, setOpen }) => {
           <Link href="/" passHref>
             <Box component="a" display="flex" flexDirection="row" mb={-1}>
               <Box>
-                <Image src={logoMark} width="41px" height="36px" priority />
+                <Image
+                  src={logoMark}
+                  alt="Wesleyan dove logo"
+                  width="41px"
+                  height="36px"
+                  priority
+                />
               </Box>
               <Box sx={{ marginLeft: '18px' }}>
-                <Image src={logoText} width="159px" height="42px" priority />
+                <Image
+                  src={logoText}
+                  alt="Columbia View logo"
+                  width="159px"
+                  height="42px"
+                  priority
+                />
               </Box>
             </Box>
           </Link>

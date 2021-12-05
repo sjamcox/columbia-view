@@ -41,7 +41,12 @@ export default function Messages({ feed }) {
               <Card sx={{ p: { xs: 3, md: 4 } }} key={item.title} elevation={4}>
                 <Stack sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
                   <Box pr={{ xs: 3, sm: 6 }} pb={2}>
-                    <img src={item.itunes.image} width={128} height={128} />
+                    <img
+                      src={item.itunes.image}
+                      alt="Episode art"
+                      width={128}
+                      height={128}
+                    />
                   </Box>
                   <Stack>
                     <Typography component="h3" variant="h4" paragraph>

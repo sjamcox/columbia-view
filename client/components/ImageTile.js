@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Box, Card, Typography } from '@mui/material'
 
-export default function ImageTile({ image, headline, link }) {
+export default function ImageTile({ image, alt, headline, link }) {
   return (
     <Link href={link}>
       <a>
@@ -15,7 +15,7 @@ export default function ImageTile({ image, headline, link }) {
             },
           }}
         >
-          <Image src={image} layout="fill" objectFit="cover" />
+          <Image src={image} alt={alt} layout="fill" objectFit="cover" />
           <Box
             sx={{
               position: 'absolute',

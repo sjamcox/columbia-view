@@ -3,7 +3,7 @@ import Head from 'next/head'
 import { CssBaseline } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
 import { theme } from '../theme'
-import { CacheProvider } from '@emotion/react';
+import { CacheProvider } from '@emotion/react'
 import createEmotionCache from '../utils/createEmotionCache'
 import '@fontsource/open-sans/300.css'
 import '@fontsource/open-sans/400.css'
@@ -14,12 +14,28 @@ import '@fontsource/open-sans/800-italic.css'
 
 const clientSideEmotionCache = createEmotionCache()
 
-const MyApp = ({ Component, emotionCache = clientSideEmotionCache, pageProps }) => {
+const MyApp = ({
+  Component,
+  emotionCache = clientSideEmotionCache,
+  pageProps,
+}) => {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
         <title>Columbia View</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon/favicon.ico"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicon/apple-touch-icon.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
@@ -35,4 +51,4 @@ MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   emotionCache: PropTypes.object,
   pageProps: PropTypes.object.isRequired,
-};
+}

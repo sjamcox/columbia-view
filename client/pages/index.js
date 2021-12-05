@@ -31,6 +31,7 @@ const Index = () => (
     <VideoSection
       videoUrl="https://www.youtube.com/watch?v=fAGhUIL-LQE"
       image={kids}
+      alt="kids in sunday school"
     />
     <Box component="section">
       <Container
@@ -113,7 +114,13 @@ const Index = () => (
                   },
                 }}
               >
-                <Image src={sermon} layout="fill" objectFit="cover" priority />
+                <Image
+                  src={sermon}
+                  alt="Pastor David teaching from the stage"
+                  layout="fill"
+                  objectFit="cover"
+                  priority
+                />
               </Box>
             </Box>
           </Grid>
@@ -145,6 +152,7 @@ const Index = () => (
               <ImageTile
                 link="/ministries#sunday-worship"
                 image={worship}
+                alt="Worship band playing"
                 headline="Sunday Worship"
               />
             </Grid>
@@ -152,6 +160,7 @@ const Index = () => (
               <ImageTile
                 link="/ministries#columbia-kids"
                 image={kids}
+                alt="kids in sunday school"
                 headline="Columbia Kids"
               />
             </Grid>
@@ -159,6 +168,7 @@ const Index = () => (
               <ImageTile
                 link="/ministries#life-groups"
                 image={lifeGroup}
+                alt="Two women smiling at life group"
                 headline="Life Groups"
               />
             </Grid>
@@ -166,6 +176,7 @@ const Index = () => (
               <ImageTile
                 link="/immigrant-connection"
                 image={immigrantMan}
+                alt="immigrant man with large hat"
                 headline="Immigrant Connection"
               />
             </Grid>
@@ -205,7 +216,12 @@ const Index = () => (
                   },
                 }}
               >
-                <Image src={immigrantFamily} layout="fill" objectFit="cover" />
+                <Image
+                  src={immigrantFamily}
+                  alt="Immigrant mother and daughter smiling"
+                  layout="fill"
+                  objectFit="cover"
+                />
               </Box>
             </Grid>
           </Grid>

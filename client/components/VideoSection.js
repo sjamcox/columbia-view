@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Box, Container } from '@mui/material'
 import ReactPlayer from 'react-player/lazy'
 
-export default function VideoSection({ image, videoUrl }) {
+export default function VideoSection({ image, alt, videoUrl }) {
   return (
     <Box
       component="section"
@@ -11,7 +11,7 @@ export default function VideoSection({ image, videoUrl }) {
         '& span > img': { zIndex: -100, opacity: '10%', position: 'absolute' },
       }}
     >
-      <Image src={image} layout="fill" objectFit="cover" />
+      <Image src={image} alt={alt} layout="fill" objectFit="cover" />
       <Container
         sx={{
           position: 'relative',

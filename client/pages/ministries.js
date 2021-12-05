@@ -201,7 +201,11 @@ export default function Ministries() {
           </Typography>
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>
-              <Image src={blakeFamily} layout="responsive" />
+              <Image
+                src={blakeFamily}
+                alt="Blake family photo"
+                layout="responsive"
+              />
               <Typography component="h3" variant="h4" mt={2}>
                 Blake Family
               </Typography>
@@ -225,7 +229,11 @@ export default function Ministries() {
               </Link>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Image src={cheneyFamily} layout="responsive" />
+              <Image
+                src={cheneyFamily}
+                alt="Cheney family photo"
+                layout="responsive"
+              />
               <Typography component="h3" variant="h4" mt={2}>
                 Cheney Family
               </Typography>
@@ -251,7 +259,11 @@ export default function Ministries() {
               </Link>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Image src={dunbarFamily} layout="responsive" />
+              <Image
+                src={dunbarFamily}
+                alt="Dunbar family photo"
+                layout="responsive"
+              />
               <Typography component="h3" variant="h4" mt={2}>
                 Mark and Serena Dunbar
               </Typography>
@@ -277,7 +289,11 @@ export default function Ministries() {
               </Link>
             </Grid>
             <Grid item xs={12} md={6}>
-              <Image src={jonesFamily} layout="responsive" />
+              <Image
+                src={jonesFamily}
+                alt="Jones family photo"
+                layout="responsive"
+              />
               <Typography component="h3" variant="h4" mt={2}>
                 Jones Family
               </Typography>

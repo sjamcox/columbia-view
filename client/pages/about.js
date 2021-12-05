@@ -4,7 +4,6 @@ import { Box, Container, Grid, Typography, Link } from '@mui/material'
 import { Layout } from '../components/Layout'
 import david from '../public/staff/david.webp'
 import tita from '../public/staff/tita.webp'
-import barbara from '../public/staff/barbara.webp'
 
 export default function About() {
   return (
@@ -125,11 +124,16 @@ export default function About() {
                 alignItems: 'center',
               }}
             >
-              <Image src={david} width="128px" height="128px" />
+              <Image
+                src={david}
+                alt="Senior Pastor David Rannabargar"
+                width="128px"
+                height="128px"
+              />
               <Typography mt={3} color="primary">
                 <strong>David Rannabargar</strong>
               </Typography>
-              <Typography fontSize={15}>Lead Pastor</Typography>
+              <Typography fontSize={15}>Senior Pastor</Typography>
               <Link
                 href="mailto:david.cvwc@gmail.com"
                 fontSize={15}
@@ -150,7 +154,12 @@ export default function About() {
                 alignItems: 'center',
               }}
             >
-              <Image src={tita} width="128px" height="128px" />
+              <Image
+                src={tita}
+                alt="Serena Rannabargar"
+                width="128px"
+                height="128px"
+              />
               <Typography mt={3} color="primary">
                 <strong>Serena Rannabargar</strong>
               </Typography>
