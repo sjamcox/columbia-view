@@ -28,11 +28,7 @@ const Index = () => (
       buttonText="Visit us this Sunday"
       href="/visit-us"
     />
-    <VideoSection
-      videoUrl="https://www.youtube.com/watch?v=fAGhUIL-LQE"
-      image={kids}
-      alt="kids in sunday school"
-    />
+    <VideoSection id="fAGhUIL-LQE" image={kids} alt="kids in sunday school" />
     <Box component="section">
       <Container
         sx={{

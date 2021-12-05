@@ -355,8 +355,9 @@ export default function ImmigrantConnection() {
         </Box>
       </Container>
       <VideoSection
-        videoUrl="https://www.youtube.com/watch?v=zBDYoLfPkwc"
+        id="zBDYoLfPkwc"
         image={immigrantFamily}
+        alt="Immigrant mother and daughter"
       />
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Typography variant="h4" paragraph textAlign="center" mt={6}>

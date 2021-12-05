@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { Box, Container } from '@mui/material'
-import ReactPlayer from 'react-player/lazy'
+import YouTubePlayer from './YouTubePlayer'
 
-export default function VideoSection({ image, alt, videoUrl }) {
+export default function VideoSection({ id, image, alt }) {
   return (
     <Box
       component="section"
@@ -24,17 +24,10 @@ export default function VideoSection({ image, alt, videoUrl }) {
         <Box
           sx={{
             width: '100%',
-            pt: '56.25%',
             position: 'relative',
           }}
         >
-          <ReactPlayer
-            url={videoUrl}
-            width="100%"
-            height="100%"
-            controls
-            style={{ position: 'absolute', top: 0, left: 0 }}
-          />
+          <YouTubePlayer id={id} />
         </Box>
       </Container>
     </Box>
