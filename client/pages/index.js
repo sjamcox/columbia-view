@@ -32,7 +32,6 @@ const Index = () => (
       buttonText="Visit us this Sunday"
       href="/visit-us"
     />
-    <VideoSection id="fAGhUIL-LQE" image={kids} alt="kids in sunday school" />
     <Box component="section">
       <Container
         sx={{
@@ -58,15 +57,13 @@ const Index = () => (
               Join us Sunday morning online or in person
             </Typography>
             <Typography variant="body1" paragraph>
-              Pellentesque et porta est. Quisque varius elementum nisl id
-              accumsan. Suspendisse volutpat varius mauris, et posuere dolor
-              dignissim sit amet. Donec congue congue purus eget pharetra. Sed
-              tincidunt nunc pretium elit auctor molestie. Vestibulum ut
-              volutpat arcu. Morbi lobortis eleifend nisi ac eleifend. Nam
-              feugiat risus vel lorem vestibulum accumsan. Quisque eu elit eu
-              mauris facilisis ultricies. Aliquam a est ut nisl dapibus
-              dignissim quis aliquam elit. Nulla aliquet urna non lorem feugiat,
-              in vulputate massa hendrerit.
+              If you’re new to the area, new to church, or just looking for a
+              new start, our Sunday morning worship services offer you the
+              opportunity to build your faith in God and connect with new
+              people. Our goal is to be an authentic community of believers who
+              are learning to love Jesus and love others more and more each day.
+              Regardless of your story, your doubts, or your struggles; you are
+              welcome at Columbia View! So come as you are.
             </Typography>
             <Link href="/visit-us" passHref>
               <Button
@@ -127,6 +124,7 @@ const Index = () => (
         </Grid>
       </Container>
     </Box>
+    <VideoSection id="fAGhUIL-LQE" image={kids} alt="kids in sunday school" />
     <Box
       component="section"
       sx={{
