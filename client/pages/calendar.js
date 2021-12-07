@@ -1,10 +1,14 @@
 import React from 'react'
 import axios from 'axios'
 import { format, parseISO } from 'date-fns'
+import Head from 'next/head'
 
 export default function Calendar({ feed }) {
   return (
     <div>
+      <Head>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       {feed.map(({ attributes: event }) => {
         return (
           <>
