@@ -172,7 +172,7 @@ const Index = () => (
             </Grid>
             <Grid item xs={12} sm={6} lg={3}>
               <ImageTile
-                link="/immigrant-connection"
+                link="/immigrant-connection-pdx"
                 image={immigrantMan}
                 alt="immigrant man with large hat"
                 headline="Immigrant Connection"
@@ -243,7 +243,7 @@ const Index = () => (
                   Providing church-based, low-cost immigration legal services in
                   underserved communities of the Portland Metro area and beyond.
                 </Typography>
-                <Link href="/immigrant-connection" passHref>
+                <Link href="/immigrant-connection-pdx" passHref>
                   <Button
                     variant="contained"
                     component="a"

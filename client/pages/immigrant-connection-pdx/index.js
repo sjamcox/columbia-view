@@ -73,7 +73,7 @@ export default function ImmigrantConnection() {
               provide affordable legal services for immigrants in our community.
               Services begin at $40.
             </Typography>
-            <Link href="/immigrant-connection/booking">
+            <Link href="/immigrant-connection-pdx/booking">
               <Button
                 variant="contained"
                 size="large"

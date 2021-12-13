@@ -15,7 +15,7 @@ export default function Booking() {
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         {count === 2 && (
           <Box display="flex" justifyContent="center" mb={3}>
-            <Link href="/immigrant-connection">
+            <Link href="/immigrant-connection-pdx">
               <Button variant="text" sx={{ color: 'rgb(57, 171, 225)' }}>
                 ← Back to Immigrant Connection
               </Button>
