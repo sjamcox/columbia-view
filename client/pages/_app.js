@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import { DefaultSeo } from 'next-seo'
-import { CssBaseline } from '@mui/material'
+import { CssBaseline, Box, Container, Typography } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
+import ErrorIcon from '@mui/icons-material/Error'
 import { theme } from '../theme'
 import { CacheProvider } from '@emotion/react'
 import createEmotionCache from '../utils/createEmotionCache'
@@ -61,6 +62,17 @@ const MyApp = ({
       />
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <Box bgcolor="#b71c1c" p={3}>
+          <Container sx={{ display: 'flex' }}>
+            <ErrorIcon sx={{ color: 'white', mr: 2, p: 0 }} />
+            <Typography color="white">
+              <strong>
+                Due to winter weather, we will not be holding Sunday service on
+                Dec. 26th. Stay safe and warm!
+              </strong>
+            </Typography>
+          </Container>
+        </Box>
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>

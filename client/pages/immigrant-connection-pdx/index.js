@@ -26,7 +26,7 @@ import brook from '../../public/staff/brook.webp'
 import david from '../../public/staff/david.webp'
 import susan from '../../public/staff/susan.webp'
 import vanessa from '../../public/staff/vanessa.webp'
-import niki from '../../public/staff/niki.webp'
+import niki from '/public/staff/niki.webp'
 
 export default function ImmigrantConnection() {
   const [isOpen, setIsOpen] = useState(false)
