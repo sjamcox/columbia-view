@@ -62,7 +62,7 @@ const MyApp = ({
       />
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box bgcolor="#b71c1c" p={3}>
+        {/* <Box bgcolor="#b71c1c" p={3}>
           <Container sx={{ display: 'flex' }}>
             <ErrorIcon sx={{ color: 'white', mr: 2, p: 0 }} />
             <Typography color="white">
@@ -72,7 +72,7 @@ const MyApp = ({
               </strong>
             </Typography>
           </Container>
-        </Box>
+        </Box> */}
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
