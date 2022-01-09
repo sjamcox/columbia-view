@@ -13,6 +13,7 @@ import kids from '../public/sunday/kids-room-1.webp'
 import lifeGroup from '../public/sandra-dani.webp'
 import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
 import immigrantFamily from '../public/icpdx/immigrant-family.webp'
+import bible from '../public/bible-recap.webp'
 
 const Index = () => (
   <Layout>
@@ -180,6 +181,30 @@ const Index = () => (
             </Grid>
           </Grid>
         </Stack>
+      </Container>
+    </Box>
+    <Box component="section" sx={{ bgcolor: 'rgb(14, 73, 111)' }}>
+      <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
+        <Grid container spacing={6} alignItems="center">
+          <Grid item xs={12} sm={6}>
+            <Image src={bible} layout="responsive" />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography component="h2" variant="h3" paragraph color="white">
+              Dive deep into Scripture this year
+            </Typography>
+            <Typography component="p" variant="p" paragraph color="white">
+              Follow along as we journey through the Bible chronologically in
+              one year. You can join our reading plan online or using the
+              YouVersion Bible app.
+            </Typography>
+            <Link href="https://bible.com/p/48212307/30d6728bbce54816de0acaac51415c9a">
+              <Button variant="contained" color="secondary">
+                Get the Reading Plan
+              </Button>
+            </Link>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
     <Box component="section">
