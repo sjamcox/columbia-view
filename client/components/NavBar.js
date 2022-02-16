@@ -11,8 +11,7 @@ import {
 } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { Menu } from '@mui/icons-material'
-import logoMark from '../public/cvwc-logo-dove.png'
-import logoText from '../public/cvwc-logo-text-small.png'
+import logo from '../public/columbia-view-new-logo-horizontal.webp'
 
 export const NavBar = ({ menu, setOpen }) => {
   const theme = useTheme()
@@ -53,18 +52,9 @@ export const NavBar = ({ menu, setOpen }) => {
             <Box component="a" display="flex" flexDirection="row" mb={-1}>
               <Box>
                 <Image
-                  src={logoMark}
-                  alt="Wesleyan dove logo"
-                  width="41px"
-                  height="36px"
-                  priority
-                />
-              </Box>
-              <Box sx={{ marginLeft: '18px' }}>
-                <Image
-                  src={logoText}
+                  src={logo}
                   alt="Columbia View logo"
-                  width="159px"
+                  width="224px"
                   height="42px"
                   priority
                 />
