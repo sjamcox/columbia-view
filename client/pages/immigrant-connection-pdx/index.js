@@ -56,22 +56,51 @@ export default function ImmigrantConnection() {
           </Grid>
         </Grid>
         <Typography variant="h4" paragraph>
-          Our vision is to build bridges for a hope-filled future, and our
-          mission is to provide affordable immigration legal services to
-          immigrants in our community.
+          A Department of Justice recognized legal office that provides low-cost
+          immigration legal services.
         </Typography>
         <Grid container justifyContent="space-between" mt={4}>
           <Grid item xs={12} md={8}>
             <Typography paragraph>
-              <strong>
-                Our office is currently open and receiving new clients!
-              </strong>
+              <strong>We are currently receiving new clients!</strong>
             </Typography>
             <Typography paragraph>
-              Immigrant Connection PDX is a low-cost immigrant legal services
-              office. Our Department of Justice Accredited Representatives
-              provide affordable legal services for immigrants in our community.
-              Services begin at $40.
+              Immigrant Connection PDX is a church-based, low-cost, immigration
+              legal services office located in east Portland that provides legal
+              assistance to individuals who are seeking assistance with issues
+              relating to immigration, such as Family and Marriage Based
+              Petitions, Naturalization Petitions, Legal Permanent Resident and
+              Employment Authorization renewals, Adjustment of Status, Consular
+              Processing, DACA, TPS, Non-Immigrant Visas, and Religious Worker
+              Visas.
+            </Typography>
+            <Typography paragraph>
+              A $40 office visit/legal consultation fee is due at your first
+              appointment and must be paid prior to speaking with the
+              Immigration Legal Representative. This is in addition to any legal
+              or filing fees that will be required for your case.
+            </Typography>
+            <Typography paragraph>
+              If you need advice or assistance with any of these services, or
+              simply need help understanding what options you may have under the
+              law, you can schedule an initial consultation with one of our
+              Legal Representatives. During the consultation, we will carefully
+              review your case and make sure you understand the benefits and
+              risks associated with your situation, then offer you advice on how
+              to proceed.
+            </Typography>
+            <Typography paragraph>
+              <strong>
+                Please click the “schedule an appointment” button below or call
+                our legal office at <a href="tel:+19712022073">971.202.2073</a>{' '}
+                to schedule an appointment.
+              </strong>{' '}
+              An initial consultation costs $40.
+            </Typography>
+            <Typography paragraph>
+              We are a part of the Immigrant Connection National Network of
+              church-based, low-cost, immigration legal services offices. For
+              more info: <a href="https://www.icwelcome.org">icwelcome.org</a>.
             </Typography>
             <Link href="/immigrant-connection-pdx/booking">
               <Button
@@ -80,7 +109,7 @@ export default function ImmigrantConnection() {
                 color="secondary"
                 sx={{ color: 'white', mb: 4, mt: 2 }}
               >
-                Book a consultation
+                Schedule an appointment
               </Button>
             </Link>
           </Grid>
