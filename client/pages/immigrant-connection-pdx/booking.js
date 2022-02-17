@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Button, Container } from '@mui/material'
-import { Layout } from '../components/Layout'
+import { Layout } from '../../components/Layout'
 
 export default function Booking() {
   return (
@@ -10,6 +10,7 @@ export default function Booking() {
       </Head>
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Button
+          href="https://columbiaviewwesleyanchurch.as.me/"
           variant="contained"
           size="large"
           color="secondary"
@@ -17,7 +18,6 @@ export default function Booking() {
         >
           Try Me
         </Button>
-
         <iframe
           src="https://app.squarespacescheduling.com/schedule.php?owner=25385557"
           title="Schedule Appointment"
