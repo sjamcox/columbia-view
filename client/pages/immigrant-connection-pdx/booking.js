@@ -9,15 +9,6 @@ export default function Booking() {
         <title>Book a Consultation | Immigrant Connection PDX</title>
       </Head>
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
-        <Button
-          href="https://columbiaviewwesleyanchurch.as.me/"
-          variant="contained"
-          size="large"
-          color="secondary"
-          sx={{ color: 'white' }}
-        >
-          Try Me
-        </Button>
         <iframe
           src="https://app.squarespacescheduling.com/schedule.php?owner=25385557"
           title="Schedule Appointment"
