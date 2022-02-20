@@ -14,6 +14,7 @@ import lifeGroup from '../public/sandra-dani.webp'
 import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
 import immigrantFamily from '../public/icpdx/immigrant-family.webp'
 import bible from '../public/bible-recap.webp'
+import YouTubePlayer from '../components/YouTubePlayer'
 
 const Index = () => (
   <Layout>
@@ -126,6 +127,30 @@ const Index = () => (
       </Container>
     </Box>
     <VideoSection id="fAGhUIL-LQE" image={kids} alt="kids in sunday school" />
+    <Box component="section" sx={{ bgcolor: 'rgb(14, 73, 111)' }}>
+      <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
+        <Grid container spacing={6} alignItems="center">
+          <Grid item xs={12} sm={6}>
+            <YouTubePlayer id="kK72Z2rXH6I" />
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Typography component="h2" variant="h3" paragraph color="white">
+              Membership Class
+            </Typography>
+            <Typography component="p" variant="p" paragraph color="white">
+              Interested in becoming a member at Columbia View? Let us know by
+              filling out the membership application. We'll be having a
+              membership class in the coming months.
+            </Typography>
+            <Link href="https://columbiaview.churchcenter.com/people/forms/50302">
+              <Button variant="contained" color="secondary">
+                Fill out the application
+              </Button>
+            </Link>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
     <Box
       component="section"
       sx={{
