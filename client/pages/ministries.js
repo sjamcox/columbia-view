@@ -276,8 +276,9 @@ export default function Ministries() {
                 the area of theological education, employment skills, and
                 discipleship.
               </Typography>
-              <Link href="https://www.wgm.org/missionary/dunbar">
+  
                 <Button
+href="https://www.wgm.org/missionary/dunbar"
                   variant="contained"
                   component="a"
                   size="large"
@@ -286,7 +287,7 @@ export default function Ministries() {
                 >
                   Learn more or donate
                 </Button>
-              </Link>
+              
             </Grid>
             <Grid item xs={12} md={6}>
               <Image
