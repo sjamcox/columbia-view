@@ -14,7 +14,7 @@ import lifeGroup from '../public/sandra-dani.webp'
 import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
 import immigrantFamily from '../public/icpdx/immigrant-family.webp'
 import bible from '../public/bible-recap.webp'
-import YouTubePlayer from '../components/YouTubePlayer'
+import rightnow from '../public/right-now-media.webp'
 
 const Index = () => (
   <Layout>
@@ -131,20 +131,21 @@ const Index = () => (
       <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
         <Grid container spacing={6} alignItems="center">
           <Grid item xs={12} sm={6}>
-            <YouTubePlayer id="kK72Z2rXH6I" />
+            <Image src={rightnow} />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography component="h2" variant="h3" paragraph color="white">
-              Membership Class
+              RightNow Media
             </Typography>
             <Typography component="p" variant="p" paragraph color="white">
-              Interested in becoming a member at Columbia View? Let us know by
-              filling out the membership application. We'll be having a
-              membership class in the coming months.
+              RightNow Media is the world’s largest streaming library of video
+              Bible study resources and is now available to all Columbia View
+              members. RightNow Media is a tool that you can use to help you
+              live out your faith in every area of your life.
             </Typography>
-            <Link href="https://columbiaview.churchcenter.com/people/forms/50302">
+            <Link href="https://app.rightnowmedia.org/join/columbiaviewchurch">
               <Button variant="contained" color="secondary">
-                Fill out the application
+                Get Access Today
               </Button>
             </Link>
           </Grid>
