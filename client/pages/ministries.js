@@ -217,16 +217,16 @@ export default function Ministries() {
                 They are currently focused on developing relationships,
                 discipleship and church leadership.
               </Typography>
-              <Link href="https://www.globalpartnersonline.org/missionary/wm04-0264/">
-                <Button
-                  variant="contained"
-                  size="large"
-                  color="secondary"
-                  sx={{ color: 'white' }}
-                >
-                  Learn more or donate
-                </Button>
-              </Link>
+
+              <Button
+                variant="contained"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white' }}
+                href="https://www.globalpartnersonline.org/missionary/wm04-0264/"
+              >
+                Learn more or donate
+              </Button>
             </Grid>
             <Grid item xs={12} md={6}>
               <Image
@@ -246,17 +246,15 @@ export default function Ministries() {
                 is in developing and strengthening churches and communities
                 through theological education and health initiatives.
               </Typography>
-              <Link href="https://www.globalpartnersonline.org/missionary/wm04-0368/">
-                <Button
-                  variant="contained"
-                  component="a"
-                  size="large"
-                  color="secondary"
-                  sx={{ color: 'white' }}
-                >
-                  Learn more or donate
-                </Button>
-              </Link>
+              <Button
+                variant="contained"
+                href="https://www.globalpartnersonline.org/missionary/wm04-0368/"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white' }}
+              >
+                Learn more or donate
+              </Button>
             </Grid>
             <Grid item xs={12} md={6}>
               <Image
@@ -276,18 +274,15 @@ export default function Ministries() {
                 the area of theological education, employment skills, and
                 discipleship.
               </Typography>
-  
-                <Button
-href="https://www.wgm.org/missionary/dunbar"
-                  variant="contained"
-                  component="a"
-                  size="large"
-                  color="secondary"
-                  sx={{ color: 'white' }}
-                >
-                  Learn more or donate
-                </Button>
-              
+              <Button
+                href="https://www.wgm.org/missionary/dunbar"
+                variant="contained"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white' }}
+              >
+                Learn more or donate
+              </Button>
             </Grid>
             <Grid item xs={12} md={6}>
               <Image
@@ -307,17 +302,15 @@ href="https://www.wgm.org/missionary/dunbar"
                 asked to support and oversee translations for the continents of
                 Africa and Asia.
               </Typography>
-              <Link href="https://www.wycliffe.org/partner/E7666D">
-                <Button
-                  variant="contained"
-                  component="a"
-                  size="large"
-                  color="secondary"
-                  sx={{ color: 'white' }}
-                >
-                  Learn more or donate
-                </Button>
-              </Link>
+              <Button
+                variant="contained"
+                href="https://www.wycliffe.org/partner/E7666D"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white' }}
+              >
+                Learn more or donate
+              </Button>
             </Grid>
           </Grid>
         </Box>

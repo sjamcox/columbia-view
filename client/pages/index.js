@@ -144,7 +144,10 @@ const Index = () => (
               volleyball, corn hole, kids dance party and more. Join us for
               Worship on Sunday at 10am.
             </Typography>
-            <Link href="https://columbiaview.churchcenter.com/registrations/events/1374801">
+            <Link
+              href="https://columbiaview.churchcenter.com/registrations/events/1374801"
+              passHref
+            >
               <Button variant="contained" color="secondary">
                 Sign Up Today
               </Button>
@@ -225,7 +228,10 @@ const Index = () => (
               one year. You can join our reading plan online or using the
               YouVersion Bible app.
             </Typography>
-            <Link href="https://bible.com/p/48212307/30d6728bbce54816de0acaac51415c9a">
+            <Link
+              href="https://bible.com/p/48212307/30d6728bbce54816de0acaac51415c9a"
+              passHref
+            >
               <Button variant="contained" color="secondary">
                 Get the Reading Plan
               </Button>

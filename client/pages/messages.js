@@ -76,6 +76,7 @@ export default function Messages({ feed }) {
             color="secondary"
             variant="h5"
             sx={{ textDecoration: 'none' }}
+            passHref
           >
             <Button variant="contained" color="secondary">
               View all past messages
