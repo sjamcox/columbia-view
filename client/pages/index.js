@@ -14,7 +14,7 @@ import lifeGroup from '../public/sandra-dani.webp'
 import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
 import immigrantFamily from '../public/icpdx/immigrant-family.webp'
 import bible from '../public/bible-recap.webp'
-import rightnow from '../public/church-campout.webp'
+import rightnow from '../public/right-now-media.webp'
 
 const Index = () => (
   <Layout>
@@ -135,21 +135,20 @@ const Index = () => (
           </Grid>
           <Grid item xs={12} sm={6}>
             <Typography component="h2" variant="h3" paragraph color="white">
-              Church Campout
+              RightNow Media
             </Typography>
             <Typography component="p" variant="p" paragraph color="white">
-              Join us August 26–28 for fun and festivities on the back lawn of
-              the church! Pitch a tent and enjoy tables games, music, snacks,
-              yard games etc. Saturday we'll have a bounce house, kiddy pool,
-              volleyball, corn hole, kids dance party and more. Join us for
-              Worship on Sunday at 10am.
+              RightNow Media is the world’s largest streaming library of video
+              Bible study resources and is now available to all Columbia View
+              members. RightNow Media is a tool that you can use to help you
+              live out your faith in every area of your life.
             </Typography>
             <Link
-              href="https://columbiaview.churchcenter.com/registrations/events/1374801"
+              href="https://app.rightnowmedia.org/join/columbiaviewchurch"
               passHref
             >
               <Button variant="contained" color="secondary">
-                Sign Up Today
+                Get Access Today
               </Button>
             </Link>
           </Grid>

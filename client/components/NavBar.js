@@ -15,7 +15,7 @@ import logo from '../public/columbia-view-new-logo-horizontal.webp'
 
 export const NavBar = ({ menu, setOpen }) => {
   const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.up('md'))
+  const matches = useMediaQuery(theme.breakpoints.up('lg'))
 
   const linkList = menu.map((link) => {
     return (
