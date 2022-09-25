@@ -76,6 +76,47 @@ export default function Ministries() {
             </Grid>
           </Grid>
         </Box>
+        <Box id="womens-retreat" my={4} sx={{ scrollMarginTop: '100px' }}>
+          <Typography component="h2" variant="h3" color="primary" paragraph>
+            Women's Retreat
+          </Typography>
+          <Grid container justifyContent="space-between">
+            <Grid item xs={12} md={8}>
+              <Typography paragraph>
+                Women's Retreat 2022 is designed to provide a comfortable
+                environment for ladies to slow down, rest, and rejuvenate. There
+                will be a basic flow of activities, balancing time together and
+                individually, times of reflection and times for fun, etc. We are
+                pumped to welcome Jessica Schmerse as our guest speaker! Jess is
+                so excited to be with us and lead us through some sessions on
+                finding rest in the chaotic and busy world we all live in.
+              </Typography>
+              <Typography paragraph>
+                <strong>Cost:</strong> $130 per person
+              </Typography>
+              <Button
+                variant="contained"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white', mb: 3 }}
+                href="https://columbiaview.churchcenter.com/registrations/events/1450232"
+              >
+                Register for Women's Retreat
+              </Button>
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <Typography fontSize={15}>
+                <strong>Dates & Location</strong>
+              </Typography>
+              <Typography fontSize={15}>November 4–6, 2022</Typography>
+              <Typography fontSize={15}>Twin Rock Friends Camp @</Typography>
+              <Typography fontSize={15}>
+                The Harbor Villa Retreat Center
+              </Typography>
+              <Typography fontSize={15}>Rockaway Beach, OR</Typography>
+            </Grid>
+          </Grid>
+        </Box>
         <Box id="columbia-kids" my={4} sx={{ scrollMarginTop: '100px' }}>
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Children's Ministry
