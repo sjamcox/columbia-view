@@ -1,46 +1,95 @@
 import React from 'react'
 import axios from 'axios'
 import { format, parseISO } from 'date-fns'
+import {
+  Box,
+  Button,
+  Card,
+  Container,
+  Link,
+  Stack,
+  Typography,
+} from '@mui/material'
 import Head from 'next/head'
+import { Layout } from '../components/Layout'
+import { dehydrate, QueryClient, useQueryClient } from '@tanstack/react-query'
 
-export default function Calendar({ feed }) {
-  return (
-    <div>
-      <Head>
-        <meta name="robots" content="noindex,nofollow" />
-      </Head>
-      {feed.map(({ attributes: event }) => {
-        return (
-          <>
-            <p>{event.event_name}</p>
-            <p>{format(parseISO(event.starts_at), 'EEEE, MMMM d')}</p>
-            <p>{format(parseISO(event.starts_at), 'h aaa')}</p>
-            <p>{event.event_summary}</p>
-            <br />
-          </>
-        )
-      })}
-    </div>
-  )
-}
+import getCalendar from '../queries/getCalendar'
 
 export async function getServerSideProps() {
+  const queryClient = new QueryClient()
   const date = new Date()
   const startDate = date.toISOString()
-  date.setMonth(date.getMonth() + 1)
+  date.setMonth(date.getMonth() + 3)
   const endDate = date.toISOString()
-  const url = `https://api.planningcenteronline.com/calendar/v2/calendar_instances?where[tag_ids]=24038&where[during][start]=${startDate}&where[during][end]=${endDate}&fields[CalendarInstance]=all_day_event,created_at,ends_at,event,event_feed_name,event_feed_type,event_name,event_summary,event_visible_in_church_center,feed,location,recurrence_description,registration_url,starts_at,status,tags,visible_ends_at,visible_starts_at&filter=public_times&order=starts_at,ends_at&per_page=100`
-  const appId = process.env.PLANNING_CENTER_APP_ID
-  const secret = process.env.PLANNING_CENTER_SECRET
-  const token = Buffer.from(`${appId}:${secret}`, 'utf8').toString('base64')
-  const { data } = await axios.get(url, {
-    headers: {
-      Authorization: `Basic ${token}`,
-    },
-  })
+  await queryClient.prefetchQuery(['calendar', startDate, endDate], () =>
+    getCalendar(startDate, endDate)
+  )
   return {
     props: {
-      feed: data.data,
+      startDate,
+      endDate,
+      dehydratedState: dehydrate(queryClient),
     },
   }
+}
+
+export default function Calendar({ startDate, endDate }) {
+  const queryClient = useQueryClient()
+  const { data: calendar } = queryClient.getQueryData([
+    'calendar',
+    startDate,
+    endDate,
+  ])
+  return (
+    <Layout>
+      <Head>
+        <title>Calendar | Columbia View</title>
+      </Head>
+      <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
+        <Typography component="h1" variant="h1" sx={{ my: 5 }}>
+          Calendar
+        </Typography>
+        <Stack spacing={4}>
+          {calendar &&
+            calendar.map(({ attributes: event }, i) => {
+              console.log(event)
+              return (
+                <Card
+                  sx={{ p: { xs: 3, md: 4 } }}
+                  key={event.event_name + i}
+                  elevation={4}
+                >
+                  <Stack sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
+                    <Box pr={{ xs: 3, sm: 6 }} pb={2}>
+                      {/* <img
+                    src={item.itunes.image}
+                    alt="Episode art"
+                    width={128}
+                    height={128}
+                  /> */}
+                    </Box>
+                    <Stack>
+                      <Typography component="h3" variant="h4" paragraph>
+                        {event.event_name}
+                      </Typography>
+                      <Typography sx={{ pb: 3 }}>{`${format(
+                        parseISO(event.visible_starts_at),
+                        'EEEE, MMMM d'
+                      )} @ ${format(
+                        parseISO(event.visible_starts_at),
+                        'h aaa'
+                      )}`}</Typography>
+                      <Typography sx={{ pb: 3 }}>
+                        {event.event_summary}
+                      </Typography>
+                    </Stack>
+                  </Stack>
+                </Card>
+              )
+            })}
+        </Stack>
+      </Container>
+    </Layout>
+  )
 }
