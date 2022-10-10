@@ -98,4 +98,20 @@ theme.typography = {
       fontSize: '1.4rem',
     },
   },
+  c1: {
+    fontFamily: 'Open Sans Condensed',
+    fontSize: '1.7rem',
+    fontWeight: 700,
+    [theme.breakpoints.up('md')]: {
+      fontSize: '2.3rem',
+    },
+    [theme.breakpoints.up('lg')]: {
+      fontSize: '2.8rem',
+    },
+    lineHeight: 1.3,
+  },
+  c2: {
+    fontFamily: 'Open Sans Condensed',
+    fontWeight: 300,
+  },
 }
