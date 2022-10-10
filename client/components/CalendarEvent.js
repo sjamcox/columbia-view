@@ -39,6 +39,7 @@ export default function CalendarEvent({ event }) {
                 variant="contained"
                 color="secondary"
                 href={event.registration_url}
+                target="_blank"
                 sx={{
                   color: 'white',
                   alignSelf: 'self-start',
