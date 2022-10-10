@@ -1,6 +1,14 @@
 import React from 'react'
 import { format, parseISO } from 'date-fns'
-import { Box, Card, Divider, Grid, Stack, Typography } from '@mui/material'
+import {
+  Box,
+  Button,
+  Card,
+  Divider,
+  Grid,
+  Stack,
+  Typography,
+} from '@mui/material'
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled'
 import HomeIcon from '@mui/icons-material/Home'
 
@@ -11,22 +19,40 @@ export default function CalendarEvent({ event, order }) {
   const startDay = format(startDate, 'd')
   const startTime = format(startDate, 'ha')
   const endDate = parseISO(event.visible_ends_at)
+  const endDay = format(endDate, 'd')
   const endTime = format(endDate, 'ha')
+  const displayDay = startDay === endDay ? startDay : `${startDay}-${endDay}`
   return (
     <Card
       sx={{ p: { xs: 2, sm: 4 } }}
       key={event.event_name + order}
       elevation={4}
     >
-      <Grid container spacing={4} sx={{ minHeight: 240 }}>
+      <Grid container spacing={4}>
         <Grid item xs={12} sm={7} md={8}>
-          <Stack>
-            <Typography component="h2" variant="c1" color="primary" paragraph>
-              {event.event_name}
-            </Typography>
-            <Typography sx={{ fontSize: { xs: 16 } }}>
-              {event.event_summary}
-            </Typography>
+          <Stack sx={{ minHeight: 240, justifyContent: 'space-between' }}>
+            <Box>
+              <Typography component="h2" variant="c1" color="primary" paragraph>
+                {event.event_name}
+              </Typography>
+              <Typography sx={{ fontSize: { xs: 16 } }}>
+                {event.event_summary}
+              </Typography>
+            </Box>
+            {event.registration_url && (
+              <Button
+                variant="contained"
+                color="secondary"
+                href={event.registration_url}
+                sx={{
+                  color: 'white',
+                  alignSelf: 'self-start',
+                  justifySelf: 'flex-end',
+                }}
+              >
+                More Information & Registration
+              </Button>
+            )}
           </Stack>
         </Grid>
         <Grid item xs={1} sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -56,16 +82,18 @@ export default function CalendarEvent({ event, order }) {
               color="primary"
               sx={{ fontSize: { xs: 72, sm: 90 }, mt: -2 }}
             >
-              {startDay}
+              {displayDay}
             </Typography>
           </Stack>
           <Stack>
-            <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
-              <AccessTimeFilledIcon fontSize="small" />
-              <Typography sx={{ fontSize: 14, fontWeight: 600 }}>
-                {startTime} – {endTime}
-              </Typography>
-            </Stack>
+            {!event.all_day_event && (
+              <Stack direction="row" spacing={1} sx={{ mb: 1 }}>
+                <AccessTimeFilledIcon fontSize="small" />
+                <Typography sx={{ fontSize: 14, fontWeight: 600 }}>
+                  {startTime} – {endTime}
+                </Typography>
+              </Stack>
+            )}
             <Stack direction="row" spacing={1}>
               <HomeIcon fontSize="small" />
               <Typography
