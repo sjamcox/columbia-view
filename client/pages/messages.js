@@ -25,6 +25,7 @@ export async function getStaticProps() {
 }
 
 export default function Messages({ feed }) {
+  console.log(feed)
   return (
     <Layout>
       <Head>
@@ -36,7 +37,7 @@ export default function Messages({ feed }) {
         </Typography>
         <Stack spacing={4} alignItems="center">
           {feed.items.slice(0, 5).map((item) => {
-            const episode = item.enclosure.url.split('/')[5]
+            const episode = item.enclosure.url.split('/')[7]
             return (
               <Card sx={{ p: { xs: 3, md: 4 } }} key={item.title} elevation={4}>
                 <Stack sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
