@@ -23,9 +23,9 @@ export default function CalendarEvent({ event }) {
   const displayDay = startDay === endDay ? startDay : `${startDay}-${endDay}`
   return (
     <Card sx={{ p: { xs: 2, sm: 4 } }} elevation={4}>
-      <Grid container spacing={4}>
+      <Grid container spacing={4} sx={{ minHeight: 270 }}>
         <Grid item xs={12} sm={7} md={8}>
-          <Stack sx={{ minHeight: 240, justifyContent: 'space-between' }}>
+          <Stack sx={{ height: '100%', justifyContent: 'space-between' }}>
             <Box>
               <Typography component="h2" variant="c1" color="primary" paragraph>
                 {event.event_name}
