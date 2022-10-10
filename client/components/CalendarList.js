@@ -6,7 +6,7 @@ export default function CalendarList({ calendar }) {
   return (
     <Stack spacing={4}>
       {calendar.map(({ attributes: event }, i) => {
-        return <CalendarEvent event={event} />
+        return <CalendarEvent key={event.event_name + i} event={event} />
       })}
     </Stack>
   )

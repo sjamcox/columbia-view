@@ -13,25 +13,28 @@ export async function getServerSideProps() {
   const startDate = date.toISOString()
   date.setMonth(date.getMonth() + 3)
   const endDate = date.toISOString()
-  await queryClient.prefetchQuery(['calendar', startDate, endDate], () =>
-    getCalendar(startDate, endDate)
-  )
+  const { data } = await getCalendar(startDate, endDate)
+  console.log(data)
+  // await queryClient.prefetchQuery(['calendar', startDate, endDate], () =>
+  //   getCalendar(startDate, endDate)
+  // )
   return {
     props: {
       startDate,
       endDate,
-      dehydratedState: dehydrate(queryClient),
+      calendar: data,
+      // dehydratedState: dehydrate(queryClient),
     },
   }
 }
 
-export default function Calendar({ startDate, endDate }) {
+export default function Calendar({ calendar, startDate, endDate }) {
   const queryClient = useQueryClient()
-  const { data: calendar } = queryClient.getQueryData([
-    'calendar',
-    startDate,
-    endDate,
-  ])
+  // const { data: calendar } = queryClient.getQueryData([
+  //   'calendar',
+  //   startDate,
+  //   endDate,
+  // ])
   return (
     <Layout>
       <Head>

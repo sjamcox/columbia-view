@@ -12,8 +12,7 @@ import {
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled'
 import HomeIcon from '@mui/icons-material/Home'
 
-export default function CalendarEvent({ event, order }) {
-  console.log(event)
+export default function CalendarEvent({ event }) {
   const startDate = parseISO(event.visible_starts_at)
   const startMonth = format(startDate, 'MMM')
   const startDay = format(startDate, 'd')
@@ -23,11 +22,7 @@ export default function CalendarEvent({ event, order }) {
   const endTime = format(endDate, 'ha')
   const displayDay = startDay === endDay ? startDay : `${startDay}-${endDay}`
   return (
-    <Card
-      sx={{ p: { xs: 2, sm: 4 } }}
-      key={event.event_name + order}
-      elevation={4}
-    >
+    <Card sx={{ p: { xs: 2, sm: 4 } }} elevation={4}>
       <Grid container spacing={4}>
         <Grid item xs={12} sm={7} md={8}>
           <Stack sx={{ minHeight: 240, justifyContent: 'space-between' }}>
