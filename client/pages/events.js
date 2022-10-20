@@ -1,5 +1,5 @@
 import React from 'react'
-import { LinearProgress, Container, Typography } from '@mui/material'
+import { Box, LinearProgress, Typography } from '@mui/material'
 import Head from 'next/head'
 import { Layout } from '../components/Layout'
 import { useQuery } from '@tanstack/react-query'
@@ -22,12 +22,12 @@ export default function Calendar() {
       <Head>
         <title>Events | Columbia View</title>
       </Head>
-      <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
+      <Box>
         <Typography component="h1" variant="h1" sx={{ my: 5 }}>
           Events
         </Typography>
         {calendar ? <CalendarList calendar={calendar} /> : <LinearProgress />}
-      </Container>
+      </Box>
     </Layout>
   )
 }

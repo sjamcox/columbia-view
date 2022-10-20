@@ -13,6 +13,10 @@ import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled'
 import HomeIcon from '@mui/icons-material/Home'
 
 export default function CalendarEvent({ event }) {
+  const eventName =
+    event.event_feed_type === 'groups'
+      ? event.event_name.split(': ')[1]
+      : event.event_name
   const startDate = parseISO(event.visible_starts_at)
   const startMonth = format(startDate, 'MMM')
   const startDay = format(startDate, 'd')
@@ -28,9 +32,9 @@ export default function CalendarEvent({ event }) {
           <Stack sx={{ height: '100%', justifyContent: 'space-between' }}>
             <Box>
               <Typography component="h2" variant="c1" color="primary" paragraph>
-                {event.event_name}
+                {eventName}
               </Typography>
-              <Typography sx={{ fontSize: { xs: 16 } }}>
+              <Typography sx={{ fontSize: { xs: 16 }, whiteSpace: 'pre-line' }}>
                 {event.event_summary}
               </Typography>
             </Box>
