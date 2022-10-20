@@ -16,10 +16,10 @@ export default function CalendarEvent({ event }) {
   const startDate = parseISO(event.visible_starts_at)
   const startMonth = format(startDate, 'MMM')
   const startDay = format(startDate, 'd')
-  const startTime = format(startDate, 'ha')
+  const startTime = format(startDate, 'p')
   const endDate = parseISO(event.visible_ends_at)
   const endDay = format(endDate, 'd')
-  const endTime = format(endDate, 'ha')
+  const endTime = format(endDate, 'p')
   const displayDay = startDay === endDay ? startDay : `${startDay}-${endDay}`
   return (
     <Card sx={{ p: { xs: 2, sm: 4 } }} elevation={4}>
@@ -41,6 +41,7 @@ export default function CalendarEvent({ event }) {
                 href={event.registration_url}
                 target="_blank"
                 sx={{
+                  mt: 2,
                   color: 'white',
                   alignSelf: 'self-start',
                   justifySelf: 'flex-end',

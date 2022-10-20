@@ -20,11 +20,11 @@ export default function Calendar() {
   return (
     <Layout>
       <Head>
-        <title>Calendar | Columbia View</title>
+        <title>Events | Columbia View</title>
       </Head>
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Typography component="h1" variant="h1" sx={{ my: 5 }}>
-          Calendar
+          Events
         </Typography>
         {calendar ? <CalendarList calendar={calendar} /> : <LinearProgress />}
       </Container>
