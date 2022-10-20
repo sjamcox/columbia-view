@@ -17,7 +17,7 @@ import bible from '../public/bible-recap.webp'
 import rightnow from '../public/right-now-media.webp'
 
 const Index = () => (
-  <Layout>
+  <Layout noContainer>
     <Head>
       <title>Welcome Home | Columbia View</title>
       <meta

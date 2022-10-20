@@ -1,20 +1,26 @@
 import { useState } from 'react'
+import { Container } from '@mui/material'
+
 import { NavBar } from './NavBar'
 import { NavDrawer } from './NavDrawer'
 import { menu } from './menuItems'
 import Footer from './Footer'
-import { Box } from '@mui/material'
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, noContainer }) => {
   const [open, setOpen] = useState(false)
 
   return (
     <div>
       <NavDrawer menu={menu} open={open} setOpen={setOpen} />
       <NavBar menu={menu} setOpen={setOpen} />
-      <Box component="main" minHeight="90vh">
-        {children}
-      </Box>
+      {noContainer ? (
+        children
+      ) : (
+        <Container maxWidth="md" sx={{ my: 5, px: 3, minHeight: '90vh' }}>
+          {children}
+        </Container>
+      )}
+
       <Footer />
     </div>
   )

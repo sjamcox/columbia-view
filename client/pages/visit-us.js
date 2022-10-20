@@ -24,7 +24,7 @@ export default function VisitUs() {
   }
 
   return (
-    <Layout>
+    <Layout noContainer>
       <Head>
         <title>Visit Us | Columbia View</title>
       </Head>

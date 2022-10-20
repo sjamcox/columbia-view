@@ -31,7 +31,7 @@ import niki from '/public/staff/niki.webp'
 export default function ImmigrantConnection() {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <Layout>
+    <Layout noContainer>
       <Head>
         <title>Immigrant Connection | Columbia View</title>
       </Head>
