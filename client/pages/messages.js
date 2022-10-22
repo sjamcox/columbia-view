@@ -1,14 +1,11 @@
 import Head from 'next/head'
 import { Layout } from '../components/Layout'
 import { Box, Button, Card, Link, Stack, Typography } from '@mui/material'
-import Parser from 'rss-parser'
 import ReactAudioPlayer from 'react-audio-player'
+import getMessages from '../queries/getMessages'
 
-export async function getStaticProps() {
-  const RSS_URL = `https://www.spreaker.com/show/3172208/episodes/feed`
-  const parser = new Parser()
-  const feed = await parser.parseURL(RSS_URL)
-
+export async function getServerSideProps() {
+  const feed = await getMessages()
   return {
     props: {
       feed,

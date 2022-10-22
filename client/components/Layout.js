@@ -3,8 +3,32 @@ import { Container } from '@mui/material'
 
 import { NavBar } from './NavBar'
 import { NavDrawer } from './NavDrawer'
-import { menu } from './menuItems'
 import Footer from './Footer'
+
+const menu = [
+  {
+    text: 'Get Involved',
+    subnav: [
+      {
+        text: 'Visit Us',
+        href: '/visit-us',
+      },
+      {
+        text: 'Service Opportunities',
+        href: 'https://columbiaview.churchcenter.com/people/forms/86247',
+      },
+      {
+        text: 'Event Calendar',
+        href: '/events',
+      },
+      { text: 'Give', href: 'https://columbiaview.churchcenter.com/giving' },
+    ],
+  },
+  { text: 'Ministries', href: '/ministries' },
+  { text: 'Messages', href: '/messages' },
+  { text: 'Immigrant Connection', href: '/immigrant-connection-pdx' },
+  { text: 'About Us', href: '/about' },
+]
 
 export const Layout = ({ children, noContainer }) => {
   const [open, setOpen] = useState(false)

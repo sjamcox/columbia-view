@@ -24,6 +24,7 @@ export default async function handler(req, res) {
         },
       }
     )
+    res.setHeader('Cache-Control', 's-maxage=3600')
     res.status(200).send(data.data)
   } catch (err) {
     res.status(500).send(err)
