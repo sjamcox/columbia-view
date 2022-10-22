@@ -31,8 +31,8 @@ const Index = () => (
       title="made"
       titleHighlight="new"
       subtitle="Consistently pursuing a personal knowledge of the heart of God"
-      buttonText="Visit us this Sunday"
-      href="/visit-us"
+      buttonText="Join us this Sunday"
+      href="/join-us"
     />
     <Box component="section">
       <Container
@@ -67,7 +67,7 @@ const Index = () => (
               Regardless of your story, your doubts, or your struggles; you are
               welcome at Columbia View! So come as you are.
             </Typography>
-            <Link href="/visit-us" passHref>
+            <Link href="/join-us" passHref>
               <Button
                 variant="contained"
                 component="a"
@@ -75,7 +75,7 @@ const Index = () => (
                 color="secondary"
                 sx={{ color: 'white', mt: 2 }}
               >
-                Visit us this Sunday
+                Join us this Sunday
               </Button>
             </Link>
           </Grid>

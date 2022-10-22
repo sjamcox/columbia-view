@@ -10,8 +10,8 @@ const menu = [
     text: 'Get Involved',
     subnav: [
       {
-        text: 'Visit Us',
-        href: '/visit-us',
+        text: 'Join Us',
+        href: '/join-us',
       },
       {
         text: 'Service Opportunities',
