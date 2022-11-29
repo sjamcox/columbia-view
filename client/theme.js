@@ -11,9 +11,11 @@ export const theme = createTheme({
     },
     text: {
       primary: 'rgb(51, 49, 50)',
+      body: 'rgb(100, 98, 99)',
     },
     background: {
       grey: 'rgb(231, 231, 231)',
+      light: 'rgb(240, 240, 240)',
     },
   },
   typography: {
