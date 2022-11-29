@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useQuery } from '@tanstack/react-query'
 import { Layout } from '../components/Layout'
 import {
   Box,
@@ -13,8 +12,17 @@ import {
 import ReactAudioPlayer from 'react-audio-player'
 import getMessages from '../queries/getMessages'
 
-export default function Messages({ feed }) {
-  const { data: messages } = useQuery(['messages'], getMessages)
+export async function getStaticProps() {
+  const messages = await getMessages()
+  return {
+    props: {
+      messages,
+    },
+    revalidate: 300,
+  }
+}
+
+export default function Messages({ messages }) {
   return (
     <Layout>
       <Head>
@@ -68,7 +76,7 @@ export default function Messages({ feed }) {
             sx={{ textDecoration: 'none' }}
             passHref
           >
-            <Button variant="contained" color="secondary">
+            <Button component="a" variant="contained" color="secondary">
               View all past messages
             </Button>
           </Link>

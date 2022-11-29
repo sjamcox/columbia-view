@@ -6,7 +6,7 @@ export const Hero = ({
   src,
   alt,
   title,
-  titleHighlight,
+  titleHighlight = '',
   subtitle,
   buttonText,
   href,
@@ -25,12 +25,14 @@ export const Hero = ({
         overflow: 'hidden',
       }}
     >
-      <Image src={src} alt={alt} layout="fill" objectFit="cover" priority />
+      <Box>
+        <Image src={src} alt={alt} layout="fill" objectFit="cover" priority />
+      </Box>
       <Box
         sx={{
           position: 'absolute',
           inset: 0,
-          backgroundColor: 'rgba(0,0,0, .7)',
+          backgroundColor: 'rgba(0,0,0, .3)',
         }}
       ></Box>
       <Container sx={{ position: 'relative', px: { xs: 3 } }}>
@@ -49,7 +51,6 @@ export const Hero = ({
             <Box component="span" sx={{ color: 'rgb(57, 171, 225)' }}>
               {titleHighlight + ' '}
             </Box>
-            in Christ
           </Typography>
           <Typography
             sx={{
