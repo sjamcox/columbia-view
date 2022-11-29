@@ -26,7 +26,23 @@ const menu = [
   },
   { text: 'Ministries', href: '/ministries' },
   { text: 'Messages', href: '/messages' },
-  { text: 'Immigrant Connection', href: '/immigrant-connection-pdx' },
+  {
+    text: 'Immigrant Connection',
+    subnav: [
+      {
+        text: 'What We Do',
+        href: '/immigrant-connection-pdx',
+      },
+      {
+        text: 'Client Portal',
+        href: '/immigrant-connection-pdx/clients',
+      },
+      {
+        text: 'Our Staff',
+        href: '/immigrant-connection-pdx/staff',
+      },
+    ],
+  },
   { text: 'About Us', href: '/about' },
 ]
 

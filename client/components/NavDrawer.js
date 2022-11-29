@@ -14,16 +14,27 @@ import {
 import { Close } from '@mui/icons-material'
 
 export const NavDrawer = ({ menu, open, setOpen }) => {
-  const [showSubnav, setShowSubnav] = useState(false)
-  const toggleIn = () => {
-    setShowSubnav(!showSubnav)
+  const generateDefaultNavState = (menu) => {
+    const defaultNavState = {}
+    menu.forEach((item) => {
+      if (item.subnav) {
+        defaultNavState[item.text] = false
+      }
+    })
+    return defaultNavState
   }
+  const [navState, setNavState] = useState(menu)
+
+  const toggleIn = (name) => {
+    setNavState((prevState) => ({ ...prevState, [name]: !navState[name] }))
+  }
+
   const linkList = menu.map((link) => {
     if (link.subnav) {
       return (
         <Grid item key={link.text}>
           <Button
-            onClick={toggleIn}
+            onClick={() => toggleIn(link.text)}
             sx={{ p: 0, '&:hover': { background: 'none' } }}
           >
             <Typography
@@ -36,7 +47,7 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
               {link.text}
             </Typography>
           </Button>
-          <Collapse in={showSubnav}>
+          <Collapse in={navState[link.text]}>
             {link.subnav.map((item) => (
               <Grid item key={item.text}>
                 <Link href={item.href} key={item.text} passHref>
