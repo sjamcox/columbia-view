@@ -30,12 +30,12 @@ const menu = [
     text: 'Immigrant Connection',
     subnav: [
       {
-        text: 'What We Do',
-        href: '/immigrant-connection-pdx',
-      },
-      {
         text: 'Client Portal',
         href: '/immigrant-connection-pdx/clients',
+      },
+      {
+        text: 'Partner With Us',
+        href: '/immigrant-connection-pdx',
       },
       {
         text: 'Our Staff',
