@@ -42,10 +42,10 @@ export default function Staff() {
   return (
     <Layout>
       <Head>
-        <title>Our Staff | Columbia View</title>
+        <title>Immigrant Connection Staff | Columbia View</title>
       </Head>
       <Typography component="h1" variant="h1" sx={{ my: 5 }}>
-        Our Staff
+        Immigrant Connection Staff
       </Typography>
       <Stack
         alignItems="center"
