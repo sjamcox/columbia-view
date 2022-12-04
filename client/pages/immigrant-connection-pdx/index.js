@@ -46,7 +46,7 @@ export default function ImmigrantConnection() {
           >
             <Typography
               variant="h2"
-              sx={{ color: 'orange', textAlign: 'center' }}
+              sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
               160+
             </Typography>
@@ -69,7 +69,7 @@ export default function ImmigrantConnection() {
           >
             <Typography
               variant="h2"
-              sx={{ color: 'orange', textAlign: 'center' }}
+              sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
               40+
             </Typography>
@@ -92,7 +92,7 @@ export default function ImmigrantConnection() {
           >
             <Typography
               variant="h2"
-              sx={{ color: 'orange', textAlign: 'center' }}
+              sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
               10+
             </Typography>
@@ -101,8 +101,17 @@ export default function ImmigrantConnection() {
             </Typography>
           </Grid>
         </Grid>
+        <Typography
+          component="p"
+          variant="h5"
+          textAlign="center"
+          borderTop="1px solid silver"
+          borderBottom="1px solid silver"
+          sx={{ p: 5 }}
+        >
+          We're grateful for the impact we made together in 2022!
+        </Typography>
       </Container>
-      <Typography></Typography>
       <Grid container spacing={3}>
         <Grid
           item
