@@ -31,16 +31,16 @@ const menu = [
     subnav: [
       {
         text: 'Client Portal',
-        href: '/immigrant-connection-pdx/clients',
-      },
-      {
-        text: 'Partner With Us',
         href: '/immigrant-connection-pdx',
       },
       {
-        text: 'Our Staff',
-        href: '/immigrant-connection-pdx/staff',
+        text: 'Partner With Us',
+        href: '/icpdx',
       },
+      // {
+      //   text: 'Our Staff',
+      //   href: '/immigrant-connection-pdx/staff',
+      // },
     ],
   },
   { text: 'About Us', href: '/about' },
