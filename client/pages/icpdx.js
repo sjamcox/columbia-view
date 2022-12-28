@@ -168,12 +168,12 @@ export default function ImmigrantConnection() {
           to open our office one additional day per week in 2023.
         </Typography>
         <Stack direction="row" justifyContent="space-between" mb={2}>
-          <Typography>Currently gifted: $7,385</Typography>
+          <Typography>Currently gifted: $10,930</Typography>
           <Typography>Goal: $12,000</Typography>
         </Stack>
         <LinearProgress
           variant="determinate"
-          value={62}
+          value={91}
           sx={{ height: 40, borderRadius: '100px', mb: 4 }}
         />
         <Stack direction="row" justifyContent="center">
