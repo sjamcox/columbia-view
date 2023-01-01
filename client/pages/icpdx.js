@@ -164,16 +164,17 @@ export default function ImmigrantConnection() {
           matching grant!
         </Typography>
         <Typography mb={5}>
-          Our goal is to raise an additional $12,000 by the end of 2022 in order
-          to open our office one additional day per week in 2023.
+          Our goal was to raise an additional $12,000 by the end of 2022 in order
+          to open our office one additional day per week in 2023. We're happy to
+          announce we exceeded our goal thanks to your generousity!
         </Typography>
         <Stack direction="row" justifyContent="space-between" mb={2}>
-          <Typography>Currently gifted: $11,880</Typography>
+          <Typography>Currently gifted: $12,330</Typography>
           <Typography>Goal: $12,000</Typography>
         </Stack>
         <LinearProgress
           variant="determinate"
-          value={99}
+          value={100}
           sx={{ height: 40, borderRadius: '100px', mb: 4 }}
         />
         <Stack direction="row" justifyContent="center">
