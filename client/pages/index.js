@@ -15,20 +15,16 @@ import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
 import ImageTile from '../components/ImageTile'
 import sermon from '../public/sunday/sermon-david-preaching.webp'
-import baptism from '../public/sunday/mark-baptism.webp'
+import mensGroup from '../public/mens-group-table.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
 import kids from '../public/sunday/kids-room-1.webp'
 import lifeGroup from '../public/sandra-dani.webp'
 import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
 import immigrantFamily from '../public/icpdx/immigrant-family.webp'
-import bible from '../public/bible-recap.webp'
+import bible from '../public/bible-project-one-story.webp'
 import rightnow from '../public/right-now-media.webp'
-import candles from '../public/candlelight-service-web-banner.webp'
-import candlesMobile from '../public/candlelight-service-web-banner-mobile.webp'
 
 const Index = () => {
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'))
-  const heroImage = isMobile ? candlesMobile : candles
   return (
     <Layout noContainer>
       <Head>
@@ -39,12 +35,12 @@ const Index = () => {
         />
       </Head>
       <Hero
-        src={heroImage}
-        alt="Lit candles in a dim room"
-        title="Candlelight Service"
-        subtitle="Join us for a heartwarming worship service this Christmas Eve"
+        src={mensGroup}
+        alt="Men talking around a table"
+        title="Men's Group"
+        subtitle="Embark on an eight week journey of growth in prayer"
         buttonText="Learn more"
-        href="https://columbiaview.churchcenter.com/calendar/event/115323043"
+        href="https://columbiaview.churchcenter.com/groups/life-groups/men-s-life-group"
       />
       <Box component="section">
         <Container
@@ -235,12 +231,11 @@ const Index = () => {
                 Dive deep into Scripture this year
               </Typography>
               <Typography component="p" variant="p" paragraph color="white">
-                Follow along as we journey through the Bible chronologically in
-                one year. You can join our reading plan online or using the
-                YouVersion Bible app.
+                Follow along as we journey through the Bible in one year. Join
+                our reading plan online or using the YouVersion Bible app.
               </Typography>
               <Link
-                href="https://bible.com/p/48212307/30d6728bbce54816de0acaac51415c9a"
+                href="https://bible.com/p/55820626/47e13a105a1cdaf72278d61eda22961e"
                 passHref
               >
                 <Button variant="contained" color="secondary">
