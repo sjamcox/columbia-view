@@ -38,7 +38,7 @@ const Index = () => {
         src={mensGroup}
         alt="Men talking around a table"
         title="Men's Group"
-        subtitle="Embark on an eight week journey of growth in prayer"
+        subtitle="What does it mean, and more importantly look like, to be a godly man?"
         buttonText="Learn more"
         href="https://columbiaview.churchcenter.com/groups/life-groups/men-s-life-group"
       />

@@ -16,10 +16,7 @@ import MapIcon from '@mui/icons-material/Map'
 import { toGoogleMapsLink } from '../helpers/maps'
 
 export default function CalendarEvent({ event }) {
-  const eventName =
-    event.event_feed_type === 'groups'
-      ? event.event_name.split(': ')[1]
-      : event.event_name
+  const eventName = event.event_name
   const startDate = parseISO(event.visible_starts_at)
   const startMonth = format(startDate, 'MMM')
   const startDay = format(startDate, 'd')
