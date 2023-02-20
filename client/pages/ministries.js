@@ -75,47 +75,6 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-      <Box id="womens-retreat" my={4} sx={{ scrollMarginTop: '100px' }}>
-        <Typography component="h2" variant="h3" color="primary" paragraph>
-          Women's Retreat
-        </Typography>
-        <Grid container justifyContent="space-between">
-          <Grid item xs={12} md={8}>
-            <Typography paragraph>
-              Women's Retreat 2022 is designed to provide a comfortable
-              environment for ladies to slow down, rest, and rejuvenate. There
-              will be a basic flow of activities, balancing time together and
-              individually, times of reflection and times for fun, etc. We are
-              pumped to welcome Jessica Schmerse as our guest speaker! Jess is
-              so excited to be with us and lead us through some sessions on
-              finding rest in the chaotic and busy world we all live in.
-            </Typography>
-            <Typography paragraph>
-              <strong>Cost:</strong> $130 per person
-            </Typography>
-            <Button
-              variant="contained"
-              size="large"
-              color="secondary"
-              sx={{ color: 'white', mb: 3 }}
-              href="https://columbiaview.churchcenter.com/registrations/events/1450232"
-            >
-              Register for Women's Retreat
-            </Button>
-          </Grid>
-          <Grid item xs={12} md={3}>
-            <Typography fontSize={15}>
-              <strong>Dates & Location</strong>
-            </Typography>
-            <Typography fontSize={15}>November 4–6, 2022</Typography>
-            <Typography fontSize={15}>Twin Rock Friends Camp @</Typography>
-            <Typography fontSize={15}>
-              The Harbor Villa Retreat Center
-            </Typography>
-            <Typography fontSize={15}>Rockaway Beach, OR</Typography>
-          </Grid>
-        </Grid>
-      </Box>
       <Box id="columbia-kids" my={4} sx={{ scrollMarginTop: '100px' }}>
         <Typography component="h2" variant="h3" color="primary" paragraph>
           Children's Ministry
@@ -220,19 +179,35 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-      <Box id="youth-ministry" my={4} sx={{ scrollMarginTop: '100px' }}>
+      <Box id="love-inc" my={4} sx={{ scrollMarginTop: '100px' }}>
         <Typography component="h2" variant="h3" color="primary" paragraph>
-          Youth Ministry
+          Love INC
         </Typography>
         <Grid container justifyContent="space-between">
           <Grid item xs={12} md={8}>
             <Typography paragraph>
-              We offer periodic outings and yearly retreats, camps, and service
-              opportunities. Rather than a traditional youth group, we seek to
-              integrate youth into the overall life of our church through our
-              worship services and life groups.
+              The local church is God's answer to community brokenness and a
+              part of His plan of redemption and restoration. We're proud to
+              partner with Love INC, uniting East Multnomah County churches to
+              care for people in all areas of life: spiritual, mental,
+              emotional, relational, material, and physical.
             </Typography>
+            <Typography paragraph>
+              If you're interested in using your God given talents to serve the
+              needs in our community, fill out this quick questionnaire. This is
+              for informational purposes only, it is not a commitment to serve.
+            </Typography>
+            <Button
+              variant="contained"
+              size="large"
+              color="secondary"
+              sx={{ color: 'white', mb: 3 }}
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdxIQFvEZN1t9o7qDPsPwc3fkhToDp2J1-HKc6tIqsoO6V8Yw/viewform"
+            >
+              Fill out the Love INC Questionnaire
+            </Button>
           </Grid>
+          <Grid item xs={12} md={3}></Grid>
         </Grid>
       </Box>
       <Box id="global-missions" my={4} sx={{ scrollMarginTop: '100px' }}>
