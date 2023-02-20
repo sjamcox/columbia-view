@@ -15,7 +15,7 @@ import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
 import ImageTile from '../components/ImageTile'
 import sermon from '../public/sunday/sermon-david-preaching.webp'
-import mensGroup from '../public/mens-group-table.webp'
+import baptism from '../public/sunday/mark-baptism.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
 import kids from '../public/sunday/kids-room-1.webp'
 import lifeGroup from '../public/sandra-dani.webp'
@@ -35,12 +35,13 @@ const Index = () => {
         />
       </Head>
       <Hero
-        src={mensGroup}
-        alt="Men talking around a table"
-        title="Men's Group"
-        subtitle="What does it mean, and more importantly look like, to be a godly man?"
-        buttonText="Learn more"
-        href="https://columbiaview.churchcenter.com/groups/life-groups/men-s-life-group"
+        src={baptism}
+        alt="Alt tag"
+        title="made"
+        titleHighlight="new"
+        subtitle="Consistently pursuing a personal knowledge of the heart of God"
+        buttonText="Join us this Sunday"
+        href="/join-us"
       />
       <Box component="section">
         <Container
