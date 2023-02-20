@@ -26,7 +26,7 @@ export default function VisitUs() {
   return (
     <Layout noContainer>
       <Head>
-        <title>Visit Us | Columbia View</title>
+        <title>Join Us | Columbia View Church</title>
       </Head>
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>

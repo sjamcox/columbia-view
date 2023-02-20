@@ -26,7 +26,7 @@ export default function Calendar({ calendar }) {
   return (
     <Layout>
       <Head>
-        <title>Events | Columbia View</title>
+        <title>Events | Columbia View Church</title>
       </Head>
       <Box>
         <Typography component="h1" variant="h1" sx={{ my: 5 }}>

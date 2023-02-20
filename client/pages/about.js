@@ -9,7 +9,7 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>About | Columbia View</title>
+        <title>About | Columbia View Church</title>
       </Head>
       <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
         Welcome Home

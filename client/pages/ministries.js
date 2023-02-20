@@ -12,7 +12,7 @@ export default function Ministries() {
   return (
     <Layout>
       <Head>
-        <title>Ministries | Columbia View</title>
+        <title>Ministries | Columbia View Church</title>
       </Head>
       <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
         Ministries

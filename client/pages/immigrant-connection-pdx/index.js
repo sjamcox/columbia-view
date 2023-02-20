@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { NextSeo } from 'next-seo'
 import {
   Box,
   Button,
@@ -26,9 +26,11 @@ export default function ImmigrantConnection() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <Layout noContainer>
-      <Head>
-        <title>Immigrant Connection | Columbia View</title>
-      </Head>
+      <NextSeo
+        title="Immigrant Connection PDX | Low-Cost Immigration Legal Services"
+        description="We're a church-based, low-cost immigration legal services office in East Portland. We serve those seeking legal assistance with issues relating to immigration."
+      />
+
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Grid
           container

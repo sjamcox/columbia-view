@@ -33,7 +33,6 @@ const MyApp = ({
   return (
     <CacheProvider value={emotionCache}>
       <DefaultSeo
-        titleTemplate="%s | Columbia View Church"
         defaultTitle="Columbia View Church"
         additionalMetaTags={[
           { name: 'viewport', content: 'initial-scale=1, width=device-width' },

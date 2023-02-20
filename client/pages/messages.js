@@ -26,7 +26,7 @@ export default function Messages({ messages }) {
   return (
     <Layout>
       <Head>
-        <title>Messages | Columbia View</title>
+        <title>Messages | Columbia View Church</title>
       </Head>
       <Typography component="h1" variant="h1" sx={{ my: 5 }}>
         Messages

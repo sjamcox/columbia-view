@@ -28,7 +28,7 @@ const Index = () => {
   return (
     <Layout noContainer>
       <Head>
-        <title>Welcome Home | Columbia View</title>
+        <title>Welcome Home | Columbia View Church</title>
         <meta
           name="description"
           content="Columbia View Wesleyan Church is a Christ-centered church where the Word of God is shared and people are loved. Advancing the great commission in the spirit of the great commandment."

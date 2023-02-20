@@ -1,6 +1,6 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { NextSeo } from 'next-seo'
 import {
   Box,
   Button,
@@ -18,9 +18,10 @@ import YouTubePlayer from '../components/YouTubePlayer'
 export default function ImmigrantConnection() {
   return (
     <Layout noContainer>
-      <Head>
-        <title>Immigrant Connection | Columbia View</title>
-      </Head>
+      <NextSeo
+        title="Partner With Us | Immigrant Connection"
+        description="Immigrant Connection is committed to seeing immigrant families in East Portland thrive. See how you can get involved today."
+      />
       <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
         <Typography component="h1" variant="h2" gutterBottom mt={5}>
           Partner With Immigrant Connection PDX
@@ -164,9 +165,9 @@ export default function ImmigrantConnection() {
           matching grant!
         </Typography>
         <Typography mb={5}>
-          Our goal was to raise an additional $12,000 by the end of 2022 in order
-          to open our office one additional day per week in 2023. We're happy to
-          announce we exceeded our goal thanks to your generousity!
+          Our goal was to raise an additional $12,000 by the end of 2022 in
+          order to open our office one additional day per week in 2023. We're
+          happy to announce we exceeded our goal thanks to your generousity!
         </Typography>
         <Stack direction="row" justifyContent="space-between" mb={2}>
           <Typography>Currently gifted: $12,330</Typography>
