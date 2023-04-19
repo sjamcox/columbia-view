@@ -68,7 +68,9 @@ export default function VisitUs() {
                 }}
               >
                 {`We also live stream our worship services via `}
-                <a href="https://www.facebook.com/COLUMBIAVIEW/">Facebook</a>
+                <a href="https://www.youtube.com/@columbiaviewwesleyanchurch2805/streams">
+                  YouTube
+                </a>
                 {` each Sunday`}
               </Typography>
             </Grid>
