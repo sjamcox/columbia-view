@@ -13,7 +13,7 @@ export default async function handler(req, res) {
           Authorization: `Basic ${token}`,
         },
         params: {
-          'where[tag_ids]': 24038,
+          'where[tag_ids]': 74492,
           'where[during][start]': startDate,
           'where[during][end]': endDate,
           'fields[CalendarInstance]':
