@@ -13,30 +13,25 @@ export default function Staff() {
       name: 'David Rannabargar',
       title: 'Site Director',
       image: david,
-      bio: 'bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio',
+      bio: 'Pastor David Rannabargar is married to his wife of 7 years (Tita) and is the proud dad of Kariss (4) and Charlee (2). David accepted the call to be Lead Pastor of Columbia View in 2020 and loves to journey with people in discovering belonging, faith, and formation in Jesus through the local church. In his spare time, he enjoys spending time with his kids building with magnet tiles, drinking really good coffee, going on hikes, and starting remodel projects around his home (sometimes even finishing them!)',
     },
     {
       name: 'Serena Rannabargar',
       title: 'DOJ Accredited Representative',
       image: serena,
-      bio: 'bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio',
+      bio: 'Serena Rannabargar, also known by friends as Tita, is the proud wife of David Rannabargar and mother of two. She grew up in Honduras, Central America and feels blessed to be able to use the Spanish learned in her childhood to serve immigrant families in both of her roles as a Department of Justice Accredited Representative and Licensed Clinical Social Worker. She serves in the church where needed currently including in the NextGen ministry teaching kids. In spare time, her family adventures in the beautiful outdoors that God has created in the Northwest.',
     },
     {
       name: 'Nancy Bennett',
-      title: 'Legal Assistant, DOJ Accredited Representative In-Training',
+      title: 'Legal Assistant',
       image: nancy,
-      bio: 'bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio',
+      bio: 'Nancy Bennett is mother to four grown daughters and steward of a small acreage in the beautiful Willamette Valley. With a heart for justice, Nancy has served in multiple roles and ministries that provide resources and care for the vulnerable and the marginalized. She enjoys traveling to out of state family gatherings, being outdoors with her aging flock of Shetland sheep and tending her lavender field.',
     },
     {
       name: 'Hawi Jaldo',
       title: 'Legal Assistant',
       image: hawi,
-      bio: 'bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio',
-    },
-    {
-      name: 'Elvia Angel-Silva',
-      title: 'Intern',
-      bio: 'bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio bio',
+      bio: 'As a coordinator at a non-profit organization that serves refugees and immigrants, Hawi is passionate about using her skillsets to positively impact vulnerable populations in our city. Growing up in a family of three, she learned the value of compassion, kindness, and empathy toward others. Through her work at Immigrant Connection PDX, she blessed to be able to weave together her faith and her love for people, creating a meaningful and fulfilling career. In addition to her dedication to her work, she find joy in the simple pleasures of life such as savoring a warm cup of chai, admiring the breathtaking sunsets, and wandering through fields of fragrant flowers.',
     },
   ]
   return (
@@ -44,7 +39,7 @@ export default function Staff() {
       <Head>
         <title>Staff | Immigrant Connection PDX</title>
       </Head>
-      <Typography component="h1" variant="h1" sx={{ my: 5 }}>
+      <Typography component="h1" variant="h2" sx={{ my: 5 }}>
         Immigrant Connection Staff
       </Typography>
       <Stack
@@ -58,17 +53,22 @@ export default function Staff() {
           <Stack sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
             <Box
               sx={{
-                maxHeight: 250,
-                maxWidth: 250,
+                position: 'relative',
+                height: 250,
+                width: 250,
                 flexShrink: 0,
-                mr: { xs: 0, sm: 4 },
-                mb: { xs: 2, sm: 0 },
-                borderRadius: 4,
+                mr: { xs: 0, sm: 6 },
+                mb: { xs: 4, sm: 0 },
+                boxShadow: '4px 4px #FFFFFF, 12px 12px #0E496F',
+                overflow: 'hidden',
               }}
             >
-              {member.image && (
-                <Image src={member.image} alt={`Photo of ${member.name}`} />
-              )}
+              <Image
+                src={member.image}
+                alt={`Photo of ${member.name}`}
+                layout="fill"
+                objectFit="cover"
+              />
             </Box>
             <Box>
               <Typography component="h2" variant="h4" gutterBottom>

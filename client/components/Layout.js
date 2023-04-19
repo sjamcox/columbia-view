@@ -37,10 +37,10 @@ const menu = [
         text: 'Partner With Us',
         href: '/icpdx',
       },
-      // {
-      //   text: 'Our Staff',
-      //   href: '/immigrant-connection-pdx/staff',
-      // },
+      {
+        text: 'Our Staff',
+        href: '/immigrant-connection-pdx/staff',
+      },
     ],
   },
   { text: 'About Us', href: '/about' },
