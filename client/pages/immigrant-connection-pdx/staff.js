@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Layout } from '../../components/Layout'
-import { Box, Divider, Stack, Typography } from '@mui/material'
+import { Divider, Stack, Typography } from '@mui/material'
+import { StaffListing } from '../../components/StaffListing'
 import david from '../../public/david-headshot.webp'
 import serena from '../../public/serena-headshot.webp'
 import nancy from '../../public/nancy-headshot.webp'
@@ -34,6 +34,7 @@ export default function Staff() {
       bio: 'As a coordinator at a non-profit organization that serves refugees and immigrants, Hawi is passionate about using her skillsets to positively impact vulnerable populations in our city. Growing up in a family of three, she learned the value of compassion, kindness, and empathy toward others. Through her work at Immigrant Connection PDX, she blessed to be able to weave together her faith and her love for people, creating a meaningful and fulfilling career. In addition to her dedication to her work, she find joy in the simple pleasures of life such as savoring a warm cup of chai, admiring the breathtaking sunsets, and wandering through fields of fragrant flowers.',
     },
   ]
+
   return (
     <Layout>
       <Head>
@@ -50,36 +51,7 @@ export default function Staff() {
         spacing={6}
       >
         {staff.map((member) => (
-          <Stack sx={{ flexDirection: { xs: 'column', sm: 'row' } }}>
-            <Box
-              sx={{
-                position: 'relative',
-                height: 250,
-                width: 250,
-                flexShrink: 0,
-                mr: { xs: 0, sm: 6 },
-                mb: { xs: 4, sm: 0 },
-                boxShadow: '4px 4px #FFFFFF, 12px 12px #0E496F',
-                overflow: 'hidden',
-              }}
-            >
-              <Image
-                src={member.image}
-                alt={`Photo of ${member.name}`}
-                layout="fill"
-                objectFit="cover"
-              />
-            </Box>
-            <Box>
-              <Typography component="h2" variant="h4" gutterBottom>
-                {member.name}
-              </Typography>
-              <Typography gutterBottom color="secondary">
-                <strong>{member.title}</strong>
-              </Typography>
-              <Typography color="text.body">{member.bio}</Typography>
-            </Box>
-          </Stack>
+          <StaffListing member={member} />
         ))}
       </Stack>
     </Layout>
