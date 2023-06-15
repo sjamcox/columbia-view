@@ -15,7 +15,7 @@ import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
 import ImageTile from '../components/ImageTile'
 import sermon from '../public/sunday/sermon-david-preaching.webp'
-import baptism from '../public/sunday/mark-baptism.webp'
+import campout from '../public/church-campout.png'
 import worship from '../public/sunday/worship-team-vertical.webp'
 import kids from '../public/sunday/kids-room-1.webp'
 import lifeGroup from '../public/sandra-dani.webp'
@@ -35,13 +35,13 @@ const Index = () => {
         />
       </Head>
       <Hero
-        src={baptism}
+        src={campout}
         alt="Alt tag"
-        title="made"
-        titleHighlight="new"
-        subtitle="Consistently pursuing a personal knowledge of the heart of God"
-        buttonText="Join us this Sunday"
-        href="/join-us"
+        title="Church Campout"
+        // titleHighlight="Campout"
+        subtitle="Pitch your tent and join us for volleyball, table games, kids dance party and more!"
+        buttonText="Learn More and Register"
+        href="https://columbiaview.churchcenter.com/registrations/events/1809202"
       />
       <Box component="section">
         <Container
