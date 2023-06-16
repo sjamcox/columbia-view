@@ -34,7 +34,7 @@ export default function Footer() {
       <Box sx={{ borderTop: '1px solid white', bgcolor: '#333132', py: 1 }}>
         <Container sx={{ px: 3 }}>
           <Typography color="white" fontSize="14px">
-            © 2021 Columbia View Wesleyan Church | All Rights Reserved
+            © 2023 Columbia View Wesleyan Church | All Rights Reserved
           </Typography>
         </Container>
       </Box>
