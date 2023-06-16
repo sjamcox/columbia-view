@@ -304,16 +304,15 @@ const Index = () => {
                     in underserved communities of the Portland Metro area and
                     beyond.
                   </Typography>
-                  <Link href="/immigrant-connection-pdx">
-                    <Button
-                      variant="contained"
-                      size="large"
-                      color="secondary"
-                      sx={{ color: 'white', mt: 2 }}
-                    >
-                      Learn more about our services
-                    </Button>
-                  </Link>
+                  <Button
+                    href="/immigrant-connection-pdx"
+                    variant="contained"
+                    size="large"
+                    color="secondary"
+                    sx={{ color: 'white', mt: 2 }}
+                  >
+                    Learn more about our services
+                  </Button>
                 </Box>
               </Grid>
               <Grid item xs={0} md={5}></Grid>
