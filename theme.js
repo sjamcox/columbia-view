@@ -1,4 +1,10 @@
 import { createTheme } from '@mui/material/styles'
+import NextLink from 'next/link'
+import { forwardRef } from 'react'
+
+const LinkAdapter = forwardRef(function LinkAdapter(props, ref) {
+  return <NextLink ref={ref} {...props} />
+})
 
 export const theme = createTheme({
   palette: {
@@ -23,6 +29,16 @@ export const theme = createTheme({
     fontSize: 16,
   },
   components: {
+    MuiLink: {
+      defaultProps: {
+        component: LinkAdapter,
+      },
+    },
+    MuiButtonBase: {
+      defaultProps: {
+        LinkComponent: LinkAdapter,
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {

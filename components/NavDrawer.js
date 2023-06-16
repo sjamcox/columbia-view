@@ -1,15 +1,15 @@
 import { useState } from 'react'
-import Link from 'next/link'
 import {
   Box,
+  Button,
+  Collapse,
   Container,
   Drawer,
   IconButton,
   Grid,
+  Link,
   Toolbar,
   Typography,
-  Collapse,
-  Button,
 } from '@mui/material'
 import { Close } from '@mui/icons-material'
 
@@ -50,14 +50,13 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
           <Collapse in={navState[link.text]}>
             {link.subnav.map((item) => (
               <Grid item key={item.text}>
-                <Link href={item.href} key={item.text} passHref>
+                <Link href={item.href} key={item.text}>
                   <Typography
                     sx={{
                       color: '#444444',
                       fontWeight: '500',
                       textDecoration: 'none',
                     }}
-                    component="a"
                   >
                     {item.text}
                   </Typography>
@@ -71,14 +70,13 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
 
     return (
       <Grid item key={link.text}>
-        <Link href={link.href} key={link.text} passHref>
+        <Link href={link.href} key={link.text}>
           <Typography
             sx={{
               color: '#333333',
               fontWeight: '600',
               textDecoration: 'none',
             }}
-            component="a"
           >
             {link.text}
           </Typography>

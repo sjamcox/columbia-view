@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Container, Grid, Link, Typography } from '@mui/material'
 import { Layout } from '../components/Layout'
 import blakeFamily from '../public/blake-family.webp'
 import cheneyFamily from '../public/cheney-family.webp'

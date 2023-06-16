@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
 import {
   Box,
   Button,
   Container,
   Grid,
+  Link,
   Stack,
   Typography,
   useMediaQuery,
@@ -76,10 +76,9 @@ const Index = () => {
                 each day. Regardless of your story, your doubts, or your
                 struggles; you are welcome at Columbia View! So come as you are.
               </Typography>
-              <Link href="/join-us" passHref>
+              <Link href="/join-us">
                 <Button
                   variant="contained"
-                  component="a"
                   size="large"
                   color="secondary"
                   sx={{ color: 'white', mt: 2 }}
@@ -152,10 +151,7 @@ const Index = () => {
                 members. RightNow Media is a tool that you can use to help you
                 live out your faith in every area of your life.
               </Typography>
-              <Link
-                href="https://app.rightnowmedia.org/join/columbiaviewchurch"
-                passHref
-              >
+              <Link href="https://app.rightnowmedia.org/join/columbiaviewchurch">
                 <Button variant="contained" color="secondary">
                   Get Access Today
                 </Button>
@@ -235,10 +231,7 @@ const Index = () => {
                 Follow along as we journey through the Bible in one year. Join
                 our reading plan online or using the YouVersion Bible app.
               </Typography>
-              <Link
-                href="https://bible.com/p/55820626/47e13a105a1cdaf72278d61eda22961e"
-                passHref
-              >
+              <Link href="https://bible.com/p/55820626/47e13a105a1cdaf72278d61eda22961e">
                 <Button variant="contained" color="secondary">
                   Get the Reading Plan
                 </Button>
@@ -309,10 +302,9 @@ const Index = () => {
                     in underserved communities of the Portland Metro area and
                     beyond.
                   </Typography>
-                  <Link href="/immigrant-connection-pdx" passHref>
+                  <Link href="/immigrant-connection-pdx">
                     <Button
                       variant="contained"
-                      component="a"
                       size="large"
                       color="secondary"
                       sx={{ color: 'white', mt: 2 }}

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import {
   Box,
@@ -8,7 +7,7 @@ import {
   Collapse,
   Container,
   Grid,
-  Link as MuiLink,
+  Link,
   Typography,
 } from '@mui/material'
 import { Layout } from '../../components/Layout'
@@ -124,25 +123,25 @@ export default function ImmigrantConnection() {
               Portland, OR 97230
             </Typography>
             <Typography fontSize={15} paragraph>
-              <MuiLink
+              <Link
                 href="tel:+19712022073"
                 sx={{ textDecoration: 'none', color: 'primary' }}
               >
                 971.202.2073
-              </MuiLink>
+              </Link>
               <br />
-              <MuiLink
+              <Link
                 href="mailto:info.icpdx@gmail.com"
                 sx={{ textDecoration: 'none', color: 'primary' }}
               >
                 info.icpdx@gmail.com
-              </MuiLink>
+              </Link>
             </Typography>
           </Grid>
         </Grid>
         <Grid container spacing={2} mt={0}>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1XeRXuDW9PJibxu4iPJOanX-gkFkbPjwe/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/1XeRXuDW9PJibxu4iPJOanX-gkFkbPjwe/view?usp=sharing">
               <Button
                 variant="contained"
                 size="large"
@@ -151,10 +150,10 @@ export default function ImmigrantConnection() {
               >
                 English
               </Button>
-            </MuiLink>
+            </Link>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1vk4tep1hGWxpngElIWqHb2gtQTmynlBH/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/1vk4tep1hGWxpngElIWqHb2gtQTmynlBH/view?usp=sharing">
               <Button
                 variant="contained"
                 size="large"
@@ -163,10 +162,10 @@ export default function ImmigrantConnection() {
               >
                 Español (Spanish)
               </Button>
-            </MuiLink>
+            </Link>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1g0n9KAD89bIW40-5-uwbXP37V5FTdW0n/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/1g0n9KAD89bIW40-5-uwbXP37V5FTdW0n/view?usp=sharing">
               <Button
                 variant="contained"
                 size="large"
@@ -175,10 +174,10 @@ export default function ImmigrantConnection() {
               >
                 한글 (Korean)
               </Button>
-            </MuiLink>
+            </Link>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/16noMyw08fkRI5m5T9ERyVqjuoSz25Gu9/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/16noMyw08fkRI5m5T9ERyVqjuoSz25Gu9/view?usp=sharing">
               <Button
                 variant="contained"
                 size="large"
@@ -187,10 +186,10 @@ export default function ImmigrantConnection() {
               >
                 Português (Portugese)
               </Button>
-            </MuiLink>
+            </Link>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1dM7carIbYI6U9oOQhrzrOXr3VBs82lDB/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/1dM7carIbYI6U9oOQhrzrOXr3VBs82lDB/view?usp=sharing">
               <Button
                 variant="contained"
                 size="large"
@@ -199,10 +198,10 @@ export default function ImmigrantConnection() {
               >
                 Tagalog (Filipino)
               </Button>
-            </MuiLink>
+            </Link>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1R0lKYV5l8B5SWUWLYa8La_Kqtp2KIyMG/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/1R0lKYV5l8B5SWUWLYa8La_Kqtp2KIyMG/view?usp=sharing">
               <Button
                 variant="contained"
                 size="large"
@@ -211,10 +210,10 @@ export default function ImmigrantConnection() {
               >
                 русский (Russian)
               </Button>
-            </MuiLink>
+            </Link>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1zBEXxNjjNPvneT-BcEYgqeo9oXXACPln/view?usp=sharing">
+            <Link href="https://drive.google.com/file/d/1zBEXxNjjNPvneT-BcEYgqeo9oXXACPln/view?usp=sharing">
               <Button
                 variant="contained"
                 size="large"
@@ -223,7 +222,7 @@ export default function ImmigrantConnection() {
               >
                 Français (French)
               </Button>
-            </MuiLink>
+            </Link>
           </Grid>
         </Grid>
         <Typography variant="h4" paragraph textAlign="center" mt={6}>
@@ -373,9 +372,9 @@ export default function ImmigrantConnection() {
             <Typography textAlign="center">
               For more information regarding these services:
             </Typography>
-            <MuiLink href="https://www.uscis.gov">
+            <Link href="https://www.uscis.gov">
               <Typography textAlign="center">https://www.uscis.gov</Typography>
-            </MuiLink>
+            </Link>
           </Collapse>
         </Box>
       </Container>

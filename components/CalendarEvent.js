@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { format, parseISO } from 'date-fns'
 import {
   Box,
@@ -7,6 +6,7 @@ import {
   Card,
   Divider,
   Grid,
+  Link,
   Stack,
   Typography,
 } from '@mui/material'
@@ -97,9 +97,8 @@ export default function CalendarEvent({ event }) {
             )}
             <Stack direction="row" spacing={1}>
               <HomeIcon fontSize="small" />
-              <Link href={toGoogleMapsLink(event.location)} passHref>
+              <Link href={toGoogleMapsLink(event.location)}>
                 <Typography
-                  component="a"
                   sx={{
                     fontSize: 14,
                     fontWeight: 600,

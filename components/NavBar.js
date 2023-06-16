@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import {
   AppBar,
   Box,
   Button,
   Container,
   IconButton,
+  Link,
   Menu,
   MenuItem,
   Toolbar,
@@ -33,18 +33,16 @@ const NavItem = ({ href, subnav, text, handleClick }) => {
   }
 
   return (
-    <Link key={href + 'bar'} href={href} passHref>
-      <Button
-        component="a"
-        sx={{
-          color: '#333333',
-          fontWeight: '500',
-          px: 2,
-        }}
-      >
-        {text}
-      </Button>
-    </Link>
+    <Button
+      href={href}
+      sx={{
+        color: '#333333',
+        fontWeight: '500',
+        px: 2,
+      }}
+    >
+      {text}
+    </Button>
   )
 }
 
@@ -86,14 +84,14 @@ export const NavBar = ({ menu, setOpen }) => {
     >
       <Container maxWidth="lg" disableGutters>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <Link href="/" passHref>
-            <Box component="a" display="flex" flexDirection="row" mb={-1}>
+          <Link href="/">
+            <Box display="flex" flexDirection="row" mb={-1}>
               <Box>
                 <Image
                   src={logo}
                   alt="Columbia View logo"
-                  width="224px"
-                  height="42px"
+                  width={224}
+                  height={42}
                   priority
                 />
               </Box>
@@ -109,9 +107,12 @@ export const NavBar = ({ menu, setOpen }) => {
               {linkList}
               <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
                 {activeMenu.map((item) => (
-                  <Link href={item.href} passHref>
+                  <Link
+                    href={item.href}
+                    sx={{ color: '#333333', textDecoration: 'none' }}
+                  >
                     <MenuItem
-                      component="a"
+                      component="span"
                       onClick={handleClose}
                       sx={{ fontSize: 16 }}
                     >
