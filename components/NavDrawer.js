@@ -50,12 +50,15 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
           <Collapse in={navState[link.text]}>
             {link.subnav.map((item) => (
               <Grid item key={item.text}>
-                <Link href={item.href} key={item.text}>
+                <Link
+                  href={item.href}
+                  key={item.text}
+                  sx={{ textDecoration: 'none' }}
+                >
                   <Typography
                     sx={{
                       color: '#444444',
                       fontWeight: '500',
-                      textDecoration: 'none',
                     }}
                   >
                     {item.text}
@@ -70,12 +73,11 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
 
     return (
       <Grid item key={link.text}>
-        <Link href={link.href} key={link.text}>
+        <Link href={link.href} key={link.text} sx={{ textDecoration: 'none' }}>
           <Typography
             sx={{
               color: '#333333',
               fontWeight: '600',
-              textDecoration: 'none',
             }}
           >
             {link.text}

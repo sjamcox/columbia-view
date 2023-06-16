@@ -10,10 +10,11 @@ export default function ImageTile({ image, alt, headline, link }) {
           pb: '133%',
           '& img': {
             position: 'absolute',
+            objectFit: 'cover',
           },
         }}
       >
-        <Image src={image} alt={alt} layout="fill" objectFit="cover" />
+        <Image src={image} alt={alt} fill />
         <Box
           sx={{
             position: 'absolute',

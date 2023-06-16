@@ -13,6 +13,7 @@ import {
 import { Layout } from '../components/Layout'
 import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
+import ResponsiveImage from '../components/ResponsiveImage'
 import ImageTile from '../components/ImageTile'
 import sermon from '../public/sunday/sermon-david-preaching.webp'
 import serve from '../public/serve-east-county-2023.webp'
@@ -136,7 +137,7 @@ const Index = () => {
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} sm={6}>
-              <Image src={rightnow} />
+              <ResponsiveImage src={rightnow} />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography component="h2" variant="h3" paragraph color="white">
@@ -148,11 +149,13 @@ const Index = () => {
                 members. RightNow Media is a tool that you can use to help you
                 live out your faith in every area of your life.
               </Typography>
-              <Link href="https://app.rightnowmedia.org/join/columbiaviewchurch">
-                <Button variant="contained" color="secondary">
-                  Get Access Today
-                </Button>
-              </Link>
+              <Button
+                href="https://app.rightnowmedia.org/join/columbiaviewchurch"
+                variant="contained"
+                color="secondary"
+              >
+                Get Access Today
+              </Button>
             </Grid>
           </Grid>
         </Container>
@@ -218,7 +221,7 @@ const Index = () => {
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} sm={6}>
-              <Image src={bible} layout="responsive" />
+              <ResponsiveImage src={bible} />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography component="h2" variant="h3" paragraph color="white">
@@ -228,11 +231,13 @@ const Index = () => {
                 Follow along as we journey through the Bible in one year. Join
                 our reading plan online or using the YouVersion Bible app.
               </Typography>
-              <Link href="https://bible.com/p/55820626/47e13a105a1cdaf72278d61eda22961e">
-                <Button variant="contained" color="secondary">
-                  Get the Reading Plan
-                </Button>
-              </Link>
+              <Button
+                href="https://bible.com/p/55820626/47e13a105a1cdaf72278d61eda22961e"
+                variant="contained"
+                color="secondary"
+              >
+                Get the Reading Plan
+              </Button>
             </Grid>
           </Grid>
         </Container>
@@ -266,14 +271,14 @@ const Index = () => {
                     '& img': {
                       position: { xs: 'static', md: 'absolute' },
                       borderRadius: { xs: 'none', md: '10px' },
+                      objectFit: 'cover',
                     },
                   }}
                 >
                   <Image
                     src={immigrantFamily}
                     alt="Immigrant mother and daughter smiling"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                   />
                 </Box>
               </Grid>
