@@ -76,16 +76,15 @@ const Index = () => {
                 each day. Regardless of your story, your doubts, or your
                 struggles; you are welcome at Columbia View! So come as you are.
               </Typography>
-              <Link href="/join-us">
-                <Button
-                  variant="contained"
-                  size="large"
-                  color="secondary"
-                  sx={{ color: 'white', mt: 2 }}
-                >
-                  Join us this Sunday
-                </Button>
-              </Link>
+              <Button
+                href="/join-us"
+                variant="contained"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white', mt: 2 }}
+              >
+                Join us this Sunday
+              </Button>
             </Grid>
             <Grid item xs={4} sx={{ mb: { xs: 4, md: 0 } }}>
               <Box
@@ -112,20 +111,18 @@ const Index = () => {
                     top: { xs: 20, md: 0 },
                     left: { xs: 20, md: 0 },
                     width: '100%',
-                    height: { xs: '260px', md: '400px' },
-                    '& span': {
-                      borderRadius: '10px',
-                    },
+                    height: { xs: 260, md: 400 },
                     '& img': {
+                      borderRadius: '10px',
                       position: 'absolute',
+                      objectFit: 'cover',
                     },
                   }}
                 >
                   <Image
                     src={sermon}
                     alt="Pastor David teaching from the stage"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     priority
                   />
                 </Box>
