@@ -71,16 +71,13 @@ export default function Messages({ messages }) {
               </Card>
             )
           })}
-          <Link
+          <Button
             href="https://www.spreaker.com/show/sermons_59"
+            variant="contained"
             color="secondary"
-            variant="h5"
-            sx={{ textDecoration: 'none' }}
           >
-            <Button variant="contained" color="secondary">
-              View all past messages
-            </Button>
-          </Link>
+            View all past messages
+          </Button>
         </Stack>
       ) : (
         <LinearProgress />
