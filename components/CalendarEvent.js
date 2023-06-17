@@ -12,7 +12,6 @@ import {
 } from '@mui/material'
 import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled'
 import HomeIcon from '@mui/icons-material/Home'
-import MapIcon from '@mui/icons-material/Map'
 import { toGoogleMapsLink } from '../helpers/maps'
 
 export default function CalendarEvent({ event }) {
