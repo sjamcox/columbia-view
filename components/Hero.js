@@ -60,16 +60,9 @@ export const Hero = ({
           >
             {subtitle}
           </Typography>
-          <Link href={href}>
-            <Button
-              variant="contained"
-              size="large"
-              color="secondary"
-              sx={{ color: 'white' }}
-            >
-              {buttonText}
-            </Button>
-          </Link>
+          <Button href={href} variant="contained" color="secondary">
+            {buttonText}
+          </Button>
         </Box>
       </Container>
     </Grid>
