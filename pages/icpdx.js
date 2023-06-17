@@ -14,6 +14,7 @@ import { Layout } from '../components/Layout'
 import icMap from '../public/ic-map.webp'
 import chart from '../public/family-workplace-community.webp'
 import YouTubePlayer from '../components/YouTubePlayer'
+import ResponsiveImage from '../components/ResponsiveImage'
 
 export default function ImmigrantConnection() {
   return (
@@ -119,11 +120,12 @@ export default function ImmigrantConnection() {
           item
           xs={12}
           sm={6}
-          sx={{ display: 'flex', alignItems: 'center' }}
+          sx={{ display: 'block', alignItems: 'center' }}
         >
-          <Image
+          <ResponsiveImage
             src={icMap}
             alt="Map of Immigrant Connection sites across the United States"
+            aspectRatio="2:1"
           />
         </Grid>
         <Grid
@@ -150,10 +152,11 @@ export default function ImmigrantConnection() {
           their residents to thrive.
         </Typography>
         <Stack alignItems="center">
-          <Box maxWidth={500}>
-            <Image
+          <Box width="100%" maxWidth={500}>
+            <ResponsiveImage
               src={chart}
               alt="Chart showing key pillars of Immigrant Connection"
+              aspectRatio="2:1"
             />
           </Box>
         </Stack>
@@ -182,18 +185,16 @@ export default function ImmigrantConnection() {
           <Button
             href="https://columbiaview.churchcenter.com/people/forms/34910"
             variant="contained"
-            size="large"
             color="secondary"
-            sx={{ color: 'white', mt: 2, mr: 2, textAlign: 'center' }}
+            sx={{ mt: 2, mr: 2, textAlign: 'center' }}
           >
             Explore ways to partner with us
           </Button>
           <Button
             href="https://columbiaview.churchcenter.com/giving"
             variant="contained"
-            size="large"
             color="secondary"
-            sx={{ color: 'white', mt: 2, textAlign: 'center' }}
+            sx={{ mt: 2, textAlign: 'center' }}
           >
             Donate here
           </Button>
