@@ -142,14 +142,14 @@ export default function About() {
       </Typography>
       <Typography paragraph>
         These terms describe the “soul of the Church”:
-        <ul>
-          <li>Biblical authority</li>
-          <li>Christlikeness</li>
-          <li>Disciple Making</li>
-          <li>Local Church-Centered</li>
-          <li>Servant Leadership</li>
-        </ul>
       </Typography>
+      <ul>
+        <li>Biblical authority</li>
+        <li>Christlikeness</li>
+        <li>Disciple Making</li>
+        <li>Local Church-Centered</li>
+        <li>Servant Leadership</li>
+      </ul>
       <Typography paragraph>
         {'For a comprehensive overview of Wesleyan beliefs, please visit '}
         <Link href="https://www.wesleyan.org/about">wesleyan.org/about</Link>.
@@ -171,7 +171,7 @@ export default function About() {
         spacing={6}
       >
         {staff.map((member) => (
-          <StaffListing member={member} />
+          <StaffListing key={member.name} member={member} />
         ))}
       </Stack>
       <Typography component="h3" variant="h4" gutterBottom mt={5}>

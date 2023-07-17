@@ -63,6 +63,7 @@ export const NavBar = ({ menu, setOpen }) => {
 
   const linkList = menu.map((link) => (
     <NavItem
+      key={link.text}
       href={link.href}
       text={link.text}
       subnav={link.subnav}
@@ -108,6 +109,7 @@ export const NavBar = ({ menu, setOpen }) => {
               <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
                 {activeMenu.map((item) => (
                   <Link
+                    key={item.text}
                     href={item.href}
                     sx={{ color: '#333333', textDecoration: 'none' }}
                   >
