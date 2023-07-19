@@ -19,7 +19,7 @@ const menu = [
       },
       {
         text: 'Event Calendar',
-        href: '/events',
+        href: 'https://columbiaview.churchcenter.com/calendar?view=list',
       },
       { text: 'Give', href: 'https://columbiaview.churchcenter.com/giving' },
     ],
