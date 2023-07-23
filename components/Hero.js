@@ -18,22 +18,21 @@ export const Hero = ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        position: 'relative',
         height: '70vh',
         width: '100vw',
         overflow: 'hidden',
+        position: 'relative',
+        '& img': { objectFit: 'cover' },
       }}
     >
-      <Box sx={{ '& img': { objectFit: 'cover' } }}>
-        <Image src={src} alt={alt} fill priority />
-      </Box>
+      <Image src={src} alt={alt} fill priority />
       <Box
         sx={{
           position: 'absolute',
           inset: 0,
           backgroundColor: 'rgba(0,0,0, .4)',
         }}
-      ></Box>
+      />
       <Container sx={{ position: 'relative', px: { xs: 3 } }}>
         <Box display="flex" flexDirection="column" alignItems="flex-start">
           <Typography

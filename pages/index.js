@@ -15,7 +15,7 @@ import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
 import ResponsiveImage from '../components/ResponsiveImage'
 import ImageTile from '../components/ImageTile'
-import sermon from '../public/sunday/sermon-david-preaching.webp'
+import baptism from '../public/sunday/mark-baptism.webp'
 import serve from '../public/serve-east-county-2023.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
 import kids from '../public/sunday/kids-room-1.webp'
@@ -121,8 +121,8 @@ const Index = () => {
                   }}
                 >
                   <Image
-                    src={sermon}
-                    alt="Pastor David teaching from the stage"
+                    src={baptism}
+                    alt="Pastor David baptising a new believer"
                     fill
                     priority
                   />
