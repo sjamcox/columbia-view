@@ -15,7 +15,7 @@ import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
 import ImageTile from '../components/ImageTile'
 import sermon from '../public/sunday/sermon-david-preaching.webp'
-import campout from '../public/church-campout.png'
+import serve from '../public/serve-east-county-2023.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
 import kids from '../public/sunday/kids-room-1.webp'
 import lifeGroup from '../public/sandra-dani.webp'
@@ -35,13 +35,13 @@ const Index = () => {
         />
       </Head>
       <Hero
-        src={campout}
+        src={serve}
         alt="Alt tag"
-        title="Church Campout"
+        title="Serve East County"
         // titleHighlight="Campout"
-        subtitle="Pitch your tent and join us for volleyball, table games, kids dance party and more!"
+        subtitle="Join us in demonstrating our love for our community on August 26."
         buttonText="Learn More and Register"
-        href="https://columbiaview.churchcenter.com/registrations/events/1809202"
+        href="https://form.jotform.com/231566848108059"
       />
       <Box component="section">
         <Container
