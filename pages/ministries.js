@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Grid, Link, Typography } from '@mui/material'
 import { Layout } from '../components/Layout'
+import ResponsiveImage from '../components/ResponsiveImage'
 import blakeFamily from '../public/blake-family.webp'
 import cheneyFamily from '../public/cheney-family.webp'
 import dunbarFamily from '../public/dunbar-family.webp'
@@ -218,10 +217,10 @@ export default function Ministries() {
         </Typography>
         <Grid container spacing={4}>
           <Grid item xs={12} md={6}>
-            <Image
+            <ResponsiveImage
               src={blakeFamily}
               alt="Blake family photo"
-              layout="responsive"
+              aspectRatio="16:9"
             />
             <Typography component="h3" variant="h4" mt={2}>
               Blake Family
@@ -237,19 +236,17 @@ export default function Ministries() {
 
             <Button
               variant="contained"
-              size="large"
               color="secondary"
-              sx={{ color: 'white' }}
               href="https://www.globalpartnersonline.org/missionary/wm04-0264/"
             >
               Learn more or donate
             </Button>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Image
+            <ResponsiveImage
               src={cheneyFamily}
               alt="Cheney family photo"
-              layout="responsive"
+              aspectRatio="16:9"
             />
             <Typography component="h3" variant="h4" mt={2}>
               Cheney Family
@@ -266,18 +263,16 @@ export default function Ministries() {
             <Button
               variant="contained"
               href="https://www.globalpartnersonline.org/missionary/wm04-0368/"
-              size="large"
               color="secondary"
-              sx={{ color: 'white' }}
             >
               Learn more or donate
             </Button>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Image
+            <ResponsiveImage
               src={dunbarFamily}
               alt="Dunbar family photo"
-              layout="responsive"
+              aspectRatio="16:9"
             />
             <Typography component="h3" variant="h4" mt={2}>
               Mark and Serena Dunbar
@@ -294,18 +289,16 @@ export default function Ministries() {
             <Button
               href="https://www.wgm.org/missionary/dunbar"
               variant="contained"
-              size="large"
               color="secondary"
-              sx={{ color: 'white' }}
             >
               Learn more or donate
             </Button>
           </Grid>
           <Grid item xs={12} md={6}>
-            <Image
+            <ResponsiveImage
               src={jonesFamily}
               alt="Jones family photo"
-              layout="responsive"
+              aspectRatio="16:9"
             />
             <Typography component="h3" variant="h4" mt={2}>
               Jones Family
@@ -322,9 +315,7 @@ export default function Ministries() {
             <Button
               variant="contained"
               href="https://www.wycliffe.org/partner/E7666D"
-              size="large"
               color="secondary"
-              sx={{ color: 'white' }}
             >
               Learn more or donate
             </Button>

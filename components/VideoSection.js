@@ -8,10 +8,15 @@ export default function VideoSection({ id, image, alt }) {
       component="section"
       sx={{
         position: 'relative',
-        '& span > img': { zIndex: -100, opacity: '10%', position: 'absolute' },
+        '& img': {
+          zIndex: -100,
+          opacity: '10%',
+          position: 'absolute',
+          objectFit: 'cover',
+        },
       }}
     >
-      <Image src={image} alt={alt} layout="fill" objectFit="cover" />
+      <Image src={image} alt={alt} fill />
       <Container
         sx={{
           position: 'relative',

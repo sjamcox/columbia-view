@@ -1,6 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Container, Grid, Link, Typography } from '@mui/material'
 
 export const Hero = ({
   src,
@@ -19,22 +18,21 @@ export const Hero = ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        position: 'relative',
         height: '70vh',
         width: '100vw',
         overflow: 'hidden',
+        position: 'relative',
+        '& img': { objectFit: 'cover' },
       }}
     >
-      <Box>
-        <Image src={src} alt={alt} layout="fill" objectFit="cover" priority />
-      </Box>
+      <Image src={src} alt={alt} fill priority />
       <Box
         sx={{
           position: 'absolute',
           inset: 0,
           backgroundColor: 'rgba(0,0,0, .4)',
         }}
-      ></Box>
+      />
       <Container sx={{ position: 'relative', px: { xs: 3 } }}>
         <Box display="flex" flexDirection="column" alignItems="flex-start">
           <Typography
@@ -61,17 +59,9 @@ export const Hero = ({
           >
             {subtitle}
           </Typography>
-          <Link href={href} passHref>
-            <Button
-              variant="contained"
-              component="a"
-              size="large"
-              color="secondary"
-              sx={{ color: 'white' }}
-            >
-              {buttonText}
-            </Button>
-          </Link>
+          <Button href={href} variant="contained" color="secondary">
+            {buttonText}
+          </Button>
         </Box>
       </Container>
     </Grid>

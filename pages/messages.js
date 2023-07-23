@@ -10,10 +10,12 @@ import {
   Typography,
 } from '@mui/material'
 import ReactAudioPlayer from 'react-audio-player'
-import getMessages from '../queries/getMessages'
+import Parser from 'rss-parser'
 
 export async function getStaticProps() {
-  const messages = await getMessages()
+  const RSS_URL = `https://www.spreaker.com/show/3172208/episodes/feed`
+  const parser = new Parser()
+  const messages = await parser.parseURL(RSS_URL)
   return {
     props: {
       messages,
@@ -69,17 +71,13 @@ export default function Messages({ messages }) {
               </Card>
             )
           })}
-          <Link
+          <Button
             href="https://www.spreaker.com/show/sermons_59"
+            variant="contained"
             color="secondary"
-            variant="h5"
-            sx={{ textDecoration: 'none' }}
-            passHref
           >
-            <Button component="a" variant="contained" color="secondary">
-              View all past messages
-            </Button>
-          </Link>
+            View all past messages
+          </Button>
         </Stack>
       ) : (
         <LinearProgress />

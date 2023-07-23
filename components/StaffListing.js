@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box, Stack, Typography } from '@mui/material'
 import Image from 'next/image'
+import { Box, Stack, Typography } from '@mui/material'
 
 export const StaffListing = ({ member }) => {
   return (
@@ -15,14 +15,12 @@ export const StaffListing = ({ member }) => {
           mb: { xs: 4, sm: 0 },
           boxShadow: '4px 4px #FFFFFF, 12px 12px #0E496F',
           overflow: 'hidden',
+          '& img': {
+            objectFit: 'cover',
+          },
         }}
       >
-        <Image
-          src={member.image}
-          alt={`Photo of ${member.name}`}
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image src={member.image} alt={`Photo of ${member.name}`} fill />
       </Box>
       <Box>
         <Typography component="h3" variant="h4" gutterBottom>

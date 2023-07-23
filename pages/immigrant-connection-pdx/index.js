@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { NextSeo } from 'next-seo'
 import {
   Box,
@@ -8,7 +7,7 @@ import {
   Collapse,
   Container,
   Grid,
-  Link as MuiLink,
+  Link,
   Typography,
 } from '@mui/material'
 import { Layout } from '../../components/Layout'
@@ -88,26 +87,26 @@ export default function ImmigrantConnection() {
             <Typography paragraph>
               <strong>
                 Please click the “schedule an appointment” button below or call
-                our legal office at <a href="tel:+19712022073">971.202.2073</a>{' '}
-                to schedule an appointment.
+                our legal office at{' '}
+                <Link href="tel:+19712022073">971.202.2073</Link> to schedule an
+                appointment.
               </strong>{' '}
               An initial consultation costs $40.
             </Typography>
             <Typography paragraph>
               We are a part of the Immigrant Connection National Network of
               church-based, low-cost, immigration legal services offices. For
-              more info: <a href="https://www.icwelcome.org">icwelcome.org</a>.
+              more info:{' '}
+              <Link href="https://www.icwelcome.org">icwelcome.org</Link>.
             </Typography>
-            <Link href="/immigrant-connection-pdx/booking">
-              <Button
-                variant="contained"
-                size="large"
-                color="secondary"
-                sx={{ color: 'white', mb: 4, mt: 2 }}
-              >
-                Schedule an appointment
-              </Button>
-            </Link>
+            <Button
+              variant="contained"
+              color="secondary"
+              href="/immigrant-connection-pdx/booking"
+              sx={{ mb: 4, mt: 2 }}
+            >
+              Schedule an appointment
+            </Button>
           </Grid>
 
           <Grid item xs={12} md={3}>
@@ -124,106 +123,82 @@ export default function ImmigrantConnection() {
               Portland, OR 97230
             </Typography>
             <Typography fontSize={15} paragraph>
-              <MuiLink
-                href="tel:+19712022073"
-                sx={{ textDecoration: 'none', color: 'primary' }}
-              >
+              <Link href="tel:+19712022073" sx={{ color: 'primary' }}>
                 971.202.2073
-              </MuiLink>
+              </Link>
               <br />
-              <MuiLink
+              <Link
                 href="mailto:info.icpdx@gmail.com"
-                sx={{ textDecoration: 'none', color: 'primary' }}
+                sx={{ color: 'primary' }}
               >
                 info.icpdx@gmail.com
-              </MuiLink>
+              </Link>
             </Typography>
           </Grid>
         </Grid>
         <Grid container spacing={2} mt={0}>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1XeRXuDW9PJibxu4iPJOanX-gkFkbPjwe/view?usp=sharing">
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                sx={{ color: 'white' }}
-              >
-                English
-              </Button>
-            </MuiLink>
+            <Button
+              href="https://drive.google.com/file/d/1XeRXuDW9PJibxu4iPJOanX-gkFkbPjwe/view?usp=sharing"
+              variant="contained"
+              color="primary"
+            >
+              English
+            </Button>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1vk4tep1hGWxpngElIWqHb2gtQTmynlBH/view?usp=sharing">
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                sx={{ color: 'white' }}
-              >
-                Español (Spanish)
-              </Button>
-            </MuiLink>
+            <Button
+              href="https://drive.google.com/file/d/1vk4tep1hGWxpngElIWqHb2gtQTmynlBH/view?usp=sharing"
+              variant="contained"
+              color="primary"
+            >
+              Español (Spanish)
+            </Button>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1g0n9KAD89bIW40-5-uwbXP37V5FTdW0n/view?usp=sharing">
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                sx={{ color: 'white' }}
-              >
-                한글 (Korean)
-              </Button>
-            </MuiLink>
+            <Button
+              href="https://drive.google.com/file/d/1g0n9KAD89bIW40-5-uwbXP37V5FTdW0n/view?usp=sharing"
+              variant="contained"
+              color="primary"
+            >
+              한글 (Korean)
+            </Button>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/16noMyw08fkRI5m5T9ERyVqjuoSz25Gu9/view?usp=sharing">
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                sx={{ color: 'white' }}
-              >
-                Português (Portugese)
-              </Button>
-            </MuiLink>
+            <Button
+              href="https://drive.google.com/file/d/16noMyw08fkRI5m5T9ERyVqjuoSz25Gu9/view?usp=sharing"
+              variant="contained"
+              color="primary"
+            >
+              Português (Portugese)
+            </Button>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1dM7carIbYI6U9oOQhrzrOXr3VBs82lDB/view?usp=sharing">
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                sx={{ color: 'white' }}
-              >
-                Tagalog (Filipino)
-              </Button>
-            </MuiLink>
+            <Button
+              href="https://drive.google.com/file/d/1dM7carIbYI6U9oOQhrzrOXr3VBs82lDB/view?usp=sharing"
+              variant="contained"
+              color="primary"
+            >
+              Tagalog (Filipino)
+            </Button>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1R0lKYV5l8B5SWUWLYa8La_Kqtp2KIyMG/view?usp=sharing">
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                sx={{ color: 'white' }}
-              >
-                русский (Russian)
-              </Button>
-            </MuiLink>
+            <Button
+              href="https://drive.google.com/file/d/1R0lKYV5l8B5SWUWLYa8La_Kqtp2KIyMG/view?usp=sharing"
+              variant="contained"
+              color="primary"
+            >
+              русский (Russian)
+            </Button>
           </Grid>
           <Grid item>
-            <MuiLink href="https://drive.google.com/file/d/1zBEXxNjjNPvneT-BcEYgqeo9oXXACPln/view?usp=sharing">
-              <Button
-                variant="contained"
-                size="large"
-                color="primary"
-                sx={{ color: 'white' }}
-              >
-                Français (French)
-              </Button>
-            </MuiLink>
+            <Button
+              href="https://drive.google.com/file/d/1zBEXxNjjNPvneT-BcEYgqeo9oXXACPln/view?usp=sharing"
+              variant="contained"
+              color="primary"
+            >
+              Français (French)
+            </Button>
           </Grid>
         </Grid>
         <Typography variant="h4" paragraph textAlign="center" mt={6}>
@@ -325,9 +300,8 @@ export default function ImmigrantConnection() {
         <Box display="flex" flexDirection="column" alignItems="center" my={5}>
           <Button
             variant="contained"
-            size="large"
             color="secondary"
-            sx={{ color: 'white', mb: 4 }}
+            sx={{ mb: 4 }}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? 'See less services' : 'See more services'}
@@ -373,9 +347,9 @@ export default function ImmigrantConnection() {
             <Typography textAlign="center">
               For more information regarding these services:
             </Typography>
-            <MuiLink href="https://www.uscis.gov">
+            <Link href="https://www.uscis.gov">
               <Typography textAlign="center">https://www.uscis.gov</Typography>
-            </MuiLink>
+            </Link>
           </Collapse>
         </Box>
       </Container>

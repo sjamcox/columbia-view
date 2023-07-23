@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Image from 'next/image'
 import {
   Box,
   Button,
   Container,
   Grid,
+  Link,
   Stack,
   Typography,
   useMediaQuery,
@@ -13,8 +13,9 @@ import {
 import { Layout } from '../components/Layout'
 import { Hero } from '../components/Hero'
 import VideoSection from '../components/VideoSection'
+import ResponsiveImage from '../components/ResponsiveImage'
 import ImageTile from '../components/ImageTile'
-import sermon from '../public/sunday/sermon-david-preaching.webp'
+import baptism from '../public/sunday/mark-baptism.webp'
 import serve from '../public/serve-east-county-2023.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
 import kids from '../public/sunday/kids-room-1.webp'
@@ -76,17 +77,15 @@ const Index = () => {
                 each day. Regardless of your story, your doubts, or your
                 struggles; you are welcome at Columbia View! So come as you are.
               </Typography>
-              <Link href="/join-us" passHref>
-                <Button
-                  variant="contained"
-                  component="a"
-                  size="large"
-                  color="secondary"
-                  sx={{ color: 'white', mt: 2 }}
-                >
-                  Join us this Sunday
-                </Button>
-              </Link>
+              <Button
+                href="/join-us"
+                variant="contained"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white', mt: 2 }}
+              >
+                Join us this Sunday
+              </Button>
             </Grid>
             <Grid item xs={4} sx={{ mb: { xs: 4, md: 0 } }}>
               <Box
@@ -113,20 +112,18 @@ const Index = () => {
                     top: { xs: 20, md: 0 },
                     left: { xs: 20, md: 0 },
                     width: '100%',
-                    height: { xs: '260px', md: '400px' },
-                    '& span': {
-                      borderRadius: '10px',
-                    },
+                    height: { xs: 260, md: 400 },
                     '& img': {
+                      borderRadius: '10px',
                       position: 'absolute',
+                      objectFit: 'cover',
                     },
                   }}
                 >
                   <Image
-                    src={sermon}
-                    alt="Pastor David teaching from the stage"
-                    layout="fill"
-                    objectFit="cover"
+                    src={baptism}
+                    alt="Pastor David baptising a new believer"
+                    fill
                     priority
                   />
                 </Box>
@@ -140,7 +137,7 @@ const Index = () => {
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} sm={6}>
-              <Image src={rightnow} />
+              <ResponsiveImage src={rightnow} />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography component="h2" variant="h3" paragraph color="white">
@@ -152,14 +149,13 @@ const Index = () => {
                 members. RightNow Media is a tool that you can use to help you
                 live out your faith in every area of your life.
               </Typography>
-              <Link
+              <Button
                 href="https://app.rightnowmedia.org/join/columbiaviewchurch"
-                passHref
+                variant="contained"
+                color="secondary"
               >
-                <Button variant="contained" color="secondary">
-                  Get Access Today
-                </Button>
-              </Link>
+                Get Access Today
+              </Button>
             </Grid>
           </Grid>
         </Container>
@@ -225,7 +221,7 @@ const Index = () => {
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} sm={6}>
-              <Image src={bible} layout="responsive" />
+              <ResponsiveImage src={bible} />
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography component="h2" variant="h3" paragraph color="white">
@@ -235,14 +231,13 @@ const Index = () => {
                 Follow along as we journey through the Bible in one year. Join
                 our reading plan online or using the YouVersion Bible app.
               </Typography>
-              <Link
+              <Button
                 href="https://bible.com/p/55820626/47e13a105a1cdaf72278d61eda22961e"
-                passHref
+                variant="contained"
+                color="secondary"
               >
-                <Button variant="contained" color="secondary">
-                  Get the Reading Plan
-                </Button>
-              </Link>
+                Get the Reading Plan
+              </Button>
             </Grid>
           </Grid>
         </Container>
@@ -276,14 +271,14 @@ const Index = () => {
                     '& img': {
                       position: { xs: 'static', md: 'absolute' },
                       borderRadius: { xs: 'none', md: '10px' },
+                      objectFit: 'cover',
                     },
                   }}
                 >
                   <Image
                     src={immigrantFamily}
                     alt="Immigrant mother and daughter smiling"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                   />
                 </Box>
               </Grid>
@@ -309,17 +304,15 @@ const Index = () => {
                     in underserved communities of the Portland Metro area and
                     beyond.
                   </Typography>
-                  <Link href="/immigrant-connection-pdx" passHref>
-                    <Button
-                      variant="contained"
-                      component="a"
-                      size="large"
-                      color="secondary"
-                      sx={{ color: 'white', mt: 2 }}
-                    >
-                      Learn more about our services
-                    </Button>
-                  </Link>
+                  <Button
+                    href="/immigrant-connection-pdx"
+                    variant="contained"
+                    size="large"
+                    color="secondary"
+                    sx={{ color: 'white', mt: 2 }}
+                  >
+                    Learn more about our services
+                  </Button>
                 </Box>
               </Grid>
               <Grid item xs={0} md={5}></Grid>
