@@ -51,10 +51,10 @@ export default function ImmigrantConnection() {
               variant="h2"
               sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
-              160+
+              700+
             </Typography>
             <Typography textAlign="center" color="white" fontWeight={600}>
-              clients served
+              new client consultations
             </Typography>
           </Grid>
           <Grid
@@ -74,10 +74,10 @@ export default function ImmigrantConnection() {
               variant="h2"
               sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
-              40+
+              150+
             </Typography>
             <Typography textAlign="center" color="white" fontWeight={600}>
-              citizenships granted
+              citizenship applications
             </Typography>
           </Grid>
           <Grid
@@ -97,10 +97,10 @@ export default function ImmigrantConnection() {
               variant="h2"
               sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
-              10+
+              50+
             </Typography>
             <Typography textAlign="center" color="white" fontWeight={600}>
-              families reunited
+              family-based petitions
             </Typography>
           </Grid>
         </Grid>
@@ -112,7 +112,7 @@ export default function ImmigrantConnection() {
           borderBottom="1px solid silver"
           sx={{ p: 5 }}
         >
-          We're grateful for the impact we made together in 2022!
+          We're grateful for the impact we made together so far!
         </Typography>
       </Container>
       <Grid container spacing={3}>
@@ -151,7 +151,7 @@ export default function ImmigrantConnection() {
           Immigration Legal Services opens pathways for whole communities and
           their residents to thrive.
         </Typography>
-        <Stack alignItems="center">
+        <Stack alignItems="center" mb={4}>
           <Box width="100%" maxWidth={500}>
             <ResponsiveImage
               src={chart}
@@ -160,27 +160,6 @@ export default function ImmigrantConnection() {
             />
           </Box>
         </Stack>
-        <Typography component="h2" variant="h3" gutterBottom mt={5}>
-          End of Year Giving Campaign
-        </Typography>
-        <Typography gutterBottom sx={{ fontWeight: 600 }}>
-          Thank you to Tyson Foods, Inc. for providing a generous $12,000
-          matching grant!
-        </Typography>
-        <Typography mb={5}>
-          Our goal was to raise an additional $12,000 by the end of 2022 in
-          order to open our office one additional day per week in 2023. We're
-          happy to announce we exceeded our goal thanks to your generousity!
-        </Typography>
-        <Stack direction="row" justifyContent="space-between" mb={2}>
-          <Typography>Currently gifted: $12,330</Typography>
-          <Typography>Goal: $12,000</Typography>
-        </Stack>
-        <LinearProgress
-          variant="determinate"
-          value={100}
-          sx={{ height: 40, borderRadius: '100px', mb: 4 }}
-        />
         <Stack direction="row" justifyContent="center">
           <Button
             href="https://columbiaview.churchcenter.com/people/forms/34910"
@@ -204,7 +183,7 @@ export default function ImmigrantConnection() {
         </Typography>
         <Typography>
           A heartfelt thank you to each of the organizations below for their
-          support. Together we were able to accomplish so much in 2022.
+          support. Together we are able to accomplish so much.
         </Typography>
         <Grid container spacing={1} sx={{ mt: 2, mb: 3 }}>
           <Grid item xs={12} sm={6} md={4}>
