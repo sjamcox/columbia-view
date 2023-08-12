@@ -8,7 +8,7 @@ export default function Footer() {
           <Grid container spacing={{ xs: 3, sm: 10 }}>
             <Grid item>
               <Typography color="white">
-                <strong>Columbia View Wesleyan Church</strong>
+                <strong>Columbia View Church</strong>
               </Typography>
               <Typography color="white" fontSize={15}>
                 16700 NE Halsey Street
@@ -34,7 +34,7 @@ export default function Footer() {
       <Box sx={{ borderTop: '1px solid white', bgcolor: '#333132', py: 1 }}>
         <Container sx={{ px: 3 }}>
           <Typography color="white" fontSize="14px">
-            © 2023 Columbia View Wesleyan Church | All Rights Reserved
+            © 2023 Columbia View Church | All Rights Reserved
           </Typography>
         </Container>
       </Box>

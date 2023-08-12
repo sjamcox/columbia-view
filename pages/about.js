@@ -65,11 +65,11 @@ export default function About() {
         Welcome Home
       </Typography>
       <Typography paragraph>
-        Columbia View Wesleyan Church is a church body committed to consistently
-        pursuing a personal knowledge of the heart of God and then sharing that
-        with our people. The Wesleyan church has had a presence in Portland
-        since 1893. We are honored to carry on a rich commitment to study, know
-        and teach the Word of God in this great city.
+        Columbia View Church is a church body committed to consistently pursuing
+        a personal knowledge of the heart of God and then sharing that with our
+        people. The Wesleyan church has had a presence in Portland since 1893.
+        We are honored to carry on a rich commitment to study, know and teach
+        the Word of God in this great city.
       </Typography>
       <Typography component="h2" variant="h3" color="primary" mt={4}>
         Our Mission
@@ -118,8 +118,8 @@ export default function About() {
         Beliefs and Core Values
       </Typography>
       <Typography variant="h4" my={2} paragraph>
-        Wesleyans believe in one God, who is Father, Son, and Holy Spirit, and
-        the Savior of all who put their faith in Him alone for eternal life.
+        We believe in one God, who is Father, Son, and Holy Spirit, and the
+        Savior of all who put their faith in Him alone for eternal life.
       </Typography>
       <Typography paragraph>
         <strong>We believe</strong> that those who are made new in Christ are

@@ -58,7 +58,7 @@ const MyApp = ({
           site_name: 'Columbia View Church',
           title: 'Columbia View Church',
           description:
-            'Columbia View Wesleyan Church is a Christ-centered church where the Word of God is shared and people are loved. Advancing the great commission in the spirit of the great commandment.',
+            'Columbia View Church is a Christ-centered church where the Word of God is shared and people are loved. Advancing the great commission in the spirit of the great commandment.',
           images: [
             {
               url: 'https://www.columbiaview.org/og/mark-baptism.webp',

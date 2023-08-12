@@ -118,7 +118,7 @@ export default function ImmigrantConnection() {
               10:00 am – 4:00 pm
             </Typography>
             <Typography fontSize={15} paragraph>
-              Columbia View Wesleyan Church <br />
+              Columbia View Church <br />
               16700 NE Halsey St. <br />
               Portland, OR 97230
             </Typography>
