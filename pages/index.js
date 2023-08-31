@@ -24,6 +24,7 @@ import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
 import immigrantFamily from '../public/icpdx/immigrant-family.webp'
 import bible from '../public/bible-project-one-story.webp'
 import rightnow from '../public/right-now-media.webp'
+import { BTCSHero } from '../components/BTCSHero'
 
 const Index = () => {
   return (
@@ -35,7 +36,7 @@ const Index = () => {
           content="Columbia View Church is a Christ-centered church where the Word of God is shared and people are loved. Advancing the great commission in the spirit of the great commandment."
         />
       </Head>
-      <Hero
+      {/* <Hero
         src={serve}
         alt="Alt tag"
         title="Serve East County"
@@ -43,7 +44,8 @@ const Index = () => {
         subtitle="Join us in demonstrating our love for our community on August 26."
         buttonText="Learn More and Register"
         href="https://form.jotform.com/231566848108059"
-      />
+      /> */}
+      <BTCSHero />
       <Box component="section">
         <Container
           sx={{
