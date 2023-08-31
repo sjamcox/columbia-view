@@ -24,9 +24,7 @@ export const BTCSHero = () => {
       bgcolor="#FFC121"
       overflow="hidden"
     >
-      <Container
-        sx={{ position: 'relative', px: { xs: 3 }, py: { xs: 5, sm: 0 } }}
-      >
+      <Container sx={{ position: 'relative', px: { xs: 3 }, py: { xs: 5 } }}>
         <Grid container spacing={{ xs: 5, sm: 10 }}>
           <Grid
             item
