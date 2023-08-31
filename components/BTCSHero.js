@@ -43,6 +43,7 @@ export const BTCSHero = () => {
               sizes="(max-width: 600px): 80vw, (max-width: 900px): 50vw, (max-width: 1500px): 33vw"
               height={isMediumAndUp ? 305 : 250}
               width={isMediumAndUp ? 300 : 245}
+              priority
             />
           </Grid>
           <Grid
@@ -61,6 +62,7 @@ export const BTCSHero = () => {
                 sizes="(max-width: 600px): 80vw, (max-width: 900px): 50vw, (max-width: 1500px): 33vw"
                 height={isMediumAndUp ? 130 : 75}
                 width={isMediumAndUp ? 400 : 250}
+                priority
               />
               <Box>
                 <Button
