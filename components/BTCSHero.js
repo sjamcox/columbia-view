@@ -14,6 +14,7 @@ import BTCSJoinUs from '../public/BTCS/BTCS-join-us.webp'
 
 export const BTCSHero = () => {
   const isMediumAndUp = useMediaQuery('(min-width: 900px)')
+  const isLargeAndUp = useMediaQuery('(min-width: 1300px)')
 
   return (
     <Box
@@ -39,8 +40,8 @@ export const BTCSHero = () => {
             <Image
               src={BTCSLogo}
               sizes="(max-width: 600px): 80vw, (max-width: 900px): 50vw, (max-width: 1500px): 33vw"
-              height={isMediumAndUp ? 305 : 250}
-              width={isMediumAndUp ? 300 : 245}
+              height={isLargeAndUp ? 450 : isMediumAndUp ? 305 : 250}
+              width={isLargeAndUp ? 430 : isMediumAndUp ? 300 : 245}
               priority
             />
           </Grid>
