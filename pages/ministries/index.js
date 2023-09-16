@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import { Box, Button, Grid, Link, Typography } from '@mui/material'
-import { Layout } from '../components/Layout'
-import ResponsiveImage from '../components/ResponsiveImage'
-import blakeFamily from '../public/blake-family.webp'
-import cheneyFamily from '../public/cheney-family.webp'
-import dunbarFamily from '../public/dunbar-family.webp'
-import jonesFamily from '../public/jones-family.webp'
+import { Layout } from '../../components/Layout'
+import ResponsiveImage from '../../components/ResponsiveImage'
+import blakeFamily from '../../public/blake-family.webp'
+import cheneyFamily from '../../public/cheney-family.webp'
+import dunbarFamily from '../../public/dunbar-family.webp'
+import jonesFamily from '../../public/jones-family.webp'
 
 export default function Ministries() {
   return (
@@ -78,7 +78,7 @@ export default function Ministries() {
       </Box>
       <Box id="columbia-kids" my={4} sx={{ scrollMarginTop: '100px' }}>
         <Typography component="h2" variant="h3" color="primary" paragraph>
-          Children's Ministry
+          Columbia Kids
         </Typography>
         <Grid container justifyContent="space-between">
           <Grid item xs={12} md={8}>
@@ -88,6 +88,15 @@ export default function Ministries() {
               all background checked and trained to ensure the highest quality
               and safety for your children.
             </Typography>
+            <Button
+              variant="contained"
+              size="large"
+              color="secondary"
+              sx={{ color: 'white', mb: 3 }}
+              href="/ministries/columbia-kids"
+            >
+              Learn more about Columbia Kids
+            </Button>
           </Grid>
           <Grid item xs={12} md={3}>
             <Typography fontSize={15}>

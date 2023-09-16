@@ -193,7 +193,7 @@ const Index = () => {
               </Grid>
               <Grid item xs={12} sm={6} lg={3}>
                 <ImageTile
-                  link="/ministries#columbia-kids"
+                  link="/ministries/columbia-kids"
                   image={kids}
                   alt="kids in sunday school"
                   headline="Columbia Kids"
