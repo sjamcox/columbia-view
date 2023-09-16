@@ -38,6 +38,10 @@ const menu = [
         href: '/icpdx',
       },
       {
+        text: 'Available Positions',
+        href: '/immigrant-connection-pdx/jobs',
+      },
+      {
         text: 'Our Staff',
         href: '/immigrant-connection-pdx/staff',
       },
