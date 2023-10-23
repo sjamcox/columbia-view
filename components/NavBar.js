@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import Image from 'next/image'
 import {
@@ -15,6 +17,52 @@ import {
 import { useTheme } from '@mui/material/styles'
 import { Menu as HamburgerMenu } from '@mui/icons-material'
 import logo from '../public/columbia-view-new-logo-horizontal.webp'
+import { NavDrawer } from '../components/NavDrawer'
+
+const menuItems = [
+  {
+    text: 'Get Involved',
+    subnav: [
+      {
+        text: 'Join Us',
+        href: '/join-us',
+      },
+      {
+        text: 'Service Opportunities',
+        href: 'https://columbiaview.churchcenter.com/people/forms/86247',
+      },
+      {
+        text: 'Event Calendar',
+        href: 'https://columbiaview.churchcenter.com/calendar?view=list',
+      },
+      { text: 'Give', href: 'https://columbiaview.churchcenter.com/giving' },
+    ],
+  },
+  { text: 'Ministries', href: '/ministries' },
+  { text: 'Messages', href: '/messages' },
+  {
+    text: 'Immigrant Connection',
+    subnav: [
+      {
+        text: 'Client Portal',
+        href: '/immigrant-connection-pdx',
+      },
+      {
+        text: 'Partner With Us',
+        href: '/icpdx',
+      },
+      {
+        text: 'Available Positions',
+        href: '/immigrant-connection-pdx/jobs',
+      },
+      {
+        text: 'Our Staff',
+        href: '/immigrant-connection-pdx/staff',
+      },
+    ],
+  },
+  { text: 'About Us', href: '/about' },
+]
 
 const NavItem = ({ href, subnav, text, handleClick }) => {
   if (subnav) {
@@ -46,14 +94,15 @@ const NavItem = ({ href, subnav, text, handleClick }) => {
   )
 }
 
-export const NavBar = ({ menu, setOpen }) => {
+export const NavBar = () => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('md'))
+  const [open, setOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState([])
   const [anchorEl, setAnchorEl] = useState(null)
 
-  const handleClick = (e, menu) => {
-    setActiveMenu(menu)
+  const handleClick = (e, menuItems) => {
+    setActiveMenu(menuItems)
     setAnchorEl(e.currentTarget)
   }
 
@@ -61,7 +110,7 @@ export const NavBar = ({ menu, setOpen }) => {
     setAnchorEl(null)
   }
 
-  const linkList = menu.map((link) => (
+  const linkList = menuItems.map((link) => (
     <NavItem
       key={link.text}
       href={link.href}
@@ -83,6 +132,8 @@ export const NavBar = ({ menu, setOpen }) => {
         height: 72,
       }}
     >
+      <NavDrawer menu={menuItems} open={open} setOpen={setOpen} />
+
       <Container maxWidth="lg" disableGutters>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Link href="/">
