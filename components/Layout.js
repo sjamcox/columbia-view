@@ -25,7 +25,7 @@ const menu = [
     ],
   },
   { text: 'Ministries', href: '/ministries' },
-  { text: 'Messages', href: '/messages' },
+  { text: 'Messages', href: 'https://www.spreaker.com/show/sermons_59' },
   {
     text: 'Immigrant Connection',
     subnav: [
