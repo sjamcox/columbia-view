@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import MessageGrid from '../../components/MessageGrid'
 
 export default async function Messages() {
@@ -14,6 +14,16 @@ export default async function Messages() {
         Messages
       </Typography>
       <MessageGrid messages={data.response.items} />
+      <Box width="100%" textAlign="center" mt={4}>
+        <Button
+          variant="contained"
+          color="secondary"
+          href="https://www.spreaker.com/show/sermons_59"
+          target="_blank"
+        >
+          See All Messages
+        </Button>
+      </Box>
     </>
   )
 }
