@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { Divider, Grid, Stack, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import MessageGrid from '../../components/MessageGrid'
 
 export default async function Messages() {

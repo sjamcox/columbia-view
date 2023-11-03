@@ -28,7 +28,6 @@ export default async function MessageDetails({
         sx={{ '& a': { color: 'primary.main' } }}
       />
       <AudioPlayer src={episode.playback_url} />
-      <Link href={episode.download_url}>Download Message</Link>
     </Stack>
   )
 }
