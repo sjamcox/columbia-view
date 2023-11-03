@@ -1,7 +1,14 @@
-import axios from 'axios'
+import type { Metadata } from 'next'
 
+import axios from 'axios'
 import { Box, Button, Typography } from '@mui/material'
+
 import MessageGrid from '../../components/MessageGrid'
+
+export const metadata: Metadata = {
+  title: 'Messages | Columbia View Church',
+  description: 'Explore the latest teachings from Columbia View Church.',
+}
 
 export default async function Messages() {
   const { data } = await axios.get(

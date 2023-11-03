@@ -4,6 +4,13 @@ import axios from 'axios'
 
 import AudioPlayer from '../../../components/AudioPlayer'
 
+export const metadata = {
+  robots: {
+    title: 'Messages | Columbia View Church',
+    index: false,
+  },
+}
+
 export default async function MessageDetails({
   params,
 }: {
