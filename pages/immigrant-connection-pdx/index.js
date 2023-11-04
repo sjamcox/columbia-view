@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { NextSeo } from 'next-seo'
 import {
+  Alert,
   Box,
   Button,
   Collapse,
@@ -99,6 +100,15 @@ export default function ImmigrantConnection() {
               more info:{' '}
               <Link href="https://www.icwelcome.org">icwelcome.org</Link>.
             </Typography>
+            <Alert severity="warning" icon={false}>
+              <Typography>
+                <strong>
+                  Our office will resume taking the following case types after
+                  April 1 2024:
+                </strong>{' '}
+                Asylum, U-Visa, VAWA, SIJS.
+              </Typography>
+            </Alert>
             <Button
               variant="contained"
               color="secondary"

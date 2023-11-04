@@ -213,6 +213,31 @@ export default function ImmigrantConnection() {
           <Grid item xs={12} sm={6} md={4}>
             <Link href="http://www.thechapelonline.org/">The Chapel</Link>
           </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Link href="https://rockwoodcdc.org/">
+              Rockwood Community Development Corporation
+            </Link>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Link href="https://eastportlandchamberofcommerce.com/">
+              East Portland Chamber of Commerce
+            </Link>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Link href="https://www.catholiccharitiesoregon.org/">
+              Catholic Charities
+            </Link>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Link href="https://www.ilrc.org/">
+              Immigration Legal Resource Center
+            </Link>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4}>
+            <Link href="https://www.facebook.com/loveincemc/">
+              Love INC East Multnomah
+            </Link>
+          </Grid>
         </Grid>
         <Typography>
           ... and to all of our individual recurring donors!
