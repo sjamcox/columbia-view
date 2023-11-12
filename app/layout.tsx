@@ -1,4 +1,4 @@
-import { Container } from '@mui/material'
+import { Box } from '@mui/material'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Providers from '../providers'
@@ -13,16 +13,15 @@ export default function RootLayout({
       <body>
         <Providers>
           <Header />
-          <Container
-            maxWidth="lg"
+          <Box
             sx={{
-              my: 5,
-              px: 3,
+              mb: 5,
+              px: '4vw',
               minHeight: '90vh',
             }}
           >
             {children}
-          </Container>
+          </Box>
           <Footer />
         </Providers>
       </body>

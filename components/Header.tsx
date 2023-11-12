@@ -1,9 +1,26 @@
 'use client'
 
 import { useState } from 'react'
+import {
+  Box,
+  Button,
+  ButtonBase,
+  IconButton,
+  Link,
+  Menu,
+  MenuItem,
+  Stack,
+  Typography,
+  useMediaQuery,
+} from '@mui/material'
+import Grid from '@mui/material/Unstable_Grid2'
+import MenuIcon from '@mui/icons-material/Menu'
+import FacebookIcon from '@mui/icons-material/Facebook'
+import YouTubeIcon from '@mui/icons-material/YouTube'
+import Image from 'next/image'
 
-import { NavBar } from './NavBar'
 import { NavDrawer } from './NavDrawer'
+import logo from '../public/logos/cvwc-logo-mountains.png'
 
 const menu = [
   {
@@ -50,13 +67,142 @@ const menu = [
   { text: 'About Us', href: '/about' },
 ]
 
+const NavItem = ({ href, subnav, text, handleClick }) => {
+  if (subnav) {
+    return (
+      <ButtonBase
+        onClick={(e) => handleClick(e.currentTarget, subnav)}
+        sx={{ mx: 1.5, py: 1 }}
+      >
+        <Typography fontSize={16} fontWeight={600}>
+          {text}
+        </Typography>
+      </ButtonBase>
+    )
+  }
+
+  return (
+    <ButtonBase href={href} sx={{ mx: 1.5, py: 1 }}>
+      <Typography fontSize={16} fontWeight={600}>
+        {text}
+      </Typography>
+    </ButtonBase>
+  )
+}
+
 export default function Header() {
+  const matches = useMediaQuery((theme: any) => theme.breakpoints.up('md'))
   const [open, setOpen] = useState(false)
+  const [activeMenu, setActiveMenu] = useState([])
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+
+  const handleClick = (element, menu) => {
+    setActiveMenu(menu)
+    setAnchorEl(element)
+  }
+
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
 
   return (
     <>
       <NavDrawer menu={menu} open={open} setOpen={setOpen} />
-      <NavBar menu={menu} setOpen={setOpen} />
+      <Grid container height={90} width="100%" px="4vw">
+        <Grid
+          xs={6}
+          sm={1}
+          display="flex"
+          justifyContent="flex-start"
+          alignItems="center"
+        >
+          <Link href="/">
+            <Box display="flex" mb={-1}>
+              <Box>
+                <Image
+                  src={logo}
+                  alt="Columbia View logo"
+                  width={70}
+                  height={70}
+                  priority
+                />
+              </Box>
+            </Box>
+          </Link>
+        </Grid>
+        <Grid
+          xs={6}
+          sm={11}
+          md={10}
+          display="flex"
+          justifyContent={{ xs: 'flex-end', md: 'center' }}
+          alignItems="center"
+        >
+          <Box display={{ xs: 'none', md: 'block' }}>
+            <>
+              {menu.map((link) => (
+                <NavItem
+                  key={link.text}
+                  href={link.href}
+                  text={link.text}
+                  subnav={link.subnav}
+                  handleClick={handleClick}
+                />
+              ))}
+              <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
+                {activeMenu.map((item) => (
+                  <Link
+                    key={item.text}
+                    href={item.href}
+                    sx={{ textDecoration: 'none' }}
+                  >
+                    <MenuItem
+                      component="span"
+                      onClick={handleClose}
+                      sx={{
+                        color: '#333333',
+                        fontSize: 16,
+                        fontWeight: 600,
+                      }}
+                    >
+                      {item.text}
+                    </MenuItem>
+                  </Link>
+                ))}
+              </Menu>
+            </>
+          </Box>
+          <Box display={{ xs: 'block', md: 'none' }}>
+            <IconButton sx={{ padding: 0 }} onClick={() => setOpen(true)}>
+              <MenuIcon />
+            </IconButton>
+          </Box>
+        </Grid>
+        <Grid
+          xs={0}
+          md={1}
+          display={{ xs: 'none', md: 'flex' }}
+          justifyContent="flex-end"
+          alignItems="center"
+        >
+          <Stack direction="row" spacing={1}>
+            <IconButton
+              href="https://www.facebook.com/COLUMBIAVIEW/"
+              color="primary"
+              sx={{ padding: 0 }}
+            >
+              <FacebookIcon />
+            </IconButton>
+            <IconButton
+              href="https://www.youtube.com/@columbiaview.church"
+              color="primary"
+              sx={{ padding: 0 }}
+            >
+              <YouTubeIcon />
+            </IconButton>
+          </Stack>
+        </Grid>
+      </Grid>
     </>
   )
 }
