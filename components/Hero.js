@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Box, Button, Container, Grid, Link, Typography } from '@mui/material'
 
-export const Hero = ({
+export default function Hero({
   src,
   alt,
   title,
@@ -9,7 +9,7 @@ export const Hero = ({
   subtitle,
   buttonText,
   href,
-}) => {
+}) {
   return (
     <Grid
       container
@@ -19,7 +19,8 @@ export const Hero = ({
         flexDirection: 'column',
         justifyContent: 'center',
         height: '70vh',
-        width: '100vw',
+        width: '100%',
+        borderRadius: '20px',
         overflow: 'hidden',
         position: 'relative',
         '& img': { objectFit: 'cover' },

@@ -1,22 +1,13 @@
+import type { Metadata } from 'next'
+
 import Head from 'next/head'
 import Image from 'next/image'
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Link,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from '@mui/material'
-import { Layout } from '../components/Layout'
-import { Hero } from '../components/Hero'
+import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
+import Hero from '../components/Hero'
 import VideoSection from '../components/VideoSection'
 import ResponsiveImage from '../components/ResponsiveImage'
 import ImageTile from '../components/ImageTile'
 import baptism from '../public/sunday/mark-baptism.webp'
-import serve from '../public/serve-east-county-2023.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
 import kids from '../public/sunday/kids-room-1.webp'
 import lifeGroup from '../public/sandra-dani.webp'
@@ -25,18 +16,17 @@ import immigrantFamily from '../public/icpdx/immigrant-family.webp'
 import bible from '../public/bible-project-one-story.webp'
 import rightnow from '../public/right-now-media.webp'
 import lobby from '../public/lobby-group.webp'
-import { BTCSHero } from '../components/BTCSHero'
+import YouTubePlayer from '../components/YouTubePlayer'
 
-const Index = () => {
+export const metadata: Metadata = {
+  title: 'Welcome Home | Columbia View Church',
+  description:
+    'Columbia View Church is a Christ-centered church where the Word of God is shared and people are loved. Advancing the great commission in the spirit of the great commandment.',
+}
+
+export default function Index() {
   return (
-    <Layout noContainer>
-      <Head>
-        <title>Welcome Home | Columbia View Church</title>
-        <meta
-          name="description"
-          content="Columbia View Church is a Christ-centered church where the Word of God is shared and people are loved. Advancing the great commission in the spirit of the great commandment."
-        />
-      </Head>
+    <>
       <Hero
         src={lobby}
         alt="Made new"
@@ -134,8 +124,28 @@ const Index = () => {
           </Grid>
         </Container>
       </Box>
-      <VideoSection id="fAGhUIL-LQE" image={kids} alt="kids in sunday school" />
-      <Box component="section" sx={{ bgcolor: 'rgb(14, 73, 111)' }}>
+      <Container
+        sx={{
+          position: 'relative',
+          pb: { xs: 5, sm: 8, md: 12 },
+          display: 'flex',
+          justifyContent: 'center',
+          zIndex: 100,
+        }}
+      >
+        <Box
+          sx={{
+            width: '100%',
+            position: 'relative',
+          }}
+        >
+          <YouTubePlayer id="fAGhUIL-LQE" />
+        </Box>
+      </Container>
+      <Box
+        component="section"
+        sx={{ bgcolor: 'rgb(14, 73, 111)', borderRadius: '20px' }}
+      >
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} sm={6}>
@@ -145,7 +155,7 @@ const Index = () => {
               <Typography component="h2" variant="h3" paragraph color="white">
                 RightNow Media
               </Typography>
-              <Typography component="p" variant="p" paragraph color="white">
+              <Typography component="p" paragraph color="white">
                 RightNow Media is the world’s largest streaming library of video
                 Bible study resources and is now available to all Columbia View
                 members. RightNow Media is a tool that you can use to help you
@@ -162,13 +172,7 @@ const Index = () => {
           </Grid>
         </Container>
       </Box>
-      <Box
-        component="section"
-        sx={{
-          background:
-            'linear-gradient(180deg, rgba(188, 230, 251, 0.5) 0%, #FFFFFF 100%)',
-        }}
-      >
+      <Box component="section">
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
           <Stack alignItems="center">
             <Typography component="h2" variant="h2">
@@ -219,7 +223,10 @@ const Index = () => {
           </Stack>
         </Container>
       </Box>
-      <Box component="section" sx={{ bgcolor: 'rgb(14, 73, 111)' }}>
+      <Box
+        component="section"
+        sx={{ bgcolor: 'rgb(14, 73, 111)', borderRadius: '20px' }}
+      >
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
           <Grid container spacing={6} alignItems="center">
             <Grid item xs={12} sm={6}>
@@ -229,7 +236,7 @@ const Index = () => {
               <Typography component="h2" variant="h3" paragraph color="white">
                 Dive deep into Scripture this year
               </Typography>
-              <Typography component="p" variant="p" paragraph color="white">
+              <Typography component="p" paragraph color="white">
                 Follow along as we journey through the Bible in one year. Join
                 our reading plan online or using the YouVersion Bible app.
               </Typography>
@@ -245,7 +252,12 @@ const Index = () => {
         </Container>
       </Box>
       <Box component="section">
-        <Container sx={{ px: { xs: 0, md: 3 }, py: { xs: 0, md: 12 } }}>
+        <Container
+          sx={{
+            px: { xs: 0, md: 3 },
+            py: { xs: 6, md: 12 },
+          }}
+        >
           <Box
             sx={{
               height: { xs: 'auto', md: 460 },
@@ -253,6 +265,8 @@ const Index = () => {
               display: 'flex',
               alignItems: 'center',
               flexDirection: { xs: 'column', md: 'row' },
+              borderRadius: '20px',
+              overflow: 'hidden',
             }}
           >
             <Grid
@@ -322,8 +336,6 @@ const Index = () => {
           </Box>
         </Container>
       </Box>
-    </Layout>
+    </>
   )
 }
-
-export default Index

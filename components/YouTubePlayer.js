@@ -1,3 +1,5 @@
+'use client'
+
 import LiteYouTubePlayer from 'react-lite-youtube-embed'
 import { Global, css } from '@emotion/react'
 
