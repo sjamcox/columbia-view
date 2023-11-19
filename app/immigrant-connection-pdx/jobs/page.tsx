@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import { Layout } from '../../components/Layout'
-import { Button, Divider, Link, Typography } from '@mui/material'
+import { Button, Container, Divider, Link, Typography } from '@mui/material'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Jobs | Immigrant Connection PDX',
+}
 
 export default function Jobs() {
   return (
-    <Layout>
-      <Head>
-        <title>Jobs | Immigrant Connection PDX</title>
-      </Head>
+    <Container maxWidth="md">
       <Typography component="h1" variant="h2" sx={{ my: 5 }}>
         Available Positions
       </Typography>
@@ -37,6 +37,6 @@ export default function Jobs() {
         <Link href="tel:503.253.7939">503.253.7939</Link> or{' '}
         <Link href="mailto:office.cvwc@gmail.com">office.cvwc@gmail.com</Link>
       </Typography>
-    </Layout>
+    </Container>
   )
 }

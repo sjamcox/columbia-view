@@ -1,12 +1,12 @@
-import Head from 'next/head'
-import { Layout } from '../../components/Layout'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Book a Consultation | Immigrant Connection PDX',
+}
 
 export default function Booking() {
   return (
-    <Layout>
-      <Head>
-        <title>Book a Consultation | Immigrant Connection PDX</title>
-      </Head>
+    <>
       <iframe
         src="https://app.squarespacescheduling.com/schedule.php?owner=25385557"
         title="Schedule Appointment"
@@ -18,6 +18,6 @@ export default function Booking() {
         src="https://embed.acuityscheduling.com/js/embed.js"
         type="text/javascript"
       />
-    </Layout>
+    </>
   )
 }

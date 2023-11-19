@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { NextSeo } from 'next-seo'
 import {
   Box,
   Button,
@@ -10,28 +9,42 @@ import {
   Stack,
   Typography,
 } from '@mui/material'
-import { Layout } from '../components/Layout'
-import icMap from '../public/ic-map.webp'
-import chart from '../public/family-workplace-community.webp'
-import YouTubePlayer from '../components/YouTubePlayer'
-import ResponsiveImage from '../components/ResponsiveImage'
+import icMap from '../../public/ic-map.webp'
+import chart from '../../public/family-workplace-community.webp'
+import YouTubePlayer from '../../components/YouTubePlayer'
+import ResponsiveImage from '../../components/ResponsiveImage'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Partner With Us | Immigrant Connection',
+  description:
+    'Immigrant Connection is committed to seeing immigrant families in East Portland thrive. See how you can get involved today.',
+}
 
 export default function ImmigrantConnection() {
   return (
-    <Layout noContainer>
-      <NextSeo
-        title="Partner With Us | Immigrant Connection"
-        description="Immigrant Connection is committed to seeing immigrant families in East Portland thrive. See how you can get involved today."
-      />
-      <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
-        <Typography component="h1" variant="h2" gutterBottom mt={5}>
-          Partner With Immigrant Connection PDX
-        </Typography>
-        <Typography paragraph>
-          Immigrant Connection is committed to seeing immigrant families thrive.
-          We believe when immigrant families have access to immigration legal
-          services, all families can thrive.
-        </Typography>
+    <>
+      <Container maxWidth="lg" sx={{ my: 5 }}>
+        <Stack alignItems={{ xs: 'flex-start', sm: 'center' }} mb={4}>
+          <Typography
+            component="h1"
+            variant="h2"
+            gutterBottom
+            maxWidth={900}
+            textAlign={{ xs: 'left', sm: 'center' }}
+          >
+            Partner With Immigrant Connection PDX
+          </Typography>
+          <Typography
+            paragraph
+            textAlign={{ xs: 'left', sm: 'center' }}
+            maxWidth={900}
+          >
+            Immigrant Connection is committed to seeing immigrant families
+            thrive. We believe when immigrant families have access to
+            immigration legal services, all families can thrive.
+          </Typography>
+        </Stack>
         <YouTubePlayer id={'ek0RzZbxUXY'} />
         <Grid container my={4}>
           <Grid
@@ -142,7 +155,7 @@ export default function ImmigrantConnection() {
           </Typography>
         </Grid>
       </Grid>
-      <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
+      <Container maxWidth="lg" sx={{ my: 5, px: 3 }}>
         <YouTubePlayer id={'_Px3J78h5x0'} />
         <Typography my={5}>
           As the Immigrant Connection Legal Network provides critical services,
@@ -243,6 +256,6 @@ export default function ImmigrantConnection() {
           ... and to all of our individual recurring donors!
         </Typography>
       </Container>
-    </Layout>
+    </>
   )
 }

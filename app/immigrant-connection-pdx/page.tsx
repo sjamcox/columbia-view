@@ -1,19 +1,15 @@
-import { useState } from 'react'
 import Image from 'next/image'
-import { NextSeo } from 'next-seo'
 import {
   Alert,
   Box,
   Button,
-  Collapse,
   Container,
   Grid,
   Link,
   Typography,
 } from '@mui/material'
-import { Layout } from '../../components/Layout'
 import VideoSection from '../../components/VideoSection'
-import icpdxLogo from '../../public/icpdx/icpdx-logo.webp'
+import icpdxLogo from '../../public/logos/icpdx-logo-transparent.png'
 import immigrantFamily from '../../public/icpdx/immigrant-family.webp'
 import daca from '../../public/daca.webp'
 import family from '../../public/family.webp'
@@ -21,17 +17,19 @@ import residence from '../../public/residence.webp'
 import status from '../../public/status.webp'
 import visa from '../../public/visa.webp'
 import world from '../../public/world.webp'
+import { Metadata } from 'next'
+import ServiceList from './ServiceList'
+
+export const metadata: Metadata = {
+  title: 'Immigrant Connection PDX | Low-Cost Immigration Legal Services',
+  description:
+    "We're a church-based, low-cost immigration legal services office in East Portland. We serve those seeking legal assistance with issues relating to immigration.",
+}
 
 export default function ImmigrantConnection() {
-  const [isOpen, setIsOpen] = useState(false)
   return (
-    <Layout noContainer>
-      <NextSeo
-        title="Immigrant Connection PDX | Low-Cost Immigration Legal Services"
-        description="We're a church-based, low-cost immigration legal services office in East Portland. We serve those seeking legal assistance with issues relating to immigration."
-      />
-
-      <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
+    <>
+      <Container maxWidth="md">
         <Grid
           container
           flexDirection={{ xs: 'column-reverse', sm: 'row ' }}
@@ -307,67 +305,13 @@ export default function ImmigrantConnection() {
             <Typography mt={3}>U Visas</Typography>
           </Grid>
         </Grid>
-        <Box display="flex" flexDirection="column" alignItems="center" my={5}>
-          <Button
-            variant="contained"
-            color="secondary"
-            sx={{ mb: 4 }}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? 'See less services' : 'See more services'}
-          </Button>
-          <Collapse in={isOpen}>
-            <Typography textAlign="center" paragraph>
-              Adjustment of Status <br />
-              Advanced Parole/Travel Authorization <br />
-              Affilidavit of Support
-              <br />
-              Applications for Victims of Domestic Violence or Crimes (VAWA Or U
-              Visa)
-              <br />
-              Citizenship Certifications
-              <br />
-              Consular Processing
-              <br />
-              Consultations
-              <br />
-              Deferred Action for Childhood Arrivals (DACA)
-              <br />
-              Deferred Action for Paretnal Accountability (DAPA)
-              <br />
-              Family-Based Petitions
-              <br />
-              Fiancé Visas
-              <br />
-              Green Card Renewals
-              <br />
-              Naturalization and Citizenship Applications
-              <br />
-              Referrals
-              <br />
-              Work Authorization <br />
-              Removal of Conditions of Residency <br />
-              Temporary Protection Status (TPS)
-              <br />
-              Visa Renewals <br />
-              Waiver Applications
-              <br />
-              Additional Services
-            </Typography>
-            <Typography textAlign="center">
-              For more information regarding these services:
-            </Typography>
-            <Link href="https://www.uscis.gov">
-              <Typography textAlign="center">https://www.uscis.gov</Typography>
-            </Link>
-          </Collapse>
-        </Box>
+        <ServiceList />
       </Container>
       <VideoSection
         id="zBDYoLfPkwc"
         image={immigrantFamily}
         alt="Immigrant mother and daughter"
       />
-    </Layout>
+    </>
   )
 }
