@@ -17,12 +17,6 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.11.0
     version: 11.11.0(@emotion/react@11.11.1)(react@18.2.0)
-  '@fontsource/open-sans':
-    specifier: ^5.0.3
-    version: 5.0.3
-  '@fontsource/open-sans-condensed':
-    specifier: ^4.5.5
-    version: 4.5.5
   '@mui/icons-material':
     specifier: ^5.11.16
     version: 5.11.16(@mui/material@5.14.16)(react@18.2.0)
@@ -218,6 +212,7 @@ packages:
 
   /@emotion/memoize@0.7.4:
     resolution: {integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==}
+    requiresBuild: true
     dev: false
     optional: true
 
@@ -356,14 +351,6 @@ packages:
 
   /@floating-ui/utils@0.1.6:
     resolution: {integrity: sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==}
-    dev: false
-
-  /@fontsource/open-sans-condensed@4.5.5:
-    resolution: {integrity: sha512-ah6DBSWgjWEG20tVJnvcUQ/8XTfnGpuOGK4HLTF91vtrGg7PyrdEMlao/O1+S4i+SzeuJCmf5Qbc3eWponBL3Q==}
-    dev: false
-
-  /@fontsource/open-sans@5.0.3:
-    resolution: {integrity: sha512-L86qrEfW7IWSGojCtiPpw2/M6qKjxDG+EV4k1xMVFCkhh6Z6gyZwevqCt0yOvd1BmjrtUAIAfSzFTjBn3DeZJw==}
     dev: false
 
   /@humanwhocodes/config-array@0.5.0:
