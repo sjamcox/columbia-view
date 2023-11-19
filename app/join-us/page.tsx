@@ -76,7 +76,12 @@ export default function VisitUs() {
                 '& img': { objectFit: 'cover' },
               }}
             >
-              <Image src={worship} fill priority />
+              <Image
+                src={worship}
+                alt="Three guitar players leading worship on a Sunday morning"
+                fill
+                priority
+              />
             </Box>
           </Grid>
           <Grid item xs={5} md={4}>
@@ -90,7 +95,12 @@ export default function VisitUs() {
                 '& img': { objectFit: 'cover' },
               }}
             >
-              <Image src={testimony} fill priority />
+              <Image
+                src={testimony}
+                alt="A man sharing his testimony"
+                fill
+                priority
+              />
             </Box>
           </Grid>
           <Grid item xs={5} md={4}>
@@ -104,7 +114,12 @@ export default function VisitUs() {
                 '& img': { objectFit: 'cover' },
               }}
             >
-              <Image src={kidsSermon} fill priority />
+              <Image
+                src={kidsSermon}
+                alt="A pastor teaching a crowd of kids gathered around him"
+                fill
+                priority
+              />
             </Box>
           </Grid>
           <Grid item xs={7} md={8}>
@@ -118,7 +133,12 @@ export default function VisitUs() {
                 '& img': { objectFit: 'cover' },
               }}
             >
-              <Image src={communion} fill priority />
+              <Image
+                src={communion}
+                alt='A communion table that reads "Do this in remembrance of me"'
+                fill
+                priority
+              />
             </Box>
           </Grid>
         </Grid>

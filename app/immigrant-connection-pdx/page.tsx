@@ -32,9 +32,11 @@ export default function ImmigrantConnection() {
       <Container maxWidth="md">
         <Grid
           container
-          flexDirection={{ xs: 'column-reverse', sm: 'row ' }}
-          justifyContent="space-between"
-          alignItems={{ xs: 'flex-start', sm: 'flex-end' }}
+          sx={{
+            flexDirection: { xs: 'column-reverse', sm: 'row ' },
+            justifyContent: 'space-between',
+            alignItems: { xs: 'flex-start', sm: 'flex-end' },
+          }}
         >
           <Grid item xs={12} sm={8}>
             <Typography component="h1" variant="h2" sx={{ mb: 3 }}>
@@ -44,7 +46,12 @@ export default function ImmigrantConnection() {
           <Grid item xs={12} sm={3}>
             <Box display="flex" justifyContent="center" mb={3}>
               <Box sx={{ width: { xs: 150, md: 250 } }}>
-                <Image src={icpdxLogo} layout="responsive" priority />
+                <Image
+                  src={icpdxLogo}
+                  alt="Immigrant Connection PDX logo"
+                  layout="responsive"
+                  priority
+                />
               </Box>
             </Box>
           </Grid>
@@ -225,7 +232,12 @@ export default function ImmigrantConnection() {
               alignItems: 'center',
             }}
           >
-            <Image src={world} width="128px" height="128px" />
+            <Image
+              src={world}
+              alt="Illustration of Earth"
+              width={128}
+              height={128}
+            />
             <Typography mt={3}>Naturalization / Citizenship</Typography>
           </Grid>
           <Grid
@@ -240,7 +252,12 @@ export default function ImmigrantConnection() {
               alignItems: 'center',
             }}
           >
-            <Image src={family} width="128px" height="128px" />
+            <Image
+              src={family}
+              alt="Illustration of two parents with a child"
+              width={128}
+              height={128}
+            />
             <Typography mt={3}>Family-Based Petitions</Typography>
           </Grid>
           <Grid
@@ -255,7 +272,12 @@ export default function ImmigrantConnection() {
               alignItems: 'center',
             }}
           >
-            <Image src={daca} width="128px" height="128px" />
+            <Image
+              src={daca}
+              alt="Illustration of a gavel"
+              width={128}
+              height={128}
+            />
             <Typography mt={3}>DACA</Typography>
           </Grid>
           <Grid
@@ -270,7 +292,12 @@ export default function ImmigrantConnection() {
               alignItems: 'center',
             }}
           >
-            <Image src={status} width="128px" height="128px" />
+            <Image
+              src={status}
+              alt="Illustration of a completed form and pencil"
+              width={128}
+              height={128}
+            />
             <Typography mt={3}>Adjustment of Status</Typography>
           </Grid>
           <Grid
@@ -285,7 +312,12 @@ export default function ImmigrantConnection() {
               alignItems: 'center',
             }}
           >
-            <Image src={residence} width="128px" height="128px" />
+            <Image
+              src={residence}
+              alt="Illustration of a house"
+              width={128}
+              height={128}
+            />
             <Typography mt={3}>Renew Permanent</Typography>
             <Typography>Resident Card</Typography>
           </Grid>
@@ -301,7 +333,12 @@ export default function ImmigrantConnection() {
               alignItems: 'center',
             }}
           >
-            <Image src={visa} width="128px" height="128px" />
+            <Image
+              src={visa}
+              alt="Illustration of an ID card"
+              width={128}
+              height={128}
+            />
             <Typography mt={3}>U Visas</Typography>
           </Grid>
         </Grid>

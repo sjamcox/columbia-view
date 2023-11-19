@@ -51,7 +51,12 @@ export default function ColumbiaKids() {
                 '& img': { objectFit: 'cover' },
               }}
             >
-              <Image src={columbiaKids} fill priority />
+              <Image
+                src={columbiaKids}
+                alt="A line of kids sitting in chairs"
+                fill
+                priority
+              />
             </Box>
           </Grid>
           <Grid xs={5} md={4}>
@@ -65,7 +70,12 @@ export default function ColumbiaKids() {
                 '& img': { objectFit: 'cover' },
               }}
             >
-              <Image src={outdoorBounce} fill priority />
+              <Image
+                src={outdoorBounce}
+                alt="Two kids smiling while enjoying a bounce house"
+                fill
+                priority
+              />
             </Box>
           </Grid>
           <Grid xs={5} md={4}>
@@ -79,7 +89,12 @@ export default function ColumbiaKids() {
                 '& img': { objectFit: 'cover' },
               }}
             >
-              <Image src={nurseryBounce} fill priority />
+              <Image
+                src={nurseryBounce}
+                alt="A young toddler in a small bounce house"
+                fill
+                priority
+              />
             </Box>
           </Grid>
           <Grid xs={7} md={8}>
@@ -93,7 +108,12 @@ export default function ColumbiaKids() {
                 '& img': { objectFit: 'cover' },
               }}
             >
-              <Image src={kidsSong} fill priority />
+              <Image
+                src={kidsSong}
+                alt="A crowd of kids on stage dancing to a song"
+                fill
+                priority
+              />
             </Box>
           </Grid>
         </Grid>
