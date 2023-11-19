@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import testimony from '../../public/sunday/mark-baptism-testimony.webp'
 import worship from '../../public/sunday/worship-team.webp'
 import kidsSermon from '../../public/sunday/sermon-in-a-sack.webp'
