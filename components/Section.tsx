@@ -34,7 +34,6 @@ export function ImageSection({ children, src, alt }: ImageSectionProps) {
       sx={{
         py: '3.5vw',
         px: '3vw',
-        my: '3vw',
         borderRadius: '20px',
         boxShadow: '0px 0px 15px rgba(100,100,100,.15)',
         position: 'relative',
@@ -47,7 +46,7 @@ export function ImageSection({ children, src, alt }: ImageSectionProps) {
         sx={{
           position: 'absolute',
           inset: 0,
-          backgroundColor: 'rgba(0,0,0, .6)',
+          backgroundColor: 'rgba(0,0,0, .4)',
         }}
       />
       <Box position="relative">{children}</Box>
