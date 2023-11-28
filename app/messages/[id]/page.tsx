@@ -1,12 +1,13 @@
+import type { Metadata } from 'next'
 import { Box, Stack, Typography } from '@mui/material'
 import { format } from 'date-fns'
 import axios from 'axios'
 
 import AudioPlayer from '../../../components/AudioPlayer'
 
-export const metadata = {
+export const metadata: Metadata = {
+  title: 'Messages | Columbia View Church',
   robots: {
-    title: 'Messages | Columbia View Church',
     index: false,
   },
 }

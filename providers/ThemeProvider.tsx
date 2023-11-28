@@ -11,7 +11,7 @@ import CssBaseline from '@mui/material/CssBaseline'
 import NextLink from 'next/link'
 
 const openSans = Open_Sans({
-  weight: ['400', '700'],
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
   display: 'swap',
 })

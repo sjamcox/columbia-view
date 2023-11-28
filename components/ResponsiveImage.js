@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import { Box } from '@mui/material'
 
-function ResponsiveImage({ src, alt = '', aspectRatio = '16:9' }) {
+export default function ResponsiveImage({
+  src,
+  alt = '',
+  aspectRatio = '16:9',
+}) {
   const [width, height] = aspectRatio.split(':')
   const ratioPercentage = Math.ceil((height / width) * 100) + '%'
 
@@ -10,12 +14,10 @@ function ResponsiveImage({ src, alt = '', aspectRatio = '16:9' }) {
       sx={{
         position: 'relative',
         pb: ratioPercentage,
-        '& img': { objectFit: 'cover' },
+        '& img': { objectFit: 'contain' },
       }}
     >
       <Image src={src} alt={alt} fill />
     </Box>
   )
 }
-
-export default ResponsiveImage

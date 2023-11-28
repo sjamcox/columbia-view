@@ -17,7 +17,7 @@ export default async function Messages() {
 
   return (
     <>
-      <Typography component="h1" variant="h1" sx={{ my: 5 }}>
+      <Typography component="h1" variant="h1" sx={{ mb: 3 }}>
         Messages
       </Typography>
       <MessageGrid messages={data.response.items} />

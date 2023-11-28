@@ -1,14 +1,13 @@
-import Head from 'next/head'
-import { Stack, Divider, Typography, Link } from '@mui/material'
-import { Layout } from '../components/Layout'
-import { StaffListing } from '../components/StaffListing'
-import david from '../public/david-church-headshot.webp'
-import serena from '../public/serena-church-headshot.webp'
-import nathaniel from '../public/nathaniel-church-headshot.webp'
-import hawi from '../public/hawi-church-headshot.webp'
-import jacob from '../public/jacob-church-headshot.webp'
-import jose from '../public/jose-church-headshot.webp'
-import mark from '../public/mark-church-headshot.webp'
+import { Metadata } from 'next'
+import { Stack, Divider, Typography, Link, Box } from '@mui/material'
+import { StaffListing } from '../../components/StaffListing'
+import david from '../../public/david-church-headshot.webp'
+import serena from '../../public/serena-church-headshot.webp'
+import nathaniel from '../../public/nathaniel-church-headshot.webp'
+import hawi from '../../public/hawi-church-headshot.webp'
+import jacob from '../../public/jacob-church-headshot.webp'
+import jose from '../../public/jose-church-headshot.webp'
+import mark from '../../public/mark-church-headshot.webp'
 
 const staff = [
   {
@@ -55,12 +54,13 @@ const staff = [
   },
 ]
 
+export const metadata: Metadata = {
+  title: 'About | Columbia View Church',
+}
+
 export default function About() {
   return (
-    <Layout>
-      <Head>
-        <title>About | Columbia View Church</title>
-      </Head>
+    <Box maxWidth={1024}>
       <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
         Welcome Home
       </Typography>
@@ -197,6 +197,6 @@ export default function About() {
         our office at:{' '}
         <a href="mailto:office.cvwc@gmail.com">office.cvwc@gmail.com</a>
       </Typography>
-    </Layout>
+    </Box>
   )
 }

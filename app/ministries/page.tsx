@@ -1,18 +1,18 @@
-import Head from 'next/head'
+import type { Metadata } from 'next'
 import { Box, Button, Grid, Link, Typography } from '@mui/material'
-import { Layout } from '../../components/Layout'
 import ResponsiveImage from '../../components/ResponsiveImage'
 import blakeFamily from '../../public/blake-family.webp'
 import cheneyFamily from '../../public/cheney-family.webp'
 import dunbarFamily from '../../public/dunbar-family.webp'
 import jonesFamily from '../../public/jones-family.webp'
 
+export const metadata: Metadata = {
+  title: 'Ministries | Columbia View Church',
+}
+
 export default function Ministries() {
   return (
-    <Layout>
-      <Head>
-        <title>Ministries | Columbia View Church</title>
-      </Head>
+    <Box maxWidth={1024}>
       <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
         Ministries
       </Typography>
@@ -331,6 +331,6 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-    </Layout>
+    </Box>
   )
 }
