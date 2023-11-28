@@ -275,11 +275,11 @@ export default function ImmigrantConnection() {
       <Container maxWidth="lg" sx={{ my: 5, px: 3 }}>
         <YouTubePlayer id={'_Px3J78h5x0'} />
         <Typography my={5}>
-          As the Immigrant Connection Legal Network provides critical services,
-          we can see positive outcomes for immigrant families, the workplace and
-          school they are part of, as well as the communities they live in.
-          Immigration Legal Services opens pathways for whole communities and
-          their residents to thrive.
+          As Immigrant Connection PDX provides critical services, we can see
+          positive outcomes for immigrant families, the workplace and school
+          they are part of, as well as the communities they live in. Immigrant
+          Connection PDX opens pathways for whole communities and their
+          residents to thrive.
         </Typography>
         <Stack alignItems="center" mb={4}>
           <Box width="100%" maxWidth={500}>
