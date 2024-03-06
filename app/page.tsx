@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 
-import Head from 'next/head'
 import Image from 'next/image'
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
 import Hero from '../components/Hero'
-import VideoSection from '../components/VideoSection'
 import ResponsiveImage from '../components/ResponsiveImage'
 import ImageTile from '../components/ImageTile'
 import baptism from '../public/sunday/mark-baptism.webp'
@@ -15,6 +13,7 @@ import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
 import immigrantFamily from '../public/icpdx/immigrant-family.webp'
 import bible from '../public/bible-project-one-story.webp'
 import rightnow from '../public/right-now-media.webp'
+import prayerfulFasting from '../public/prayerful-fasting.png'
 import lobby from '../public/lobby-group.webp'
 import YouTubePlayer from '../components/YouTubePlayer'
 
@@ -124,10 +123,48 @@ export default function Index() {
           </Grid>
         </Container>
       </Box>
+      <Box
+        component="section"
+        sx={{ bgcolor: 'rgb(14, 73, 111)', borderRadius: '20px' }}
+      >
+        <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
+          <Grid container spacing={6} alignItems="center">
+            <Grid item xs={12} sm={6}>
+              <ResponsiveImage src={prayerfulFasting} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Typography component="h2" variant="h3" paragraph color="white">
+                21 Days of Prayerful Fasting
+              </Typography>
+              <Typography component="p" paragraph color="white">
+                This will be a powerful time and we're hopeful that all who join
+                in will encounter God in a special way. Get involved this March
+                by downloading the prayer guide and following along!
+              </Typography>
+              <Stack spacing={2} direction={{ xs: 'column', md: 'row' }}>
+                <Button
+                  href="https://drive.google.com/file/d/1N2Mo1sGQYskiO6QW-7JLpAMdTBvfoOHL/view?usp=sharing"
+                  variant="contained"
+                  color="secondary"
+                >
+                  Get the Prayer Guide
+                </Button>
+                <Button
+                  href="https://drive.google.com/file/d/12ekHR2HgbWC--YaJNIk8qHZFGUet9UAU/view?usp=sharing"
+                  variant="contained"
+                  color="secondary"
+                >
+                  Kids Fasting Resource
+                </Button>
+              </Stack>
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
       <Container
         sx={{
           position: 'relative',
-          pb: { xs: 5, sm: 8, md: 12 },
+          py: { xs: 5, sm: 8, md: 12 },
           display: 'flex',
           justifyContent: 'center',
           zIndex: 100,
