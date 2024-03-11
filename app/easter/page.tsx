@@ -26,17 +26,16 @@ const typography = {
   body: {
     fontSize: {
       xs: 26,
-      sm: 16,
       md: 16,
       lg: 16,
     },
-    lineHeight: 1.3,
+    lineHeight: { xs: 1.3, sm: 1.5 },
   },
   sectionHeader: {
     fontWeight: 700,
     fontSize: {
       xs: 46,
-      sm: 50,
+      sm: 66,
       md: 60,
       lg: 70,
     },
@@ -45,7 +44,7 @@ const typography = {
     fontWeight: 700,
     fontSize: {
       xs: 30,
-      sm: 30,
+      sm: 40,
       md: 37,
       lg: 37,
     },
@@ -56,9 +55,7 @@ const typography = {
     fontWeight: 700,
     fontSize: {
       xs: 85,
-      sm: 100,
-      md: 150,
-      lg: 200,
+      sm: 240,
     },
     letterSpacing: '3px',
   },
@@ -66,7 +63,9 @@ const typography = {
 
 export default function Easter() {
   const isMobile = useMediaQuery((theme: any) => theme.breakpoints.only('xs'))
-  console.log({ isMobile })
+  const isTabletDown = useMediaQuery((theme: any) =>
+    theme.breakpoints.down('md')
+  )
   return (
     <>
       <Grid container pt={{ xs: 2, sm: 6 }}>
@@ -74,16 +73,16 @@ export default function Easter() {
           item
           xs={12}
           md={5}
-          display={isMobile ? 'block' : 'flex'}
+          display={isTabletDown ? 'block' : 'flex'}
           // justifyContent="center"
           // position="relative"
           pb={7}
         >
-          {isMobile ? (
+          {isTabletDown ? (
             <ResponsiveImage
               src={easter}
               alt="colorful Easter text"
-              aspectRatio="4:3"
+              aspectRatio={isMobile ? '4:3' : '16:9'}
               objectFit="cover"
               priority
             />
@@ -100,7 +99,7 @@ export default function Easter() {
         </Grid>
         <Grid item xs={12} md={7}>
           <Stack spacing={5}>
-            {isMobile ? (
+            {isTabletDown ? (
               <Stack alignItems="center">
                 <Box
                   bgcolor="grey"
@@ -114,7 +113,7 @@ export default function Easter() {
               <ResponsiveImage
                 src={easter}
                 alt="colorful Easter text"
-                aspectRatio="4:3"
+                aspectRatio="16:9"
                 objectFit="cover"
                 priority
               />
@@ -122,7 +121,7 @@ export default function Easter() {
             <ResponsiveImage
               src={worshipTeam}
               alt="Worship team leading songs"
-              aspectRatio="4:3"
+              aspectRatio={isMobile ? '4:3' : '8:3'}
               objectFit="cover"
               objectPosition="0 0"
             />
@@ -133,21 +132,39 @@ export default function Easter() {
               <Typography
                 align="right"
                 sx={{
-                  ...typography.sectionHeader,
+                  fontSize: {
+                    xs: 46,
+                    sm: 36,
+                    md: 60,
+                    lg: 70,
+                  },
+                  fontWeight: 700,
                   color: '#6A6A6A',
+                  lineHeight: 1,
                 }}
               >
                 THIS EASTER
               </Typography>
-              <Typography align="right" sx={typography.sectionHeader}>
+              <Typography
+                align="right"
+                sx={{
+                  fontSize: {
+                    xs: 46,
+                    sm: 36,
+                    md: 60,
+                    lg: 70,
+                  },
+                  fontWeight: 700,
+                }}
+              >
                 MARCH 31ST @ 10:00 AM
               </Typography>
             </Stack>
             <ResponsiveImage
               src={bounceHouse}
               alt="Young girl and boy smiling in a bounce house on a warm summer day"
-              aspectRatio="4:3"
-              quality={100}
+              aspectRatio={isMobile ? '4:3' : '8:3'}
+              objectFit="cover"
             />
             <Typography sx={typography.sectionHeader} lineHeight={1}>
               GREAT FOR KIDS!
@@ -166,7 +183,7 @@ export default function Easter() {
                 PLUS…After our Easter Service stay for a great on-site egg hunt
                 for your kids!
               </Typography>
-              <Typography sx={typography.subheader}>
+              <Typography sx={typography.subheader} mb={2}>
                 Let us know you’re coming & Pre-register your kids to make
                 check-in even easier!{' '}
                 <Typography
@@ -204,25 +221,41 @@ export default function Easter() {
             <ResponsiveImage
               src={lobby}
               alt="People chatting in the foyer"
-              aspectRatio="5:3"
+              aspectRatio={isMobile ? '4:3' : '8:3'}
               objectFit="cover"
             />
-            <Stack>
-              <Typography sx={typography.sectionHeader} lineHeight={1} mb={4}>
-                WHEN YOU GET HERE…
-              </Typography>
-              <Typography align="right" sx={typography.subheader}>
+            <Typography sx={typography.sectionHeader} lineHeight={1} mb={4}>
+              WHEN YOU GET HERE…
+            </Typography>
+            <Stack pl={{ xs: 0, sm: 8 }}>
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                sx={typography.subheader}
+              >
                 Be sure to Grab a coffee and drop off your kids
               </Typography>
-              <Typography align="right" mb={4} sx={typography.body}>
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                mb={4}
+                sx={typography.body}
+              >
                 We’re here to celebrate, worship, make friends, and walk life
                 together. You can relax and we know you’ll feel at home.
               </Typography>
-              <Typography align="right" sx={typography.subheader}>
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                sx={typography.subheader}
+              >
                 Find any seat you’d like in the sanctuary.
               </Typography>
-              <Typography align="right" mb={4} sx={typography.body}>
-                There’s one just for you!
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                mb={4}
+                sx={typography.body}
+              >
+                There’s one{' '}
+                <span style={{ textDecoration: 'underline' }}>just</span> for
+                you!
               </Typography>
             </Stack>
           </Stack>
