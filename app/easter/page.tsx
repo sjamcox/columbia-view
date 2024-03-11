@@ -9,6 +9,7 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material'
+import { motion } from 'framer-motion'
 
 import { anton } from '../../utils/fonts'
 import easter from '../../public/easter/easter-temp.png'
@@ -24,11 +25,7 @@ export const metadata: Metadata = {
 
 const typography = {
   body: {
-    fontSize: {
-      xs: 26,
-      md: 16,
-      lg: 16,
-    },
+    fontSize: 26,
     lineHeight: { xs: 1.3, sm: 1.5 },
   },
   sectionHeader: {
@@ -36,8 +33,6 @@ const typography = {
     fontSize: {
       xs: 46,
       sm: 66,
-      md: 60,
-      lg: 70,
     },
   },
   subheader: {
@@ -45,8 +40,6 @@ const typography = {
     fontSize: {
       xs: 30,
       sm: 40,
-      md: 37,
-      lg: 37,
     },
     lineHeight: 1.3,
   },
@@ -66,16 +59,17 @@ export default function Easter() {
   const isTabletDown = useMediaQuery((theme: any) =>
     theme.breakpoints.down('md')
   )
+
   return (
-    <>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <Grid container pt={{ xs: 2, sm: 6 }}>
         <Grid
           item
           xs={12}
           md={5}
           display={isTabletDown ? 'block' : 'flex'}
-          // justifyContent="center"
-          // position="relative"
+          justifyContent={!isTabletDown ? 'center' : 'unset'}
+          position={!isTabletDown ? 'relative' : 'unset'}
           pb={7}
         >
           {isTabletDown ? (
@@ -135,8 +129,6 @@ export default function Easter() {
                   fontSize: {
                     xs: 46,
                     sm: 36,
-                    md: 60,
-                    lg: 70,
                   },
                   fontWeight: 700,
                   color: '#6A6A6A',
@@ -151,8 +143,6 @@ export default function Easter() {
                   fontSize: {
                     xs: 46,
                     sm: 36,
-                    md: 60,
-                    lg: 70,
                   },
                   fontWeight: 700,
                 }}
@@ -250,7 +240,7 @@ export default function Easter() {
               </Typography>
               <Typography
                 align={isMobile ? 'right' : 'left'}
-                mb={4}
+                mb={8}
                 sx={typography.body}
               >
                 There’s one{' '}
@@ -305,6 +295,6 @@ export default function Easter() {
           Get Directions
         </Button>
       </Stack>
-    </>
+    </motion.div>
   )
 }
