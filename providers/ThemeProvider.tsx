@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { Open_Sans } from 'next/font/google'
 import { useServerInsertedHTML } from 'next/navigation'
 import { CacheProvider } from '@emotion/react'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
@@ -10,11 +9,7 @@ import createCache from '@emotion/cache'
 import CssBaseline from '@mui/material/CssBaseline'
 import NextLink from 'next/link'
 
-const openSans = Open_Sans({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  display: 'swap',
-})
+import { openSans } from '../utils/fonts'
 
 const LinkAdapter = forwardRef(function LinkAdapter(props, ref) {
   return <NextLink ref={ref} {...props} />
