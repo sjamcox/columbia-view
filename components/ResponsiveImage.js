@@ -5,6 +5,9 @@ export default function ResponsiveImage({
   src,
   alt = '',
   aspectRatio = '16:9',
+  objectFit = 'contain',
+  objectPosition = '50% 50%',
+  ...rest
 }) {
   const [width, height] = aspectRatio.split(':')
   const ratioPercentage = Math.ceil((height / width) * 100) + '%'
@@ -14,10 +17,10 @@ export default function ResponsiveImage({
       sx={{
         position: 'relative',
         pb: ratioPercentage,
-        '& img': { objectFit: 'contain' },
+        '& img': { objectFit, objectPosition },
       }}
     >
-      <Image src={src} alt={alt} fill />
+      <Image src={src} alt={alt} fill {...rest} />
     </Box>
   )
 }
