@@ -15,7 +15,7 @@ import easter from '../../public/easter/easter-temp.png'
 import worshipTeam from '../../public/sunday/worship-team.webp'
 import bounceHouse from '../../public/outdoor-bounce-house.png'
 import lobby from '../../public/lobby-group.webp'
-import { typography } from './page'
+import { typography } from './typography'
 
 export default function Client() {
   const isMobile = useMediaQuery((theme: any) => theme.breakpoints.only('xs'))

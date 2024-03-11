@@ -1,49 +1,18 @@
 import { Metadata } from 'next'
 import { Box, Button, Stack, Typography } from '@mui/material'
 
-import { anton } from '../../utils/fonts'
 import ClientComponents from './client'
+import { typography } from './typography'
 
 export const metadata: Metadata = {
   title: 'Easter Sunday | Columbia View Churh',
   description: 'need to come up with something',
 }
 
-export const typography = {
-  body: {
-    fontSize: 26,
-    lineHeight: { xs: 1.3, sm: 1.5 },
-  },
-  sectionHeader: {
-    fontWeight: 700,
-    fontSize: {
-      xs: 46,
-      sm: 66,
-    },
-  },
-  subheader: {
-    fontWeight: 700,
-    fontSize: {
-      xs: 30,
-      sm: 40,
-    },
-    lineHeight: 1.3,
-  },
-  display: {
-    fontFamily: anton.style.fontFamily,
-    fontWeight: 700,
-    fontSize: {
-      xs: 85,
-      sm: 240,
-    },
-    letterSpacing: '3px',
-  },
-}
-
 export default function Easter() {
   return (
     <>
-      {/* <ClientComponents /> */}
+      <ClientComponents />
       <Box bgcolor="grey" borderRadius={3} width="100%" height={256} />
       <Stack alignItems="center" py={5}>
         <Typography
