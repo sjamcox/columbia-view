@@ -8,5 +8,6 @@ export const openSans = Open_Sans({
 
 export const anton = Anton({
   weight: '400',
+  subsets: ['latin'],
   display: 'swap',
 })
