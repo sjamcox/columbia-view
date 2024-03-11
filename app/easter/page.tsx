@@ -43,7 +43,7 @@ export const typography = {
 export default function Easter() {
   return (
     <>
-      <ClientComponents />
+      {/* <ClientComponents /> */}
       <Box bgcolor="grey" borderRadius={3} width="100%" height={256} />
       <Stack alignItems="center" py={5}>
         <Typography
