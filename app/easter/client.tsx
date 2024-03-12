@@ -17,6 +17,7 @@ import worshipTeam from '../../public/sunday/worship-team.webp'
 import bounceHouse from '../../public/outdoor-bounce-house.png'
 import lobby from '../../public/lobby-group.webp'
 import colors from '../../public/easter/colors.jpg'
+import YouTubePlayer from '../../components/YouTubePlayer'
 
 export default function Client() {
   const isMobile = useMediaQuery((theme: any) => theme.breakpoints.only('xs'))
@@ -47,26 +48,32 @@ export default function Client() {
             />
           ) : (
             <Box
-              bgcolor="grey"
+              display="flex"
+              alignItems="center"
               borderRadius={3}
-              width={320}
-              height={600}
+              width={400}
+              height={700}
               position="sticky"
               top={70}
-            />
+              overflow="hidden"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/Zzm_f1Tki3c"
+                width="400"
+                height="700"
+              ></iframe>
+            </Box>
           )}
         </Grid>
         <Grid item xs={12} md={7}>
           <Stack spacing={5}>
             {isTabletDown ? (
               <Stack alignItems="center">
-                <Box
-                  bgcolor="grey"
-                  borderRadius={3}
-                  width={320}
-                  height={600}
-                  position="static"
-                />
+                <iframe
+                  src="https://www.youtube.com/embed/Zzm_f1Tki3c"
+                  width="320"
+                  height="560"
+                ></iframe>
               </Stack>
             ) : (
               <ResponsiveImage
