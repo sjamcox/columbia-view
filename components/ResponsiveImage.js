@@ -7,6 +7,7 @@ export default function ResponsiveImage({
   aspectRatio = '16:9',
   objectFit = 'contain',
   objectPosition = '50% 50%',
+  rounded = false,
   ...rest
 }) {
   const [width, height] = aspectRatio.split(':')
@@ -17,6 +18,8 @@ export default function ResponsiveImage({
       sx={{
         position: 'relative',
         pb: ratioPercentage,
+        borderRadius: rounded ? 4 : 0,
+        overflow: rounded ? 'hidden' : 'unset',
         '& img': { objectFit, objectPosition },
       }}
     >

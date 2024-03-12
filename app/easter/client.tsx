@@ -10,12 +10,13 @@ import {
 } from '@mui/material'
 import { motion } from 'framer-motion'
 
+import { typography } from './typography'
 import ResponsiveImage from '../../components/ResponsiveImage'
-import easter from '../../public/easter/easter-temp.png'
+import easter from '../../public/easter/easter.jpg'
 import worshipTeam from '../../public/sunday/worship-team.webp'
 import bounceHouse from '../../public/outdoor-bounce-house.png'
 import lobby from '../../public/lobby-group.webp'
-import { typography } from './typography'
+import colors from '../../public/easter/colors.jpg'
 
 export default function Client() {
   const isMobile = useMediaQuery((theme: any) => theme.breakpoints.only('xs'))
@@ -41,6 +42,7 @@ export default function Client() {
               alt="colorful Easter text"
               aspectRatio={isMobile ? '4:3' : '16:9'}
               objectFit="cover"
+              rounded
               priority
             />
           ) : (
@@ -70,8 +72,9 @@ export default function Client() {
               <ResponsiveImage
                 src={easter}
                 alt="colorful Easter text"
-                aspectRatio="16:9"
+                aspectRatio="4:3"
                 objectFit="cover"
+                rounded
                 priority
               />
             )}
@@ -81,6 +84,7 @@ export default function Client() {
               aspectRatio={isMobile ? '4:3' : '8:3'}
               objectFit="cover"
               objectPosition="0 0"
+              rounded
             />
             <Stack>
               <Typography align="right" sx={typography.sectionHeader}>
@@ -118,6 +122,7 @@ export default function Client() {
               alt="Young girl and boy smiling in a bounce house on a warm summer day"
               aspectRatio={isMobile ? '4:3' : '8:3'}
               objectFit="cover"
+              rounded
             />
             <Typography sx={typography.sectionHeader} lineHeight={1}>
               GREAT FOR KIDS!
@@ -176,6 +181,7 @@ export default function Client() {
               alt="People chatting in the foyer"
               aspectRatio={isMobile ? '4:3' : '8:3'}
               objectFit="cover"
+              rounded
             />
             <Typography sx={typography.sectionHeader} lineHeight={1} mb={4}>
               WHEN YOU GET HERE…
@@ -214,6 +220,13 @@ export default function Client() {
           </Stack>
         </Grid>
       </Grid>
+      <ResponsiveImage
+        src={colors}
+        alt="colorful background"
+        aspectRatio={isMobile ? '2:1' : '4:1'}
+        objectFit="cover"
+        rounded
+      />
     </motion.div>
   )
 }
