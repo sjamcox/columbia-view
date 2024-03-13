@@ -139,10 +139,11 @@ export default function Client() {
                 Be sure to bring everybody!
               </Typography>
               <Typography sx={typography.body} mb={4}>
-                There’s a separate ministry just for kids with fun, engaging
-                activities. We work hard to create a fun and safe environment
-                for kids to learn about the love of God through the story of the
-                Bible, and Easter is no exception!
+                There’s a designated ministry just for kids with fun, engaging
+                activities. We create a fun and safe environment for kids to
+                learn about the love of Jesus through the story of the Bible,
+                and Easter is an especially meaningful Sunday if you’re newer to
+                church - or never have been to one before!
               </Typography>
               <Typography sx={typography.body} mb={4}>
                 PLUS…After our Easter Service stay for a great on-site egg hunt
@@ -206,8 +207,9 @@ export default function Client() {
                 mb={4}
                 sx={typography.body}
               >
-                We’re here to celebrate, worship, make friends, and walk life
-                together. You can relax and we know you’ll feel at home.
+                We’re here to celebrate, make friends, and learn to follow Jesus
+                together. We invite you to come as you are - we know you’ll feel
+                right at home.
               </Typography>
               <Typography
                 align={isMobile ? 'right' : 'left'}
