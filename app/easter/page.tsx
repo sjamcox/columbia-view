@@ -38,10 +38,11 @@ export default function Easter() {
           Portland, OR 97230
         </Typography>
         <Button
-          href="/join-us"
+          href="https://maps.app.goo.gl/4srCf8fAAunfau6S8"
           variant="contained"
           size="large"
           color="secondary"
+          target="_blank"
           sx={{
             fontSize: 34,
             fontWeight: 400,

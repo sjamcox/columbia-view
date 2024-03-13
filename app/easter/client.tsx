@@ -164,10 +164,11 @@ export default function Client() {
               </Typography>
               <Box display="flex" justifyContent="flex-end">
                 <Button
-                  href="/join-us"
+                  href="https://columbiaview.churchcenter.com/people/forms/711672"
                   variant="contained"
                   size="large"
                   color="secondary"
+                  target="_blank"
                   sx={{
                     fontSize: 34,
                     fontWeight: 400,
@@ -216,12 +217,53 @@ export default function Client() {
               </Typography>
               <Typography
                 align={isMobile ? 'right' : 'left'}
-                mb={8}
+                mb={4}
                 sx={typography.body}
               >
                 There’s one{' '}
                 <span style={{ textDecoration: 'underline' }}>just</span> for
                 you!
+              </Typography>
+            </Stack>
+            <Typography sx={typography.sectionHeader} lineHeight={1} mb={4}>
+              FLOW OF SERVICE
+            </Typography>
+            <Stack pl={{ xs: 0, sm: 8 }}>
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                sx={typography.subheader}
+              >
+                10 AM Easter Worship (sanctuary)
+              </Typography>
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                mb={4}
+                sx={typography.body}
+              >
+                Children ages 4 - grade 5 join worship for the first song, then
+                will be dismissed to their class.
+              </Typography>
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                sx={typography.subheader}
+              >
+                11:15a Egg hunt
+              </Typography>
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                mb={4}
+                sx={typography.body}
+              >
+                Outdoors if weather is good, indoors if it’s raining. We’ll have
+                two separate areas for the little’s (1-3) and bigger kids (4 -
+                grade 5)
+              </Typography>
+              <Typography
+                align={isMobile ? 'right' : 'left'}
+                mb={8}
+                sx={typography.subheader}
+              >
+                11:30a kids prizes / giveaways
               </Typography>
             </Stack>
           </Stack>
