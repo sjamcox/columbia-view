@@ -255,8 +255,8 @@ export default function Client() {
                 sx={typography.body}
               >
                 Outdoors if weather is good, indoors if it’s raining. We’ll have
-                two separate areas for the little’s (1-3) and bigger kids (4 -
-                grade 5)
+                two separate areas for the littles (1 - 3) and bigger kids (4 -
+                grade 5).
               </Typography>
               <Typography
                 align={isMobile ? 'right' : 'left'}
