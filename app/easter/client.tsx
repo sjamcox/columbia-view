@@ -233,7 +233,7 @@ export default function Client() {
                 align={isMobile ? 'right' : 'left'}
                 sx={typography.subheader}
               >
-                10 AM Easter Worship (sanctuary)
+                10a Easter Worship (sanctuary)
               </Typography>
               <Typography
                 align={isMobile ? 'right' : 'left'}
