@@ -249,7 +249,7 @@ export default function Client() {
                 align={isMobile ? 'right' : 'left'}
                 sx={typography.subheader}
               >
-                11:15a Egg hunt
+                11:30a Egg hunt
               </Typography>
               <Typography
                 align={isMobile ? 'right' : 'left'}
@@ -265,7 +265,7 @@ export default function Client() {
                 mb={8}
                 sx={typography.subheader}
               >
-                11:30a kids prizes / giveaways
+                11:45a kids prizes / giveaways
               </Typography>
             </Stack>
           </Stack>
