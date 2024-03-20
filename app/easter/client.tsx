@@ -17,7 +17,6 @@ import worshipTeam from '../../public/sunday/worship-team.webp'
 import bounceHouse from '../../public/outdoor-bounce-house.png'
 import lobby from '../../public/lobby-group.webp'
 import colors from '../../public/easter/colors.jpg'
-import YouTubePlayer from '../../components/YouTubePlayer'
 
 export default function Client() {
   const isMobile = useMediaQuery((theme: any) => theme.breakpoints.only('xs'))
@@ -58,7 +57,7 @@ export default function Client() {
               overflow="hidden"
             >
               <iframe
-                src="https://www.youtube.com/embed/Zzm_f1Tki3c"
+                src="https://www.youtube.com/embed/WiGsjWldKF0"
                 width="400"
                 height="700"
               ></iframe>

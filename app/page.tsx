@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
 import Hero from '../components/Hero'
+import EasterHero from '../components/EasterHero'
 import ResponsiveImage from '../components/ResponsiveImage'
 import ImageTile from '../components/ImageTile'
 import baptism from '../public/sunday/mark-baptism.webp'
@@ -15,6 +16,8 @@ import bible from '../public/bible-project-one-story.webp'
 import rightnow from '../public/right-now-media.webp'
 import prayerfulFasting from '../public/prayerful-fasting.png'
 import lobby from '../public/lobby-group.webp'
+import easter from '../public/easter/easter.jpg'
+
 import YouTubePlayer from '../components/YouTubePlayer'
 
 export const metadata: Metadata = {
@@ -26,14 +29,11 @@ export const metadata: Metadata = {
 export default function Index() {
   return (
     <>
-      <Hero
-        src={lobby}
-        alt="Made new"
-        title="Made"
-        titleHighlight="new"
-        subtitle="Abiding in love, living by grace, growing together in Christ"
-        buttonText="Join us this Sunday"
-        href="/join-us"
+      <EasterHero
+        src={easter}
+        alt="Easter with Columbia View"
+        buttonText="Celebrate With Us"
+        href="/easter"
       />
       <Box component="section">
         <Container
