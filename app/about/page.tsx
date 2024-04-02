@@ -64,13 +64,36 @@ export default function About() {
       <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
         Welcome Home
       </Typography>
-      <Typography paragraph>
-        Columbia View Church is a church body committed to consistently pursuing
-        a personal knowledge of the heart of God and then sharing that with our
-        people. The Wesleyan church has had a presence in Portland since 1893.
-        We are honored to carry on a rich commitment to study, know and teach
-        the Word of God in this great city.
+      <Typography component="h2" variant="h3" color="primary" mt={4}>
+        Our Vision
       </Typography>
+      <Typography variant="h4" paragraph>
+        Inviting our community to belong to Jesus, believe in Jesus, and become
+        like Jesus.
+      </Typography>
+      <Box mt={3} mx={{ xs: 2, sm: 6 }}>
+        <Typography variant="h5">Belong</Typography>
+        <Typography paragraph>
+          We are a community building church. Community is God's idea and a
+          reflection of His character. We seek to become the kind of faith
+          community that welcomes people in whatever age and stage of life they
+          are in to explore faith in the context of safe and loving community.
+        </Typography>
+        <Typography variant="h5">Believe</Typography>
+        <Typography paragraph>
+          We are a Bible teaching church. We believe The Bible is God's Word and
+          the loving authority on all things related to life and eternity. We
+          honor everyone's journey of faith and encourage people to believe in
+          Jesus as their Lord and savior, becoming his apprentice.
+        </Typography>
+        <Typography variant="h5">Become</Typography>
+        <Typography paragraph>
+          We are a Bible practicing church. We believe the way and teachings of
+          Jesus offer us a compelling vision of what it means to be remade as
+          humans. We offer various opportunities for people to grow in their
+          faith and apprenticeship to Jesus.
+        </Typography>
+      </Box>
       <Typography component="h2" variant="h3" color="primary" mt={4}>
         Our Mission
       </Typography>
@@ -79,40 +102,9 @@ export default function About() {
         for the flourishing of the whole community.
       </Typography>
       <Typography paragraph>
-        Our mission is not a “solo” endeavor; it is a communal enterprise. All
-        are welcome to discover the God who made them, died for them, and who
-        wants an ongoing, transformative, hope-giving relationship with them.
-      </Typography>
-      <Typography component="h2" variant="h3" color="primary" mt={4}>
-        Our Vision
-      </Typography>
-      <Typography variant="h4" my={2} paragraph>
-        Columbia View’s vision is five-fold:
-      </Typography>
-      <Typography paragraph>
-        <strong>We want</strong> to see people’s lives transformed through the
-        hope and holiness of Jesus Christ. We want to see the Kingdom of God
-        that Jesus described in the Sermon on the Mount (Matthew 5-7) actualized
-        in our neighborhoods, city, and across the world.
-      </Typography>
-      <Typography paragraph>
-        <strong>We want</strong> to see a church multiplication movement of
-        Christ-followers advancing new expressions of the gospel in unreached
-        corners of our city.
-      </Typography>
-      <Typography paragraph>
-        <strong>We want</strong> to see immigrant brothers and sisters welcomed
-        in the name of Jesus.
-      </Typography>
-      <Typography paragraph>
-        <strong>We want</strong> to see a multi-ethnic family of Jesus’
-        followers expressing their faith in ways that are culturally meaningful
-        to them, and yet united under our common mission of knowing and sharing
-        God’s heart.
-      </Typography>
-      <Typography paragraph>
-        <strong>We want</strong> to see individuals’ lives aligned more to the
-        way and teachings of Jesus.
+        All are welcome to discover the God who made them, died for them, and
+        who wants an ongoing, transformative, hope-giving relationship with
+        them.
       </Typography>
       <Typography component="h2" variant="h3" color="primary" mt={4}>
         Beliefs and Core Values
@@ -152,7 +144,10 @@ export default function About() {
       </ul>
       <Typography paragraph>
         {'For a comprehensive overview of Wesleyan beliefs, please visit '}
-        <Link href="https://www.wesleyan.org/about">wesleyan.org/about</Link>.
+        <Link href="https://www.wesleyan.org/about/articles-of-religion">
+          wesleyan.org
+        </Link>
+        .
       </Typography>
       <Typography component="h2" variant="h3" color="primary" mt={4} mb={2}>
         Annual Report

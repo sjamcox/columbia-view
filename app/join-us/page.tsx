@@ -33,8 +33,7 @@ export default function VisitUs() {
                 preaching/teaching of God's word, giving, and testimony. Worship
                 for us is the response of a life that is seeking after Jesus. If
                 you are a guest with us, we encourage you to come with an open
-                heart to what God may want to do in your life, and don't worry,
-                we will not embarrass or call on you during worship.
+                heart to what God may want to do in your life.
               </Typography>
             </Grid>
             <Grid item xs={12} md={3}>

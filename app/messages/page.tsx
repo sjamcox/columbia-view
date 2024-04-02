@@ -15,6 +15,8 @@ export default async function Messages() {
     'https://api.spreaker.com/v2/shows/3172208/episodes?limit=12'
   )
 
+  console.log(data.response.items)
+
   return (
     <>
       <Typography component="h1" variant="h1" sx={{ mb: 3 }}>

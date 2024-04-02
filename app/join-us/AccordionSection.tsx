@@ -62,30 +62,10 @@ export default function AccordionSection() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                We have a nursery on-site for families with infants and babies
-                to utilize. We also offer a children’s Sunday School class
-                during our Sunday worship from 10:00 - 11:00 am on Sunday
-                mornings. All nursery and children volunteers are background
-                checked and trained.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion
-            expanded={expanded === 'clothing'}
-            onClick={() => handleClick('clothing')}
-          >
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel-clothing-content"
-              id="panel-clothing-header"
-            >
-              <Typography>
-                <strong>Clothing & Attire</strong>
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Just come in something that you’re comfortable with!
+                We have nursery staff on-site for families with infants through
+                age 3. We also offer kids programming for age 4 - grade 5 during
+                the preaching portion of our worship service. All nursery and
+                children volunteers are background checked and trained.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -104,8 +84,8 @@ export default function AccordionSection() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Our parking lot that wraps around the church building includes
-                the front, the right side, and the rear of the church.
+                We have parking available at the front, side, and the back of
+                the building.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -124,8 +104,8 @@ export default function AccordionSection() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                We believe the worship music should reflect the congregation,
-                and therefore we offer a blend of hymns and contemporary music.
+                We promote music that reflects the congregation, so we generally
+                worship with a blend of hymns and contemporary music.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -144,8 +124,8 @@ export default function AccordionSection() {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                Our directory has around 70 names, and on a given Sunday we will
-                have anywhere between 30-50 people.
+                Our directory has around 100 names, and on a given Sunday we
+                will have between 50-60 people in attendance.
               </Typography>
             </AccordionDetails>
           </Accordion>

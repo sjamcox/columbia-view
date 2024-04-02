@@ -1,22 +1,19 @@
 import type { Metadata } from 'next'
-
-import Image from 'next/image'
 import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
+import Image from 'next/image'
+
 import Hero from '../components/Hero'
-import EasterHero from '../components/EasterHero'
 import ResponsiveImage from '../components/ResponsiveImage'
 import ImageTile from '../components/ImageTile'
 import baptism from '../public/sunday/mark-baptism.webp'
 import worship from '../public/sunday/worship-team-vertical.webp'
-import kids from '../public/sunday/kids-room-1.webp'
-import lifeGroup from '../public/sandra-dani.webp'
-import immigrantMan from '../public/icpdx/immigrant-man-with-hat.webp'
+import kids from '../public/kids/kids-activity.webp'
+import lifeGroup from '../public/life-groups/ladies-group.webp'
+import smilingFamily from '../public/icpdx/smiling-family.webp'
 import immigrantFamily from '../public/icpdx/immigrant-family.webp'
 import bible from '../public/bible-project-one-story.webp'
 import rightnow from '../public/right-now-media.webp'
-import prayerfulFasting from '../public/prayerful-fasting.png'
 import lobby from '../public/lobby-group.webp'
-import easter from '../public/easter/easter.jpg'
 
 import YouTubePlayer from '../components/YouTubePlayer'
 
@@ -29,11 +26,14 @@ export const metadata: Metadata = {
 export default function Index() {
   return (
     <>
-      <EasterHero
-        src={easter}
-        alt="Easter with Columbia View"
-        buttonText="Celebrate With Us"
-        href="/easter"
+      <Hero
+        src={lobby}
+        alt="Made new"
+        title="Made"
+        titleHighlight="new"
+        subtitle="Abiding in love, living by grace, growing together in Christ"
+        buttonText="Join us this Sunday"
+        href="/join-us"
       />
       <Box component="section">
         <Container
@@ -123,44 +123,6 @@ export default function Index() {
           </Grid>
         </Container>
       </Box>
-      <Box
-        component="section"
-        sx={{ bgcolor: 'rgb(14, 73, 111)', borderRadius: '20px' }}
-      >
-        <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
-          <Grid container spacing={6} alignItems="center">
-            <Grid item xs={12} sm={6}>
-              <ResponsiveImage src={prayerfulFasting} />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography component="h2" variant="h3" paragraph color="white">
-                21 Days of Prayerful Fasting
-              </Typography>
-              <Typography component="p" paragraph color="white">
-                This will be a powerful time and we're hopeful that all who join
-                in will encounter God in a special way. Get involved this March
-                by downloading the prayer guide and following along!
-              </Typography>
-              <Stack spacing={2} direction={{ xs: 'column', md: 'row' }}>
-                <Button
-                  href="https://drive.google.com/file/d/1N2Mo1sGQYskiO6QW-7JLpAMdTBvfoOHL/view?usp=sharing"
-                  variant="contained"
-                  color="secondary"
-                >
-                  Get the Prayer Guide
-                </Button>
-                <Button
-                  href="https://drive.google.com/file/d/12ekHR2HgbWC--YaJNIk8qHZFGUet9UAU/view?usp=sharing"
-                  variant="contained"
-                  color="secondary"
-                >
-                  Kids Fasting Resource
-                </Button>
-              </Stack>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
       <Container
         sx={{
           position: 'relative',
@@ -234,10 +196,10 @@ export default function Index() {
               </Grid>
               <Grid item xs={12} sm={6} lg={3}>
                 <ImageTile
-                  link="/ministries/columbia-kids"
+                  link="/ministries/nextgen"
                   image={kids}
                   alt="kids in sunday school"
-                  headline="Columbia Kids"
+                  headline="NextGen Ministries"
                 />
               </Grid>
               <Grid item xs={12} sm={6} lg={3}>
@@ -251,7 +213,7 @@ export default function Index() {
               <Grid item xs={12} sm={6} lg={3}>
                 <ImageTile
                   link="/immigrant-connection-pdx"
-                  image={immigrantMan}
+                  image={smilingFamily}
                   alt="immigrant man with large hat"
                   headline="Immigrant Connection"
                 />

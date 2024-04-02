@@ -181,7 +181,7 @@ export default function ImmigrantConnection() {
               variant="h2"
               sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
-              700+
+              800+
             </Typography>
             <Typography textAlign="center" color="white" fontWeight={600}>
               new client consultations
@@ -204,7 +204,7 @@ export default function ImmigrantConnection() {
               variant="h2"
               sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
-              150+
+              165+
             </Typography>
             <Typography textAlign="center" color="white" fontWeight={600}>
               citizenship applications
@@ -227,7 +227,7 @@ export default function ImmigrantConnection() {
               variant="h2"
               sx={{ fontSize: 64, color: 'orange', textAlign: 'center' }}
             >
-              50+
+              60+
             </Typography>
             <Typography textAlign="center" color="white" fontWeight={600}>
               family-based petitions
@@ -290,35 +290,6 @@ export default function ImmigrantConnection() {
             />
           </Box>
         </Stack>
-        <Typography component="h2" variant="h3" gutterBottom mt={5}>
-          End of Year Giving Campaign
-        </Typography>
-        <Typography paragraph>
-          Since first opening in 2020, our office has served over 700
-          foreign-born individuals from over 40 countries of origin, resulting
-          in hundreds of immigration case submissions to the government
-          including: family reunifications, green cards, citizenship, asylum,
-          U-Visas, TPS, employment authorization, as well as a host of other
-          immigration benefits (99.8% of our case submissions result in client
-          immigration benefit approval.)
-        </Typography>
-        <Typography mb={5}>
-          Our goal this year is to raise $15,000. As of Monday November 27, we
-          have raised $7,050.
-        </Typography>
-        <Stack direction="row" justifyContent="space-between" mb={2}>
-          <Typography>
-            <strong>Currently gifted: $7,050</strong>
-          </Typography>
-          <Typography>
-            <strong>Goal: $15,000</strong>
-          </Typography>
-        </Stack>
-        <LinearProgress
-          variant="determinate"
-          value={47}
-          sx={{ height: 40, borderRadius: '100px', mb: 4 }}
-        />
         <Stack direction="row" justifyContent="center">
           <Button
             href="https://columbiaview.churchcenter.com/giving"

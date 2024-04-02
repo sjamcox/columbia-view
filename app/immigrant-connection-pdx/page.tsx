@@ -91,6 +91,14 @@ export default function ImmigrantConnection() {
               to proceed.
             </Typography>
             <Typography paragraph>
+              Defensive Asylum is outside of the scope of our practice. Please
+              visit the{' '}
+              <Link href="https://www.ailalawyer.com/">
+                American Immigration Lawyers Association
+              </Link>{' '}
+              (AILA) website for assistance regarding Defensive Asylum.
+            </Typography>
+            <Typography paragraph>
               <strong>
                 Please click the “schedule an appointment” button below or call
                 our legal office at{' '}
@@ -105,15 +113,6 @@ export default function ImmigrantConnection() {
               more info:{' '}
               <Link href="https://www.icwelcome.org">icwelcome.org</Link>.
             </Typography>
-            <Alert severity="warning" icon={false}>
-              <Typography>
-                <strong>
-                  Our office will resume taking the following case types after
-                  April 1 2024:
-                </strong>{' '}
-                Asylum, U-Visa, VAWA, SIJS.
-              </Typography>
-            </Alert>
             <Button
               variant="contained"
               color="secondary"
@@ -128,9 +127,15 @@ export default function ImmigrantConnection() {
             <Typography fontSize={15}>
               <strong>Office Hours & Location</strong>
             </Typography>
-            <Typography fontSize={15}>Tuesdays and Thursdays</Typography>
+            <Typography fontSize={15}>Mondays</Typography>
             <Typography fontSize={15} paragraph>
-              10:00 am – 4:00 pm
+              11:00 am – 5:00 pm
+            </Typography>
+            <Typography fontSize={15}>
+              Tuesdays, Wednesdays and Thursdays
+            </Typography>
+            <Typography fontSize={15} paragraph>
+              9:00 am – 6:00 pm
             </Typography>
             <Typography fontSize={15} paragraph>
               Columbia View Church <br />
@@ -339,7 +344,7 @@ export default function ImmigrantConnection() {
               width={128}
               height={128}
             />
-            <Typography mt={3}>U Visas</Typography>
+            <Typography mt={3}>Work Authorization</Typography>
           </Grid>
         </Grid>
         <ServiceList />

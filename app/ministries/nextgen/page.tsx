@@ -2,17 +2,18 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Box, Link, Stack, Typography } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
+
+import { ElevatedSection, ImageSection } from '../../../components/Section'
 import columbiaKids from '../../../public/columbia-kids-sunday.jpeg'
 import outdoorBounce from '../../../public/outdoor-bounce-house.png'
 import nurseryBounce from '../../../public/nursery-bounce-house.png'
 import nursery from '../../../public/nursery.webp'
 import kidsRoom from '../../../public/kids-room.webp'
-import kidsSong from '../../../public/kids-song-performance.png'
-import checkIn from '../../../public/check-in.png'
-import { ElevatedSection, ImageSection } from '../../../components/Section'
+import kidsSong from '../../../public/kids/kids-on-stage.webp'
+import nurseryVolunteers from '../../../public/nursery/nursery-kids.webp'
 
 export const metadata: Metadata = {
-  title: 'Columbia Kids | Columbia View Church',
+  title: 'NextGen Ministries | Columbia View Church',
 }
 
 export default function ColumbiaKids() {
@@ -20,7 +21,7 @@ export default function ColumbiaKids() {
     <Box>
       <Box sx={{ my: 5 }}>
         <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
-          Columbia Kids
+          NextGen Ministries
         </Typography>
         <Typography variant="h4" paragraph>
           Partnering with parents to pass on faith to the next generation.
@@ -137,9 +138,9 @@ export default function ColumbiaKids() {
               Upon arrival, parents are invited to check-in their children at
               the station to the left of our lobby. But don’t drop off your kids
               just yet! We invite you to grab a cup of coffee and find a spot in
-              our worship center. The service starts at 10am with everyone
-              together. After the first song, kids will be dismissed to their
-              appropriate classes.
+              our sanctuary. The service starts at 10am with everyone together.
+              Before the teaching, kids will be dismissed to their appropriate
+              classes.
             </Typography>
             <Typography>
               Parent pick-up happens right after the service, usually between
@@ -160,7 +161,7 @@ export default function ColumbiaKids() {
               '& > img': { objectFit: 'cover' },
             }}
           >
-            <Image src={checkIn} alt="Check in area" fill />
+            <Image src={nurseryVolunteers} alt="Check in area" fill />
           </Box>
         </Stack>
       </ElevatedSection>

@@ -29,6 +29,9 @@ export const StaffListing = ({ member }) => {
         <Typography gutterBottom color="secondary">
           <strong>{member.title}</strong>
         </Typography>
+        <Typography gutterBottom color="secondary">
+          <strong>{member.languages}</strong>
+        </Typography>
         <Typography color="text.body">{member.bio}</Typography>
       </Box>
     </Stack>

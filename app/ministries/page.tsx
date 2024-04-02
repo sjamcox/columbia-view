@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Box, Button, Grid, Link, Typography } from '@mui/material'
+import { Box, Button, Divider, Grid, Link, Typography } from '@mui/material'
 import ResponsiveImage from '../../components/ResponsiveImage'
 import blakeFamily from '../../public/blake-family.webp'
 import cheneyFamily from '../../public/cheney-family.webp'
@@ -16,26 +16,6 @@ export default function Ministries() {
       <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
         Ministries
       </Typography>
-      <Typography variant="h4" paragraph>
-        Our ministries can be summed up in three words: belong, believe, and
-        become.
-      </Typography>
-      <Typography paragraph>
-        First, our ministries provide both places and spaces where you can
-        belong just as you are. We are a diverse and eclectic group of people
-        all seeking to know God’s heart.
-      </Typography>
-      <Typography paragraph>
-        Second, our ministries are designed to help you move towards greater
-        alignment with the Bible. We believe the story of the Bible ultimately
-        points to Jesus, and through belief in Jesus, we can truly know God’s
-        heart.
-      </Typography>
-      <Typography paragraph>
-        Lastly, we view our ministries as tools God can use to shape you to
-        become the person he intends you to be — reflecting the life and
-        character of Jesus as you seek to share his heart with your people.
-      </Typography>
       <Box id="sunday-worship" my={4} sx={{ scrollMarginTop: '100px' }}>
         <Typography component="h2" variant="h3" color="primary" paragraph>
           Worship Service
@@ -47,8 +27,7 @@ export default function Ministries() {
               preaching/teaching of God's word, giving, and testimony. Worship
               for us is the response of a life that is seeking after Jesus. If
               you are a guest with us, we encourage you to come with an open
-              heart to what God may want to do in your life, and don't worry, we
-              will not embarrass or call on you during worship.
+              heart to what God may want to do in your life.
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
@@ -76,34 +55,35 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-      <Box id="columbia-kids" my={4} sx={{ scrollMarginTop: '100px' }}>
+      <Box id="nextgen" my={4} sx={{ scrollMarginTop: '100px' }}>
         <Typography component="h2" variant="h3" color="primary" paragraph>
-          Columbia Kids
+          NextGen
         </Typography>
         <Grid container justifyContent="space-between">
           <Grid item xs={12} md={8}>
             <Typography paragraph>
-              We offer a children's class during our Sunday morning preaching
-              portion of our worship service. Our Children's Ministry team are
-              all background checked and trained to ensure the highest quality
-              and safety for your children.
+              We have nursery staff on-site for families with infants through
+              age 3. We also offer kids programming for age 4 - grade 5 during
+              the preaching portion of our worship service. All nursery and
+              children volunteers are background checked and trained.
             </Typography>
             <Button
               variant="contained"
               size="large"
               color="secondary"
               sx={{ color: 'white', mb: 3 }}
-              href="/ministries/columbia-kids"
+              href="/ministries/nextgen"
             >
-              Learn more about Columbia Kids
+              Learn more about NextGen ministries
             </Button>
           </Grid>
           <Grid item xs={12} md={3}>
             <Typography fontSize={15}>
-              <strong>Meeting Time & Location</strong>
+              <strong>Ages & Locations</strong>
             </Typography>
+            <Typography fontSize={15}>Ages 0-3 in the nursery</Typography>
             <Typography fontSize={15} paragraph>
-              10:00 AM in the kids room
+              Age 4-Grade 5 in the kids room
             </Typography>
           </Grid>
         </Grid>
