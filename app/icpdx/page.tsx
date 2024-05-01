@@ -391,6 +391,19 @@ export default function ImmigrantConnection() {
         <Typography>
           ... and to all of our individual recurring donors!
         </Typography>
+        <Typography component="h2" variant="h3" gutterBottom mt={5}>
+          2023 Annual Report
+        </Typography>
+        <Button
+          href="https://drive.google.com/file/d/1wU-Hmam19gN4CeHlemYWDsIDZESEFPcd/view"
+          target="_blank"
+          variant="contained"
+          size="large"
+          color="secondary"
+          sx={{ color: 'white', mt: 2 }}
+        >
+          View Our Annual Report
+        </Button>
       </Container>
     </>
   )
