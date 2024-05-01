@@ -5,7 +5,6 @@ import {
   Container,
   Divider,
   Grid,
-  LinearProgress,
   Link,
   Stack,
   Typography,
@@ -13,6 +12,7 @@ import {
 import icMap from '../../public/ic-map.webp'
 import chart from '../../public/family-workplace-community.webp'
 import immigrantSuccess from '../../public/immigrant-success-stories.webp'
+import celebrationLuncheon from '../../public/icpdx/2024-luncheon-digital-invite.png'
 import YouTubePlayer from '../../components/YouTubePlayer'
 import ResponsiveImage from '../../components/ResponsiveImage'
 import { ImageSection } from '../../components/Section'
@@ -44,23 +44,42 @@ function CoreValue({ title, description }) {
 export default function ImmigrantConnection() {
   return (
     <>
-      <ImageSection
-        src={immigrantSuccess}
-        alt="Immigrant families celebrating success"
-      >
-        <Stack minHeight={{ xs: 350, sm: 500 }} justifyContent="flex-end">
-          <Typography
-            component="h1"
-            variant="h2"
-            maxWidth={900}
-            textAlign="left"
-            color="white"
-          >
-            Partner With Immigrant Connection PDX
-          </Typography>
-        </Stack>
-      </ImageSection>
       <Container maxWidth="lg" sx={{ my: 5 }}>
+        <ResponsiveImage
+          src={celebrationLuncheon}
+          alt="ICPDX Celebration Luncheon Invitation"
+          aspectRatio="3:4"
+        />
+        <Stack alignItems="center">
+          <Button
+            href="https://columbiaview.churchcenter.com/people/forms/712531"
+            target="_blank"
+            variant="contained"
+            size="large"
+            color="secondary"
+            sx={{ color: 'white', mt: 2, width: 300, fontSize: 20, mb: 7 }}
+          >
+            RSVP Today
+          </Button>
+        </Stack>
+        <Box my={5}>
+          <ImageSection
+            src={immigrantSuccess}
+            alt="Immigrant families celebrating success"
+          >
+            <Stack minHeight={{ xs: 350, sm: 500 }} justifyContent="flex-end">
+              <Typography
+                component="h1"
+                variant="h2"
+                maxWidth={900}
+                textAlign="left"
+                color="white"
+              >
+                Partner With Immigrant Connection PDX
+              </Typography>
+            </Stack>
+          </ImageSection>
+        </Box>
         <Stack alignItems={{ xs: 'flex-start', sm: 'center' }} mb={4}>
           <Grid container spacing={{ xs: 0, sm: 4 }}>
             <Grid
