@@ -16,7 +16,7 @@ export default function VisitUs() {
     <>
       <Box sx={{ my: 5 }}>
         <Typography component="h1" variant="h1" sx={{ mb: 3 }}>
-          Visit Us
+          Join Us
         </Typography>
         <Typography variant="h4" paragraph>
           We're excited to have you join us for a Sunday morning worship
