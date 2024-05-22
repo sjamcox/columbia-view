@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import {
+  Alert,
   Box,
   Button,
   ButtonBase,
@@ -11,12 +12,12 @@ import {
   MenuItem,
   Stack,
   Typography,
-  useMediaQuery,
 } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import MenuIcon from '@mui/icons-material/Menu'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import YouTubeIcon from '@mui/icons-material/YouTube'
+import InfoIcon from '@mui/icons-material/Info'
 import Image from 'next/image'
 
 import { NavDrawer } from './NavDrawer'
@@ -91,7 +92,6 @@ const NavItem = ({ href, subnav, text, handleClick }) => {
 }
 
 export default function Header() {
-  const matches = useMediaQuery((theme: any) => theme.breakpoints.up('md'))
   const [open, setOpen] = useState(false)
   const [activeMenu, setActiveMenu] = useState([])
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -105,9 +105,26 @@ export default function Header() {
     setAnchorEl(null)
   }
 
+  const showBanner = new Date('2024-05-27') > new Date()
+
   return (
     <>
       <NavDrawer menu={menu} open={open} setOpen={setOpen} />
+      {showBanner && (
+        <Alert
+          severity="warning"
+          icon={<InfoIcon />}
+          sx={{ justifyContent: 'center', border: '2px solid gold' }}
+        >
+          <Box maxWidth={700}>
+            Church service will be held offsite on Sunday, May 26 at 10am at
+            Willamette Mission State Park in conjuction with our church campout.{' '}
+            <Link href="https://columbiaview.churchcenter.com/calendar/event/155341599">
+              Campout Details
+            </Link>
+          </Box>
+        </Alert>
+      )}
       <Grid container height={90} width="100%" px="4vw">
         <Grid
           xs={6}
