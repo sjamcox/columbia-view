@@ -3,5 +3,5 @@
 import ThemeProvider from './ThemeProvider'
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-  return <ThemeProvider key="mui">{children}</ThemeProvider>
+  return <ThemeProvider>{children}</ThemeProvider>
 }
