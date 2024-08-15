@@ -3,7 +3,6 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
@@ -18,7 +17,7 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strict": false
   },
   "include": [
     "next-env.d.ts",

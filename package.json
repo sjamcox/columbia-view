@@ -13,38 +13,36 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@emotion/cache": "^11.11.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.14.16",
-    "@tanstack/react-query": "^4.29.13",
-    "@tanstack/react-query-devtools": "^4.29.13",
+    "@emotion/cache": "^11.13.1",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "@mui/material-nextjs": "^5.16.6",
     "axios": "^1.4.0",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.16.4",
-    "next": "^13.4.12",
-    "next-seo": "^6.0.0",
+    "next": "^14.2.5",
     "prop-types": "^15.8.1",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "react-audio-player": "^0.17.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.3.1",
     "react-lite-youtube-embed": "^2.1.0",
     "rss-parser": "^3.12.0",
-    "sharp": "^0.32.1"
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "20.8.10",
+    "@types/react": "^18.3.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "typescript": "5.2.2"
+    "typescript": "5.5.4"
   },
   "engines": {
-    "node": "^18.0.0"
+    "node": "^20.0.0"
   }
 }
