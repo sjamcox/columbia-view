@@ -1,10 +1,10 @@
 'use client'
 
+import type { SubnavItem } from '../helpers/menu'
+
 import { useState } from 'react'
 import {
-  Alert,
   Box,
-  Button,
   ButtonBase,
   IconButton,
   Link,
@@ -17,73 +17,35 @@ import Grid from '@mui/material/Unstable_Grid2'
 import MenuIcon from '@mui/icons-material/Menu'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import YouTubeIcon from '@mui/icons-material/YouTube'
-import InfoIcon from '@mui/icons-material/Info'
 import Image from 'next/image'
 
 import { NavDrawer } from './NavDrawer'
+import { menu } from '../helpers/menu'
 import logo from '../public/logos/cvwc-logo-mountains.png'
 
-const menu = [
-  {
-    text: 'Get Involved',
-    subnav: [
-      {
-        text: 'Join Us',
-        href: '/join-us',
-      },
-      {
-        text: 'Service Opportunities',
-        href: 'https://columbiaview.churchcenter.com/people/forms/86247',
-      },
-      {
-        text: 'Event Calendar',
-        href: 'https://columbiaview.churchcenter.com/calendar?view=list',
-      },
-      { text: 'Give', href: 'https://columbiaview.churchcenter.com/giving' },
-    ],
-  },
-  { text: 'Ministries', href: '/ministries' },
-  { text: 'Messages', href: '/messages' },
-  {
-    text: 'Immigrant Connection',
-    subnav: [
-      {
-        text: 'Client Portal',
-        href: '/immigrant-connection-pdx',
-      },
-      {
-        text: 'Partner With Us',
-        href: '/icpdx',
-      },
-      {
-        text: 'Available Positions',
-        href: '/immigrant-connection-pdx/jobs',
-      },
-      {
-        text: 'Our Staff',
-        href: '/immigrant-connection-pdx/staff',
-      },
-    ],
-  },
-  { text: 'About Us', href: '/about' },
-]
+type NavLinkProps = {
+  href: string
+  text: string
+}
 
-const NavItem = ({ href, subnav, text, handleClick }) => {
-  if (subnav) {
-    return (
-      <ButtonBase
-        onClick={(e) => handleClick(e.currentTarget, subnav)}
-        sx={{ mx: 1.5, py: 1 }}
-      >
-        <Typography fontSize={16} fontWeight={600}>
-          {text}
-        </Typography>
-      </ButtonBase>
-    )
-  }
-
+function NavLink({ href, text }: NavLinkProps) {
   return (
-    <ButtonBase href={href} sx={{ mx: 1.5, py: 1 }}>
+    <Link href={href} sx={{ mx: 1.5, py: 1, textDecoration: 'none' }}>
+      <Typography fontSize={16} fontWeight={600} color="#333333">
+        {text}
+      </Typography>
+    </Link>
+  )
+}
+
+type NavParentProps = {
+  text: string
+  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void
+}
+
+function NavParent({ text, onClick }: NavParentProps) {
+  return (
+    <ButtonBase onClick={onClick} sx={{ mx: 1.5, py: 1 }}>
       <Typography fontSize={16} fontWeight={600}>
         {text}
       </Typography>
@@ -93,38 +55,48 @@ const NavItem = ({ href, subnav, text, handleClick }) => {
 
 export default function Header() {
   const [open, setOpen] = useState(false)
-  const [activeMenu, setActiveMenu] = useState([])
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  const [activeMenu, setActiveMenu] = useState<string | null>(null)
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
-  const handleClick = (element, menu) => {
-    setActiveMenu(menu)
-    setAnchorEl(element)
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setActiveMenu(e.currentTarget.innerText)
+    setAnchorEl(e.currentTarget)
   }
 
   const handleClose = () => {
     setAnchorEl(null)
   }
 
-  const showBanner = new Date('2024-05-27') > new Date()
+  const primaryNavItems = menu.map((item) => {
+    if (item.subnav) {
+      return (
+        <NavParent key={item.text} text={item.text} onClick={handleClick} />
+      )
+    } else if (item.href) {
+      return <NavLink key={item.text} href={item.href} text={item.text} />
+    }
+  })
+
+  const subnavItems = menu.find((item) => item.text === activeMenu)?.subnav
+  const popperMenuItems = subnavItems?.map((item) => (
+    <Link key={item.text} href={item.href} sx={{ textDecoration: 'none' }}>
+      <MenuItem
+        component="span"
+        onClick={handleClose}
+        sx={{
+          color: '#333333',
+          fontSize: 16,
+          fontWeight: 600,
+        }}
+      >
+        {item.text}
+      </MenuItem>
+    </Link>
+  ))
 
   return (
     <>
       <NavDrawer menu={menu} open={open} setOpen={setOpen} />
-      {showBanner && (
-        <Alert
-          severity="warning"
-          icon={<InfoIcon />}
-          sx={{ justifyContent: 'center', border: '2px solid gold' }}
-        >
-          <Box maxWidth={700}>
-            Church service will be held offsite on Sunday, May 26 at 10am at
-            Willamette Mission State Park in conjuction with our church campout.{' '}
-            <Link href="https://columbiaview.churchcenter.com/calendar/event/155341599">
-              Campout Details
-            </Link>
-          </Box>
-        </Alert>
-      )}
       <Grid container height={90} width="100%" px="4vw">
         <Grid
           xs={6}
@@ -156,38 +128,10 @@ export default function Header() {
           alignItems="center"
         >
           <Box display={{ xs: 'none', md: 'block' }}>
-            <>
-              {menu.map((link) => (
-                <NavItem
-                  key={link.text}
-                  href={link.href}
-                  text={link.text}
-                  subnav={link.subnav}
-                  handleClick={handleClick}
-                />
-              ))}
-              <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
-                {activeMenu.map((item) => (
-                  <Link
-                    key={item.text}
-                    href={item.href}
-                    sx={{ textDecoration: 'none' }}
-                  >
-                    <MenuItem
-                      component="span"
-                      onClick={handleClose}
-                      sx={{
-                        color: '#333333',
-                        fontSize: 16,
-                        fontWeight: 600,
-                      }}
-                    >
-                      {item.text}
-                    </MenuItem>
-                  </Link>
-                ))}
-              </Menu>
-            </>
+            <Box display="flex">{primaryNavItems}</Box>
+            <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
+              {popperMenuItems}
+            </Menu>
           </Box>
           <Box display={{ xs: 'block', md: 'none' }}>
             <IconButton sx={{ padding: 0 }} onClick={() => setOpen(true)}>
