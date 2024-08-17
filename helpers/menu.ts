@@ -25,7 +25,22 @@ export const menu: MenuItem[] = [
         text: 'Event Calendar',
         href: 'https://columbiaview.churchcenter.com/calendar?view=list',
       },
-      { text: 'Give', href: 'https://columbiaview.churchcenter.com/giving' },
+      {
+        text: 'Membership',
+        href: 'https://columbiaview.churchcenter.com/people/forms/50302',
+      },
+      {
+        text: 'Baptism',
+        href: 'https://columbiaview.churchcenter.com/people/forms/352735',
+      },
+      {
+        text: 'Child Dedication',
+        href: 'https://columbiaview.churchcenter.com/people/forms/115028',
+      },
+      {
+        text: 'Internship Opportunities',
+        href: 'https://columbiaview.churchcenter.com/people/forms/795644',
+      },
     ],
   },
   { text: 'Ministries', href: '/ministries' },
@@ -52,4 +67,5 @@ export const menu: MenuItem[] = [
     ],
   },
   { text: 'About Us', href: '/about' },
+  { text: 'Give', href: 'https://columbiaview.churchcenter.com/giving' },
 ]
