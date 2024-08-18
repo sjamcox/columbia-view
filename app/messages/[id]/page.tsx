@@ -3,7 +3,7 @@ import { Box, Stack, Typography } from '@mui/material'
 import { format } from 'date-fns'
 import axios from 'axios'
 
-import AudioPlayer from '../../../components/AudioPlayer'
+import AudioPlayer from 'components/AudioPlayer'
 
 export const metadata: Metadata = {
   title: 'Messages | Columbia View Church',

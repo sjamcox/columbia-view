@@ -1,6 +1,6 @@
 'use client'
 
-import type { SubnavItem } from '../helpers/menu'
+import type { SubnavItem } from 'helpers/menu'
 
 import { useState } from 'react'
 import {
@@ -20,8 +20,8 @@ import YouTubeIcon from '@mui/icons-material/YouTube'
 import Image from 'next/image'
 
 import { NavDrawer } from './NavDrawer'
-import { menu } from '../helpers/menu'
-import logo from '../public/logos/cvwc-logo-mountains.png'
+import { menu } from 'helpers/menu'
+import logo from 'public/logos/cvwc-logo-mountains.png'
 
 type NavLinkProps = {
   href: string

@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import axios from 'axios'
 import { Box, Button, Typography } from '@mui/material'
 
-import MessageGrid from '../../components/MessageGrid'
+import MessageGrid from 'components/MessageGrid'
 
 export const metadata: Metadata = {
   title: 'Messages | Columbia View Church',

@@ -11,12 +11,12 @@ import {
 import { motion } from 'framer-motion'
 
 import { typography } from './typography'
-import ResponsiveImage from '../../components/ResponsiveImage'
-import easter from '../../public/easter/easter.jpg'
-import worshipTeam from '../../public/sunday/worship-team.webp'
-import bounceHouse from '../../public/outdoor-bounce-house.png'
-import lobby from '../../public/lobby-group.webp'
-import colors from '../../public/easter/colors.jpg'
+import ResponsiveImage from 'components/ResponsiveImage'
+import easter from 'public/easter/easter.jpg'
+import worshipTeam from 'public/sunday/worship-team.webp'
+import bounceHouse from 'public/outdoor-bounce-house.png'
+import lobby from 'public/lobby-group.webp'
+import colors from 'public/easter/colors.jpg'
 
 export default function Client() {
   const isMobile = useMediaQuery((theme: any) => theme.breakpoints.only('xs'))

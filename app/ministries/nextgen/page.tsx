@@ -3,14 +3,14 @@ import Image from 'next/image'
 import { Box, Link, Stack, Typography } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 
-import { ElevatedSection, ImageSection } from '../../../components/Section'
-import columbiaKids from '../../../public/columbia-kids-sunday.jpeg'
-import outdoorBounce from '../../../public/outdoor-bounce-house.png'
-import nurseryBounce from '../../../public/nursery-bounce-house.png'
-import nursery from '../../../public/nursery.webp'
-import kidsRoom from '../../../public/kids-room.webp'
-import kidsSong from '../../../public/kids/kids-on-stage.webp'
-import nurseryVolunteers from '../../../public/nursery/nursery-kids.webp'
+import { ElevatedSection, ImageSection } from 'components/Section'
+import columbiaKids from 'public/columbia-kids-sunday.jpeg'
+import outdoorBounce from 'public/outdoor-bounce-house.png'
+import nurseryBounce from 'public/nursery-bounce-house.png'
+import nursery from 'public/nursery.webp'
+import kidsRoom from 'public/kids-room.webp'
+import kidsSong from 'public/kids/kids-on-stage.webp'
+import nurseryVolunteers from 'public/nursery/nursery-kids.webp'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',

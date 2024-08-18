@@ -8,7 +8,7 @@ import { forwardRef } from 'react'
 import CssBaseline from '@mui/material/CssBaseline'
 import NextLink from 'next/link'
 
-import { openSans } from '../utils/fonts'
+import { openSans } from 'utils/fonts'
 
 const LinkAdapter = forwardRef<
   HTMLAnchorElement,

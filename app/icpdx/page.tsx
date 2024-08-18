@@ -9,13 +9,13 @@ import {
   Stack,
   Typography,
 } from '@mui/material'
-import icMap from '../../public/ic-map.webp'
-import chart from '../../public/family-workplace-community.webp'
-import immigrantSuccess from '../../public/immigrant-success-stories.webp'
-import celebrationLuncheon from '../../public/icpdx/2024-luncheon-digital-invite.png'
-import YouTubePlayer from '../../components/YouTubePlayer'
-import ResponsiveImage from '../../components/ResponsiveImage'
-import { ImageSection } from '../../components/Section'
+import icMap from 'public/ic-map.webp'
+import chart from 'public/family-workplace-community.webp'
+import immigrantSuccess from 'public/immigrant-success-stories.webp'
+import celebrationLuncheon from 'public/icpdx/2024-luncheon-digital-invite.png'
+import YouTubePlayer from 'components/YouTubePlayer'
+import ResponsiveImage from 'components/ResponsiveImage'
+import { ImageSection } from 'components/Section'
 
 export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',

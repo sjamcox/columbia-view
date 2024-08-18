@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import { Box } from '@mui/material'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Providers from '../providers'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
+import Providers from 'providers'
 
 export const metadata: Metadata = {
   title: 'Columbia View Church',

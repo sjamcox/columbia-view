@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Box, Grid, Typography } from '@mui/material'
-import testimony from '../../public/sunday/mark-baptism-testimony.webp'
-import worship from '../../public/sunday/worship-team.webp'
-import kidsSermon from '../../public/sunday/sermon-in-a-sack.webp'
-import communion from '../../public/sunday/sermon-communion-table.webp'
+import testimony from 'public/sunday/mark-baptism-testimony.webp'
+import worship from 'public/sunday/worship-team.webp'
+import kidsSermon from 'public/sunday/sermon-in-a-sack.webp'
+import communion from 'public/sunday/sermon-communion-table.webp'
 import AccordionSection from './AccordionSection'
 
 export const metadata: Metadata = {

@@ -14,7 +14,7 @@ import {
 } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { Menu as HamburgerMenu } from '@mui/icons-material'
-import logo from '../public/columbia-view-new-logo-horizontal.webp'
+import logo from 'public/columbia-view-new-logo-horizontal.webp'
 
 const NavItem = ({ href, subnav, text, handleClick }) => {
   if (subnav) {

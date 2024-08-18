@@ -1,4 +1,4 @@
-import { anton } from '../../utils/fonts'
+import { anton } from 'utils/fonts'
 
 export const typography = {
   body: {
