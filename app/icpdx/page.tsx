@@ -44,116 +44,23 @@ function CoreValue({ title, description }) {
 export default function ImmigrantConnection() {
   return (
     <>
-      <Container maxWidth="lg" sx={{ my: 5 }}>
-        <ResponsiveImage
-          src={celebrationLuncheon}
-          alt="ICPDX Celebration Luncheon Invitation"
-          aspectRatio="3:4"
-        />
-        <Stack alignItems="center">
-          <Typography paragraph>
-            4 years ago, a dream birthed from an east county pastor's prayer
-            conference to see the local church welcome immigrants in a practical
-            way. Since then, Immigrant Connection PDX (ICPDX) has now served{' '}
-            <Link href="https://drive.google.com/file/d/1wU-Hmam19gN4CeHlemYWDsIDZESEFPcd/view?pli=1">
-              more than 800 immigrants
-            </Link>{' '}
-            with church-based, low-cost, immigration legal services resulting in
-            hundreds of foreign-born individuals receiving green cards,
-            petitioning family members, becoming naturalized citizens, among a
-            host of other immigration benefits.
-          </Typography>
-          <Typography paragraph variant="h4" align="center">
-            God's favor on this ministry is evidence of his love for the
-            immigrant.
-          </Typography>
-          <Typography mb={6}>
-            Join us Saturday, May 18 from 11:30a - 2p at{' '}
-            <Link href="https://www.gracecc.net/">Grace Community Church</Link>{' '}
-            (800 SE Hogan Rd, Gresham, OR 97080) for a Taco Bar catered by{' '}
-            <Link href="https://www.facebook.com/lamixtecafairview/">
-              La Mixteca
-            </Link>{' '}
-            to celebrate the immigrants of our community and the role ICPDX and
-            our various church partners have played in building bridges for a
-            hope-filled future through church-based, low-cost immigration legal
-            services.
-          </Typography>
-          <Typography paragraph>
-            We are honored to host{' '}
-            <Link href="https://www.icwelcome.org/">
-              Immigrant Connection National's
-            </Link>{' '}
-            Executive Director,{' '}
-            <Link href="https://www.icwelcome.org/zach">
-              Pastor Zach Szmara
-            </Link>
-            , who will deliver a keynote address about how God has been
-            advancing a movement of loving welcome to foreign-born individuals
-            across the nation's fastest growing network of church-based
-            immigration legal services sites with 33 DOJ Recognized Sites now
-            open across the country.
-          </Typography>
-          <Typography paragraph>
-            Immigrant Connection PDX pioneered the way as the first successful
-            West Coast launch in 2020 (great year to start something right?)
-            with 3 more West Coast sites awaiting DOJ approval that are expected
-            to open this year (2 more in Oregon, and 1 in Alaska.)
-          </Typography>
-          <Typography paragraph variant="h4" align="center">
-            This luncheon is open to the entire community, so please spread the
-            word!
-          </Typography>
-          <Typography variant="h3">General Event Schedule</Typography>
-          <ul>
-            <li>
-              11:30am kids activities: (bounce houses, face painting, etc.)
-              coffee will be served at this time.
-            </li>
-            <li>12:00pm: the taco bar will open.</li>
-            <li>
-              12:30pm: keynote speakers begin (coloring activities provided for
-              kids at this time.)
-            </li>
-            <li>1:45pm: raffle giveaways.</li>
-            <li>2:00pm: wrap up, connecting/networking time.</li>
-          </ul>
-          <Button
-            href="https://columbiaview.churchcenter.com/people/forms/712531"
-            target="_blank"
-            variant="contained"
-            size="large"
-            color="secondary"
-            sx={{ color: 'white', mt: 2, width: 300, fontSize: 20, mb: 2 }}
+      <ImageSection
+        src={immigrantSuccess}
+        alt="Immigrant families celebrating success"
+      >
+        <Stack minHeight={{ xs: 350, sm: 500 }} justifyContent="flex-end">
+          <Typography
+            component="h1"
+            variant="h2"
+            maxWidth={900}
+            textAlign="left"
+            color="white"
           >
-            RSVP for the Luncheon
-          </Button>
-          <Link
-            href="https://columbiaview.churchcenter.com/people/forms/712531"
-            target="_blank"
-            sx={{ textAlign: 'center', mb: 7 }}
-          >
-            Please Register here to help with volunteer staffing and food needs.
-          </Link>
+            Partner With Immigrant Connection PDX
+          </Typography>
         </Stack>
-        <Box my={5}>
-          <ImageSection
-            src={immigrantSuccess}
-            alt="Immigrant families celebrating success"
-          >
-            <Stack minHeight={{ xs: 350, sm: 500 }} justifyContent="flex-end">
-              <Typography
-                component="h1"
-                variant="h2"
-                maxWidth={900}
-                textAlign="left"
-                color="white"
-              >
-                Partner With Immigrant Connection PDX
-              </Typography>
-            </Stack>
-          </ImageSection>
-        </Box>
+      </ImageSection>
+      <Container maxWidth="lg" sx={{ my: 5 }}>
         <Stack alignItems={{ xs: 'flex-start', sm: 'center' }} mb={4}>
           <Grid container spacing={{ xs: 0, sm: 4 }}>
             <Grid
