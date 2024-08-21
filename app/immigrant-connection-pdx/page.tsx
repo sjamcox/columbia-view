@@ -349,11 +349,6 @@ export default function ImmigrantConnection() {
         </Grid>
         <ServiceList />
       </Container>
-      <VideoSection
-        id="zBDYoLfPkwc"
-        image={immigrantFamily}
-        alt="Immigrant mother and daughter"
-      />
     </>
   )
 }

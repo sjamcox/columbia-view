@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Hero from 'components/Hero'
 import ResponsiveImage from 'components/ResponsiveImage'
 import ImageTile from 'components/ImageTile'
+import YouTubePlayer from 'components/YouTubePlayer'
 import baptism from 'public/sunday/mark-baptism.webp'
 import worship from 'public/sunday/worship-team-vertical.webp'
 import kids from 'public/kids/kids-activity.webp'
@@ -14,8 +15,6 @@ import immigrantFamily from 'public/icpdx/immigrant-family.webp'
 import bible from 'public/bible-project-one-story.webp'
 import rightnow from 'public/right-now-media.webp'
 import lobby from 'public/lobby-group.webp'
-
-import YouTubePlayer from 'components/YouTubePlayer'
 
 export const metadata: Metadata = {
   title: 'Welcome Home | Columbia View Church',
