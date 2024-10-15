@@ -59,7 +59,7 @@ export default function Header() {
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    setActiveMenu(e.currentTarget.innerText)
+    setActiveMenu(e.currentTarget.textContent)
     setAnchorEl(e.currentTarget)
   }
 
@@ -77,7 +77,12 @@ export default function Header() {
     }
   })
 
-  const subnavItems = menu.find((item) => item.text === activeMenu)?.subnav
+  const subnavItems = menu.find((item) => {
+    console.log(item.text, activeMenu)
+    console.log(item.text === activeMenu)
+    return item.text === activeMenu
+  })?.subnav
+
   const popperMenuItems = subnavItems?.map((item) => (
     <Link key={item.text} href={item.href} sx={{ textDecoration: 'none' }}>
       <MenuItem
