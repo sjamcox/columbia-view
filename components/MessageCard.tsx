@@ -2,7 +2,7 @@
 
 import { format } from 'date-fns'
 import { motion } from 'framer-motion'
-import { Box, Card, Grid, Link, Stack, Typography } from '@mui/material'
+import { Card, Grid, Link, Stack, Typography } from '@mui/material'
 
 export default function MessageCard({ message, ...rest }) {
   return (
@@ -16,13 +16,6 @@ export default function MessageCard({ message, ...rest }) {
           height: '100%',
         }}
       >
-        <Box
-          sx={{
-            pb: '60%',
-            background:
-              'linear-gradient(140deg, rgba(14,73,111,1) 0%, rgba(51,49,50,1) 100%)',
-          }}
-        />
         <Stack key={message.episode_id} px={4} py={3}>
           <Typography variant="date">
             {format(new Date(message.published_at), 'PPP')}

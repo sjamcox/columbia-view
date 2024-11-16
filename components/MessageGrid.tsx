@@ -12,7 +12,7 @@ export default function MessageGrid({ messages }) {
     animate(
       '.message-card',
       { opacity: 1, marginTop: 0 },
-      { delay: stagger(0.1) }
+      { delay: stagger(0.05) }
     )
   }, [])
 

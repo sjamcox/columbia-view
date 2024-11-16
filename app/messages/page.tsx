@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 
-import axios from 'axios'
 import { Box, Button, Typography } from '@mui/material'
 
 import MessageGrid from 'components/MessageGrid'
@@ -11,16 +10,27 @@ export const metadata: Metadata = {
 }
 
 export default async function Messages() {
-  const { data } = await axios.get(
-    'https://api.spreaker.com/v2/shows/3172208/episodes?limit=12'
+  const res = await fetch(
+    'https://api.spreaker.com/v2/shows/3172208/episodes?limit=36',
+    { next: { revalidate: 1800 } }
   )
+
+  let data
+
+  if (res.ok) {
+    data = await res.json()
+  }
 
   return (
     <>
-      <Typography component="h1" variant="h1" sx={{ mb: 3 }}>
+      <Typography component="h1" variant="h1" sx={{ mb: 4 }}>
         Messages
       </Typography>
-      <MessageGrid messages={data.response.items} />
+      {data ? (
+        <MessageGrid messages={data.response.items} />
+      ) : (
+        <Typography>Error fetching messages data.</Typography>
+      )}
       <Box width="100%" textAlign="center" mt={4}>
         <Button
           variant="contained"
