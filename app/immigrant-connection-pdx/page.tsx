@@ -116,7 +116,7 @@ export default function ImmigrantConnection() {
             <Button
               variant="contained"
               color="secondary"
-              href="/immigrant-connection-pdx/booking"
+              href="https://immigrantconnectionpdx.as.me/?location=16700%20NE%20Halsey%20st.%20Portland%20OR%2097230"
               sx={{ mb: 4, mt: 2 }}
             >
               Schedule an appointment
