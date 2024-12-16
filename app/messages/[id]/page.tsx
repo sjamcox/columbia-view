@@ -12,11 +12,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function MessageDetails({
-  params,
-}: {
-  params: { id: string }
+export default async function MessageDetails(props: {
+  params: Promise<{ id: string }>
 }) {
+  const params = await props.params
   const { data } = await axios.get(
     `https://api.spreaker.com/v2/episodes/${params.id}`
   )
