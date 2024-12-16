@@ -60,18 +60,34 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <Box maxWidth={1024}>
+    <Box
+      sx={{
+        maxWidth: 1024,
+      }}
+    >
       <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
         Welcome Home
       </Typography>
-      <Typography component="h2" variant="h3" color="primary" mt={4}>
+      <Typography
+        component="h2"
+        variant="h3"
+        color="primary"
+        sx={{
+          mt: 4,
+        }}
+      >
         Our Vision
       </Typography>
       <Typography variant="h4" paragraph>
         Inviting our community to belong to Jesus, believe in Jesus, and become
         like Jesus.
       </Typography>
-      <Box mt={3} mx={{ xs: 2, sm: 6 }}>
+      <Box
+        sx={{
+          mt: 3,
+          mx: { xs: 2, sm: 6 },
+        }}
+      >
         <Typography variant="h5">Belong</Typography>
         <Typography paragraph>
           We are a community building church. Community is God's idea and a
@@ -94,10 +110,23 @@ export default function About() {
           faith and apprenticeship to Jesus.
         </Typography>
       </Box>
-      <Typography component="h2" variant="h3" color="primary" mt={4}>
+      <Typography
+        component="h2"
+        variant="h3"
+        color="primary"
+        sx={{
+          mt: 4,
+        }}
+      >
         Our Mission
       </Typography>
-      <Typography variant="h4" my={2} paragraph>
+      <Typography
+        variant="h4"
+        paragraph
+        sx={{
+          my: 2,
+        }}
+      >
         Advancing the great commission, in the spirit of the great commandment,
         for the flourishing of the whole community.
       </Typography>
@@ -106,10 +135,23 @@ export default function About() {
         who wants an ongoing, transformative, hope-giving relationship with
         them.
       </Typography>
-      <Typography component="h2" variant="h3" color="primary" mt={4}>
+      <Typography
+        component="h2"
+        variant="h3"
+        color="primary"
+        sx={{
+          mt: 4,
+        }}
+      >
         Beliefs and Core Values
       </Typography>
-      <Typography variant="h4" my={2} paragraph>
+      <Typography
+        variant="h4"
+        paragraph
+        sx={{
+          my: 2,
+        }}
+      >
         We believe in one God, who is Father, Son, and Holy Spirit, and the
         Savior of all who put their faith in Him alone for eternal life.
       </Typography>
@@ -149,7 +191,15 @@ export default function About() {
         </Link>
         .
       </Typography>
-      <Typography component="h2" variant="h3" color="primary" mt={4} mb={2}>
+      <Typography
+        component="h2"
+        variant="h3"
+        color="primary"
+        sx={{
+          mt: 4,
+          mb: 2,
+        }}
+      >
         Annual Report
       </Typography>
       <Link href="https://drive.google.com/file/d/1onBcSt0pbj3mL4w2MWeaJKn_vjhaDJ25/view">
@@ -159,17 +209,26 @@ export default function About() {
         Columbia View Staff
       </Typography>
       <Stack
-        alignItems="center"
         divider={
           <Divider orientation="horizontal" flexItem sx={{ color: 'blue' }} />
         }
         spacing={6}
+        sx={{
+          alignItems: 'center',
+        }}
       >
         {staff.map((member) => (
           <StaffListing key={member.name} member={member} />
         ))}
       </Stack>
-      <Typography component="h3" variant="h4" gutterBottom mt={5}>
+      <Typography
+        component="h3"
+        variant="h4"
+        gutterBottom
+        sx={{
+          mt: 5,
+        }}
+      >
         Russelle Brandom
       </Typography>
       <Typography paragraph color="secondary">
@@ -187,7 +246,11 @@ export default function About() {
       <Typography gutterBottom color="secondary">
         <strong>Hospitality</strong>
       </Typography>
-      <Typography mt={5}>
+      <Typography
+        sx={{
+          mt: 5,
+        }}
+      >
         If you would like to get in contact with one of our staff, please email
         our office at:{' '}
         <a href="mailto:office.cvwc@gmail.com">office.cvwc@gmail.com</a>

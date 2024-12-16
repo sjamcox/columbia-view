@@ -31,7 +31,13 @@ type NavLinkProps = {
 function NavLink({ href, text }: NavLinkProps) {
   return (
     <Link href={href} sx={{ mx: 1.5, py: 1, textDecoration: 'none' }}>
-      <Typography fontSize={16} fontWeight={600} color="#333333">
+      <Typography
+        sx={{
+          fontSize: 16,
+          fontWeight: 600,
+          color: '#333333',
+        }}
+      >
         {text}
       </Typography>
     </Link>
@@ -46,7 +52,12 @@ type NavParentProps = {
 function NavParent({ text, onClick }: NavParentProps) {
   return (
     <ButtonBase onClick={onClick} sx={{ mx: 1.5, py: 1 }}>
-      <Typography fontSize={16} fontWeight={600}>
+      <Typography
+        sx={{
+          fontSize: 16,
+          fontWeight: 600,
+        }}
+      >
         {text}
       </Typography>
     </ButtonBase>
@@ -109,7 +120,12 @@ export default function Header() {
           alignItems="center"
         >
           <Link href="/">
-            <Box display="flex" mb={-1}>
+            <Box
+              sx={{
+                display: 'flex',
+                mb: -1,
+              }}
+            >
               <Box>
                 <Image
                   src={logo}
@@ -130,13 +146,27 @@ export default function Header() {
           justifyContent={{ xs: 'flex-end', md: 'center' }}
           alignItems="center"
         >
-          <Box display={{ xs: 'none', md: 'block' }}>
-            <Box display="flex">{primaryNavItems}</Box>
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'block' },
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+              }}
+            >
+              {primaryNavItems}
+            </Box>
             <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
               {popperMenuItems}
             </Menu>
           </Box>
-          <Box display={{ xs: 'block', md: 'none' }}>
+          <Box
+            sx={{
+              display: { xs: 'block', md: 'none' },
+            }}
+          >
             <IconButton sx={{ padding: 0 }} onClick={() => setOpen(true)}>
               <MenuIcon />
             </IconButton>

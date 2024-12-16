@@ -22,11 +22,21 @@ export default function VisitUs() {
           We're excited to have you join us for a Sunday morning worship
           service!
         </Typography>
-        <Box id="sunday-worship" my={4}>
+        <Box
+          id="sunday-worship"
+          sx={{
+            my: 4,
+          }}
+        >
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Worship Service
           </Typography>
-          <Grid container justifyContent="space-between">
+          <Grid
+            container
+            sx={{
+              justifyContent: 'space-between',
+            }}
+          >
             <Grid item xs={12} md={8}>
               <Typography paragraph>
                 Every Sunday, we gather and worship through music, prayer,
@@ -37,15 +47,25 @@ export default function VisitUs() {
               </Typography>
             </Grid>
             <Grid item xs={12} md={3}>
-              <Typography fontSize={15}>
+              <Typography
+                sx={{
+                  fontSize: 15,
+                }}
+              >
                 <strong>Meeting Time & Location</strong>
               </Typography>
-              <Typography fontSize={15} paragraph>
+              <Typography
+                paragraph
+                sx={{
+                  fontSize: 15,
+                }}
+              >
                 10:00 AM in the sanctuary
               </Typography>
               <Typography
-                fontSize={15}
                 sx={{
+                  fontSize: 15,
+
                   '& a': {
                     textDecoration: 'none',
                     color: 'rgb(57, 171, 225)',

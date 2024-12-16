@@ -22,17 +22,31 @@ export default async function MessageDetails(props: {
   const { episode } = data.response
 
   return (
-    <Stack alignItems="center" spacing={4} mt={10}>
+    <Stack
+      spacing={4}
+      sx={{
+        alignItems: 'center',
+        mt: 10,
+      }}
+    >
       <Typography variant="date">
         {format(new Date(episode.published_at), 'PPP')}
       </Typography>
-      <Typography component="h1" variant="h2" textAlign="center">
+      <Typography
+        component="h1"
+        variant="h2"
+        sx={{
+          textAlign: 'center',
+        }}
+      >
         {episode.title}
       </Typography>
       <Box
-        maxWidth={650}
         dangerouslySetInnerHTML={{ __html: episode.description_html }}
-        sx={{ '& a': { color: 'primary.main' } }}
+        sx={{
+          maxWidth: 650,
+          '& a': { color: 'primary.main' },
+        }}
       />
       <AudioPlayer src={episode.playback_url} />
     </Stack>

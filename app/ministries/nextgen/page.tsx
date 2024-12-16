@@ -26,7 +26,12 @@ export default function ColumbiaKids() {
         <Typography variant="h4" paragraph>
           Partnering with parents to pass on faith to the next generation.
         </Typography>
-        <Box maxWidth={930} mt={4}>
+        <Box
+          sx={{
+            maxWidth: 930,
+            mt: 4,
+          }}
+        >
           <Typography component="h2" variant="h3" color="primary" paragraph>
             Our Kids Program
           </Typography>
@@ -121,10 +126,16 @@ export default function ColumbiaKids() {
       </Box>
       <ElevatedSection>
         <Stack
-          justifyContent="space-between"
           direction={{ xs: 'column-reverse', sm: 'row' }}
+          sx={{
+            justifyContent: 'space-between',
+          }}
         >
-          <Box width={{ xs: '100%', sm: '50%', md: '60%' }}>
+          <Box
+            sx={{
+              width: { xs: '100%', sm: '50%', md: '60%' },
+            }}
+          >
             <Typography component="h2" variant="h3" paragraph>
               Check-in Process
             </Typography>
@@ -166,15 +177,28 @@ export default function ColumbiaKids() {
         </Stack>
       </ElevatedSection>
       <ImageSection src={kidsRoom} alt="Kids room">
-        <Stack alignItems="center" my="5vw">
+        <Stack
+          sx={{
+            alignItems: 'center',
+            my: '5vw',
+          }}
+        >
           <Stack
-            width={{ xs: '80%', sm: '65%', md: '50%' }}
-            alignItems="center"
+            sx={{
+              width: { xs: '80%', sm: '65%', md: '50%' },
+              alignItems: 'center',
+            }}
           >
             <Typography component="h2" variant="h3" color="white" paragraph>
               Curriculum
             </Typography>
-            <Typography color="white" paragraph fontWeight={500}>
+            <Typography
+              color="white"
+              paragraph
+              sx={{
+                fontWeight: 500,
+              }}
+            >
               Our church utilizes the childrens' curriculum put out by
               life.church. We follow the{' '}
               <Link
@@ -189,7 +213,12 @@ export default function ColumbiaKids() {
               App” in either Apple or Google Play stores as the app aligns with
               the curriculum used in our kids class.
             </Typography>
-            <Typography color="white" fontWeight={500}>
+            <Typography
+              color="white"
+              sx={{
+                fontWeight: 500,
+              }}
+            >
               We truly want to partner with parents to pass on faith to the next
               generation, so please let us know how we can specifically partner
               with you to help your kids follow Jesus!
@@ -199,10 +228,16 @@ export default function ColumbiaKids() {
       </ImageSection>
       <ElevatedSection>
         <Stack
-          justifyContent="space-between"
           direction={{ xs: 'column-reverse', sm: 'row-reverse' }}
+          sx={{
+            justifyContent: 'space-between',
+          }}
         >
-          <Box width={{ xs: '100%', sm: '40%', md: '35%' }}>
+          <Box
+            sx={{
+              width: { xs: '100%', sm: '40%', md: '35%' },
+            }}
+          >
             <Typography component="h2" variant="h3" paragraph>
               Volunteers
             </Typography>

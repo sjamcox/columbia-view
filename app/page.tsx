@@ -44,9 +44,11 @@ export default function Index() {
         >
           <Grid
             container
-            display="flex"
             direction={{ xs: 'column-reverse', md: 'row' }}
-            justifyContent="space-between"
+            sx={{
+              display: 'flex',
+              justifyContent: 'space-between',
+            }}
           >
             <Grid
               item
@@ -145,7 +147,13 @@ export default function Index() {
         sx={{ bgcolor: 'rgb(14, 73, 111)', borderRadius: '20px' }}
       >
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
-          <Grid container spacing={6} alignItems="center">
+          <Grid
+            container
+            spacing={6}
+            sx={{
+              alignItems: 'center',
+            }}
+          >
             <Grid item xs={12} sm={6}>
               <ResponsiveImage src={rightnow} />
             </Grid>
@@ -172,7 +180,11 @@ export default function Index() {
       </Box>
       <Box component="section">
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
-          <Stack alignItems="center">
+          <Stack
+            sx={{
+              alignItems: 'center',
+            }}
+          >
             <Typography component="h2" variant="h2">
               Columbia View Ministries
             </Typography>
@@ -226,7 +238,13 @@ export default function Index() {
         sx={{ bgcolor: 'rgb(14, 73, 111)', borderRadius: '20px' }}
       >
         <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
-          <Grid container spacing={6} alignItems="center">
+          <Grid
+            container
+            spacing={6}
+            sx={{
+              alignItems: 'center',
+            }}
+          >
             <Grid item xs={12} sm={6}>
               <ResponsiveImage src={bible} />
             </Grid>

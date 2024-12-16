@@ -16,7 +16,13 @@ export default function MessageCard({ message, ...rest }) {
           height: '100%',
         }}
       >
-        <Stack key={message.episode_id} px={4} py={3}>
+        <Stack
+          key={message.episode_id}
+          sx={{
+            px: 4,
+            py: 3,
+          }}
+        >
           <Typography variant="date">
             {format(new Date(message.published_at), 'PPP')}
           </Typography>

@@ -86,7 +86,13 @@ export const NavBar = ({ menu, setOpen }) => {
       <Container maxWidth="lg" disableGutters>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Link href="/">
-            <Box display="flex" flexDirection="row" mb={-1}>
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                mb: -1,
+              }}
+            >
               <Box>
                 <Image
                   src={logo}
@@ -100,10 +106,12 @@ export const NavBar = ({ menu, setOpen }) => {
           </Link>
           {matches ? (
             <Box
-              display="flex"
-              flexDirection="row"
-              justifyContent="flex-end"
               spacing={4}
+              sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+              }}
             >
               {linkList}
               <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>

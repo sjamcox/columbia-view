@@ -26,15 +26,31 @@ export const metadata: Metadata = {
 function CoreValue({ title, description }) {
   return (
     <Box
-      display="flex"
-      my={{ xs: 1, md: 4 }}
-      flexDirection={{ xs: 'column', sm: 'row' }}
+      sx={{
+        display: 'flex',
+        my: { xs: 1, md: 4 },
+        flexDirection: { xs: 'column', sm: 'row' },
+      }}
     >
-      <Typography variant="h4" color="primary.main" maxWidth={300} mr={4}>
+      <Typography
+        variant="h4"
+        sx={{
+          color: 'primary.main',
+          maxWidth: 300,
+          mr: 4,
+        }}
+      >
         {title}
       </Typography>
       <Divider flexItem orientation="vertical" sx={{ mr: 4 }} />
-      <Typography variant="h5" paragraph maxWidth={900} textAlign="left">
+      <Typography
+        variant="h5"
+        paragraph
+        sx={{
+          maxWidth: 900,
+          textAlign: 'left',
+        }}
+      >
         {description}
       </Typography>
     </Box>
@@ -48,20 +64,32 @@ export default function ImmigrantConnection() {
         src={immigrantSuccess}
         alt="Immigrant families celebrating success"
       >
-        <Stack minHeight={{ xs: 350, sm: 500 }} justifyContent="flex-end">
+        <Stack
+          sx={{
+            minHeight: { xs: 350, sm: 500 },
+            justifyContent: 'flex-end',
+          }}
+        >
           <Typography
             component="h1"
             variant="h2"
-            maxWidth={900}
-            textAlign="left"
             color="white"
+            sx={{
+              maxWidth: 900,
+              textAlign: 'left',
+            }}
           >
             Partner With Immigrant Connection PDX
           </Typography>
         </Stack>
       </ImageSection>
       <Container maxWidth="lg" sx={{ my: 5 }}>
-        <Stack alignItems={{ xs: 'flex-start', sm: 'center' }} mb={4}>
+        <Stack
+          sx={{
+            alignItems: { xs: 'flex-start', sm: 'center' },
+            mb: 4,
+          }}
+        >
           <Grid container spacing={{ xs: 0, sm: 4 }}>
             <Grid
               item
@@ -73,7 +101,12 @@ export default function ImmigrantConnection() {
                 alignItems: 'center',
               }}
             >
-              <Typography variant="h3" textAlign={{ xs: 'left', sm: 'center' }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  textAlign: { xs: 'left', sm: 'center' },
+                }}
+              >
                 <strong>Vision</strong>
               </Typography>
               <Divider
@@ -86,9 +119,11 @@ export default function ImmigrantConnection() {
               <Typography
                 variant="h5"
                 paragraph
-                maxWidth={900}
-                textAlign={{ xs: 'left', sm: 'center' }}
-                mb={3}
+                sx={{
+                  maxWidth: 900,
+                  textAlign: { xs: 'left', sm: 'center' },
+                  mb: 3,
+                }}
               >
                 Building bridges for a hope-filled future.
               </Typography>
@@ -103,7 +138,12 @@ export default function ImmigrantConnection() {
                 alignItems: 'center',
               }}
             >
-              <Typography variant="h3" textAlign={{ xs: 'left', sm: 'center' }}>
+              <Typography
+                variant="h3"
+                sx={{
+                  textAlign: { xs: 'left', sm: 'center' },
+                }}
+              >
                 <strong>Mission</strong>
               </Typography>
               <Divider
@@ -116,8 +156,10 @@ export default function ImmigrantConnection() {
               <Typography
                 variant="h5"
                 paragraph
-                maxWidth={900}
-                textAlign={{ xs: 'left', sm: 'center' }}
+                sx={{
+                  maxWidth: 900,
+                  textAlign: { xs: 'left', sm: 'center' },
+                }}
               >
                 Providing low-cost immigration legal services to the
                 under-resourced communities of the Portland metro area and
@@ -125,11 +167,18 @@ export default function ImmigrantConnection() {
               </Typography>
             </Grid>
           </Grid>
-          <Stack alignItems="center" width="100%">
+          <Stack
+            sx={{
+              alignItems: 'center',
+              width: '100%',
+            }}
+          >
             <Typography
               variant="h3"
-              textAlign={{ xs: 'left', sm: 'center' }}
-              mt={2}
+              sx={{
+                textAlign: { xs: 'left', sm: 'center' },
+                mt: 2,
+              }}
             >
               <strong>Core Values</strong>
             </Typography>
@@ -163,7 +212,12 @@ export default function ImmigrantConnection() {
           />
         </Stack>
         <YouTubePlayer id={'ek0RzZbxUXY'} />
-        <Grid container my={4}>
+        <Grid
+          container
+          sx={{
+            my: 4,
+          }}
+        >
           <Grid
             item
             xs={12}
@@ -183,7 +237,13 @@ export default function ImmigrantConnection() {
             >
               800+
             </Typography>
-            <Typography textAlign="center" color="white" fontWeight={600}>
+            <Typography
+              color="white"
+              sx={{
+                textAlign: 'center',
+                fontWeight: 600,
+              }}
+            >
               new client consultations
             </Typography>
           </Grid>
@@ -206,7 +266,13 @@ export default function ImmigrantConnection() {
             >
               165+
             </Typography>
-            <Typography textAlign="center" color="white" fontWeight={600}>
+            <Typography
+              color="white"
+              sx={{
+                textAlign: 'center',
+                fontWeight: 600,
+              }}
+            >
               citizenship applications
             </Typography>
           </Grid>
@@ -229,7 +295,13 @@ export default function ImmigrantConnection() {
             >
               60+
             </Typography>
-            <Typography textAlign="center" color="white" fontWeight={600}>
+            <Typography
+              color="white"
+              sx={{
+                textAlign: 'center',
+                fontWeight: 600,
+              }}
+            >
               family-based petitions
             </Typography>
           </Grid>
@@ -237,10 +309,12 @@ export default function ImmigrantConnection() {
         <Typography
           component="p"
           variant="h5"
-          textAlign="center"
-          borderTop="1px solid silver"
-          borderBottom="1px solid silver"
-          sx={{ p: 5 }}
+          sx={{
+            textAlign: 'center',
+            borderTop: '1px solid silver',
+            borderBottom: '1px solid silver',
+            p: 5,
+          }}
         >
           We're grateful for the impact we made together so far!
         </Typography>
@@ -264,7 +338,12 @@ export default function ImmigrantConnection() {
           sm={6}
           sx={{ display: 'flex', alignItems: 'center' }}
         >
-          <Typography p={4} mr={4}>
+          <Typography
+            sx={{
+              p: 4,
+              mr: 4,
+            }}
+          >
             Immigrant Connection is a network of Immigration Legal Services
             sites based in both rural and urban areas across the country. Sites
             are church-based and are established in under-resourced communities
@@ -274,15 +353,29 @@ export default function ImmigrantConnection() {
       </Grid>
       <Container maxWidth="lg" sx={{ my: 5, px: 3 }}>
         <YouTubePlayer id={'_Px3J78h5x0'} />
-        <Typography my={5}>
+        <Typography
+          sx={{
+            my: 5,
+          }}
+        >
           As Immigrant Connection PDX provides critical services, we can see
           positive outcomes for immigrant families, the workplace and school
           they are part of, as well as the communities they live in. Immigrant
           Connection PDX opens pathways for whole communities and their
           residents to thrive.
         </Typography>
-        <Stack alignItems="center" mb={4}>
-          <Box width="100%" maxWidth={500}>
+        <Stack
+          sx={{
+            alignItems: 'center',
+            mb: 4,
+          }}
+        >
+          <Box
+            sx={{
+              width: '100%',
+              maxWidth: 500,
+            }}
+          >
             <ResponsiveImage
               src={chart}
               alt="Chart showing key pillars of Immigrant Connection"
@@ -290,7 +383,12 @@ export default function ImmigrantConnection() {
             />
           </Box>
         </Stack>
-        <Stack direction="row" justifyContent="center">
+        <Stack
+          direction="row"
+          sx={{
+            justifyContent: 'center',
+          }}
+        >
           <Button
             href="https://columbiaview.churchcenter.com/giving"
             variant="contained"
@@ -308,7 +406,14 @@ export default function ImmigrantConnection() {
             Explore ways to partner with us
           </Button>
         </Stack>
-        <Typography component="h2" variant="h3" gutterBottom mt={5}>
+        <Typography
+          component="h2"
+          variant="h3"
+          gutterBottom
+          sx={{
+            mt: 5,
+          }}
+        >
           Our Partners
         </Typography>
         <Typography>
@@ -372,7 +477,14 @@ export default function ImmigrantConnection() {
         <Typography>
           ... and to all of our individual recurring donors!
         </Typography>
-        <Typography component="h2" variant="h3" gutterBottom mt={5}>
+        <Typography
+          component="h2"
+          variant="h3"
+          gutterBottom
+          sx={{
+            mt: 5,
+          }}
+        >
           2023 Annual Report
         </Typography>
         <Button

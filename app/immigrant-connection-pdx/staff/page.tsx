@@ -10,13 +10,6 @@ export const metadata: Metadata = {
   title: 'Staff | Immigrant Connection PDX',
 }
 
-const numbers = [1, 2, 3, 4, 5]
-
-const taco = {
-  shell: 'hard',
-  cheese: false,
-}
-
 const staff = [
   {
     name: 'David Rannabargar',
@@ -55,11 +48,13 @@ export default function Staff() {
         Immigrant Connection Staff
       </Typography>
       <Stack
-        alignItems="center"
         divider={
           <Divider orientation="horizontal" flexItem sx={{ color: 'blue' }} />
         }
         spacing={6}
+        sx={{
+          alignItems: 'center',
+        }}
       >
         {staff.map((member) => (
           <StaffListing key={member.name} member={member} />

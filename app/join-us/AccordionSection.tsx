@@ -20,8 +20,20 @@ export default function AccordionSection() {
   return (
     <Container maxWidth="md" sx={{ my: 5, px: 3 }}>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <Box maxWidth="md" my={{ xs: 0, md: 4 }}>
-          <Typography component="h2" variant="h3" textAlign="center" mb={4}>
+        <Box
+          sx={{
+            maxWidth: 'md',
+            my: { xs: 0, md: 4 },
+          }}
+        >
+          <Typography
+            component="h2"
+            variant="h3"
+            sx={{
+              textAlign: 'center',
+              mb: 4,
+            }}
+          >
             What to Expect During Your Visit
           </Typography>
           <Accordion

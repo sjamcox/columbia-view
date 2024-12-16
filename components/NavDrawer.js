@@ -94,7 +94,12 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
       <Container disableGutters>
         <Toolbar sx={{ margin: '36px 12px' }}>
           <Grid container direction="column" spacing={2}>
-            <Box display="flex" justifyContent="flex-end">
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+              }}
+            >
               <IconButton sx={{ padding: 0 }} onClick={() => setOpen(false)}>
                 <Close />
               </IconButton>

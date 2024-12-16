@@ -7,7 +7,14 @@ export default function ServiceList() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" my={5}>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        my: 5,
+      }}
+    >
       <Button
         variant="contained"
         color="secondary"
@@ -17,7 +24,12 @@ export default function ServiceList() {
         {isOpen ? 'See less services' : 'See more services'}
       </Button>
       <Collapse in={isOpen}>
-        <Typography textAlign="center" paragraph>
+        <Typography
+          paragraph
+          sx={{
+            textAlign: 'center',
+          }}
+        >
           Adjustment of Status <br />
           Advanced Parole/Travel Authorization <br />
           Affilidavit of Support
@@ -54,11 +66,21 @@ export default function ServiceList() {
           <br />
           Additional Services
         </Typography>
-        <Typography textAlign="center">
+        <Typography
+          sx={{
+            textAlign: 'center',
+          }}
+        >
           For more information regarding these services:
         </Typography>
         <Link href="https://www.uscis.gov">
-          <Typography textAlign="center">https://www.uscis.gov</Typography>
+          <Typography
+            sx={{
+              textAlign: 'center',
+            }}
+          >
+            https://www.uscis.gov
+          </Typography>
         </Link>
       </Collapse>
     </Box>

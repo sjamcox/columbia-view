@@ -14,15 +14,30 @@ export const metadata: Metadata = {
 
 export default function Ministries() {
   return (
-    <Box maxWidth={1024}>
+    <Box
+      sx={{
+        maxWidth: 1024,
+      }}
+    >
       <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
         Ministries
       </Typography>
-      <Box id="sunday-worship" my={4} sx={{ scrollMarginTop: '100px' }}>
+      <Box
+        id="sunday-worship"
+        sx={{
+          my: 4,
+          scrollMarginTop: '100px',
+        }}
+      >
         <Typography component="h2" variant="h3" color="primary" paragraph>
           Worship Service
         </Typography>
-        <Grid container justifyContent="space-between">
+        <Grid
+          container
+          sx={{
+            justifyContent: 'space-between',
+          }}
+        >
           <Grid item xs={12} md={8}>
             <Typography paragraph>
               Every Sunday, we gather and worship through music, prayer,
@@ -33,15 +48,25 @@ export default function Ministries() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Typography fontSize={15}>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
               <strong>Meeting Time & Location</strong>
             </Typography>
-            <Typography fontSize={15} paragraph>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: 15,
+              }}
+            >
               10:00 AM in the sanctuary
             </Typography>
             <Typography
-              fontSize={15}
               sx={{
+                fontSize: 15,
+
                 '& a': {
                   textDecoration: 'none',
                   color: 'rgb(57, 171, 225)',
@@ -57,11 +82,22 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-      <Box id="nextgen" my={4} sx={{ scrollMarginTop: '100px' }}>
+      <Box
+        id="nextgen"
+        sx={{
+          my: 4,
+          scrollMarginTop: '100px',
+        }}
+      >
         <Typography component="h2" variant="h3" color="primary" paragraph>
           NextGen
         </Typography>
-        <Grid container justifyContent="space-between">
+        <Grid
+          container
+          sx={{
+            justifyContent: 'space-between',
+          }}
+        >
           <Grid item xs={12} md={8}>
             <Typography paragraph>
               We have nursery staff on-site for families with infants through
@@ -80,21 +116,47 @@ export default function Ministries() {
             </Button>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Typography fontSize={15}>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
               <strong>Ages & Locations</strong>
             </Typography>
-            <Typography fontSize={15}>Ages 0-3 in the nursery</Typography>
-            <Typography fontSize={15} paragraph>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
+              Ages 0-3 in the nursery
+            </Typography>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: 15,
+              }}
+            >
               Age 4-Grade 5 in the kids room
             </Typography>
           </Grid>
         </Grid>
       </Box>
-      <Box id="life-groups" my={4} sx={{ scrollMarginTop: '100px' }}>
+      <Box
+        id="life-groups"
+        sx={{
+          my: 4,
+          scrollMarginTop: '100px',
+        }}
+      >
         <Typography component="h2" variant="h3" color="primary" paragraph>
           Life Groups
         </Typography>
-        <Grid container justifyContent="space-between">
+        <Grid
+          container
+          sx={{
+            justifyContent: 'space-between',
+          }}
+        >
           <Grid item xs={12} md={8}>
             <Typography paragraph>
               Life groups are the heartbeat of our church as we seek to live out
@@ -104,13 +166,18 @@ export default function Ministries() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Typography fontSize={15}>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
               <strong>Meeting Times & Locations</strong>
             </Typography>
             <Typography
-              fontSize={15}
               paragraph
               sx={{
+                fontSize: 15,
+
                 '& a': {
                   textDecoration: 'none',
                   color: 'rgb(57, 171, 225)',
@@ -126,11 +193,22 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-      <Box id="immigrant-connection" my={4} sx={{ scrollMarginTop: '100px' }}>
+      <Box
+        id="immigrant-connection"
+        sx={{
+          my: 4,
+          scrollMarginTop: '100px',
+        }}
+      >
         <Typography component="h2" variant="h3" color="primary" paragraph>
           Immigrant Connection
         </Typography>
-        <Grid container justifyContent="space-between">
+        <Grid
+          container
+          sx={{
+            justifyContent: 'space-between',
+          }}
+        >
           <Grid item xs={12} md={8}>
             <Typography paragraph>
               Immigrant Connection PDX is a low-cost immigration legal services
@@ -142,22 +220,43 @@ export default function Ministries() {
             </Typography>
           </Grid>
           <Grid item xs={12} md={3}>
-            <Typography fontSize={15}>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
               <strong>Office Hours & Location</strong>
             </Typography>
-            <Typography fontSize={15}>Tuesdays and Thursdays</Typography>
-            <Typography fontSize={15} paragraph>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
+              Tuesdays and Thursdays
+            </Typography>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: 15,
+              }}
+            >
               10:00 am – 4:00 pm
             </Typography>
-            <Typography fontSize={15} paragraph>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: 15,
+              }}
+            >
               Columbia View Church <br />
               16700 NE Halsey St. <br />
               Portland, OR 97230
             </Typography>
             <Typography
-              fontSize={15}
               paragraph
               sx={{
+                fontSize: 15,
+
                 '& a': {
                   textDecoration: 'none',
                   color: 'rgb(57, 171, 225)',
@@ -171,11 +270,22 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-      <Box id="love-inc" my={4} sx={{ scrollMarginTop: '100px' }}>
+      <Box
+        id="love-inc"
+        sx={{
+          my: 4,
+          scrollMarginTop: '100px',
+        }}
+      >
         <Typography component="h2" variant="h3" color="primary" paragraph>
           Love INC
         </Typography>
-        <Grid container justifyContent="space-between">
+        <Grid
+          container
+          sx={{
+            justifyContent: 'space-between',
+          }}
+        >
           <Grid item xs={12} md={8}>
             <Typography paragraph>
               The local church is God's answer to community brokenness and a
@@ -202,7 +312,13 @@ export default function Ministries() {
           <Grid item xs={12} md={3}></Grid>
         </Grid>
       </Box>
-      <Box id="global-missions" my={4} sx={{ scrollMarginTop: '100px' }}>
+      <Box
+        id="global-missions"
+        sx={{
+          my: 4,
+          scrollMarginTop: '100px',
+        }}
+      >
         <Typography component="h2" variant="h3" color="primary" paragraph>
           Global Missions
         </Typography>
@@ -213,7 +329,13 @@ export default function Ministries() {
               alt="Blake family photo"
               aspectRatio="16:9"
             />
-            <Typography component="h3" variant="h4" mt={2}>
+            <Typography
+              component="h3"
+              variant="h4"
+              sx={{
+                mt: 2,
+              }}
+            >
               Blake Family
             </Typography>
             <Typography paragraph color="secondary">
@@ -239,7 +361,13 @@ export default function Ministries() {
               alt="Cheney family photo"
               aspectRatio="16:9"
             />
-            <Typography component="h3" variant="h4" mt={2}>
+            <Typography
+              component="h3"
+              variant="h4"
+              sx={{
+                mt: 2,
+              }}
+            >
               Cheney Family
             </Typography>
             <Typography paragraph color="secondary">
@@ -265,7 +393,13 @@ export default function Ministries() {
               alt="Dunbar family photo"
               aspectRatio="16:9"
             />
-            <Typography component="h3" variant="h4" mt={2}>
+            <Typography
+              component="h3"
+              variant="h4"
+              sx={{
+                mt: 2,
+              }}
+            >
               Mark and Serena Dunbar
             </Typography>
             <Typography paragraph color="secondary">
@@ -291,7 +425,13 @@ export default function Ministries() {
               alt="Jones family photo"
               aspectRatio="16:9"
             />
-            <Typography component="h3" variant="h4" mt={2}>
+            <Typography
+              component="h3"
+              variant="h4"
+              sx={{
+                mt: 2,
+              }}
+            >
               Jones Family
             </Typography>
             <Typography paragraph color="secondary">

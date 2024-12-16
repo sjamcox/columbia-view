@@ -32,7 +32,13 @@ export const StaffListing = ({ member }) => {
         <Typography gutterBottom color="secondary">
           <strong>{member.languages}</strong>
         </Typography>
-        <Typography color="text.body">{member.bio}</Typography>
+        <Typography
+          sx={{
+            color: 'text.body',
+          }}
+        >
+          {member.bio}
+        </Typography>
       </Box>
     </Stack>
   )

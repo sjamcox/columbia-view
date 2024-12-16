@@ -12,13 +12,28 @@ export default function Footer() {
               <Typography color="white">
                 <strong>Columbia View Church</strong>
               </Typography>
-              <Typography color="white" fontSize={15}>
+              <Typography
+                color="white"
+                sx={{
+                  fontSize: 15,
+                }}
+              >
                 16700 NE Halsey Street
               </Typography>
-              <Typography color="white" fontSize={15}>
+              <Typography
+                color="white"
+                sx={{
+                  fontSize: 15,
+                }}
+              >
                 Portland, OR 97230
               </Typography>
-              <Typography color="white" fontSize={15}>
+              <Typography
+                color="white"
+                sx={{
+                  fontSize: 15,
+                }}
+              >
                 503.253.7939
               </Typography>
             </Grid>
@@ -26,7 +41,12 @@ export default function Footer() {
               <Typography color="white">
                 <strong>Worship Service</strong>
               </Typography>
-              <Typography color="white" fontSize={15}>
+              <Typography
+                color="white"
+                sx={{
+                  fontSize: 15,
+                }}
+              >
                 Sundays at 10:00 am
               </Typography>
             </Grid>
@@ -35,7 +55,12 @@ export default function Footer() {
       </Box>
       <Box sx={{ borderTop: '1px solid white', bgcolor: '#333132', py: 1 }}>
         <Container sx={{ px: 3 }}>
-          <Typography color="white" fontSize="14px">
+          <Typography
+            color="white"
+            sx={{
+              fontSize: 14,
+            }}
+          >
             © 2024 Columbia View Church | All Rights Reserved
           </Typography>
         </Container>

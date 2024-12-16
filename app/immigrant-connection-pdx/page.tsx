@@ -44,7 +44,13 @@ export default function ImmigrantConnection() {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={3}>
-            <Box display="flex" justifyContent="center" mb={3}>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                mb: 3,
+              }}
+            >
               <Box sx={{ width: { xs: 150, md: 250 } }}>
                 <Image
                   src={icpdxLogo}
@@ -60,7 +66,13 @@ export default function ImmigrantConnection() {
           A Department of Justice recognized legal office that provides low-cost
           immigration legal services.
         </Typography>
-        <Grid container justifyContent="space-between" mt={4}>
+        <Grid
+          container
+          sx={{
+            justifyContent: 'space-between',
+            mt: 4,
+          }}
+        >
           <Grid item xs={12} md={8}>
             <Typography paragraph>
               <strong>We are currently receiving new clients!</strong>
@@ -124,25 +136,59 @@ export default function ImmigrantConnection() {
           </Grid>
 
           <Grid item xs={12} md={3}>
-            <Typography fontSize={15}>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
               <strong>Office Hours & Location</strong>
             </Typography>
-            <Typography fontSize={15}>Mondays</Typography>
-            <Typography fontSize={15} paragraph>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
+              Mondays
+            </Typography>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: 15,
+              }}
+            >
               11:00 am – 5:00 pm
             </Typography>
-            <Typography fontSize={15}>
+            <Typography
+              sx={{
+                fontSize: 15,
+              }}
+            >
               Tuesdays, Wednesdays and Thursdays
             </Typography>
-            <Typography fontSize={15} paragraph>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: 15,
+              }}
+            >
               9:00 am – 6:00 pm
             </Typography>
-            <Typography fontSize={15} paragraph>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: 15,
+              }}
+            >
               Columbia View Church <br />
               16700 NE Halsey St. <br />
               Portland, OR 97230
             </Typography>
-            <Typography fontSize={15} paragraph>
+            <Typography
+              paragraph
+              sx={{
+                fontSize: 15,
+              }}
+            >
               <Link href="tel:+19712022073" sx={{ color: 'primary' }}>
                 971.202.2073
               </Link>
@@ -156,7 +202,13 @@ export default function ImmigrantConnection() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container spacing={2} mt={0}>
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            mt: 0,
+          }}
+        >
           <Grid item>
             <Button
               href="https://drive.google.com/file/d/1XeRXuDW9PJibxu4iPJOanX-gkFkbPjwe/view?usp=sharing"
@@ -221,17 +273,24 @@ export default function ImmigrantConnection() {
             </Button>
           </Grid>
         </Grid>
-        <Typography variant="h4" paragraph textAlign="center" mt={6}>
+        <Typography
+          variant="h4"
+          paragraph
+          sx={{
+            textAlign: 'center',
+            mt: 6,
+          }}
+        >
           <strong>Services</strong>
         </Typography>
         <Grid container spacing={4}>
           <Grid
             item
-            mt={4}
             xs={12}
             sm={6}
             md={4}
             sx={{
+              mt: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -243,15 +302,21 @@ export default function ImmigrantConnection() {
               width={128}
               height={128}
             />
-            <Typography mt={3}>Naturalization / Citizenship</Typography>
+            <Typography
+              sx={{
+                mt: 3,
+              }}
+            >
+              Naturalization / Citizenship
+            </Typography>
           </Grid>
           <Grid
             item
-            mt={4}
             xs={12}
             sm={6}
             md={4}
             sx={{
+              mt: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -263,15 +328,21 @@ export default function ImmigrantConnection() {
               width={128}
               height={128}
             />
-            <Typography mt={3}>Family-Based Petitions</Typography>
+            <Typography
+              sx={{
+                mt: 3,
+              }}
+            >
+              Family-Based Petitions
+            </Typography>
           </Grid>
           <Grid
             item
-            mt={4}
             xs={12}
             sm={6}
             md={4}
             sx={{
+              mt: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -283,15 +354,21 @@ export default function ImmigrantConnection() {
               width={128}
               height={128}
             />
-            <Typography mt={3}>DACA</Typography>
+            <Typography
+              sx={{
+                mt: 3,
+              }}
+            >
+              DACA
+            </Typography>
           </Grid>
           <Grid
             item
-            mt={4}
             xs={12}
             sm={6}
             md={4}
             sx={{
+              mt: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -303,15 +380,21 @@ export default function ImmigrantConnection() {
               width={128}
               height={128}
             />
-            <Typography mt={3}>Adjustment of Status</Typography>
+            <Typography
+              sx={{
+                mt: 3,
+              }}
+            >
+              Adjustment of Status
+            </Typography>
           </Grid>
           <Grid
             item
-            mt={4}
             xs={12}
             sm={6}
             md={4}
             sx={{
+              mt: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -323,16 +406,22 @@ export default function ImmigrantConnection() {
               width={128}
               height={128}
             />
-            <Typography mt={3}>Renew Permanent</Typography>
+            <Typography
+              sx={{
+                mt: 3,
+              }}
+            >
+              Renew Permanent
+            </Typography>
             <Typography>Resident Card</Typography>
           </Grid>
           <Grid
             item
-            mt={4}
             xs={12}
             sm={6}
             md={4}
             sx={{
+              mt: 4,
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -344,7 +433,13 @@ export default function ImmigrantConnection() {
               width={128}
               height={128}
             />
-            <Typography mt={3}>Work Authorization</Typography>
+            <Typography
+              sx={{
+                mt: 3,
+              }}
+            >
+              Work Authorization
+            </Typography>
           </Grid>
         </Grid>
         <ServiceList />

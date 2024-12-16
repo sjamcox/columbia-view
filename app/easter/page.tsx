@@ -13,28 +13,53 @@ export default function Easter() {
   return (
     <>
       <ClientComponents />
-      <Stack alignItems="center" py={5}>
+      <Stack
+        sx={{
+          alignItems: 'center',
+          py: 5,
+        }}
+      >
         <Typography
           align="center"
-          lineHeight={1}
-          mb={7}
-          sx={typography.sectionHeader}
+          sx={{
+            lineHeight: 1,
+            mb: 7,
+            ...typography.sectionHeader,
+          }}
         >
           COME AND SEE FOR YOURSELF!
         </Typography>
-        <Typography align="center" lineHeight={1} sx={typography.display}>
+        <Typography
+          align="center"
+          sx={{
+            lineHeight: 1,
+            ...typography.display,
+          }}
+        >
           EASTER
         </Typography>
         <Typography align="center" sx={typography.subheader}>
           with Columbia View Church
         </Typography>
-        <Typography align="center" mb={4} sx={typography.subheader}>
+        <Typography
+          align="center"
+          sx={{
+            mb: 4,
+            ...typography.subheader,
+          }}
+        >
           March 31st @ 10:00am
         </Typography>
         <Typography align="center" sx={typography.body}>
           16700 NE Halsey Street
         </Typography>
-        <Typography align="center" mb={4} sx={typography.body}>
+        <Typography
+          align="center"
+          sx={{
+            mb: 4,
+            ...typography.body,
+          }}
+        >
           Portland, OR 97230
         </Typography>
         <Button

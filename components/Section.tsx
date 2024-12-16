@@ -49,7 +49,13 @@ export function ImageSection({ children, src, alt }: ImageSectionProps) {
           backgroundColor: 'rgba(0,0,0, .4)',
         }}
       />
-      <Box position="relative">{children}</Box>
+      <Box
+        sx={{
+          position: 'relative',
+        }}
+      >
+        {children}
+      </Box>
     </Stack>
   )
 }

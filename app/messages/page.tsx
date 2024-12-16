@@ -31,7 +31,13 @@ export default async function Messages() {
       ) : (
         <Typography>Error fetching messages data.</Typography>
       )}
-      <Box width="100%" textAlign="center" mt={4}>
+      <Box
+        sx={{
+          width: '100%',
+          textAlign: 'center',
+          mt: 4,
+        }}
+      >
         <Button
           variant="contained"
           color="secondary"

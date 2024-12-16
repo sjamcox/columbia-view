@@ -35,7 +35,13 @@ export default function Hero({
         }}
       />
       <Container sx={{ position: 'relative', px: { xs: 3 } }}>
-        <Box display="flex" flexDirection="column" alignItems="flex-start">
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-start',
+          }}
+        >
           <Typography
             sx={{
               color: 'white',
