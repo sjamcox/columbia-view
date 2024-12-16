@@ -80,6 +80,7 @@ export default function About() {
       </Typography>
       <Typography
         variant="h4"
+        component="p"
         sx={{
           mb: 4,
         }}
@@ -139,6 +140,7 @@ export default function About() {
       </Typography>
       <Typography
         variant="h4"
+        component="p"
         sx={{
           my: 2,
           mb: 4,
@@ -168,6 +170,7 @@ export default function About() {
       </Typography>
       <Typography
         variant="h4"
+        component="p"
         sx={{
           my: 2,
           mb: 4,

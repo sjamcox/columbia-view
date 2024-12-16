@@ -58,7 +58,6 @@ export default function Index() {
             }}
           >
             <Grid
-              sx={{ width: { xs: '100%', md: 'auto' } }}
               size={{
                 xs: 12,
                 md: 6,
@@ -244,7 +243,10 @@ export default function Index() {
               container
               direction="row"
               spacing={2}
-              sx={{ maxWidth: { xs: '300px', sm: 'sm', lg: '100%' } }}
+              sx={{
+                width: '100%',
+                maxWidth: { xs: '300px', sm: 'sm', lg: '100%' },
+              }}
             >
               <Grid
                 size={{
@@ -386,6 +388,7 @@ export default function Index() {
               sx={{
                 position: { xs: 'relative', md: 'absolute' },
                 direction: 'column',
+                width: '100%',
               }}
             >
               <Grid
@@ -421,7 +424,10 @@ export default function Index() {
                 </Box>
               </Grid>
             </Grid>
-            <Grid container sx={{ position: { xs: 'static', md: 'absolute' } }}>
+            <Grid
+              container
+              sx={{ position: { xs: 'static', md: 'absolute' }, width: '100%' }}
+            >
               <Grid
                 sx={{
                   bgcolor: 'rgb(14, 73, 111)',
