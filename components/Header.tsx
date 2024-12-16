@@ -6,6 +6,7 @@ import { useState } from 'react'
 import {
   Box,
   ButtonBase,
+  Grid2 as Grid,
   IconButton,
   Link,
   Menu,
@@ -13,7 +14,6 @@ import {
   Stack,
   Typography,
 } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
 import MenuIcon from '@mui/icons-material/Menu'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import YouTubeIcon from '@mui/icons-material/YouTube'
@@ -108,95 +108,96 @@ export default function Header() {
     </Link>
   ))
 
-  return (
-    <>
-      <NavDrawer menu={menu} open={open} setOpen={setOpen} />
-      <Grid container height={90} width="100%" px="4vw">
-        <Grid
-          xs={6}
-          sm={1}
-          display="flex"
-          justifyContent="flex-start"
-          alignItems="center"
-        >
-          <Link href="/">
-            <Box
-              sx={{
-                display: 'flex',
-                mb: -1,
-              }}
-            >
-              <Box>
-                <Image
-                  src={logo}
-                  alt="Columbia View logo"
-                  width={70}
-                  height={70}
-                  priority
-                />
-              </Box>
-            </Box>
-          </Link>
-        </Grid>
-        <Grid
-          xs={6}
-          sm={11}
-          md={10}
-          display="flex"
-          justifyContent={{ xs: 'flex-end', md: 'center' }}
-          alignItems="center"
-        >
+  return (<>
+    <NavDrawer menu={menu} open={open} setOpen={setOpen} />
+    <Grid container height={90} width="100%" px="4vw">
+      <Grid
+        display="flex"
+        justifyContent="flex-start"
+        alignItems="center"
+        size={{
+          xs: 6,
+          sm: 1
+        }}>
+        <Link href="/">
           <Box
             sx={{
-              display: { xs: 'none', md: 'block' },
+              display: 'flex',
+              mb: -1,
             }}
           >
-            <Box
-              sx={{
-                display: 'flex',
-              }}
-            >
-              {primaryNavItems}
+            <Box>
+              <Image
+                src={logo}
+                alt="Columbia View logo"
+                width={70}
+                height={70}
+                priority
+              />
             </Box>
-            <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
-              {popperMenuItems}
-            </Menu>
           </Box>
-          <Box
-            sx={{
-              display: { xs: 'block', md: 'none' },
-            }}
-          >
-            <IconButton sx={{ padding: 0 }} onClick={() => setOpen(true)}>
-              <MenuIcon />
-            </IconButton>
-          </Box>
-        </Grid>
-        <Grid
-          xs={0}
-          md={1}
-          display={{ xs: 'none', md: 'flex' }}
-          justifyContent="flex-end"
-          alignItems="center"
-        >
-          <Stack direction="row" spacing={1}>
-            <IconButton
-              href="https://www.facebook.com/COLUMBIAVIEW/"
-              color="primary"
-              sx={{ padding: 0 }}
-            >
-              <FacebookIcon />
-            </IconButton>
-            <IconButton
-              href="https://www.youtube.com/@columbiaview.church"
-              color="primary"
-              sx={{ padding: 0 }}
-            >
-              <YouTubeIcon />
-            </IconButton>
-          </Stack>
-        </Grid>
+        </Link>
       </Grid>
-    </>
-  )
+      <Grid
+        display="flex"
+        justifyContent={{ xs: 'flex-end', md: 'center' }}
+        alignItems="center"
+        size={{
+          xs: 6,
+          sm: 11,
+          md: 10
+        }}>
+        <Box
+          sx={{
+            display: { xs: 'none', md: 'block' },
+          }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+            }}
+          >
+            {primaryNavItems}
+          </Box>
+          <Menu anchorEl={anchorEl} open={!!anchorEl} onClose={handleClose}>
+            {popperMenuItems}
+          </Menu>
+        </Box>
+        <Box
+          sx={{
+            display: { xs: 'block', md: 'none' },
+          }}
+        >
+          <IconButton sx={{ padding: 0 }} onClick={() => setOpen(true)}>
+            <MenuIcon />
+          </IconButton>
+        </Box>
+      </Grid>
+      <Grid
+        display={{ xs: 'none', md: 'flex' }}
+        justifyContent="flex-end"
+        alignItems="center"
+        size={{
+          xs: 0,
+          md: 1
+        }}>
+        <Stack direction="row" spacing={1}>
+          <IconButton
+            href="https://www.facebook.com/COLUMBIAVIEW/"
+            color="primary"
+            sx={{ padding: 0 }}
+          >
+            <FacebookIcon />
+          </IconButton>
+          <IconButton
+            href="https://www.youtube.com/@columbiaview.church"
+            color="primary"
+            sx={{ padding: 0 }}
+          >
+            <YouTubeIcon />
+          </IconButton>
+        </Stack>
+      </Grid>
+    </Grid>
+  </>);
 }

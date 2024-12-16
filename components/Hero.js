@@ -1,5 +1,11 @@
 import Image from 'next/image'
-import { Box, Button, Container, Grid, Link, Typography } from '@mui/material'
+import {
+  Box,
+  Button,
+  Container,
+  Grid2 as Grid,
+  Typography,
+} from '@mui/material'
 
 export default function Hero({
   src,

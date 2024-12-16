@@ -1,5 +1,12 @@
 import type { Metadata } from 'next'
-import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material'
+import {
+  Box,
+  Button,
+  Container,
+  Grid2 as Grid,
+  Stack,
+  Typography,
+} from '@mui/material'
 import Image from 'next/image'
 
 import Hero from 'components/Hero'
@@ -51,11 +58,12 @@ export default function Index() {
             }}
           >
             <Grid
-              item
-              xs={12}
-              md={6}
-              lg={6}
               sx={{ width: { xs: '100%', md: 'auto' } }}
+              size={{
+                xs: 12,
+                md: 6,
+                lg: 6,
+              }}
             >
               <Typography
                 variant="h3"
@@ -91,7 +99,7 @@ export default function Index() {
                 Join us this Sunday
               </Button>
             </Grid>
-            <Grid item xs={4} sx={{ mb: { xs: 4, md: 0 } }}>
+            <Grid sx={{ mb: { xs: 4, md: 0 } }} size={4}>
               <Box
                 sx={{
                   position: 'relative',
@@ -166,10 +174,20 @@ export default function Index() {
               alignItems: 'center',
             }}
           >
-            <Grid item xs={12} sm={6}>
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+              }}
+            >
               <ResponsiveImage src={rightnow} />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+              }}
+            >
               <Typography
                 component="h2"
                 variant="h3"
@@ -228,7 +246,13 @@ export default function Index() {
               spacing={2}
               sx={{ maxWidth: { xs: '300px', sm: 'sm', lg: '100%' } }}
             >
-              <Grid item xs={12} sm={6} lg={3}>
+              <Grid
+                size={{
+                  xs: 12,
+                  sm: 6,
+                  lg: 3,
+                }}
+              >
                 <ImageTile
                   link="/ministries#sunday-worship"
                   image={worship}
@@ -236,7 +260,13 @@ export default function Index() {
                   headline="Sunday Worship"
                 />
               </Grid>
-              <Grid item xs={12} sm={6} lg={3}>
+              <Grid
+                size={{
+                  xs: 12,
+                  sm: 6,
+                  lg: 3,
+                }}
+              >
                 <ImageTile
                   link="/ministries/nextgen"
                   image={kids}
@@ -244,7 +274,13 @@ export default function Index() {
                   headline="NextGen Ministries"
                 />
               </Grid>
-              <Grid item xs={12} sm={6} lg={3}>
+              <Grid
+                size={{
+                  xs: 12,
+                  sm: 6,
+                  lg: 3,
+                }}
+              >
                 <ImageTile
                   link="/ministries#life-groups"
                   image={lifeGroup}
@@ -252,7 +288,13 @@ export default function Index() {
                   headline="Life Groups"
                 />
               </Grid>
-              <Grid item xs={12} sm={6} lg={3}>
+              <Grid
+                size={{
+                  xs: 12,
+                  sm: 6,
+                  lg: 3,
+                }}
+              >
                 <ImageTile
                   link="/immigrant-connection-pdx"
                   image={smilingFamily}
@@ -276,10 +318,20 @@ export default function Index() {
               alignItems: 'center',
             }}
           >
-            <Grid item xs={12} sm={6}>
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+              }}
+            >
               <ResponsiveImage src={bible} />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid
+              size={{
+                xs: 12,
+                sm: 6,
+              }}
+            >
               <Typography
                 component="h2"
                 variant="h3"
@@ -336,8 +388,18 @@ export default function Index() {
                 direction: 'column',
               }}
             >
-              <Grid item xs={0} md={6}></Grid>
-              <Grid item xs={12} md={6}>
+              <Grid
+                size={{
+                  xs: 0,
+                  md: 6,
+                }}
+              ></Grid>
+              <Grid
+                size={{
+                  xs: 12,
+                  md: 6,
+                }}
+              >
                 <Box
                   sx={{
                     position: { xs: 'static', md: 'relative' },
@@ -361,14 +423,15 @@ export default function Index() {
             </Grid>
             <Grid container sx={{ position: { xs: 'static', md: 'absolute' } }}>
               <Grid
-                item
-                xs={12}
-                md={7}
                 sx={{
                   bgcolor: 'rgb(14, 73, 111)',
                   borderRadius: { xs: 'none', md: '10px' },
                   color: 'white',
                   p: 4,
+                }}
+                size={{
+                  xs: 12,
+                  md: 7,
                 }}
               >
                 <Box sx={{ maxWidth: 500 }}>
@@ -401,7 +464,12 @@ export default function Index() {
                   </Button>
                 </Box>
               </Grid>
-              <Grid item xs={0} md={5}></Grid>
+              <Grid
+                size={{
+                  xs: 0,
+                  md: 5,
+                }}
+              ></Grid>
             </Grid>
           </Box>
         </Container>

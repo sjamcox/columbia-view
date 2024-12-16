@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Box, Button, Grid, Link, Typography } from '@mui/material'
+import { Box, Button, Grid2 as Grid, Link, Typography } from '@mui/material'
 
 import ResponsiveImage from 'components/ResponsiveImage'
 import blakeFamily from 'public/blake-family.webp'
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Ministries() {
   return (
-    <Box
+    (<Box
       sx={{
         maxWidth: 1024,
       }}
@@ -45,7 +45,11 @@ export default function Ministries() {
             justifyContent: 'space-between',
           }}
         >
-          <Grid item xs={12} md={8}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 8
+            }}>
             <Typography
               sx={{
                 mb: 4,
@@ -58,7 +62,11 @@ export default function Ministries() {
               heart to what God may want to do in your life.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 3
+            }}>
             <Typography
               sx={{
                 fontSize: 15,
@@ -116,7 +124,11 @@ export default function Ministries() {
             justifyContent: 'space-between',
           }}
         >
-          <Grid item xs={12} md={8}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 8
+            }}>
             <Typography
               sx={{
                 mb: 4,
@@ -137,7 +149,11 @@ export default function Ministries() {
               Learn more about NextGen ministries
             </Button>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 3
+            }}>
             <Typography
               sx={{
                 fontSize: 15,
@@ -186,7 +202,11 @@ export default function Ministries() {
             justifyContent: 'space-between',
           }}
         >
-          <Grid item xs={12} md={8}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 8
+            }}>
             <Typography
               sx={{
                 mb: 4,
@@ -198,7 +218,11 @@ export default function Ministries() {
               experience.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 3
+            }}>
             <Typography
               sx={{
                 fontSize: 15,
@@ -250,7 +274,11 @@ export default function Ministries() {
             justifyContent: 'space-between',
           }}
         >
-          <Grid item xs={12} md={8}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 8
+            }}>
             <Typography
               sx={{
                 mb: 4,
@@ -264,7 +292,11 @@ export default function Ministries() {
               immigrants in our community.
             </Typography>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 3
+            }}>
             <Typography
               sx={{
                 fontSize: 15,
@@ -339,7 +371,11 @@ export default function Ministries() {
             justifyContent: 'space-between',
           }}
         >
-          <Grid item xs={12} md={8}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 8
+            }}>
             <Typography
               sx={{
                 mb: 4,
@@ -370,7 +406,11 @@ export default function Ministries() {
               Fill out the Love INC Questionnaire
             </Button>
           </Grid>
-          <Grid item xs={12} md={3}></Grid>
+          <Grid
+            size={{
+              xs: 12,
+              md: 3
+            }}></Grid>
         </Grid>
       </Box>
       <Box
@@ -391,7 +431,11 @@ export default function Ministries() {
           Global Missions
         </Typography>
         <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <ResponsiveImage
               src={blakeFamily}
               alt="Blake family photo"
@@ -428,7 +472,11 @@ export default function Ministries() {
               Learn more or donate
             </Button>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <ResponsiveImage
               src={cheneyFamily}
               alt="Cheney family photo"
@@ -465,7 +513,11 @@ export default function Ministries() {
               Learn more or donate
             </Button>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <ResponsiveImage
               src={dunbarFamily}
               alt="Dunbar family photo"
@@ -502,7 +554,11 @@ export default function Ministries() {
               Learn more or donate
             </Button>
           </Grid>
-          <Grid item xs={12} md={6}>
+          <Grid
+            size={{
+              xs: 12,
+              md: 6
+            }}>
             <ResponsiveImage
               src={jonesFamily}
               alt="Jones family photo"
@@ -541,6 +597,6 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-    </Box>
-  )
+    </Box>)
+  );
 }

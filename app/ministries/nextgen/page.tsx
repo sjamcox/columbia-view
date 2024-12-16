@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Box, Link, Stack, Typography } from '@mui/material'
-import Grid from '@mui/material/Unstable_Grid2'
+import { Grid2 as Grid } from '@mui/material'
 
 import { ElevatedSection, ImageSection } from 'components/Section'
 import columbiaKids from 'public/columbia-kids-sunday.jpeg'
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function ColumbiaKids() {
   return (
-    <Box>
+    (<Box>
       <Box sx={{ my: 5 }}>
         <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
           NextGen Ministries
@@ -62,7 +62,11 @@ export default function ColumbiaKids() {
       </Box>
       <Box sx={{ my: 4, borderRadius: '20px', overflow: 'hidden' }}>
         <Grid container spacing={2}>
-          <Grid xs={7} md={8}>
+          <Grid
+            size={{
+              xs: 7,
+              md: 8
+            }}>
             <Box
               sx={{
                 height: {
@@ -81,7 +85,11 @@ export default function ColumbiaKids() {
               />
             </Box>
           </Grid>
-          <Grid xs={5} md={4}>
+          <Grid
+            size={{
+              xs: 5,
+              md: 4
+            }}>
             <Box
               sx={{
                 height: {
@@ -100,7 +108,11 @@ export default function ColumbiaKids() {
               />
             </Box>
           </Grid>
-          <Grid xs={5} md={4}>
+          <Grid
+            size={{
+              xs: 5,
+              md: 4
+            }}>
             <Box
               sx={{
                 height: {
@@ -119,7 +131,11 @@ export default function ColumbiaKids() {
               />
             </Box>
           </Grid>
-          <Grid xs={7} md={8}>
+          <Grid
+            size={{
+              xs: 7,
+              md: 8
+            }}>
             <Box
               sx={{
                 height: {
@@ -327,6 +343,6 @@ export default function ColumbiaKids() {
           <Link href="mailto:office.cvwc@gmail.com">office.cvwc@gmail.com</Link>
         </Typography>
       </Box>
-    </Box>
-  )
+    </Box>)
+  );
 }

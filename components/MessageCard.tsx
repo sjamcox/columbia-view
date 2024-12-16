@@ -2,11 +2,17 @@
 
 import { format } from 'date-fns'
 import { motion } from 'framer-motion'
-import { Card, Grid, Link, Stack, Typography } from '@mui/material'
+import { Card, Grid2 as Grid, Link, Stack, Typography } from '@mui/material'
 
 export default function MessageCard({ message, ...rest }) {
   return (
-    <Grid className="message-card" item xs={12} sm={6} md={4} {...rest}>
+    (<Grid
+      className="message-card"
+      size={{
+        xs: 12,
+        sm: 6,
+        md: 4
+      }}>
       <Card
         component={motion.div}
         whileHover={{ scale: 1.05 }}
@@ -34,6 +40,6 @@ export default function MessageCard({ message, ...rest }) {
           </Link>
         </Stack>
       </Card>
-    </Grid>
-  )
+    </Grid>)
+  );
 }

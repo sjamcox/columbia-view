@@ -1,6 +1,6 @@
 'use client'
 
-import { Grid } from '@mui/material'
+import { Grid2 as Grid } from '@mui/material'
 import { useEffect } from 'react'
 import { useAnimate, stagger } from 'framer-motion'
 import MessageCard from './MessageCard'

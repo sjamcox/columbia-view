@@ -8,7 +8,7 @@ import {
   Container,
   Drawer,
   IconButton,
-  Grid,
+  Grid2 as Grid,
   Link,
   Toolbar,
   Typography,
@@ -34,7 +34,7 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
   const linkList = menu.map((link) => {
     if (link.subnav) {
       return (
-        <Grid item key={link.text}>
+        (<Grid key={link.text}>
           <Button
             onClick={() => toggleIn(link.text)}
             sx={{ p: 0, '&:hover': { background: 'none' } }}
@@ -51,7 +51,7 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
           </Button>
           <Collapse in={navState[link.text]}>
             {link.subnav.map((item) => (
-              <Grid item key={item.text}>
+              <Grid key={item.text}>
                 <Link
                   href={item.href}
                   key={item.text}
@@ -69,12 +69,12 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
               </Grid>
             ))}
           </Collapse>
-        </Grid>
-      )
+        </Grid>)
+      );
     }
 
     return (
-      <Grid item key={link.text}>
+      (<Grid key={link.text}>
         <Link href={link.href} key={link.text} sx={{ textDecoration: 'none' }}>
           <Typography
             sx={{
@@ -85,8 +85,8 @@ export const NavDrawer = ({ menu, open, setOpen }) => {
             {link.text}
           </Typography>
         </Link>
-      </Grid>
-    )
+      </Grid>)
+    );
   })
 
   return (

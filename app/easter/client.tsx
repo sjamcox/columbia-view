@@ -3,7 +3,7 @@
 import {
   Box,
   Button,
-  Grid,
+  Grid2 as Grid,
   Stack,
   Typography,
   useMediaQuery,
@@ -25,7 +25,7 @@ export default function Client() {
   )
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <Grid
         container
         sx={{
@@ -33,16 +33,16 @@ export default function Client() {
         }}
       >
         <Grid
-          item
-          xs={12}
-          md={5}
           sx={{
             display: isTabletDown ? 'block' : 'flex',
             justifyContent: !isTabletDown ? 'center' : 'unset',
             position: !isTabletDown ? 'relative' : 'unset',
             pb: 7,
           }}
-        >
+          size={{
+            xs: 12,
+            md: 5
+          }}>
           {isTabletDown ? (
             <ResponsiveImage
               src={easter}
@@ -73,7 +73,11 @@ export default function Client() {
             </Box>
           )}
         </Grid>
-        <Grid item xs={12} md={7}>
+        <Grid
+          size={{
+            xs: 12,
+            md: 7
+          }}>
           <Stack spacing={5}>
             {isTabletDown ? (
               <Stack
@@ -378,6 +382,6 @@ export default function Client() {
         objectFit="cover"
         rounded
       />
-    </motion.div>
-  )
+    </motion.div>)
+  );
 }
