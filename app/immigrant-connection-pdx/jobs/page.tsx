@@ -14,7 +14,11 @@ export default function Jobs() {
       <Typography variant="h4" gutterBottom>
         Admin Support
       </Typography>
-      <Typography paragraph>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
         Assists the Legal Team in preparing, submitting, and following-up with
         client cases.
       </Typography>
@@ -28,7 +32,13 @@ export default function Jobs() {
         View Position Details
       </Button>
       <Divider sx={{ my: 6 }} />
-      <Typography component="h2" variant="h4" paragraph>
+      <Typography
+        component="h2"
+        variant="h4"
+        sx={{
+          mb: 4,
+        }}
+      >
         Contact Us
       </Typography>
       <Typography>

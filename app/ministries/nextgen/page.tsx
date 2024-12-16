@@ -23,7 +23,12 @@ export default function ColumbiaKids() {
         <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
           NextGen Ministries
         </Typography>
-        <Typography variant="h4" paragraph>
+        <Typography
+          variant="h4"
+          sx={{
+            mb: 4,
+          }}
+        >
           Partnering with parents to pass on faith to the next generation.
         </Typography>
         <Box
@@ -32,10 +37,21 @@ export default function ColumbiaKids() {
             mt: 4,
           }}
         >
-          <Typography component="h2" variant="h3" color="primary" paragraph>
+          <Typography
+            component="h2"
+            variant="h3"
+            color="primary"
+            sx={{
+              mb: 4,
+            }}
+          >
             Our Kids Program
           </Typography>
-          <Typography paragraph>
+          <Typography
+            sx={{
+              mb: 4,
+            }}
+          >
             Columbia View Church creates a fun and safe environments for kids to
             learn about the love of God through the story of the Bible. Our
             nursery and kids teams are incredible and excited to invest in your
@@ -136,16 +152,30 @@ export default function ColumbiaKids() {
               width: { xs: '100%', sm: '50%', md: '60%' },
             }}
           >
-            <Typography component="h2" variant="h3" paragraph>
+            <Typography
+              component="h2"
+              variant="h3"
+              sx={{
+                mb: 4,
+              }}
+            >
               Check-in Process
             </Typography>
             <Typography>
               <strong>Nursery</strong> (ages 0–3)
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               <strong>Kids Room</strong> (age 4–grade 5)
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               Upon arrival, parents are invited to check-in their children at
               the station to the left of our lobby. But don’t drop off your kids
               just yet! We invite you to grab a cup of coffee and find a spot in
@@ -189,14 +219,21 @@ export default function ColumbiaKids() {
               alignItems: 'center',
             }}
           >
-            <Typography component="h2" variant="h3" color="white" paragraph>
+            <Typography
+              component="h2"
+              variant="h3"
+              color="white"
+              sx={{
+                mb: 4,
+              }}
+            >
               Curriculum
             </Typography>
             <Typography
               color="white"
-              paragraph
               sx={{
                 fontWeight: 500,
+                mb: 4,
               }}
             >
               Our church utilizes the childrens' curriculum put out by
@@ -238,7 +275,13 @@ export default function ColumbiaKids() {
               width: { xs: '100%', sm: '40%', md: '35%' },
             }}
           >
-            <Typography component="h2" variant="h3" paragraph>
+            <Typography
+              component="h2"
+              variant="h3"
+              sx={{
+                mb: 4,
+              }}
+            >
               Volunteers
             </Typography>
             <Typography>
@@ -268,7 +311,13 @@ export default function ColumbiaKids() {
         </Stack>
       </ElevatedSection>
       <Box>
-        <Typography component="h2" variant="h3" paragraph>
+        <Typography
+          component="h2"
+          variant="h3"
+          sx={{
+            mb: 4,
+          }}
+        >
           Contact
         </Typography>
         <Typography>

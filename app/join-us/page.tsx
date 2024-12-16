@@ -18,7 +18,12 @@ export default function VisitUs() {
         <Typography component="h1" variant="h1" sx={{ mb: 3 }}>
           Join Us
         </Typography>
-        <Typography variant="h4" paragraph>
+        <Typography
+          variant="h4"
+          sx={{
+            mb: 4,
+          }}
+        >
           We're excited to have you join us for a Sunday morning worship
           service!
         </Typography>
@@ -28,7 +33,14 @@ export default function VisitUs() {
             my: 4,
           }}
         >
-          <Typography component="h2" variant="h3" color="primary" paragraph>
+          <Typography
+            component="h2"
+            variant="h3"
+            color="primary"
+            sx={{
+              mb: 4,
+            }}
+          >
             Worship Service
           </Typography>
           <Grid
@@ -38,7 +50,11 @@ export default function VisitUs() {
             }}
           >
             <Grid item xs={12} md={8}>
-              <Typography paragraph>
+              <Typography
+                sx={{
+                  mb: 4,
+                }}
+              >
                 Every Sunday, we gather and worship through music, prayer,
                 preaching/teaching of God's word, giving, and testimony. Worship
                 for us is the response of a life that is seeking after Jesus. If
@@ -55,9 +71,9 @@ export default function VisitUs() {
                 <strong>Meeting Time & Location</strong>
               </Typography>
               <Typography
-                paragraph
                 sx={{
                   fontSize: 15,
+                  mb: 4,
                 }}
               >
                 10:00 AM in the sanctuary

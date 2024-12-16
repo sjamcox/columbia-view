@@ -57,10 +57,22 @@ export default function Index() {
               lg={6}
               sx={{ width: { xs: '100%', md: 'auto' } }}
             >
-              <Typography variant="h3" component="h2" color="primary" paragraph>
+              <Typography
+                variant="h3"
+                component="h2"
+                color="primary"
+                sx={{
+                  mb: 4,
+                }}
+              >
                 Join us Sunday morning online or in person
               </Typography>
-              <Typography variant="body1" paragraph>
+              <Typography
+                variant="body1"
+                sx={{
+                  mb: 4,
+                }}
+              >
                 If you’re new to the area, new to church, or just looking for a
                 new start, our Sunday morning worship services offer you the
                 opportunity to build your faith in God and connect with new
@@ -158,10 +170,23 @@ export default function Index() {
               <ResponsiveImage src={rightnow} />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Typography component="h2" variant="h3" paragraph color="white">
+              <Typography
+                component="h2"
+                variant="h3"
+                color="white"
+                sx={{
+                  mb: 4,
+                }}
+              >
                 RightNow Media
               </Typography>
-              <Typography component="p" paragraph color="white">
+              <Typography
+                component="p"
+                color="white"
+                sx={{
+                  mb: 4,
+                }}
+              >
                 RightNow Media is the world’s largest streaming library of video
                 Bible study resources and is now available to all Columbia View
                 members. RightNow Media is a tool that you can use to help you
@@ -188,7 +213,13 @@ export default function Index() {
             <Typography component="h2" variant="h2">
               Columbia View Ministries
             </Typography>
-            <Typography component="p" variant="body1" paragraph>
+            <Typography
+              component="p"
+              variant="body1"
+              sx={{
+                mb: 4,
+              }}
+            >
               Check out the different ways to get involved
             </Typography>
             <Grid
@@ -249,10 +280,23 @@ export default function Index() {
               <ResponsiveImage src={bible} />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Typography component="h2" variant="h3" paragraph color="white">
+              <Typography
+                component="h2"
+                variant="h3"
+                color="white"
+                sx={{
+                  mb: 4,
+                }}
+              >
                 Dive deep into Scripture this year
               </Typography>
-              <Typography component="p" paragraph color="white">
+              <Typography
+                component="p"
+                color="white"
+                sx={{
+                  mb: 4,
+                }}
+              >
                 Follow along as we journey through the Bible in one year. Join
                 our reading plan online or using the YouVersion Bible app.
               </Typography>
@@ -328,10 +372,20 @@ export default function Index() {
                 }}
               >
                 <Box sx={{ maxWidth: 500 }}>
-                  <Typography component="h2" variant="h3" paragraph>
+                  <Typography
+                    component="h2"
+                    variant="h3"
+                    sx={{
+                      mb: 4,
+                    }}
+                  >
                     Immigrant Connection PDX
                   </Typography>
-                  <Typography paragraph>
+                  <Typography
+                    sx={{
+                      mb: 4,
+                    }}
+                  >
                     Providing church-based, low-cost immigration legal services
                     in underserved communities of the Portland Metro area and
                     beyond.

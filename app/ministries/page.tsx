@@ -29,7 +29,14 @@ export default function Ministries() {
           scrollMarginTop: '100px',
         }}
       >
-        <Typography component="h2" variant="h3" color="primary" paragraph>
+        <Typography
+          component="h2"
+          variant="h3"
+          color="primary"
+          sx={{
+            mb: 4,
+          }}
+        >
           Worship Service
         </Typography>
         <Grid
@@ -39,7 +46,11 @@ export default function Ministries() {
           }}
         >
           <Grid item xs={12} md={8}>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               Every Sunday, we gather and worship through music, prayer,
               preaching/teaching of God's word, giving, and testimony. Worship
               for us is the response of a life that is seeking after Jesus. If
@@ -56,9 +67,9 @@ export default function Ministries() {
               <strong>Meeting Time & Location</strong>
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
+                mb: 4,
               }}
             >
               10:00 AM in the sanctuary
@@ -89,7 +100,14 @@ export default function Ministries() {
           scrollMarginTop: '100px',
         }}
       >
-        <Typography component="h2" variant="h3" color="primary" paragraph>
+        <Typography
+          component="h2"
+          variant="h3"
+          color="primary"
+          sx={{
+            mb: 4,
+          }}
+        >
           NextGen
         </Typography>
         <Grid
@@ -99,7 +117,11 @@ export default function Ministries() {
           }}
         >
           <Grid item xs={12} md={8}>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               We have nursery staff on-site for families with infants through
               age 3. We also offer kids programming for age 4 - grade 5 during
               the preaching portion of our worship service. All nursery and
@@ -131,9 +153,9 @@ export default function Ministries() {
               Ages 0-3 in the nursery
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
+                mb: 4,
               }}
             >
               Age 4-Grade 5 in the kids room
@@ -148,7 +170,14 @@ export default function Ministries() {
           scrollMarginTop: '100px',
         }}
       >
-        <Typography component="h2" variant="h3" color="primary" paragraph>
+        <Typography
+          component="h2"
+          variant="h3"
+          color="primary"
+          sx={{
+            mb: 4,
+          }}
+        >
           Life Groups
         </Typography>
         <Grid
@@ -158,7 +187,11 @@ export default function Ministries() {
           }}
         >
           <Grid item xs={12} md={8}>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               Life groups are the heartbeat of our church as we seek to live out
               the practice of Acts 2:42-47. All are welcome and encouraged to
               join a Life Group that best fits them regardless of Biblical
@@ -174,7 +207,6 @@ export default function Ministries() {
               <strong>Meeting Times & Locations</strong>
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
 
@@ -182,6 +214,8 @@ export default function Ministries() {
                   textDecoration: 'none',
                   color: 'rgb(57, 171, 225)',
                 },
+
+                mb: 4,
               }}
             >
               Check{' '}
@@ -200,7 +234,14 @@ export default function Ministries() {
           scrollMarginTop: '100px',
         }}
       >
-        <Typography component="h2" variant="h3" color="primary" paragraph>
+        <Typography
+          component="h2"
+          variant="h3"
+          color="primary"
+          sx={{
+            mb: 4,
+          }}
+        >
           Immigrant Connection
         </Typography>
         <Grid
@@ -210,7 +251,11 @@ export default function Ministries() {
           }}
         >
           <Grid item xs={12} md={8}>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               Immigrant Connection PDX is a low-cost immigration legal services
               office. Our Department of Justice Accredited Representatives
               provide affordable immigration legal services for our clients. Our
@@ -235,17 +280,17 @@ export default function Ministries() {
               Tuesdays and Thursdays
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
+                mb: 4,
               }}
             >
               10:00 am – 4:00 pm
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
+                mb: 4,
               }}
             >
               Columbia View Church <br />
@@ -253,7 +298,6 @@ export default function Ministries() {
               Portland, OR 97230
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
 
@@ -261,6 +305,8 @@ export default function Ministries() {
                   textDecoration: 'none',
                   color: 'rgb(57, 171, 225)',
                 },
+
+                mb: 4,
               }}
             >
               <a href="tel:+19712022073">971.202.2073</a>
@@ -277,7 +323,14 @@ export default function Ministries() {
           scrollMarginTop: '100px',
         }}
       >
-        <Typography component="h2" variant="h3" color="primary" paragraph>
+        <Typography
+          component="h2"
+          variant="h3"
+          color="primary"
+          sx={{
+            mb: 4,
+          }}
+        >
           Love INC
         </Typography>
         <Grid
@@ -287,14 +340,22 @@ export default function Ministries() {
           }}
         >
           <Grid item xs={12} md={8}>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               The local church is God's answer to community brokenness and a
               part of His plan of redemption and restoration. We're proud to
               partner with Love INC, uniting East Multnomah County churches to
               care for people in all areas of life: spiritual, mental,
               emotional, relational, material, and physical.
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               If you're interested in using your God given talents to serve the
               needs in our community, fill out this quick questionnaire. This is
               for informational purposes only, it is not a commitment to serve.
@@ -319,7 +380,14 @@ export default function Ministries() {
           scrollMarginTop: '100px',
         }}
       >
-        <Typography component="h2" variant="h3" color="primary" paragraph>
+        <Typography
+          component="h2"
+          variant="h3"
+          color="primary"
+          sx={{
+            mb: 4,
+          }}
+        >
           Global Missions
         </Typography>
         <Grid container spacing={4}>
@@ -338,7 +406,12 @@ export default function Ministries() {
             >
               Blake Family
             </Typography>
-            <Typography paragraph color="secondary">
+            <Typography
+              color="secondary"
+              sx={{
+                mb: 4,
+              }}
+            >
               Czech Republic
             </Typography>
             <Typography sx={{ pb: 3 }}>
@@ -370,7 +443,12 @@ export default function Ministries() {
             >
               Cheney Family
             </Typography>
-            <Typography paragraph color="secondary">
+            <Typography
+              color="secondary"
+              sx={{
+                mb: 4,
+              }}
+            >
               Swaziland
             </Typography>
             <Typography sx={{ pb: 3 }}>
@@ -402,7 +480,12 @@ export default function Ministries() {
             >
               Mark and Serena Dunbar
             </Typography>
-            <Typography paragraph color="secondary">
+            <Typography
+              color="secondary"
+              sx={{
+                mb: 4,
+              }}
+            >
               Mexico
             </Typography>
             <Typography sx={{ pb: 3 }}>
@@ -434,7 +517,12 @@ export default function Ministries() {
             >
               Jones Family
             </Typography>
-            <Typography paragraph color="secondary">
+            <Typography
+              color="secondary"
+              sx={{
+                mb: 4,
+              }}
+            >
               Wycliff Bible Translators
             </Typography>
             <Typography sx={{ pb: 3 }}>

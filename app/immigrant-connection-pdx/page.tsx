@@ -62,7 +62,12 @@ export default function ImmigrantConnection() {
             </Box>
           </Grid>
         </Grid>
-        <Typography variant="h4" paragraph>
+        <Typography
+          variant="h4"
+          sx={{
+            mb: 4,
+          }}
+        >
           A Department of Justice recognized legal office that provides low-cost
           immigration legal services.
         </Typography>
@@ -74,10 +79,18 @@ export default function ImmigrantConnection() {
           }}
         >
           <Grid item xs={12} md={8}>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               <strong>We are currently receiving new clients!</strong>
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               Immigrant Connection PDX is a church-based, low-cost, immigration
               legal services office located in east Portland that provides legal
               assistance to individuals who are seeking assistance with issues
@@ -87,13 +100,21 @@ export default function ImmigrantConnection() {
               Processing, DACA, TPS, Non-Immigrant Visas, and Religious Worker
               Visas.
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               A $40 office visit/legal consultation fee is due at your first
               appointment and must be paid prior to speaking with the
               Immigration Legal Representative. This is in addition to any legal
               or filing fees that will be required for your case.
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               If you need advice or assistance with any of these services, or
               simply need help understanding what options you may have under the
               law, you can schedule an initial consultation with one of our
@@ -102,7 +123,11 @@ export default function ImmigrantConnection() {
               risks associated with your situation, then offer you advice on how
               to proceed.
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               Defensive Asylum is outside of the scope of our practice. Please
               visit the{' '}
               <Link href="https://www.ailalawyer.com/">
@@ -110,7 +135,11 @@ export default function ImmigrantConnection() {
               </Link>{' '}
               (AILA) website for assistance regarding Defensive Asylum.
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               <strong>
                 Please click the “schedule an appointment” button below or call
                 our legal office at{' '}
@@ -119,7 +148,11 @@ export default function ImmigrantConnection() {
               </strong>{' '}
               An initial consultation costs $40.
             </Typography>
-            <Typography paragraph>
+            <Typography
+              sx={{
+                mb: 4,
+              }}
+            >
               We are a part of the Immigrant Connection National Network of
               church-based, low-cost, immigration legal services offices. For
               more info:{' '}
@@ -151,9 +184,9 @@ export default function ImmigrantConnection() {
               Mondays
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
+                mb: 4,
               }}
             >
               11:00 am – 5:00 pm
@@ -166,17 +199,17 @@ export default function ImmigrantConnection() {
               Tuesdays, Wednesdays and Thursdays
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
+                mb: 4,
               }}
             >
               9:00 am – 6:00 pm
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
+                mb: 4,
               }}
             >
               Columbia View Church <br />
@@ -184,9 +217,9 @@ export default function ImmigrantConnection() {
               Portland, OR 97230
             </Typography>
             <Typography
-              paragraph
               sx={{
                 fontSize: 15,
+                mb: 4,
               }}
             >
               <Link href="tel:+19712022073" sx={{ color: 'primary' }}>
@@ -275,10 +308,10 @@ export default function ImmigrantConnection() {
         </Grid>
         <Typography
           variant="h4"
-          paragraph
           sx={{
             textAlign: 'center',
             mt: 6,
+            mb: 4,
           }}
         >
           <strong>Services</strong>

@@ -45,10 +45,10 @@ function CoreValue({ title, description }) {
       <Divider flexItem orientation="vertical" sx={{ mr: 4 }} />
       <Typography
         variant="h5"
-        paragraph
         sx={{
           maxWidth: 900,
           textAlign: 'left',
+          mb: 4,
         }}
       >
         {description}
@@ -118,7 +118,6 @@ export default function ImmigrantConnection() {
               />
               <Typography
                 variant="h5"
-                paragraph
                 sx={{
                   maxWidth: 900,
                   textAlign: { xs: 'left', sm: 'center' },
@@ -155,10 +154,10 @@ export default function ImmigrantConnection() {
               />
               <Typography
                 variant="h5"
-                paragraph
                 sx={{
                   maxWidth: 900,
                   textAlign: { xs: 'left', sm: 'center' },
+                  mb: 4,
                 }}
               >
                 Providing low-cost immigration legal services to the

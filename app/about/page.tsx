@@ -78,7 +78,12 @@ export default function About() {
       >
         Our Vision
       </Typography>
-      <Typography variant="h4" paragraph>
+      <Typography
+        variant="h4"
+        sx={{
+          mb: 4,
+        }}
+      >
         Inviting our community to belong to Jesus, believe in Jesus, and become
         like Jesus.
       </Typography>
@@ -89,21 +94,33 @@ export default function About() {
         }}
       >
         <Typography variant="h5">Belong</Typography>
-        <Typography paragraph>
+        <Typography
+          sx={{
+            mb: 4,
+          }}
+        >
           We are a community building church. Community is God's idea and a
           reflection of His character. We seek to become the kind of faith
           community that welcomes people in whatever age and stage of life they
           are in to explore faith in the context of safe and loving community.
         </Typography>
         <Typography variant="h5">Believe</Typography>
-        <Typography paragraph>
+        <Typography
+          sx={{
+            mb: 4,
+          }}
+        >
           We are a Bible teaching church. We believe The Bible is God's Word and
           the loving authority on all things related to life and eternity. We
           honor everyone's journey of faith and encourage people to believe in
           Jesus as their Lord and savior, becoming his apprentice.
         </Typography>
         <Typography variant="h5">Become</Typography>
-        <Typography paragraph>
+        <Typography
+          sx={{
+            mb: 4,
+          }}
+        >
           We are a Bible practicing church. We believe the way and teachings of
           Jesus offer us a compelling vision of what it means to be remade as
           humans. We offer various opportunities for people to grow in their
@@ -122,15 +139,19 @@ export default function About() {
       </Typography>
       <Typography
         variant="h4"
-        paragraph
         sx={{
           my: 2,
+          mb: 4,
         }}
       >
         Advancing the great commission, in the spirit of the great commandment,
         for the flourishing of the whole community.
       </Typography>
-      <Typography paragraph>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
         All are welcome to discover the God who made them, died for them, and
         who wants an ongoing, transformative, hope-giving relationship with
         them.
@@ -147,34 +168,54 @@ export default function About() {
       </Typography>
       <Typography
         variant="h4"
-        paragraph
         sx={{
           my: 2,
+          mb: 4,
         }}
       >
         We believe in one God, who is Father, Son, and Holy Spirit, and the
         Savior of all who put their faith in Him alone for eternal life.
       </Typography>
-      <Typography paragraph>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
         <strong>We believe</strong> that those who are made new in Christ are
         called to be holy in character and conduct and can only live this way by
         being filled with the Lord’s Spirit.
       </Typography>
-      <Typography paragraph>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
         <strong>We believe</strong> in the Bible and its sufficiency to
         establish our faith and conduct.
       </Typography>
-      <Typography paragraph>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
         <strong>We believe</strong> God wills for people everywhere to know him
         and be made new in Christ.
       </Typography>
-      <Typography paragraph>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
         <strong>We believe</strong> that the purpose of the Church is to worship
         God in spirit and in truth, and to reach a lost and fallen world with
         the gospel of Jesus Christ through its worship, witness and loving
         deeds.
       </Typography>
-      <Typography paragraph>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
         These terms describe the “soul of the Church”:
       </Typography>
       <ul>
@@ -184,7 +225,11 @@ export default function About() {
         <li>Local Church-Centered</li>
         <li>Servant Leadership</li>
       </ul>
-      <Typography paragraph>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
         {'For a comprehensive overview of Wesleyan beliefs, please visit '}
         <Link href="https://www.wesleyan.org/about/articles-of-religion">
           wesleyan.org
@@ -231,13 +276,23 @@ export default function About() {
       >
         Russelle Brandom
       </Typography>
-      <Typography paragraph color="secondary">
+      <Typography
+        color="secondary"
+        sx={{
+          mb: 4,
+        }}
+      >
         <strong>Kids Director</strong>
       </Typography>
       <Typography component="h3" variant="h4" gutterBottom>
         Johan Noya
       </Typography>
-      <Typography paragraph color="secondary">
+      <Typography
+        color="secondary"
+        sx={{
+          mb: 4,
+        }}
+      >
         <strong>Worship Leader</strong>
       </Typography>
       <Typography component="h3" variant="h4" gutterBottom>

@@ -60,7 +60,7 @@ export default function Hero({
           <Typography
             sx={{
               color: 'white',
-              marginBottom: 4,
+              mb: 4,
             }}
             component="p"
           >

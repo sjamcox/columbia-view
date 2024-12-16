@@ -64,7 +64,7 @@ export const theme = createTheme({
 theme.typography = {
   ...theme.typography,
   p: {
-    marginBottom: '1rem',
+    mb: '1rem',
   },
   h1: {
     fontSize: '2.8rem',

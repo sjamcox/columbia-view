@@ -25,9 +25,9 @@ export default function ServiceList() {
       </Button>
       <Collapse in={isOpen}>
         <Typography
-          paragraph
           sx={{
             textAlign: 'center',
+            mb: 4,
           }}
         >
           Adjustment of Status <br />
