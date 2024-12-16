@@ -78,8 +78,6 @@ export default function Header() {
   })
 
   const subnavItems = menu.find((item) => {
-    console.log(item.text, activeMenu)
-    console.log(item.text === activeMenu)
     return item.text === activeMenu
   })?.subnav
 
