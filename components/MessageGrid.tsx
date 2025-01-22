@@ -1,30 +1,24 @@
 'use client'
 
-import { Grid2 as Grid } from '@mui/material'
 import { useEffect } from 'react'
-import { useAnimate, stagger } from 'framer-motion'
+import { useAnimate, stagger } from 'motion/react'
 import MessageCard from './MessageCard'
 
 export default function MessageGrid({ messages }) {
   const [scope, animate] = useAnimate()
 
   useEffect(() => {
-    animate(
-      '.message-card',
-      { opacity: 1, marginTop: 0 },
-      { delay: stagger(0.05) }
-    )
+    animate('section', { opacity: 1, marginTop: 0 }, { delay: stagger(0.05) })
   }, [])
 
   return (
-    <Grid ref={scope} container spacing={5}>
+    <div
+      ref={scope}
+      className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3"
+    >
       {messages.map((message) => (
-        <MessageCard
-          key={message.episode_id}
-          message={message}
-          sx={{ opacity: 0, mt: 10 }}
-        />
+        <MessageCard key={message.episode_id} message={message} />
       ))}
-    </Grid>
+    </div>
   )
 }

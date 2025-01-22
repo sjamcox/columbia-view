@@ -1,45 +1,29 @@
 'use client'
 
 import { format } from 'date-fns'
-import { motion } from 'framer-motion'
-import { Card, Grid2 as Grid, Link, Stack, Typography } from '@mui/material'
+import { motion } from 'motion/react'
+import Link from 'next/link'
 
-export default function MessageCard({ message, ...rest }) {
+export default function MessageCard({ message }) {
   return (
-    (<Grid
-      className="message-card"
-      size={{
-        xs: 12,
-        sm: 6,
-        md: 4
-      }}>
-      <Card
-        component={motion.div}
-        whileHover={{ scale: 1.05 }}
-        sx={{
-          borderRadius: 4,
-          boxShadow: '0px 0px 15px rgba(100,100,100,.1)',
-          height: '100%',
-        }}
-      >
-        <Stack
-          key={message.episode_id}
-          sx={{
-            px: 4,
-            py: 3,
-          }}
+    <motion.section
+      whileHover={{ scale: 1.05 }}
+      className="message-card border-neutral-light-blue border-1 mt-2 h-full rounded-xl border-solid opacity-0 shadow-lg"
+    >
+      <div className="flex flex-col px-8 py-6">
+        <time
+          dateTime={format(new Date(message.published_at), 'yyyy-mm-dd')}
+          className="text-neutral-mid-gray text-lg font-semibold"
         >
-          <Typography variant="date">
-            {format(new Date(message.published_at), 'PPP')}
-          </Typography>
-          <Link
-            href={`/messages/${message.episode_id}`}
-            sx={{ textDecoration: 'none' }}
-          >
-            <Typography variant="h5">{message.title}</Typography>
-          </Link>
-        </Stack>
-      </Card>
-    </Grid>)
-  );
+          {format(new Date(message.published_at), 'PPP')}
+        </time>
+        <Link
+          className="text-primary-dark-blue text-2xl font-bold no-underline"
+          href={`/messages/${message.episode_id}`}
+        >
+          {message.title}
+        </Link>
+      </div>
+    </motion.section>
+  )
 }

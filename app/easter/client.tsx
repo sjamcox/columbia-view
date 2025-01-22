@@ -8,7 +8,7 @@ import {
   Typography,
   useMediaQuery,
 } from '@mui/material'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 import { typography } from './typography'
 import ResponsiveImage from 'components/ResponsiveImage'
@@ -25,7 +25,7 @@ export default function Client() {
   )
 
   return (
-    (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <Grid
         container
         sx={{
@@ -41,8 +41,9 @@ export default function Client() {
           }}
           size={{
             xs: 12,
-            md: 5
-          }}>
+            md: 5,
+          }}
+        >
           {isTabletDown ? (
             <ResponsiveImage
               src={easter}
@@ -76,8 +77,9 @@ export default function Client() {
         <Grid
           size={{
             xs: 12,
-            md: 7
-          }}>
+            md: 7,
+          }}
+        >
           <Stack spacing={5}>
             {isTabletDown ? (
               <Stack
@@ -382,6 +384,6 @@ export default function Client() {
         objectFit="cover"
         rounded
       />
-    </motion.div>)
-  );
+    </motion.div>
+  )
 }
