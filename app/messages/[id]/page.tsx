@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
-import { Box, Stack, Typography } from '@mui/material'
 import { format } from 'date-fns'
-import axios from 'axios'
 
 import AudioPlayer from 'components/AudioPlayer'
 
@@ -16,39 +14,25 @@ export default async function MessageDetails(props: {
   params: Promise<{ id: string }>
 }) {
   const params = await props.params
-  const { data } = await axios.get(
+  const response = await fetch(
     `https://api.spreaker.com/v2/episodes/${params.id}`
   )
+  const data = await response.json()
   const { episode } = data.response
 
   return (
-    <Stack
-      spacing={4}
-      sx={{
-        alignItems: 'center',
-        mt: 10,
-      }}
-    >
-      <Typography variant="date">
+    <main className="mt-20 flex flex-col items-center">
+      <time className="font-bold text-neutral-mid-gray">
         {format(new Date(episode.published_at), 'PPP')}
-      </Typography>
-      <Typography
-        component="h1"
-        variant="h2"
-        sx={{
-          textAlign: 'center',
-        }}
-      >
+      </time>
+      <h1 className="text-center text-5xl font-bold sm:text-7xl">
         {episode.title}
-      </Typography>
-      <Box
+      </h1>
+      <div
         dangerouslySetInnerHTML={{ __html: episode.description_html }}
-        sx={{
-          maxWidth: 650,
-          '& a': { color: 'primary.main' },
-        }}
+        className="prose prose-a:text-primary mb-10 max-w-[650px]"
       />
       <AudioPlayer src={episode.playback_url} />
-    </Stack>
+    </main>
   )
 }
