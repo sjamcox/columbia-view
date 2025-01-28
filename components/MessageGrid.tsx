@@ -1,10 +1,13 @@
 'use client'
 
+import type { EpisodeList } from 'types'
+
 import { useEffect } from 'react'
 import { useAnimate, stagger } from 'motion/react'
+
 import MessageCard from './MessageCard'
 
-export default function MessageGrid({ messages }) {
+export default function MessageGrid({ messages }: { messages: EpisodeList }) {
   const [scope, animate] = useAnimate()
 
   useEffect(() => {
@@ -14,7 +17,7 @@ export default function MessageGrid({ messages }) {
   return (
     <div
       ref={scope}
-      className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3"
+      className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-8 md:grid-cols-3"
     >
       {messages.map((message) => (
         <MessageCard key={message.episode_id} message={message} />

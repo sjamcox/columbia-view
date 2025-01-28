@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-
-import { Box, Button, Typography } from '@mui/material'
+import type { EpisodeList } from 'types'
 
 import MessageGrid from 'components/MessageGrid'
+import ButtonLink from 'components/ButtonLink'
 
 export const metadata: Metadata = {
   title: 'Messages | Columbia View Church',
@@ -15,38 +15,29 @@ export default async function Messages() {
     { next: { revalidate: 1800 } }
   )
 
-  let data
+  let episodes: EpisodeList
 
   if (res.ok) {
-    data = await res.json()
+    const result = await res.json()
+    episodes = result.response.items
   }
 
   return (
-    <>
-      <Typography component="h1" variant="h1" sx={{ mb: 4 }}>
-        Messages
-      </Typography>
-      {data ? (
-        <MessageGrid messages={data.response.items} />
+    <main>
+      <h1 className="text-5xl md:text-8xl">Messages</h1>
+      {episodes ? (
+        <MessageGrid messages={episodes} />
       ) : (
-        <Typography>Error fetching messages data.</Typography>
+        <p>Error fetching messages data.</p>
       )}
-      <Box
-        sx={{
-          width: '100%',
-          textAlign: 'center',
-          mt: 4,
-        }}
-      >
-        <Button
-          variant="contained"
-          color="secondary"
+      <div className="mt-6 flex justify-center">
+        <ButtonLink
           href="https://www.spreaker.com/show/sermons_59"
-          target="_blank"
+          size="large"
         >
           See All Messages
-        </Button>
-      </Box>
-    </>
+        </ButtonLink>
+      </div>
+    </main>
   )
 }
