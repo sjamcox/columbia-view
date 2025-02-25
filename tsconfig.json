@@ -20,16 +20,9 @@
         "name": "next"
       }
     ],
-    "strict": false,
+    "strict": true,
     "target": "ES2017"
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "components/Hero.js",
-    "tailwind.config.js"
-  ],
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
