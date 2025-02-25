@@ -64,7 +64,7 @@ export default function ButtonLink({
   return (
     <Link
       href={href}
-      className={`text-white visited:text-white hover:text-white active:text-white inline-block rounded no-underline transition-all hover:brightness-90 ${colorClasses} ${sizeClasses} ${className}`}
+      className={`text-white visited:text-white hover:text-white active:text-white inline-block rounded-sm no-underline transition-all hover:brightness-90 ${colorClasses} ${sizeClasses} ${className}`}
     >
       {children}
     </Link>
