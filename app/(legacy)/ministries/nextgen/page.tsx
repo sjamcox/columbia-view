@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Box, Link, Stack, Typography } from '@mui/material'
 import { Grid2 as Grid } from '@mui/material'
 
-import { ElevatedSection, ImageSection } from 'components/Section'
+import { ElevatedSection, LegacyImageSection } from 'components/Section'
 import columbiaKids from 'public/columbia-kids-sunday.jpeg'
 import outdoorBounce from 'public/outdoor-bounce-house.png'
 import nurseryBounce from 'public/nursery-bounce-house.png'
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function ColumbiaKids() {
   return (
-    (<Box>
+    <Box>
       <Box sx={{ my: 5 }}>
         <Typography component="h1" variant="h1" sx={{ mt: 5, mb: 3 }}>
           NextGen Ministries
@@ -65,8 +65,9 @@ export default function ColumbiaKids() {
           <Grid
             size={{
               xs: 7,
-              md: 8
-            }}>
+              md: 8,
+            }}
+          >
             <Box
               sx={{
                 height: {
@@ -88,8 +89,9 @@ export default function ColumbiaKids() {
           <Grid
             size={{
               xs: 5,
-              md: 4
-            }}>
+              md: 4,
+            }}
+          >
             <Box
               sx={{
                 height: {
@@ -111,8 +113,9 @@ export default function ColumbiaKids() {
           <Grid
             size={{
               xs: 5,
-              md: 4
-            }}>
+              md: 4,
+            }}
+          >
             <Box
               sx={{
                 height: {
@@ -134,8 +137,9 @@ export default function ColumbiaKids() {
           <Grid
             size={{
               xs: 7,
-              md: 8
-            }}>
+              md: 8,
+            }}
+          >
             <Box
               sx={{
                 height: {
@@ -222,7 +226,7 @@ export default function ColumbiaKids() {
           </Box>
         </Stack>
       </ElevatedSection>
-      <ImageSection src={kidsRoom} alt="Kids room">
+      <LegacyImageSection src={kidsRoom} alt="Kids room">
         <Stack
           sx={{
             alignItems: 'center',
@@ -278,7 +282,7 @@ export default function ColumbiaKids() {
             </Typography>
           </Stack>
         </Stack>
-      </ImageSection>
+      </LegacyImageSection>
       <ElevatedSection>
         <Stack
           direction={{ xs: 'column-reverse', sm: 'row-reverse' }}
@@ -343,6 +347,6 @@ export default function ColumbiaKids() {
           <Link href="mailto:office.cvwc@gmail.com">office.cvwc@gmail.com</Link>
         </Typography>
       </Box>
-    </Box>)
-  );
+    </Box>
+  )
 }
