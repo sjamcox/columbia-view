@@ -26,8 +26,8 @@
   --color-black: #000000;
 
   --font-*: initial;
-  --font-sans: Graphik, sans-serif;
-  --font-serif: Merriweather, serif;
+  --font-sans: var(--font-open-sans), sans-serif;
+  --font-display: var(--font-raleway);
 }
 
 /*
