@@ -17,6 +17,7 @@ import CaseAccordions from './CaseAccordions'
 import Testimonial from './Testimonial'
 import ClientsChart from './ClientsChart'
 import RevenueChart from './RevenueChart'
+import PartnerList from './PartnerList'
 
 export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',
@@ -295,6 +296,22 @@ export default function ImmigrantConnection() {
             </div>
           </div>
         </div>
+      </section>
+      <Divider />
+      <section className="mx-auto flex w-full max-w-5xl flex-col px-4 py-25">
+        <h2 className="text-primary-dark-blue font-display text-center text-7xl/20 font-bold uppercase">
+          Partner
+          <br />
+          Organizations
+        </h2>
+        <small className="text-neutral-mid-gray text-center text-base">
+          A heartfelt thank you to each of the organizations below for their
+          support.
+        </small>
+        <small className="text-neutral-mid-gray mb-16 text-center text-base">
+          Together we are able to accomplish so much.
+        </small>
+        <PartnerList />
       </section>
       <Divider />
     </main>
