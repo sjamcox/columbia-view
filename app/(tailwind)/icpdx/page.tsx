@@ -4,9 +4,18 @@ import { ImageSection } from 'components/Section'
 import immigrantSuccess from 'public/immigrant-success-stories.webp'
 import icpdxLogo from 'public/logos/icpdx-logo-white.svg'
 import icpdxStaff from 'public/icpdx/icpdx-staff-conf.jpeg'
+import whyICPDX from 'public/icpdx/icpdx-why.jpeg'
+import officeChat from 'public/icpdx/icpdx-office-chat.jpeg'
+import immigrationClass from 'public/icpdx/immigration-class.jpg'
+import sofia from 'public/icpdx/mexican-woman.png'
+import carlos from 'public/icpdx/honduran-man.png'
+import amina from 'public/icpdx/somalian-woman.png'
 import Image from 'next/image'
 import Divider from 'components/Divider'
 import ValueCard from './ValueCard'
+import CaseAccordions from './CaseAccordions'
+import Testimonial from './Testimonial'
+import ClientsChart from './ClientsChart'
 
 export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',
@@ -17,7 +26,11 @@ export const metadata: Metadata = {
 export default function ImmigrantConnection() {
   return (
     <main>
-      <ImageSection src={immigrantSuccess} alt="Immigrant family celebrating">
+      <ImageSection
+        src={immigrantSuccess}
+        alt="Immigrant family celebrating"
+        color="blue"
+      >
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-25">
           <Image
             src={icpdxLogo}
@@ -57,7 +70,7 @@ export default function ImmigrantConnection() {
         </div>
       </section>
       <Divider />
-      <section className="bg-primary-dark-blue w-full">
+      <section className="from-primary-dark-blue to-secondary-blue-black w-full bg-gradient-to-b">
         <div className="mx-auto flex w-full max-w-6xl flex-col px-4 py-25">
           <h2 className="font-display mb-10 self-center text-7xl/28 font-bold text-white uppercase">
             Our Values
@@ -108,6 +121,181 @@ export default function ImmigrantConnection() {
           </div>
         </div>
       </section>
+      <Divider />
+      <section className="mx-auto w-full max-w-6xl flex-col px-4 py-25">
+        <h2 className="font-display mb-16 text-center text-5xl/tight font-light">
+          A case for why{' '}
+          <span className="font-semibold">
+            low-cost immigration legal services
+          </span>{' '}
+          are <i>essential</i> in East County
+        </h2>
+        <div className="grid grid-cols-12 grid-rows-1 gap-5">
+          <div className="col-span-6">
+            <CaseAccordions />
+          </div>
+          <div className="col-span-6 col-start-8 grid h-150 grid-cols-4 grid-rows-8 gap-y-8">
+            <div className="bg-neutral-light-gray relative col-span-full row-span-5 overflow-hidden rounded-3xl">
+              <Image
+                src={whyICPDX}
+                alt="Immigrant Connection leader explaining the importance of Immigrant Connection"
+                fill
+                objectFit="cover"
+              />
+            </div>
+            <div className="bg-neutral-light-gray relative col-span-2 row-span-3 overflow-hidden rounded-3xl">
+              <Image
+                src={officeChat}
+                alt="Man talks to woman in office about becoming a citizen"
+                fill
+                objectFit="cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <Divider />
+      <ImageSection src={immigrationClass} alt="" color="red">
+        <div className="mx-auto flex min-h-150 w-full max-w-6xl items-end px-4 py-25">
+          <p className="font-display bg-primary-dark-blue max-w-4xl p-10 text-2xl text-white italic">
+            “Arriving in the U.S. is only the beginning of a long and often
+            difficult journey for immigrants and refugees who face the daunting
+            task of navigating the “maze with moving walls” that is the
+            immigration system.”
+          </p>
+        </div>
+      </ImageSection>
+      <Divider />
+      <section className="mx-auto flex w-full max-w-6xl flex-col px-4 py-25">
+        <h2 className="text-primary-dark-blue font-display text-center text-7xl/20 font-bold uppercase">
+          Client
+          <br />
+          Testimonials
+        </h2>
+        <small className="text-neutral-mid-gray mb-12 text-center text-sm">
+          For anonymity and security purposes, we have used alias names and
+          changed the identifying details of their stories.
+        </small>
+        <div className="grid grid-cols-3 grid-rows-1 gap-11">
+          <Testimonial
+            quoteColor="green"
+            name="Sofia"
+            country="Mexico"
+            imageSrc={sofia}
+          >
+            <p className="mb-4">
+              I came to Immigrant Connection PDX at one of the most stressful
+              points in my life. My family had been living in the U.S. without
+              legal status for years, and I was terrified about the future. The
+              team at Immigrant Connection PDX not only helped us understand our
+              options but walked us through every step of the process, from
+              paperwork to filing for the proper visas.
+            </p>
+            <p>
+              Fortunately, our situation had a lawful pathway forward. Thanks to
+              their guidance, I finally received my work permit, and my family
+              and I now feel a sense of security we never had before. They
+              treated us like family, and I’m so grateful for the stability
+              they’ve helped bring into our lives.
+            </p>
+          </Testimonial>
+          <Testimonial
+            quoteColor="aqua"
+            name="Carlos"
+            country="Honduras"
+            imageSrc={carlos}
+          >
+            <p className="mb-4">
+              After years of struggling to get legal status and facing constant
+              uncertainty, finding Immigrant Connection PDX was a game-changer.
+              Their team worked tirelessly to help me with my immigration case
+              and connected me with legal resources I didn’t even know existed.
+              The personalized support they provided made all the difference,
+              and they were with me every step of the way, from preparing
+              documents to answering my questions.
+            </p>
+            <p>
+              Now that I have my green card, I feel like I finally have a future
+              here. Immigrant Connection PDX gave me hope when I thought all was
+              lost.
+            </p>
+          </Testimonial>
+          <Testimonial
+            quoteColor="red"
+            name="Amina"
+            country="Somalia"
+            imageSrc={amina}
+          >
+            <p className="mb-4">
+              As a single mother, being separated from my children for years was
+              one of the hardest things I’ve ever endured. I knew I wanted to
+              bring them to the U.S. so we could be together again, but the
+              immigration process seemed so complicated, and I didn’t know where
+              to begin. That’s when I turned to Immigrant Connection PDX. They
+              helped me petition for my children to join me here, guiding me
+              through every step with patience and care.
+            </p>
+            <p>
+              Thanks to their expertise, I was able to petition for my children
+              to come to the States. Though the government processing times take
+              very very long, immigrant Connection PDX continues to walk with me
+              providing support and waiting well with me.”
+            </p>
+          </Testimonial>
+        </div>
+      </section>
+      <Divider />
+      <section className="from-secondary-green to-primary-light-blue w-full bg-gradient-to-b">
+        <div className="mx-auto flex w-full max-w-5xl flex-col px-4 py-25">
+          <p className="mb-20 text-center text-4xl/snug font-light text-white">
+            Since receiving our recognition and accreditation from the
+            Department of Justice in 2020, our office has provided immigration
+            legal services for over{' '}
+            <span className="font-semibold">
+              1,200+ foreign-born individuals
+            </span>{' '}
+            from over <span className="font-semibold">60 countries</span>{' '}
+            resulting in nearly{' '}
+            <span className="font-semibold">500 immigration cases</span> being
+            submitted to the government with a{' '}
+            <span className="font-semibold">
+              99.8% immigration benefit approval rating
+            </span>
+            .
+          </p>
+          <div className="flex flex-col gap-20">
+            <div className="grid grid-cols-2 grid-rows-1 gap-20">
+              <p className="font-display text-right text-7xl font-bold text-white uppercase">
+                Clients Served
+              </p>
+              <ClientsChart />
+            </div>
+            <div className="grid grid-cols-2 grid-rows-1 gap-20">
+              <p className="font-display text-right text-7xl font-bold text-white uppercase">
+                Revenue/
+                <br />
+                Net Income
+              </p>
+              <div className="bg-neutral-light-gray h-75"></div>
+            </div>
+            <div className="grid grid-cols-2 grid-rows-1 gap-20">
+              <p className="font-display text-right text-7xl font-bold text-white uppercase">
+                Average Cost
+              </p>
+              <div>
+                <p className="font-display mb-2 text-7xl text-white">
+                  4–10x less
+                </p>
+                <p className="text-white">
+                  than traditional attorneys. What would cost our clients $4,000
+                  from a fully barred lawyer we can do for $400.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Divider />
     </main>
   )
 }
