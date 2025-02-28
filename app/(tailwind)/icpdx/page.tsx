@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+import Link from 'next/link'
+
 import { ImageSection } from 'components/Section'
 import immigrantSuccess from 'public/immigrant-success-stories.webp'
 import icpdxLogo from 'public/logos/icpdx-logo-white.svg'
@@ -314,6 +316,19 @@ export default function ImmigrantConnection() {
         <PartnerList />
       </section>
       <Divider />
+      <section className="from-secondary-yellow to-secondary-green w-full bg-gradient-to-b">
+        <div className="mx-auto flex min-h-100 w-full max-w-6xl flex-col items-start justify-end gap-6 px-4 py-25">
+          <p className="font-display text-5xl font-bold text-white">
+            2023 Annual Report
+          </p>
+          <Link
+            href="https://drive.google.com/file/d/1wU-Hmam19gN4CeHlemYWDsIDZESEFPcd/view"
+            className="bg-neutral-dark-gray/20 rounded-full px-10 py-4 font-semibold text-white uppercase"
+          >
+            View our Annual Report
+          </Link>
+        </div>
+      </section>
     </main>
   )
 }
