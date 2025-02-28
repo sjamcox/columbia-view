@@ -42,7 +42,7 @@ export default function ClientsChart() {
   return (
     <ResponsiveContainer
       width="100%"
-      height={320}
+      height={360}
       className="bg-neutral-light-gray flex items-center justify-center rounded-2xl"
     >
       <BarChart
@@ -77,7 +77,7 @@ export default function ClientsChart() {
             fill="var(--color-secondary-green)"
           />
         </Bar>
-        <XAxis dataKey="year" stroke="var(--color-neutral-dark-gray)" />
+        <XAxis dataKey="year" />
         <Legend />
       </BarChart>
     </ResponsiveContainer>

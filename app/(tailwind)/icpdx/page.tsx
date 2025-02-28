@@ -16,6 +16,7 @@ import ValueCard from './ValueCard'
 import CaseAccordions from './CaseAccordions'
 import Testimonial from './Testimonial'
 import ClientsChart from './ClientsChart'
+import RevenueChart from './RevenueChart'
 
 export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',
@@ -276,7 +277,7 @@ export default function ImmigrantConnection() {
                 <br />
                 Net Income
               </p>
-              <div className="bg-neutral-light-gray h-75"></div>
+              <RevenueChart />
             </div>
             <div className="grid grid-cols-2 grid-rows-1 gap-20">
               <p className="font-display text-right text-7xl font-bold text-white uppercase">
