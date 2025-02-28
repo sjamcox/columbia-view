@@ -10,6 +10,7 @@ interface SectionProps {
 interface ImageSectionProps extends SectionProps {
   src: StaticImageData | string
   alt: string
+  color?: 'red' | 'blue'
 }
 
 export function ElevatedSection({ children }: SectionProps) {
@@ -61,11 +62,20 @@ export function LegacyImageSection({ children, src, alt }: ImageSectionProps) {
   )
 }
 
-export function ImageSection({ children, src, alt }: ImageSectionProps) {
+export function ImageSection({ children, src, alt, color }: ImageSectionProps) {
+  const colorVariants = {
+    blue: 'from-primary-dark-blue to-primary-light-blue',
+    red: 'from-secondary-yellow to-secondary-red',
+  }
+
   return (
     <section className={'relative overflow-hidden'}>
       <Image src={src} alt={alt} fill priority objectFit="cover" />
-      <div className="from-primary-dark-blue to-primary-light-blue absolute inset-0 bg-gradient-to-b opacity-50" />
+      {color && (
+        <div
+          className={`${colorVariants[color]} absolute inset-0 bg-gradient-to-b opacity-50`}
+        />
+      )}
       <div className="relative">{children}</div>
     </section>
   )
