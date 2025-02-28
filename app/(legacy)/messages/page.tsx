@@ -15,29 +15,27 @@ export default async function Messages() {
     { next: { revalidate: 1800 } }
   )
 
-  let episodes: EpisodeList
-
   if (res.ok) {
     const result = await res.json()
-    episodes = result.response.items
-  }
+    const episodes: EpisodeList = result.response.items
 
-  return (
-    <main>
-      <h1 className="text-5xl md:text-8xl">Messages</h1>
-      {episodes ? (
-        <MessageGrid messages={episodes} />
-      ) : (
-        <p>Error fetching messages data.</p>
-      )}
-      <div className="mt-6 flex justify-center">
-        <ButtonLink
-          href="https://www.spreaker.com/show/sermons_59"
-          size="large"
-        >
-          See All Messages
-        </ButtonLink>
-      </div>
-    </main>
-  )
+    return (
+      <main>
+        <h1 className="text-5xl md:text-8xl">Messages</h1>
+        {episodes ? (
+          <MessageGrid messages={episodes} />
+        ) : (
+          <p>Error fetching messages data.</p>
+        )}
+        <div className="mt-6 flex justify-center">
+          <ButtonLink
+            href="https://www.spreaker.com/show/sermons_59"
+            size="large"
+          >
+            See All Messages
+          </ButtonLink>
+        </div>
+      </main>
+    )
+  }
 }
