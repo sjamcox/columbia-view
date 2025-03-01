@@ -3,6 +3,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { ImageSection } from 'components/Section'
+import Image from 'next/image'
+import Divider from 'components/Divider'
+import ValueCard from './ValueCard'
+import CaseAccordions from './CaseAccordions'
+import Testimonial from './Testimonial'
+import ClientsChart from './ClientsChart'
+import RevenueChart from './RevenueChart'
+import PartnerList from './PartnerList'
 import immigrantSuccess from 'public/immigrant-success-stories.webp'
 import icpdxLogo from 'public/logos/icpdx-logo-white.svg'
 import icpdxStaff from 'public/icpdx/icpdx-staff-conf.jpeg'
@@ -12,14 +20,12 @@ import immigrationClass from 'public/icpdx/immigration-class.jpg'
 import sofia from 'public/icpdx/mexican-woman.png'
 import carlos from 'public/icpdx/honduran-man.png'
 import amina from 'public/icpdx/somalian-woman.png'
-import Image from 'next/image'
-import Divider from 'components/Divider'
-import ValueCard from './ValueCard'
-import CaseAccordions from './CaseAccordions'
-import Testimonial from './Testimonial'
-import ClientsChart from './ClientsChart'
-import RevenueChart from './RevenueChart'
-import PartnerList from './PartnerList'
+import listen from 'public/icons/listen.svg'
+import advise from 'public/icons/advise.svg'
+import speak from 'public/icons/speak.svg'
+import empower from 'public/icons/empower.svg'
+import together from 'public/icons/together.svg'
+import celebrate from 'public/icons/celebrate.svg'
 
 export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',
@@ -85,6 +91,7 @@ export default function ImmigrantConnection() {
                 title="Listening"
                 subtitle="with compassion"
                 description="Because the stories of immigrants are often filled with deep challenges and trauma, we listen with care, empathy, and understanding. We recognize the human side of every case, offering a safe space for each person’s story."
+                icon={listen}
               />
             </div>
             <div className="col-start-4 col-end-12">
@@ -92,6 +99,7 @@ export default function ImmigrantConnection() {
                 title="Advising"
                 subtitle="with expertise"
                 description="Because immigration laws are constantly evolving, we continuously learn and adapt to provide our clients with the most accurate, up-to-date pathways. Our expertise is a bridge to clarity and confidence in the journey ahead."
+                icon={advise}
               />
             </div>
             <div className="col-start-2 col-end-10">
@@ -99,6 +107,7 @@ export default function ImmigrantConnection() {
                 title="Speaking"
                 subtitle="the truth"
                 description="Because the immigration journey is complex and every step matters, we are committed to building trust by being honest and transparent with our clients. Accurate immigration filings are the foundation of safe and successful futures."
+                icon={speak}
               />
             </div>
             <div className="col-start-4 col-end-12">
@@ -106,6 +115,7 @@ export default function ImmigrantConnection() {
                 title="Empowering"
                 subtitle="through knowledge"
                 description="Because navigating the immigration process can be overwhelming, we empower our clients with the knowledge and resources they need to take an active role in their journey, making informed decisions along the way."
+                icon={empower}
               />
             </div>
             <div className="col-start-2 col-end-10">
@@ -113,6 +123,7 @@ export default function ImmigrantConnection() {
                 title="Walking"
                 subtitle="with you"
                 description="Because the immigration process can be long and uncertain, we stand beside our clients throughout the journey, staying engaged, informed, and ready to support them every step of the way."
+                icon={together}
               />
             </div>
             <div className="col-start-4 col-end-12">
@@ -120,6 +131,7 @@ export default function ImmigrantConnection() {
                 title="Celebrating"
                 subtitle="the milestones"
                 description="Because the ultimate goal of immigration is stability, opportunity, and family reunification, we celebrate each step forward. Every milestone, big or small, brings us closer to the goal of building lasting futures."
+                icon={celebrate}
               />
             </div>
           </div>
