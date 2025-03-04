@@ -41,21 +41,23 @@ export default function ImmigrantConnection() {
         alt="Immigrant family celebrating"
         color="blue"
       >
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-25">
-          <Image
-            src={icpdxLogo}
-            alt="Immigrant Connection PDX logo"
-            width={272}
-            height={272}
-          />
-          <h1 className="font-display text-7xl/tight font-bold text-white">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-15 lg:py-25">
+          <div className="w-50 lg:w-full">
+            <Image
+              src={icpdxLogo}
+              alt="Immigrant Connection PDX logo"
+              width={272}
+              height={272}
+            />
+          </div>
+          <h1 className="font-display text-5xl/tight font-bold text-white lg:text-7xl/tight">
             Partner With Immigrant Connection PDX
           </h1>
         </div>
       </ImageSection>
       <Divider />
-      <section className="mx-auto grid w-full max-w-6xl grid-cols-12 flex-col gap-x-2 px-4 py-25">
-        <div className="relative col-start-2 col-end-7 overflow-hidden rounded-2xl">
+      <section className="mx-auto grid w-full max-w-6xl grid-cols-12 gap-x-2 px-6 py-15 max-md:gap-y-10 lg:py-25">
+        <div className="relative h-fit overflow-hidden rounded-2xl max-md:col-span-12 md:col-start-2 md:col-end-7">
           <Image
             src={icpdxStaff}
             alt="Immigrant Connection staff at a conference"
@@ -63,13 +65,13 @@ export default function ImmigrantConnection() {
             height={1024}
           />
         </div>
-        <div className="col-start-8 col-end-12 flex items-center">
+        <div className="flex items-center max-md:col-span-8 md:col-start-8 md:col-end-12">
           <div>
-            <h2 className="text-primary-dark-blue font-display text-7xl/28 font-bold uppercase">
+            <h2 className="text-primary-dark-blue font-display text-6xl/16 font-bold uppercase md:text-7xl/28">
               Vision
             </h2>
             <p className="mb-10">Building bridges for a hope-filled future.</p>
-            <h2 className="text-primary-dark-blue font-display text-7xl/28 font-bold uppercase">
+            <h2 className="text-primary-dark-blue font-display text-6xl/16 font-bold uppercase md:text-7xl/28">
               Mission
             </h2>
             <p>
@@ -81,12 +83,12 @@ export default function ImmigrantConnection() {
       </section>
       <Divider />
       <section className="from-primary-dark-blue to-secondary-blue-black w-full bg-gradient-to-b">
-        <div className="mx-auto flex w-full max-w-6xl flex-col px-4 py-25">
-          <h2 className="font-display mb-10 self-center text-7xl/28 font-bold text-white uppercase">
+        <div className="mx-auto flex w-full max-w-6xl flex-col px-6 py-15 lg:py-25">
+          <h2 className="font-display mb-10 text-center text-6xl/16 font-bold text-white uppercase md:text-7xl/28">
             Our Values
           </h2>
-          <div className="grid grid-cols-12 grid-rows-3 gap-y-13">
-            <div className="col-start-2 col-end-10">
+          <div className="grid grid-cols-12 gap-y-8 sm:grid-rows-3 sm:gap-y-13">
+            <div className="col-start-2 col-end-12 sm:col-end-10">
               <ValueCard
                 title="Listening"
                 subtitle="with compassion"
@@ -94,7 +96,7 @@ export default function ImmigrantConnection() {
                 icon={listen}
               />
             </div>
-            <div className="col-start-4 col-end-12">
+            <div className="col-start-2 col-end-12 sm:col-start-4">
               <ValueCard
                 title="Advising"
                 subtitle="with expertise"
@@ -102,7 +104,7 @@ export default function ImmigrantConnection() {
                 icon={advise}
               />
             </div>
-            <div className="col-start-2 col-end-10">
+            <div className="col-start-2 col-end-12 sm:col-end-10">
               <ValueCard
                 title="Speaking"
                 subtitle="the truth"
@@ -110,7 +112,7 @@ export default function ImmigrantConnection() {
                 icon={speak}
               />
             </div>
-            <div className="col-start-4 col-end-12">
+            <div className="col-start-2 col-end-12 sm:col-start-4">
               <ValueCard
                 title="Empowering"
                 subtitle="through knowledge"
@@ -118,7 +120,7 @@ export default function ImmigrantConnection() {
                 icon={empower}
               />
             </div>
-            <div className="col-start-2 col-end-10">
+            <div className="col-start-2 col-end-12 sm:col-end-10">
               <ValueCard
                 title="Walking"
                 subtitle="with you"
@@ -126,7 +128,7 @@ export default function ImmigrantConnection() {
                 icon={together}
               />
             </div>
-            <div className="col-start-4 col-end-12">
+            <div className="col-start-2 col-end-12 sm:col-start-4">
               <ValueCard
                 title="Celebrating"
                 subtitle="the milestones"
@@ -138,19 +140,19 @@ export default function ImmigrantConnection() {
         </div>
       </section>
       <Divider />
-      <section className="mx-auto w-full max-w-6xl flex-col px-4 py-25">
-        <h2 className="font-display mb-16 text-center text-5xl/tight font-light">
+      <section className="mx-auto w-full max-w-6xl flex-col px-6 py-15 lg:py-25">
+        <h2 className="font-display mb-8 text-center text-3xl/tight font-light md:mb-16 md:text-5xl/tight">
           A case for why{' '}
           <span className="font-semibold">
             low-cost immigration legal services
           </span>{' '}
           are <i>essential</i> in East County
         </h2>
-        <div className="grid grid-cols-12 grid-rows-1 gap-5">
-          <div className="col-span-6">
+        <div className="grid grid-cols-12 grid-rows-1 gap-y-10 md:gap-5">
+          <div className="col-span-12 md:col-span-6">
             <CaseAccordions />
           </div>
-          <div className="col-span-6 col-start-8 grid h-150 grid-cols-4 grid-rows-8 gap-y-8">
+          <div className="col-span-9 col-start-3 grid h-100 grid-cols-4 grid-rows-8 gap-y-8 md:col-span-8 md:col-start-8 md:h-150">
             <div className="bg-neutral-light-gray relative col-span-full row-span-5 overflow-hidden rounded-3xl">
               <Image
                 src={whyICPDX}
@@ -159,7 +161,7 @@ export default function ImmigrantConnection() {
                 objectFit="cover"
               />
             </div>
-            <div className="bg-neutral-light-gray relative col-span-2 row-span-3 overflow-hidden rounded-3xl">
+            <div className="bg-neutral-light-gray relative col-span-2 row-span-3 overflow-hidden rounded-3xl max-md:col-start-3">
               <Image
                 src={officeChat}
                 alt="Man talks to woman in office about becoming a citizen"
@@ -172,8 +174,8 @@ export default function ImmigrantConnection() {
       </section>
       <Divider />
       <ImageSection src={immigrationClass} alt="" color="red">
-        <div className="mx-auto flex min-h-150 w-full max-w-6xl items-end px-4 py-25">
-          <p className="font-display bg-primary-dark-blue max-w-4xl p-10 text-2xl text-white italic">
+        <div className="mx-auto flex min-h-150 w-full max-w-6xl items-end px-6 py-15 lg:py-25">
+          <p className="font-display bg-primary-dark-blue max-w-4xl p-10 text-2xl font-semibold text-white italic">
             “Arriving in the U.S. is only the beginning of a long and often
             difficult journey for immigrants and refugees who face the daunting
             task of navigating the “maze with moving walls” that is the
@@ -182,8 +184,8 @@ export default function ImmigrantConnection() {
         </div>
       </ImageSection>
       <Divider />
-      <section className="mx-auto flex w-full max-w-6xl flex-col px-4 py-25">
-        <h2 className="text-primary-dark-blue font-display text-center text-7xl/20 font-bold uppercase">
+      <section className="mx-auto flex w-full max-w-6xl flex-col px-6 py-15 lg:py-25">
+        <h2 className="text-primary-dark-blue font-display text-center text-4xl/tight font-bold uppercase md:text-7xl/20">
           Client
           <br />
           Testimonials
@@ -192,7 +194,7 @@ export default function ImmigrantConnection() {
           For anonymity and security purposes, we have used alias names and
           changed the identifying details of their stories.
         </small>
-        <div className="grid grid-cols-3 grid-rows-1 gap-11">
+        <div className="grid grid-cols-1 gap-11 lg:grid-cols-3 lg:grid-rows-1">
           <Testimonial
             quoteColor="green"
             name="Sofia"
@@ -262,11 +264,11 @@ export default function ImmigrantConnection() {
       </section>
       <Divider />
       <section className="from-secondary-green to-primary-light-blue w-full bg-gradient-to-b">
-        <div className="mx-auto flex w-full max-w-5xl flex-col px-4 py-25">
-          <p className="mb-20 text-center text-4xl/snug font-light text-white">
-            Since receiving our recognition and accreditation from the
-            Department of Justice in 2020, our office has provided immigration
-            legal services for over{' '}
+        <div className="mx-auto flex w-full max-w-5xl flex-col px-6 py-15 lg:py-25">
+          <p className="mb-20 text-center text-2xl/snug font-light text-white md:text-4xl/snug">
+            Since receiving recognition and accreditation from the Department of
+            Justice in 2020, our office has provided immigration legal services
+            for over{' '}
             <span className="font-semibold">
               1,200+ foreign-born individuals
             </span>{' '}
@@ -280,26 +282,26 @@ export default function ImmigrantConnection() {
             .
           </p>
           <div className="flex flex-col gap-20">
-            <div className="grid grid-cols-2 grid-rows-1 gap-20">
-              <p className="font-display text-right text-7xl font-bold text-white uppercase">
+            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
+              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
                 Clients Served
               </p>
               <ClientsChart />
             </div>
-            <div className="grid grid-cols-2 grid-rows-1 gap-20">
-              <p className="font-display text-right text-7xl font-bold text-white uppercase">
+            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
+              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
                 Revenue/
                 <br />
                 Net Income
               </p>
               <RevenueChart />
             </div>
-            <div className="grid grid-cols-2 grid-rows-1 gap-20">
-              <p className="font-display text-right text-7xl font-bold text-white uppercase">
+            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
+              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
                 Average Cost
               </p>
               <div>
-                <p className="font-display mb-2 text-7xl text-white">
+                <p className="font-display mb-2 text-4xl text-white md:text-7xl">
                   4–10x less
                 </p>
                 <p className="text-white">
@@ -312,24 +314,21 @@ export default function ImmigrantConnection() {
         </div>
       </section>
       <Divider />
-      <section className="mx-auto flex w-full max-w-5xl flex-col px-4 py-25">
-        <h2 className="text-primary-dark-blue font-display text-center text-7xl/20 font-bold uppercase">
+      <section className="mx-auto flex w-full max-w-5xl flex-col px-6 py-15 lg:py-25">
+        <h2 className="text-primary-dark-blue font-display mb-2 text-center text-4xl/tight font-bold uppercase md:text-7xl/20">
           Partner
           <br />
           Organizations
         </h2>
-        <small className="text-neutral-mid-gray text-center text-base">
+        <small className="text-neutral-mid-gray mb-12 max-w-150 self-center text-center text-base md:mb-16">
           A heartfelt thank you to each of the organizations below for their
-          support.
-        </small>
-        <small className="text-neutral-mid-gray mb-16 text-center text-base">
-          Together we are able to accomplish so much.
+          support. Together we are able to accomplish so much.
         </small>
         <PartnerList />
       </section>
       <Divider />
       <section className="from-secondary-yellow to-secondary-green w-full bg-gradient-to-b">
-        <div className="mx-auto flex min-h-100 w-full max-w-6xl flex-col items-start justify-end gap-6 px-4 py-25">
+        <div className="mx-auto flex min-h-100 w-full max-w-6xl flex-col items-start justify-end gap-6 px-6 py-15 lg:py-25">
           <p className="font-display text-5xl font-bold text-white">
             2023 Annual Report
           </p>

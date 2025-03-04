@@ -30,9 +30,9 @@ export default function Testimonial({
       >
         &#x201C;
       </p>
-      <div className="grow pt-7 pr-8 pb-5 pl-15">{children}</div>
+      <div className="grow pt-7 pr-8 pb-10 pl-15">{children}</div>
       <hr className="border-white" />
-      <div className="relative p-5 pl-15">
+      <div className="relative p-5 pb-8 pl-15">
         <p>
           <span className="font-bold">{name}</span>
           {` from ${country}`}

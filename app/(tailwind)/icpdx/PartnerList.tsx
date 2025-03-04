@@ -24,7 +24,7 @@ function PartnerTile({ name, subtitle, children }: PartnerTileProps) {
 
 export default function PartnerList() {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-12 md:gap-20">
       <div className="max-w-3xl">
         <PartnerTile
           name="Columbia View Church"
