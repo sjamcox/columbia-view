@@ -3,6 +3,9 @@ import { Box } from '@mui/material'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 import Providers from 'providers'
+import { openSans, raleway } from 'utils/fonts'
+
+import '../globals.css'
 
 export const metadata: Metadata = {
   title: 'Columbia View Church',
@@ -16,19 +19,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${openSans.variable} ${raleway.variable}`}>
       <body>
         <Providers>
           <Header />
-          <Box
-            sx={{
-              mb: 5,
-              px: '4vw',
-              minHeight: '90vh',
-            }}
-          >
-            {children}
-          </Box>
+          {children}
           <Footer />
         </Providers>
       </body>

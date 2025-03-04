@@ -1,45 +1,31 @@
 'use client'
 
-import { format } from 'date-fns'
-import { motion } from 'framer-motion'
-import { Card, Grid2 as Grid, Link, Stack, Typography } from '@mui/material'
+import type { EpisodeSummary } from 'types'
 
-export default function MessageCard({ message, ...rest }) {
+import { format } from 'date-fns'
+import { motion } from 'motion/react'
+import Link from 'next/link'
+
+export default function MessageCard({ message }: { message: EpisodeSummary }) {
   return (
-    (<Grid
-      className="message-card"
-      size={{
-        xs: 12,
-        sm: 6,
-        md: 4
-      }}>
-      <Card
-        component={motion.div}
-        whileHover={{ scale: 1.05 }}
-        sx={{
-          borderRadius: 4,
-          boxShadow: '0px 0px 15px rgba(100,100,100,.1)',
-          height: '100%',
-        }}
-      >
-        <Stack
-          key={message.episode_id}
-          sx={{
-            px: 4,
-            py: 3,
-          }}
+    <motion.section
+      whileHover={{ scale: 1.05 }}
+      className="message-card border-1 mt-2 h-full rounded-xl border-solid border-neutral-light-blue opacity-0 shadow-lg"
+    >
+      <div className="flex flex-col px-8 py-6">
+        <time
+          dateTime={format(new Date(message.published_at), 'yyyy-mm-dd')}
+          className="text-lg font-semibold text-neutral-mid-gray"
         >
-          <Typography variant="date">
-            {format(new Date(message.published_at), 'PPP')}
-          </Typography>
-          <Link
-            href={`/messages/${message.episode_id}`}
-            sx={{ textDecoration: 'none' }}
-          >
-            <Typography variant="h5">{message.title}</Typography>
-          </Link>
-        </Stack>
-      </Card>
-    </Grid>)
-  );
+          {format(new Date(message.published_at), 'PPP')}
+        </time>
+        <Link
+          className="text-2xl font-bold text-primary-dark-blue no-underline"
+          href={`/messages/${message.episode_id}`}
+        >
+          {message.title}
+        </Link>
+      </div>
+    </motion.section>
+  )
 }

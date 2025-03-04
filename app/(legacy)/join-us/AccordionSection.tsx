@@ -13,7 +13,8 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
 export default function AccordionSection() {
   const [expanded, setExpanded] = useState('')
-  const handleClick = (panel) => {
+
+  const handleClick = (panel: string) => {
     panel === expanded ? setExpanded('') : setExpanded(panel)
   }
 

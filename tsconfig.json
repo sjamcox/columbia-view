@@ -1,10 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -17,26 +13,16 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "*": [
-        "./*"
-      ]
+      "*": ["./*"]
     },
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "strict": false,
+    "strict": true,
     "target": "ES2017"
   },
-  "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "components/Hero.js"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

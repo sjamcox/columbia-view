@@ -1,5 +1,7 @@
+import type { StaticImageData } from 'next/image'
+
 import { Box, Stack } from '@mui/material'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 
 interface SectionProps {
   children: React.ReactElement
@@ -8,6 +10,7 @@ interface SectionProps {
 interface ImageSectionProps extends SectionProps {
   src: StaticImageData | string
   alt: string
+  color?: 'red' | 'blue'
 }
 
 export function ElevatedSection({ children }: SectionProps) {
@@ -27,10 +30,9 @@ export function ElevatedSection({ children }: SectionProps) {
   )
 }
 
-export function ImageSection({ children, src, alt }: ImageSectionProps) {
+export function LegacyImageSection({ children, src, alt }: ImageSectionProps) {
   return (
     <Stack
-      component="section"
       sx={{
         py: '3.5vw',
         px: '3vw',
@@ -57,5 +59,24 @@ export function ImageSection({ children, src, alt }: ImageSectionProps) {
         {children}
       </Box>
     </Stack>
+  )
+}
+
+export function ImageSection({ children, src, alt, color }: ImageSectionProps) {
+  const colorVariants = {
+    blue: 'from-primary-dark-blue to-primary-light-blue',
+    red: 'from-secondary-yellow to-secondary-red',
+  }
+
+  return (
+    <section className={'relative overflow-hidden'}>
+      <Image src={src} alt={alt} fill priority objectFit="cover" />
+      {color && (
+        <div
+          className={`${colorVariants[color]} absolute inset-0 bg-gradient-to-b opacity-50`}
+        />
+      )}
+      <div className="relative">{children}</div>
+    </section>
   )
 }

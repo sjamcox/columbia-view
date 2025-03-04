@@ -166,7 +166,11 @@ theme.typography = {
   },
 }
 
-export default function MuiProvider({ children }) {
+export default function MuiProvider({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <AppRouterCacheProvider>
       <ThemeProvider theme={theme}>
