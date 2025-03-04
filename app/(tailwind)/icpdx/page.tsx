@@ -334,7 +334,7 @@ export default function ImmigrantConnection() {
           </p>
           <Link
             href="https://drive.google.com/file/d/1wU-Hmam19gN4CeHlemYWDsIDZESEFPcd/view"
-            className="bg-neutral-dark-gray/20 rounded-full px-10 py-4 font-semibold text-white uppercase"
+            className="bg-neutral-dark-gray/20 rounded-full px-6 py-3 text-sm font-semibold text-white uppercase sm:px-10 sm:py-4 sm:text-base"
           >
             View our Annual Report
           </Link>
