@@ -65,19 +65,6 @@ export default function PartnerList() {
       </div>
       <div className="max-w-3xl">
         <PartnerTile
-          name="Tyson Foods Company"
-          subtitle="$30,000 renewable grant to serve foreign-born Tyson team members"
-        >
-          <p className="mb-3 italic">
-            "The TIP program was super convenient because they helped me through
-            the whole process and made it convenient that I did not need to go
-            anywhere to fill out forms."
-          </p>
-          <p>—Esperanza, Tyson Team Member</p>
-        </PartnerTile>
-      </div>
-      <div className="max-w-3xl self-end">
-        <PartnerTile
           name="Grace Community Church — Comunidad de Gracia"
           subtitle="Over $25,000 in scholarships for qualifying clients"
         >
@@ -89,7 +76,7 @@ export default function PartnerList() {
           <p>—Gerry Smith, GCC Pastor</p>
         </PartnerTile>
       </div>
-      <div className="max-w-3xl">
+      <div className="max-w-3xl self-end">
         <PartnerTile name="Gresham Bible Church">
           <p className="italic">
             "We love ICPDX and the way they tangibly help our neighbors with
@@ -97,7 +84,7 @@ export default function PartnerList() {
           </p>
         </PartnerTile>
       </div>
-      <div className="max-w-3xl self-end">
+      <div className="max-w-3xl">
         <PartnerTile
           name="River West Church"
           subtitle="Provided capacity building grant and client referrals"
@@ -111,7 +98,7 @@ export default function PartnerList() {
           <p>—Chris Coffman, River West Pastor</p>
         </PartnerTile>
       </div>
-      <div className="max-w-3xl">
+      <div className="max-w-3xl self-end">
         <PartnerTile
           name="Chown Real Estate"
           subtitle="Supplied a raffle basket"
@@ -123,7 +110,7 @@ export default function PartnerList() {
           </p>
         </PartnerTile>
       </div>
-      <div className="max-w-3xl self-end">
+      <div className="max-w-3xl">
         <PartnerTile name="Love INC East Multnomah County">
           <p className="mb-3 italic">
             "Immigrant Connection PDX is exactly the type of organization I look
@@ -135,7 +122,7 @@ export default function PartnerList() {
           <p>—Latoya Price-Seawood, Founding Board Member</p>
         </PartnerTile>
       </div>
-      <div className="max-w-3xl">
+      <div className="max-w-3xl self-end">
         <PartnerTile name="Parklane Christian Reformed Church">
           <p className="mb-3 italic">
             "I am so thankful for the work and ministryof Immigrant Connection
@@ -147,7 +134,7 @@ export default function PartnerList() {
           <p>—Pastor Pete Armstrong</p>
         </PartnerTile>
       </div>
-      <div className="max-w-3xl self-end">
+      <div className="max-w-3xl">
         <PartnerTile name="Rockwood CDC" subtitle="Client referrals">
           <p className="mb-3 italic">
             "What is so impressive to me about ICPDX is that they meet the
@@ -157,13 +144,13 @@ export default function PartnerList() {
           <p>—President of the Rockwood Community Development Corporation</p>
         </PartnerTile>
       </div>
-      <div className="max-w-3xl">
+      <div className="max-w-3xl self-end">
         <PartnerTile
           name="Immigration Law Resource Center"
           subtitle="Immigration law training and support"
         />
       </div>
-      <div className="max-w-3xl self-end">
+      <div className="max-w-3xl">
         <PartnerTile name="Faithful Friends PDX" subtitle="Client referrals">
           <p className="mb-3 italic">
             "Our city is blessed to be hosts to so many who have chosen to live,
