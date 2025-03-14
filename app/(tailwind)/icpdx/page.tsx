@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import { ImageSection } from 'components/Section'
+import { ExpenseChart, IncomeChart } from './FinanceCharts'
 import Image from 'next/image'
 import Divider from 'components/Divider'
 import ValueCard from './ValueCard'
 import CaseAccordions from './CaseAccordions'
 import Testimonial from './Testimonial'
 import ClientsChart from './ClientsChart'
-import RevenueChart from './RevenueChart'
 import PartnerList from './PartnerList'
 import immigrantSuccess from 'public/immigrant-success-stories.webp'
 import icpdxLogo from 'public/logos/icpdx-logo-white.svg'
@@ -290,11 +290,15 @@ export default function ImmigrantConnection() {
             </div>
             <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
               <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
-                Revenue/
-                <br />
-                Net Income
+                Income
               </p>
-              <RevenueChart />
+              <IncomeChart />
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
+              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
+                Expenses
+              </p>
+              <ExpenseChart />
             </div>
             <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
               <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
