@@ -9,17 +9,15 @@ import {
 } from '@mui/material'
 import Image from 'next/image'
 
-import Hero from 'components/Hero'
+import Hero from 'components/LegacyHero'
 import ResponsiveImage from 'components/ResponsiveImage'
 import ImageTile from 'components/ImageTile'
-import YouTubePlayer from 'components/YouTubePlayer'
 import baptism from 'public/sunday/mark-baptism.webp'
 import worship from 'public/sunday/worship-team-vertical.webp'
 import kids from 'public/kids/kids-activity.webp'
 import lifeGroup from 'public/life-groups/ladies-group.webp'
 import smilingFamily from 'public/icpdx/smiling-family.webp'
 import immigrantFamily from 'public/icpdx/immigrant-family.webp'
-import bible from 'public/bible-project-one-story.webp'
 import rightnow from 'public/right-now-media.webp'
 import lobby from 'public/lobby-group.webp'
 
@@ -93,9 +91,18 @@ export default function Index() {
                 variant="contained"
                 size="large"
                 color="secondary"
-                sx={{ color: 'white', mt: 2 }}
+                sx={{ color: 'white', mt: 2, mr: 3 }}
               >
                 Join us this Sunday
+              </Button>
+              <Button
+                href="https://columbiaview.churchcenter.com/people/forms/33687"
+                variant="contained"
+                size="large"
+                color="secondary"
+                sx={{ color: 'white', mt: 2 }}
+              >
+                New Family Registration
               </Button>
             </Grid>
             <Grid sx={{ mb: { xs: 4, md: 0 } }} size={4}>
@@ -143,85 +150,8 @@ export default function Index() {
           </Grid>
         </Container>
       </Box>
-      <Container
-        sx={{
-          position: 'relative',
-          py: { xs: 5, sm: 8, md: 12 },
-          display: 'flex',
-          justifyContent: 'center',
-          zIndex: 100,
-        }}
-      >
-        <Box
-          sx={{
-            width: '100%',
-            position: 'relative',
-          }}
-        >
-          <YouTubePlayer id="fAGhUIL-LQE" />
-        </Box>
-      </Container>
-      <Box
-        component="section"
-        sx={{ bgcolor: 'rgb(14, 73, 111)', borderRadius: '20px' }}
-      >
-        <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
-          <Grid
-            container
-            spacing={6}
-            sx={{
-              alignItems: 'center',
-            }}
-          >
-            <Grid
-              size={{
-                xs: 12,
-                sm: 6,
-              }}
-            >
-              <ResponsiveImage src={rightnow} />
-            </Grid>
-            <Grid
-              size={{
-                xs: 12,
-                sm: 6,
-              }}
-            >
-              <Typography
-                component="h2"
-                variant="h3"
-                color="white"
-                sx={{
-                  mb: 4,
-                }}
-              >
-                RightNow Media
-              </Typography>
-              <Typography
-                component="p"
-                color="white"
-                sx={{
-                  mb: 4,
-                }}
-              >
-                RightNow Media is the world’s largest streaming library of video
-                Bible study resources and is now available to all Columbia View
-                members. RightNow Media is a tool that you can use to help you
-                live out your faith in every area of your life.
-              </Typography>
-              <Button
-                href="https://app.rightnowmedia.org/join/columbiaviewchurch"
-                variant="contained"
-                color="secondary"
-              >
-                Get Access Today
-              </Button>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
       <Box component="section">
-        <Container sx={{ py: { xs: 4, md: 12 }, px: 3 }}>
+        <Container sx={{ py: { xs: 4, md: 12 }, pt: { md: 0 }, px: 3 }}>
           <Stack
             sx={{
               alignItems: 'center',
@@ -326,7 +256,7 @@ export default function Index() {
                 sm: 6,
               }}
             >
-              <ResponsiveImage src={bible} />
+              <ResponsiveImage src={rightnow} />
             </Grid>
             <Grid
               size={{
@@ -342,7 +272,7 @@ export default function Index() {
                   mb: 4,
                 }}
               >
-                Dive deep into Scripture this year
+                RightNow Media
               </Typography>
               <Typography
                 component="p"
@@ -351,15 +281,17 @@ export default function Index() {
                   mb: 4,
                 }}
               >
-                Follow along as we journey through the Bible in one year. Join
-                our reading plan online or using the YouVersion Bible app.
+                RightNow Media is the world’s largest streaming library of video
+                Bible study resources and is now available to all Columbia View
+                members. RightNow Media is a tool that you can use to help you
+                live out your faith in every area of your life.
               </Typography>
               <Button
-                href="https://bible.com/p/55820626/47e13a105a1cdaf72278d61eda22961e"
+                href="https://app.rightnowmedia.org/join/columbiaviewchurch"
                 variant="contained"
                 color="secondary"
               >
-                Get the Reading Plan
+                Get Access Today
               </Button>
             </Grid>
           </Grid>
