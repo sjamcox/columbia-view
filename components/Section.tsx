@@ -7,7 +7,7 @@ interface SectionProps {
   children: React.ReactElement
 }
 
-interface ImageSectionProps extends SectionProps {
+export interface ImageSectionProps extends SectionProps {
   src: StaticImageData | string
   alt: string
   color?: 'red' | 'blue'

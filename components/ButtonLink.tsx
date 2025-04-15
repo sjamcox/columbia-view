@@ -15,7 +15,7 @@ type ColorVariant =
 
 type Size = 'small' | 'medium' | 'large'
 
-interface ButtonLinkProps {
+export interface ButtonLinkProps {
   href: string
   children: React.ReactNode
   className?: string
@@ -64,7 +64,7 @@ export default function ButtonLink({
   return (
     <Link
       href={href}
-      className={`text-white visited:text-white hover:text-white active:text-white inline-block rounded-sm no-underline transition-all hover:brightness-90 ${colorClasses} ${sizeClasses} ${className}`}
+      className={`inline-block rounded-sm text-white no-underline transition-all visited:text-white hover:text-white hover:brightness-90 active:text-white ${colorClasses} ${sizeClasses} ${className}`}
     >
       {children}
     </Link>
