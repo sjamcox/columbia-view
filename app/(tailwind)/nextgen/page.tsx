@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Hero from 'components/Hero'
 import immigrantSuccess from 'public/immigrant-success-stories.webp'
 import KeywordCard from 'components/KeywordCard'
+import AgeCard from './AgeCard'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',
@@ -59,6 +60,43 @@ export default function NextGen() {
           />
         </div>
       </section>
+      <section className="from-secondary-green to-primary-light-blue bg-gradient-to-b">
+        <div className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-25">
+          <h2 className="font-display pb-15 text-center text-7xl/18 font-bold text-white uppercase">
+            Age Groups
+          </h2>
+          <div className="grid grid-cols-3 grid-rows-1 gap-10">
+            <AgeCard
+              title="Littles"
+              ages="3 Months - 2 Years"
+              color="aqua"
+              description={`At this age, we know your child is all about exploring. They’re constantly moving, touching, and investigating as they learn about the world around them. Our group leaders nurture this curiosity in each child, meeting their needs, praying over them, and getting all the snuggles in.`}
+              imageProps={{
+                src: immigrantSuccess,
+                alt: '',
+              }}
+            />
+            <AgeCard
+              title="Mids"
+              ages="3 Years - 5 Years"
+              color="green"
+              description={`During this stage, it’s important for kids to lean into their creativity as they begin to discover how God created them and the world they live in. In the preschool classrooms, our group leaders help cultivate this natural wonder through worship, video-based Bible stories, and hands-on activities.`}
+              imageProps={{
+                src: immigrantSuccess,
+                alt: '',
+              }}
+            />
+            <AgeCard
+              title="Bigs"
+              ages="6 Years - 12 Years"
+              color="red"
+              description={`In this age group, kids are focused on harnessing their influence. Our group leaders help develop a passion for loving others and making a difference in the elementary environment. We engage kids through worship, video-based Bible stories, and hands-on critical thinking activities.`}
+              imageProps={{
+                src: immigrantSuccess,
+                alt: '',
+              }}
+            />
+          </div>
         </div>
       </section>
     </main>
