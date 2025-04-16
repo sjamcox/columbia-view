@@ -29,7 +29,7 @@ export default function Slideshow() {
       <Fade duration={5000} transitionDuration={500} infinite indicators>
         {fadeImages.map((image, i) => (
           <div key={'easter' + i} className="each-fade">
-            <Image src={image} alt="" />
+            <Image src={image} alt="" priority={i === 0} />
           </div>
         ))}
       </Fade>
