@@ -28,7 +28,7 @@ export default function Button({
   return (
     <Link {...rest}>
       <div
-        className={`flex items-center rounded-full px-7 py-5 ${colorVariants[color]} ${minWidth} ${justify}`}
+        className={`flex w-fit items-center gap-15 rounded-full px-7 py-5 ${colorVariants[color]} ${minWidth} ${justify}`}
       >
         <p className="text-base font-semibold text-white uppercase">
           {children}

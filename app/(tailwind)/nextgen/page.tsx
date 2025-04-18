@@ -1,9 +1,18 @@
 import type { Metadata } from 'next'
 
+import Image from 'next/image'
+
+import { ImageSection } from 'components/Section'
 import Hero from 'components/Hero'
 import immigrantSuccess from 'public/immigrant-success-stories.webp'
+import fingerprintIcon from 'public/icons/fingerprint.svg'
+import heartIcon from 'public/icons/heart-hand.svg'
+import compassIcon from 'public/icons/compass.svg'
+import crownIcon from 'public/icons/crown.svg'
 import KeywordCard from 'components/KeywordCard'
 import AgeCard from './AgeCard'
+import Button from 'components/Button'
+import CoreTruth from './CoreTruth'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',
@@ -95,6 +104,172 @@ export default function NextGen() {
                 src: immigrantSuccess,
                 alt: '',
               }}
+            />
+          </div>
+        </div>
+      </section>
+      <section className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-25">
+        <div className="grid grid-cols-2 gap-45">
+          <div className="flex h-full items-center">
+            <div>
+              <h2 className="font-display text-primary-dark-blue mb-6 text-5xl font-bold uppercase">
+                Check-In Process
+              </h2>
+              <p className="mb-4 text-base">
+                Our child check-in station is in front of our lobby as you first
+                enter the building. We require that all kids are registered and
+                checked in by a parent or guardian for their safety and
+                security. For new or visiting families, to enjoy a smooth
+                check-in process, please register in advance.
+              </p>
+              <p className="mb-8 text-base">
+                We offer care for <span className="font-bold">Littles</span> for
+                the length of the worship service.{' '}
+                <span className="font-bold">Mids</span> and{' '}
+                <span className="font-bold">Bigs</span> join the entire church
+                for the first two songs of corporate worship before being
+                dismissed to their classrooms for the remainder of the worship
+                service.
+              </p>
+              <Button color="blue" href="" arrow>
+                Pre-Register
+              </Button>
+            </div>
+          </div>
+          <div className="grid grid-cols-6">
+            <div className="col-start-3 col-end-7 aspect-4/3 overflow-hidden rounded-2xl shadow-2xl">
+              <Image
+                src={immigrantSuccess}
+                alt=""
+                className="h-full object-cover"
+              />
+            </div>
+            <div className="col-start-1 col-end-5 -mt-12 aspect-4/3 overflow-hidden rounded-2xl bg-black shadow-2xl">
+              <Image
+                src={immigrantSuccess}
+                alt=""
+                className="h-full object-cover"
+              />
+            </div>
+            <div className="col-start-3 col-end-7 -mt-12 aspect-4/3 overflow-hidden rounded-2xl bg-black shadow-2xl">
+              <Image
+                src={immigrantSuccess}
+                alt=""
+                className="h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <ImageSection src={immigrantSuccess} alt="">
+        <div className="to-secondary-yellow h-full w-full bg-gradient-to-r from-0%">
+          <div className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-30">
+            <p className="font-display text-right text-6xl/tight font-semibold text-white">
+              biblical teaching,
+              <br /> age-appropriate crafts,
+              <br /> meaningful relationships
+              <br /> & encouraging music
+            </p>
+          </div>
+        </div>
+      </ImageSection>
+      <section className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-25">
+        <div className="mb-20 grid grid-cols-2 gap-45">
+          <div className="aspect-5/3 self-center overflow-hidden rounded-2xl shadow-2xl">
+            <Image
+              src={immigrantSuccess}
+              alt=""
+              className="h-full object-cover"
+            />
+          </div>
+          <div className="flex h-full items-center">
+            <div>
+              <h2 className="font-display text-primary-dark-blue mb-6 text-5xl font-bold uppercase">
+                Cirriculum
+              </h2>
+              <p className="mb-4 text-base">
+                Our church uses the Wonder Ink curriculum. Each kids' class
+                explores the core biblical truths of: God Knows Me, Jesus Loves
+                Me, The Holy Spirit Leads Me, and I am a Child of God in
+                age-appropriate ways. We'll journey through the story of the
+                scriptures every year.
+              </p>
+              <p className="mb-8 text-base">
+                Parents are encouraged to create an online account for ongoing
+                access to lesson videos, discussion questions, and more
+                discipleship materials to be utilized during the week.
+              </p>
+              <Button color="blue" href="" arrow>
+                Sign Up with Wonder Ink
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="mx-auto grid max-w-3xl grid-cols-9">
+          <div className="col-start-1 col-end-5 row-start-1 row-end-2">
+            <CoreTruth
+              title="Gods Know Me"
+              description="God, the Creator of all, knows me. He has always known me. He has had me in mind from the very beginning. He made me, and I am His masterpiece. He made me in His own image to do the amazing things He has prepared for me to do."
+              icon={{
+                src: fingerprintIcon,
+                alt: 'fingerprint icon',
+              }}
+              scripture={{
+                text: 'I am KNOWN by the Creator and that means I BELONG. I get to be part of His family.',
+                verse: 'Psalm 139:13-14 NIrV',
+              }}
+              color="aqua"
+            />
+          </div>
+          <div className="col-start-6 col-end-10 row-start-2 row-end-3">
+            <CoreTruth
+              title="Jesus Loves Me"
+              description="Jesus’ perfect life, death, resurrection, and promised return are God’s love story. Jesus came to fulfill God’s promises to His children. Through Jesus, I have salvation. Jesus loves me no matter what. His love for me has no beginning and no end, and I get to love Him back. Jesus is God’s love in person. God’s love is big and generous, and it is for me! Jesus is the way to God’s love. Choosing to follow Jesus means choosing God’s love and God’s way."
+              icon={{
+                src: heartIcon,
+                alt: 'heart in hand icon',
+              }}
+              scripture={{
+                text: 'I am LOVED by Jesus, and I get to share His LOVE too.',
+                verse: 'John 13:34, 35 NIrV',
+              }}
+              color="green"
+            />
+          </div>
+          <div className="col-start-1 col-end-5 row-start-3 row-end-4">
+            <CoreTruth
+              title="The Holy Spirit Leads Me"
+              description={[
+                'God gives me the gift of His Holy Spirit when I choose to live for Jesus. The Holy Spirit invites me to live in God’s Kingdom—now and not yet.',
+                'When I accept Jesus as my Savior, I receive the Holy Spirit as a gift, and He lives inside me. When I let the Holy Spirit lead, He strengthens me, and I grow in belief. As I learn that God’s way is the best way, my faith grows too. The Holy Spirit helps me be more like Jesus—the me I was made to be.',
+              ]}
+              icon={{
+                src: compassIcon,
+                alt: 'compass icon',
+              }}
+              scripture={{
+                text: 'Because I am LED by the Holy Spirit, I can FOLLOW Him',
+                verse: 'Romans 8:14, 15a NIrV',
+              }}
+              color="yellow"
+            />
+          </div>
+          <div className="col-start-6 col-end-10 row-start-4 row-end-5">
+            <CoreTruth
+              title="I Am a Child of God"
+              description={[
+                'God’s amazing story changes my own. Because God knows me, Jesus loves me, and the Holy Spirit leads me, I get to be a wonder-filled reflection of God to the world. I get to know who I truly am and who I was made to be.',
+                'The Bible tells me that I am fearfully and wonderfully made, knit together by a loving God who knows all about me and loves every inch of me. He delights in me, and I will celebrate His wonder!',
+              ]}
+              icon={{
+                src: crownIcon,
+                alt: 'crown icon',
+              }}
+              scripture={{
+                text: 'I am a WONDER. I get to BE part of God’s story, and my life TELLS of God’s wonder.',
+                verse: '1 Peter 2:9 NIrV',
+              }}
+              color="red"
             />
           </div>
         </div>
