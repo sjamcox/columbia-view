@@ -274,6 +274,21 @@ export default function NextGen() {
           </div>
         </div>
       </section>
+      <section className="from-secondary-yellow to-secondary-green bg-gradient-to-b">
+        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-15 lg:py-25">
+          <h2 className="font-display pb-4 text-center text-7xl/18 font-bold text-white uppercase">
+            Join The Team
+          </h2>
+          <p className="mb-8 max-w-3xl text-center text-xl/relaxed text-white">
+            Each week it takes a team of faithful volunteers to provide a
+            high-quality experience for our kids. There are 3 ways you can serve
+            on a Sunday morning: as a check-in kiosk helper (once per month), an
+            assistant teacher (once per month), or as a teacher (one month, 4
+            times per year).
+          </p>
+          <Button href="">Apply to Serve</Button>
+        </div>
+      </section>
     </main>
   )
 }

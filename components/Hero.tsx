@@ -31,7 +31,7 @@ export default function Hero({
             </div>
             <div>
               {buttonProps && (
-                <Button {...buttonProps} arrow>
+                <Button {...buttonProps} arrow color="dark">
                   {buttonProps.text}
                 </Button>
               )}
