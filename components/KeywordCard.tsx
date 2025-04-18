@@ -14,7 +14,7 @@ export default function KeywordCard({
   imageProps,
 }: KeywordCardProps) {
   return (
-    <div className="h-full min-h-125 w-full overflow-hidden rounded-2xl bg-white">
+    <div className="h-full min-h-125 w-full overflow-hidden rounded-2xl bg-white shadow-md">
       <div className="relative flex aspect-4/3 items-center justify-center">
         <Image
           className="absolute top-0 h-full object-cover opacity-80"
