@@ -18,14 +18,14 @@ export default function Hero({
 }: HeroProps) {
   return (
     <ImageSection {...imageProps}>
-      <div className="flex justify-center lg:min-h-150">
-        <div className="my-15 flex w-full max-w-7xl items-end lg:mx-30 lg:my-25">
-          <div className="flex w-full items-end justify-between gap-25">
+      <div className="flex min-h-150 justify-center lg:min-h-175">
+        <div className="mx-auto flex w-full max-w-7xl items-end px-6 py-15 lg:py-25">
+          <div className="flex w-full flex-col justify-between gap-10 lg:flex-row lg:items-end lg:gap-25">
             <div className="max-w-2xl">
-              <h1 className="font-display pb-4 text-7xl/18 font-bold text-white uppercase">
+              <h1 className="font-display pb-4 text-5xl/14 font-bold text-white uppercase lg:text-7xl/18">
                 {title}
               </h1>
-              <p className="font-display text-3xl/tight text-white">
+              <p className="font-display text-2xl/tight text-white lg:text-3xl/tight">
                 {subtitle}
               </p>
             </div>
