@@ -64,7 +64,7 @@ export default function NextGen() {
         <div className="grid gap-10 md:grid-cols-3 lg:gap-15">
           <KeywordCard
             keyword="Safe"
-            text={`We comply with the state of Oregon's safety standards for childcare including cleanliness, as well as, background checks, and proper training for adult volunteers. You can rest assured that your kids are in a safe place each week!`}
+            text={`We comply with the State of Oregon's safety standards for childcare including cleanliness, background checks, and proper training for adult volunteers. You can rest assured that your kids are in a safe place each week!`}
             imageProps={{
               src: kidsAroundTable,
               alt: 'Teacher instructing kids sitting around a table',
@@ -148,7 +148,8 @@ export default function NextGen() {
                 <span className="font-bold">Bigs</span> join the entire church
                 for the first two songs of corporate worship before being
                 dismissed to their classrooms for the remainder of the worship
-                service.
+                service. We ask parents to pick up their kids from their classes
+                promptly when worship lets out.
               </p>
               <Button
                 color="blue"
