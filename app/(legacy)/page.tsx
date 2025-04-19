@@ -9,7 +9,6 @@ import {
 } from '@mui/material'
 import Image from 'next/image'
 
-import Hero from 'components/LegacyHero'
 import ResponsiveImage from 'components/ResponsiveImage'
 import ImageTile from 'components/ImageTile'
 import baptism from 'public/sunday/mark-baptism.webp'
@@ -20,6 +19,7 @@ import smilingFamily from 'public/icpdx/smiling-family.webp'
 import immigrantFamily from 'public/icpdx/immigrant-family.webp'
 import rightnow from 'public/right-now-media.webp'
 import lobby from 'public/lobby-group.webp'
+import Slideshow from './Slideshow'
 
 export const metadata: Metadata = {
   title: 'Welcome Home | Columbia View Church',
@@ -30,15 +30,16 @@ export const metadata: Metadata = {
 export default function Index() {
   return (
     <>
-      <Hero
-        src={lobby}
-        alt="Made new"
-        title="Made"
-        titleHighlight="new"
-        subtitle="Abiding in love, living by grace, growing together in Christ"
-        buttonText="Join us this Sunday"
-        href="/join-us"
-      />
+      <Slideshow />
+      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+        <Button
+          variant="contained"
+          color="secondary"
+          href="https://columbiaview.churchcenter.com/calendar/event/181914041"
+        >
+          Register for the Egg Hunt
+        </Button>
+      </Box>
       <Box component="section">
         <Container
           sx={{
