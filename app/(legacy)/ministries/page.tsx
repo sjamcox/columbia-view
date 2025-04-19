@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Ministries() {
   return (
-    (<Box
+    <Box
       sx={{
         maxWidth: 1024,
       }}
@@ -48,8 +48,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 8
-            }}>
+              md: 8,
+            }}
+          >
             <Typography
               sx={{
                 mb: 4,
@@ -65,8 +66,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 3
-            }}>
+              md: 3,
+            }}
+          >
             <Typography
               sx={{
                 fontSize: 15,
@@ -127,8 +129,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 8
-            }}>
+              md: 8,
+            }}
+          >
             <Typography
               sx={{
                 mb: 4,
@@ -144,7 +147,7 @@ export default function Ministries() {
               size="large"
               color="secondary"
               sx={{ color: 'white', mb: 3 }}
-              href="/ministries/nextgen"
+              href="/nextgen"
             >
               Learn more about NextGen ministries
             </Button>
@@ -152,8 +155,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 3
-            }}>
+              md: 3,
+            }}
+          >
             <Typography
               sx={{
                 fontSize: 15,
@@ -205,8 +209,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 8
-            }}>
+              md: 8,
+            }}
+          >
             <Typography
               sx={{
                 mb: 4,
@@ -221,8 +226,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 3
-            }}>
+              md: 3,
+            }}
+          >
             <Typography
               sx={{
                 fontSize: 15,
@@ -277,8 +283,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 8
-            }}>
+              md: 8,
+            }}
+          >
             <Typography
               sx={{
                 mb: 4,
@@ -295,8 +302,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 3
-            }}>
+              md: 3,
+            }}
+          >
             <Typography
               sx={{
                 fontSize: 15,
@@ -374,8 +382,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 8
-            }}>
+              md: 8,
+            }}
+          >
             <Typography
               sx={{
                 mb: 4,
@@ -409,8 +418,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 3
-            }}></Grid>
+              md: 3,
+            }}
+          ></Grid>
         </Grid>
       </Box>
       <Box
@@ -434,8 +444,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 6
-            }}>
+              md: 6,
+            }}
+          >
             <ResponsiveImage
               src={blakeFamily}
               alt="Blake family photo"
@@ -475,8 +486,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 6
-            }}>
+              md: 6,
+            }}
+          >
             <ResponsiveImage
               src={cheneyFamily}
               alt="Cheney family photo"
@@ -516,8 +528,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 6
-            }}>
+              md: 6,
+            }}
+          >
             <ResponsiveImage
               src={dunbarFamily}
               alt="Dunbar family photo"
@@ -557,8 +570,9 @@ export default function Ministries() {
           <Grid
             size={{
               xs: 12,
-              md: 6
-            }}>
+              md: 6,
+            }}
+          >
             <ResponsiveImage
               src={jonesFamily}
               alt="Jones family photo"
@@ -597,6 +611,6 @@ export default function Ministries() {
           </Grid>
         </Grid>
       </Box>
-    </Box>)
-  );
+    </Box>
+  )
 }

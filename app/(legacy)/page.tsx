@@ -201,7 +201,7 @@ export default function Index() {
                 }}
               >
                 <ImageTile
-                  link="/ministries/nextgen"
+                  link="/nextgen"
                   image={kids}
                   alt="kids in sunday school"
                   headline="NextGen Ministries"
