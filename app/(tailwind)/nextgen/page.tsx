@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
+import * as motion from 'motion/react-client'
 import Image from 'next/image'
 
 import { ImageSection } from 'components/Section'
 import Hero from 'components/Hero'
-import immigrantSuccess from 'public/immigrant-success-stories.webp'
 import wonderInk from 'public/kids/wonder-ink.png'
 import kidsOnStage from 'public/kids/kids-on-stage.webp'
 import kidsAroundTable from 'public/kids/kids-around-table.webp'
@@ -28,6 +28,13 @@ import CoreTruth from './CoreTruth'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',
+}
+
+const fadeIn = {
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1, marginTop: -40 },
+  viewport: { once: true },
+  transition: { duration: 1.5 },
 }
 
 export default function NextGen() {
@@ -221,8 +228,11 @@ export default function NextGen() {
             </div>
           </div>
         </div>
-        <div className="mx-auto grid max-w-3xl lg:grid-cols-9">
-          <div className="row-start-1 row-end-2 sm:col-start-1 sm:col-end-7 lg:col-end-5">
+        <div className="mx-auto grid max-w-3xl gap-10 lg:grid-cols-9 lg:gap-0">
+          <motion.div
+            className="row-start-1 row-end-2 sm:col-start-1 sm:col-end-7 lg:col-end-5"
+            {...fadeIn}
+          >
             <CoreTruth
               title="Gods Know Me"
               description="God, the Creator of all, knows me. He has always known me. He has had me in mind from the very beginning. He made me, and I am His masterpiece. He made me in His own image to do the amazing things He has prepared for me to do."
@@ -236,8 +246,11 @@ export default function NextGen() {
               }}
               color="aqua"
             />
-          </div>
-          <div className="row-start-2 row-end-3 sm:col-start-4 sm:col-end-10 lg:col-start-6">
+          </motion.div>
+          <motion.div
+            className="row-start-2 row-end-3 sm:col-start-4 sm:col-end-10 lg:col-start-6"
+            {...fadeIn}
+          >
             <CoreTruth
               title="Jesus Loves Me"
               description="Jesus’ perfect life, death, resurrection, and promised return are God’s love story. Jesus came to fulfill God’s promises to His children. Through Jesus, I have salvation. Jesus loves me no matter what. His love for me has no beginning and no end, and I get to love Him back. Jesus is God’s love in person. God’s love is big and generous, and it is for me! Jesus is the way to God’s love. Choosing to follow Jesus means choosing God’s love and God’s way."
@@ -251,8 +264,11 @@ export default function NextGen() {
               }}
               color="green"
             />
-          </div>
-          <div className="row-start-3 row-end-4 sm:col-start-1 sm:col-end-7 lg:col-end-5">
+          </motion.div>
+          <motion.div
+            className="row-start-3 row-end-4 sm:col-start-1 sm:col-end-7 lg:col-end-5"
+            {...fadeIn}
+          >
             <CoreTruth
               title="The Holy Spirit Leads Me"
               description={[
@@ -269,8 +285,11 @@ export default function NextGen() {
               }}
               color="yellow"
             />
-          </div>
-          <div className="row-start-4 row-end-5 sm:col-start-4 sm:col-end-10 lg:col-start-6">
+          </motion.div>
+          <motion.div
+            className="row-start-4 row-end-5 sm:col-start-4 sm:col-end-10 lg:col-start-6"
+            {...fadeIn}
+          >
             <CoreTruth
               title="I Am a Child of God"
               description={[
@@ -287,7 +306,7 @@ export default function NextGen() {
               }}
               color="red"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="from-secondary-yellow to-secondary-green bg-gradient-to-b">
