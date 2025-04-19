@@ -21,7 +21,7 @@ export default function KeywordCard({
           {...imageProps}
         />
         <p
-          className="font-display absolute text-center text-6xl font-light text-white uppercase"
+          className="font-display absolute max-w-70 text-center text-6xl font-light text-white uppercase"
           style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}
         >
           {keyword}
