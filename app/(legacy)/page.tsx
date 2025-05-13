@@ -31,15 +31,6 @@ export default function Index() {
   return (
     <>
       <Slideshow />
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-        <Button
-          variant="contained"
-          color="secondary"
-          href="https://columbiaview.churchcenter.com/calendar/event/181914041"
-        >
-          Register for the Egg Hunt
-        </Button>
-      </Box>
       <Box component="section">
         <Container
           sx={{

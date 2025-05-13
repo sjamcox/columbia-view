@@ -2,31 +2,38 @@
 
 import Image from 'next/image'
 import { Fade } from 'react-slideshow-image'
-import { Button } from '@mui/material'
 import 'react-slideshow-image/dist/styles.css'
 
-import easter1 from 'public/easter/easter-1.jpg'
-import easter2 from 'public/easter/easter-2.jpg'
-import easter3 from 'public/easter/easter-3.jpg'
-import easter4 from 'public/easter/easter-4.jpg'
-import easter5 from 'public/easter/easter-5.jpg'
-import easter6 from 'public/easter/easter-6.jpg'
-import easter7 from 'public/easter/easter-7.jpg'
+import davidLight from 'public/easter/2025/david-light.webp'
+import easterParty from 'public/easter/2025/easter-party.webp'
+import bubblesOutside from 'public/easter/2025/bubbles-outside.webp'
+import selenaFamily from 'public/easter/2025/selena-family.webp'
+import jenniferPeace from 'public/easter/2025/jennifer-peace.webp'
+import rannabargarFamily from 'public/easter/2025/rannabargar-family.webp'
+import crowdOutside1 from 'public/easter/2025/crowd-outside-1.webp'
+import noyaFamily from 'public/easter/2025/noya-family.webp'
+import joshTestimony from 'public/sunday/josh-testimony.webp'
+import cisnerosKids from 'public/kids/cisneroz-buckets.webp'
+import potluck from 'public/potluck/christmas-tables.webp'
 
 const fadeImages = [
-  easter1,
-  easter2,
-  easter3,
-  easter4,
-  easter5,
-  easter6,
-  easter7,
+  davidLight,
+  easterParty,
+  bubblesOutside,
+  cisnerosKids,
+  joshTestimony,
+  selenaFamily,
+  jenniferPeace,
+  potluck,
+  rannabargarFamily,
+  crowdOutside1,
+  noyaFamily,
 ]
 
 export default function Slideshow() {
   return (
     <div className="slide-container">
-      <Fade duration={5000} transitionDuration={500} infinite indicators>
+      <Fade duration={5000} transitionDuration={500} infinite>
         {fadeImages.map((image, i) => (
           <div key={'easter' + i} className="each-fade">
             <Image src={image} alt="" priority={i === 0} />
