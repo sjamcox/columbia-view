@@ -7,7 +7,7 @@ export type HeroProps = {
   buttonProps?: Omit<ButtonProps, 'children'> & { text: string }
   imageProps: Omit<ImageSectionProps, 'children'>
   title: string
-  subtitle: string
+  subtitle?: string
 }
 
 export default function Hero({
@@ -25,9 +25,11 @@ export default function Hero({
               <h1 className="font-display pb-4 text-5xl/14 font-bold text-white uppercase lg:text-7xl/18">
                 {title}
               </h1>
-              <p className="font-display text-2xl/tight text-white lg:text-3xl/tight">
-                {subtitle}
-              </p>
+              {subtitle && (
+                <p className="font-display text-2xl/tight text-white lg:text-3xl/tight">
+                  {subtitle}
+                </p>
+              )}
             </div>
             <div>
               {buttonProps && (

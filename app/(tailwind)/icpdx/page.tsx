@@ -26,6 +26,8 @@ import speak from 'public/icons/speak.svg'
 import empower from 'public/icons/empower.svg'
 import together from 'public/icons/together.svg'
 import celebrate from 'public/icons/celebrate.svg'
+import Hero from 'components/Hero'
+import Button from 'components/Button'
 
 export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',
@@ -36,26 +38,27 @@ export const metadata: Metadata = {
 export default function ImmigrantConnection() {
   return (
     <main>
-      <ImageSection
-        src={immigrantSuccess}
-        alt="Immigrant family celebrating"
-        color="blue"
-      >
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-15 lg:py-25">
-          <div className="w-50 lg:w-full">
-            <Image
-              src={icpdxLogo}
-              alt="Immigrant Connection PDX logo"
-              width={272}
-              height={272}
-            />
-          </div>
-          <h1 className="font-display text-5xl/tight font-bold text-white lg:text-7xl/tight">
-            Partner With Immigrant Connection PDX
-          </h1>
-        </div>
-      </ImageSection>
+      <Hero
+        title="Partner With Immigrant Connection PDX"
+        imageProps={{
+          src: immigrantSuccess,
+          alt: 'Immigrant family celebrating',
+          color: 'blue',
+        }}
+        buttonProps={{
+          text: 'Partner With Us',
+          href: 'https://columbiaview.churchcenter.com/people/forms/34910',
+        }}
+      />
       <Divider />
+      <section className="mx-auto flex w-full max-w-6xl justify-center px-6 pt-12">
+        <Button
+          color="blue"
+          href="https://columbiaview.churchcenter.com/giving"
+        >
+          Support Our Mission
+        </Button>
+      </section>
       <section className="mx-auto grid w-full max-w-6xl grid-cols-12 gap-x-2 px-6 py-15 max-md:gap-y-10 lg:py-25">
         <div className="relative h-fit overflow-hidden rounded-2xl max-md:col-span-12 md:col-start-2 md:col-end-7">
           <Image
@@ -92,7 +95,7 @@ export default function ImmigrantConnection() {
               <ValueCard
                 title="Listening"
                 subtitle="with compassion"
-                description="Because the stories of immigrants are often filled with deep challenges and trauma, we listen with care, empathy, and understanding. We recognize the human side of every case, offering a safe space for each person’s story."
+                description="Because the stories of immigrants are often filled with deep challenges and trauma, we listen with care, empathy, and understanding. We recognize the human side of every case, offering a safe space for each person's story."
                 icon={listen}
               />
             </div>
@@ -176,10 +179,10 @@ export default function ImmigrantConnection() {
       <ImageSection src={immigrationClass} alt="" color="red">
         <div className="mx-auto flex min-h-150 w-full max-w-6xl items-end px-6 py-15 lg:py-25">
           <p className="font-display bg-primary-dark-blue max-w-4xl p-10 text-2xl font-semibold text-white italic">
-            “Arriving in the U.S. is only the beginning of a long and often
+            "Arriving in the U.S. is only the beginning of a long and often
             difficult journey for immigrants and refugees who face the daunting
-            task of navigating the “maze with moving walls” that is the
-            immigration system.”
+            task of navigating the "maze with moving walls" that is the
+            immigration system."
           </p>
         </div>
       </ImageSection>
@@ -213,8 +216,8 @@ export default function ImmigrantConnection() {
               Fortunately, our situation had a lawful pathway forward. Thanks to
               their guidance, I finally received my work permit, and my family
               and I now feel a sense of security we never had before. They
-              treated us like family, and I’m so grateful for the stability
-              they’ve helped bring into our lives.
+              treated us like family, and I'm so grateful for the stability
+              they've helped bring into our lives.
             </p>
           </Testimonial>
           <Testimonial
@@ -227,7 +230,7 @@ export default function ImmigrantConnection() {
               After years of struggling to get legal status and facing constant
               uncertainty, finding Immigrant Connection PDX was a game-changer.
               Their team worked tirelessly to help me with my immigration case
-              and connected me with legal resources I didn’t even know existed.
+              and connected me with legal resources I didn't even know existed.
               The personalized support they provided made all the difference,
               and they were with me every step of the way, from preparing
               documents to answering my questions.
@@ -246,10 +249,10 @@ export default function ImmigrantConnection() {
           >
             <p className="mb-4">
               As a single mother, being separated from my children for years was
-              one of the hardest things I’ve ever endured. I knew I wanted to
+              one of the hardest things I've ever endured. I knew I wanted to
               bring them to the U.S. so we could be together again, but the
-              immigration process seemed so complicated, and I didn’t know where
-              to begin. That’s when I turned to Immigrant Connection PDX. They
+              immigration process seemed so complicated, and I didn't know where
+              to begin. That's when I turned to Immigrant Connection PDX. They
               helped me petition for my children to join me here, guiding me
               through every step with patience and care.
             </p>
@@ -257,7 +260,7 @@ export default function ImmigrantConnection() {
               Thanks to their expertise, I was able to petition for my children
               to come to the States. Though the government processing times take
               very very long, immigrant Connection PDX continues to walk with me
-              providing support and waiting well with me.”
+              providing support and waiting well with me."
             </p>
           </Testimonial>
         </div>
@@ -314,6 +317,14 @@ export default function ImmigrantConnection() {
                 </p>
               </div>
             </div>
+            <div className="flex justify-center">
+              <Button
+                color="light"
+                href="https://columbiaview.churchcenter.com/giving"
+              >
+                Support Our Mission
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -344,6 +355,7 @@ export default function ImmigrantConnection() {
           </Link>
         </div>
       </section>
+      <Divider />
     </main>
   )
 }
