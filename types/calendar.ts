@@ -1,52 +1,53 @@
-export interface CalendarAttributes {
-  all_day_event: boolean
+export interface EventAttributes {
+  approval_status: string
   created_at: string
-  ends_at: string
-  event_feed_name: string
-  event_feed_type: string
-  event_name: string
-  event_summary: string | null
-  event_visible_in_church_center: boolean
-  location: string
-  recurrence_description: string
-  registration_url: string | null
+  description: string
+  featured: boolean
+  image_url: string
+  name: string
+  percent_approved: number
+  percent_rejected: number
+  registration_url: string
+  summary: string
+  updated_at: string
+  visible_in_church_center: boolean
+}
+
+export interface Event {
+  type: string
+  id: string
+  attributes: EventAttributes
+}
+
+export interface EventInstanceAttributes {
   starts_at: string
-  status: string
-  visible_ends_at: string
-  visible_starts_at: string
+  ends_at: string
+  all_day: boolean
+  location: string | null
+  url: string | null
+  created_at: string
+  updated_at: string
 }
 
-export interface ResourceData {
+export interface EventInstance {
   type: string
   id: string
+  attributes: EventInstanceAttributes
+  relationships?: {
+    event?: {
+      data: {
+        type: string
+        id: string
+      }
+    }
+  }
 }
 
-export interface EventRelationship {
-  data: ResourceData
-}
-
-export interface FeedRelationship {
-  data: ResourceData
-}
-
-export interface TagsRelationship {
-  data: ResourceData[]
-}
-
-export interface CalendarRelationships {
-  event: EventRelationship
-  feed: FeedRelationship
-  tags: TagsRelationship
-}
-
-export interface CalendarLinks {
-  self: string
-}
-
-export interface CalendarInstance {
-  type: string
-  id: string
-  attributes: CalendarAttributes
-  relationships: CalendarRelationships
-  links: CalendarLinks
+export interface EventInstanceResponse {
+  data: EventInstance[]
+  included?: Event[]
+  meta?: {
+    total_count: number
+    count: number
+  }
 }

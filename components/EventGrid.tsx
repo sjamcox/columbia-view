@@ -1,0 +1,62 @@
+import { Event } from 'types/calendar'
+import { getCalendarEvents } from 'queries/calendar'
+import EventCard from './EventCard'
+
+interface EventGridProps {
+  limit?: number
+  className?: string
+}
+
+export default async function EventGrid({
+  limit,
+  className = '',
+}: EventGridProps) {
+  let events: Event[] = []
+
+  try {
+    events = await getCalendarEvents()
+
+    // Limit the number of events if specified
+    if (limit) {
+      events = events.slice(0, limit)
+    }
+  } catch (error) {
+    console.error('Failed to fetch calendar events:', error)
+  }
+
+  if (events.length === 0) {
+    return (
+      <div className={`py-12 text-center ${className}`}>
+        <div className="text-gray-500">
+          <svg
+            className="mx-auto mb-4 h-12 w-12"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+            />
+          </svg>
+          <h3 className="mb-1 text-lg font-medium text-gray-900">
+            No events found
+          </h3>
+          <p className="text-gray-500">Check back later for upcoming events.</p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div
+      className={`grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ${className}`}
+    >
+      {events.map((event) => (
+        <EventCard key={event.id} event={event} />
+      ))}
+    </div>
+  )
+}

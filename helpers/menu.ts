@@ -23,7 +23,7 @@ export const menu: MenuItem[] = [
       },
       {
         text: 'Event Calendar',
-        href: 'https://columbiaview.churchcenter.com/calendar?view=list',
+        href: '/events',
       },
       {
         text: 'Membership',
