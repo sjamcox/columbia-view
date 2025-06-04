@@ -1,4 +1,5 @@
-import { Button, Container, Divider, Link, Typography } from '@mui/material'
+import { Container, Divider, Link, Typography } from '@mui/material'
+import Button from 'components/Button'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -12,6 +13,26 @@ export default function Jobs() {
         Available Positions
       </Typography>
       <Typography variant="h4" gutterBottom>
+        Bilingual Legal Assistant
+      </Typography>
+      <Typography
+        sx={{
+          mb: 4,
+        }}
+      >
+        This Immigrant Connection PDX staff position starts as a legal assistant
+        under the supervision of a DOJ accredited representative with the
+        intention that within 12-18 months you will submit your DOJ
+        accreditation application.
+      </Typography>
+      <Button
+        color="blue"
+        href="https://columbiaview.churchcenter.com/people/forms/981496"
+      >
+        View Position Details
+      </Button>
+      <Divider sx={{ my: 6 }} />
+      <Typography variant="h4" gutterBottom>
         Admin Support
       </Typography>
       <Typography
@@ -23,10 +44,7 @@ export default function Jobs() {
         client cases.
       </Typography>
       <Button
-        variant="contained"
-        size="large"
-        color="secondary"
-        sx={{ color: 'white' }}
+        color="blue"
         href="https://docs.google.com/document/d/1VGq-3iASNoAkeBKDCnC2CQ_aVHH_V99C/view"
       >
         View Position Details
