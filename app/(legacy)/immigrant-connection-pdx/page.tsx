@@ -180,7 +180,7 @@ export default function ImmigrantConnection() {
             <Button
               variant="contained"
               color="secondary"
-              href="https://immigrantconnectionpdx.as.me/LOCAL"
+              href="https://app.acuityscheduling.com/schedule/ded43c4b/?categories[]=1.%20Initial%20Consultation%20%2F%20%20Asesorar%20y%20aconsejar%20-%20Consulta%20inicial"
               sx={{ mb: 4, mt: 2 }}
             >
               Schedule an appointment
