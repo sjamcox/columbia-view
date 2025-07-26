@@ -1,6 +1,6 @@
 'use client'
 
-import type { EpisodeSummary } from '@/types'
+import type { EpisodeSummary } from '@/types/messages'
 
 import { format } from 'date-fns'
 import { motion } from 'motion/react'

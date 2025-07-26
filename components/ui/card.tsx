@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { cn } from '@/lib'
+import { cn } from '@/utils'
 
 function Card({ className, ...props }: React.ComponentProps<'div'>) {
   return (
@@ -32,7 +32,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-title"
-      className={cn('leading-none font-semibold', className)}
+      className={cn('font-semibold', className)}
       {...props}
     />
   )
@@ -42,9 +42,30 @@ function CardDescription({ className, ...props }: React.ComponentProps<'div'>) {
   return (
     <div
       data-slot="card-description"
-      className={cn('text-muted-foreground text-sm', className)}
+      className={cn('text-muted-foreground text-base', className)}
       {...props}
     />
+  )
+}
+
+function CardMetadata({
+  icon,
+  className,
+  children,
+  ...props
+}: React.ComponentProps<'div'> & { icon: React.ReactNode }) {
+  return (
+    <div
+      data-slot="card-metadata"
+      className={cn(
+        'text-muted-foreground flex items-center text-sm',
+        className
+      )}
+      {...props}
+    >
+      {icon}
+      {children}
+    </div>
   )
 }
 
@@ -87,6 +108,7 @@ export {
   CardFooter,
   CardTitle,
   CardAction,
+  CardMetadata,
   CardDescription,
   CardContent,
 }

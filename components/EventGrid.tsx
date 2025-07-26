@@ -1,4 +1,4 @@
-import { MergedEventAttributes } from '@/types/calendar'
+import type { MergedEventAttributes } from '@/types/calendar'
 import { getCalendarEvents } from '@/queries/calendar'
 import EventCard from './EventCard'
 
@@ -56,6 +56,7 @@ export default async function EventGrid({
       }
     })
     .filter((event) => event.visible_in_church_center)
+    .slice(0, limit)
 
   return (
     <div

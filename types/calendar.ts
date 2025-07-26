@@ -20,13 +20,19 @@ export interface Event {
 }
 
 export interface EventInstanceAttributes {
-  starts_at: string
-  ends_at: string
-  all_day: boolean
-  location: string | null
-  url: string | null
+  all_day_event: boolean
+  compact_recurrence_description: string
   created_at: string
+  ends_at: string
+  location: string
+  name: string
+  recurrence: string
+  recurrence_description: string
+  starts_at: string
   updated_at: string
+  church_center_url: string
+  published_starts_at: string
+  published_ends_at: string
 }
 
 export interface EventInstance {

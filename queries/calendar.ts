@@ -43,8 +43,7 @@ export async function getCalendarEvents(
       throw new Error(`HTTP error! Status: ${response.status}`)
     }
 
-    const res: EventInstanceResponse = await response.json()
-    return res
+    return await response.json()
   } catch (error) {
     console.error('Error fetching calendar events:', error)
     return { data: [], included: [] }

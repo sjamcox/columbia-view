@@ -26,6 +26,9 @@ dependencies:
   '@mui/material-nextjs':
     specifier: ^6.2.0
     version: 6.2.0(@emotion/cache@11.13.1)(@emotion/react@11.13.0)(@types/react@19.0.1)(next@15.3.3)(react@19.0.0)
+  '@radix-ui/react-slot':
+    specifier: ^1.2.3
+    version: 1.2.3(@types/react@19.0.1)(react@19.0.0)
   class-variance-authority:
     specifier: ^0.7.1
     version: 0.7.1
@@ -1054,6 +1057,33 @@ packages:
 
   /@popperjs/core@2.11.8:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+    dev: false
+
+  /@radix-ui/react-compose-refs@1.1.2(@types/react@19.0.1)(react@19.0.0):
+    resolution: {integrity: sha512-z4eqJvfiNnFMHIIvXP3CY57y2WJs5g2v3X0zm9mEJkrkNv4rDxu+sg9Jh8EkXyeqBkB7SOcboo9dMVqhyrACIg==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@types/react': 19.0.1
+      react: 19.0.0
+    dev: false
+
+  /@radix-ui/react-slot@1.2.3(@types/react@19.0.1)(react@19.0.0):
+    resolution: {integrity: sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@radix-ui/react-compose-refs': 1.1.2(@types/react@19.0.1)(react@19.0.0)
+      '@types/react': 19.0.1
+      react: 19.0.0
     dev: false
 
   /@swc/counter@0.1.3:
