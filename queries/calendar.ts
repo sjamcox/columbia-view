@@ -1,6 +1,8 @@
 import { EventInstanceResponse } from 'types/calendar'
 
-export async function getCalendarEvents(): Promise<EventInstanceResponse> {
+export async function getCalendarEvents(
+  count = 24
+): Promise<EventInstanceResponse> {
   try {
     const today = new Date()
     const threeMonthsFromNow = new Date()
@@ -26,7 +28,7 @@ export async function getCalendarEvents(): Promise<EventInstanceResponse> {
     url.searchParams.append('where[during][start]', startDate)
     url.searchParams.append('where[during][end]', endDate)
     url.searchParams.append('order', 'starts_at,ends_at')
-    url.searchParams.append('per_page', '10')
+    url.searchParams.append('per_page', count.toString())
 
     const response = await fetch(url, {
       headers: {
@@ -41,10 +43,10 @@ export async function getCalendarEvents(): Promise<EventInstanceResponse> {
       throw new Error(`HTTP error! Status: ${response.status}`)
     }
 
-    const data: EventInstanceResponse = await response.json()
-    return data
+    const res: EventInstanceResponse = await response.json()
+    return res
   } catch (error) {
     console.error('Error fetching calendar events:', error)
-    return { data: [] }
+    return { data: [], included: [] }
   }
 }

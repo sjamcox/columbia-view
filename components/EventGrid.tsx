@@ -1,4 +1,4 @@
-import { Event } from 'types/calendar'
+import { MergedEventAttributes } from 'types/calendar'
 import { getCalendarEvents } from 'queries/calendar'
 import EventCard from './EventCard'
 
@@ -11,20 +11,9 @@ export default async function EventGrid({
   limit,
   className = '',
 }: EventGridProps) {
-  let events: Event[] = []
+  let { data, included } = await getCalendarEvents()
 
-  try {
-    events = await getCalendarEvents()
-
-    // Limit the number of events if specified
-    if (limit) {
-      events = events.slice(0, limit)
-    }
-  } catch (error) {
-    console.error('Failed to fetch calendar events:', error)
-  }
-
-  if (events.length === 0) {
+  if (data.length === 0) {
     return (
       <div className={`py-12 text-center ${className}`}>
         <div className="text-gray-500">
@@ -50,11 +39,29 @@ export default async function EventGrid({
     )
   }
 
+  const combinedEventAttributes: MergedEventAttributes[] = data
+    .map((event) => {
+      const eventData = included.find(
+        (e) => e.id === event.relationships?.event?.data.id
+      )
+
+      if (!eventData) {
+        throw new Error(`Event data not found for event ${event.id}`)
+      }
+
+      return {
+        id: event.id,
+        ...event.attributes,
+        ...eventData.attributes,
+      }
+    })
+    .filter((event) => event.visible_in_church_center)
+
   return (
     <div
       className={`grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ${className}`}
     >
-      {events.map((event) => (
+      {combinedEventAttributes.map((event) => (
         <EventCard key={event.id} event={event} />
       ))}
     </div>

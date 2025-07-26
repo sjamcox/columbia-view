@@ -45,9 +45,14 @@ export interface EventInstance {
 
 export interface EventInstanceResponse {
   data: EventInstance[]
-  included?: Event[]
+  included: Event[]
   meta?: {
     total_count: number
     count: number
   }
 }
+
+export type MergedEventAttributes = EventInstanceAttributes &
+  EventAttributes & {
+    id: string
+  }

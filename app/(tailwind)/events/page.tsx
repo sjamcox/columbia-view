@@ -10,7 +10,6 @@ export default function EventsPage() {
             Join us for upcoming events and activities at our community.
           </p>
         </div>
-
         <EventGrid />
       </div>
     </div>
