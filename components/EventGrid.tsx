@@ -1,6 +1,7 @@
 import type { MergedEventAttributes } from '@/types/calendar'
 import { getCalendarEvents } from '@/queries/calendar'
 import EventCard from './EventCard'
+import Link from 'next/link'
 
 interface EventGridProps {
   limit?: number
@@ -63,7 +64,9 @@ export default async function EventGrid({
       className={`grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 ${className}`}
     >
       {combinedEventAttributes.map((event) => (
-        <EventCard key={event.id} event={event} />
+        <Link href={event.church_center_url} key={event.id} target="_blank">
+          <EventCard key={event.id} event={event} />
+        </Link>
       ))}
     </div>
   )
