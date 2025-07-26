@@ -1,4 +1,4 @@
-import ImageCard, { ImageCardProps } from 'components/ImageCard'
+import ImageCard, { ImageCardProps } from '@/components/ImageCard'
 
 export type AgeCardProps = {
   title: string

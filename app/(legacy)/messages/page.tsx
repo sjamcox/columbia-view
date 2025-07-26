@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import type { EpisodeList } from 'types'
+import type { EpisodeList } from '@/types/messages'
 
-import MessageGrid from 'components/MessageGrid'
-import ButtonLink from 'components/ButtonLink'
+import MessageGrid from '@/components/MessageGrid'
+import ButtonLink from '@/components/ButtonLink'
 
 export const metadata: Metadata = {
   title: 'Messages | Columbia View Church',

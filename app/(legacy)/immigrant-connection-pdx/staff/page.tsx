@@ -1,10 +1,10 @@
 import { Metadata } from 'next'
 import { Container, Divider, Stack, Typography } from '@mui/material'
-import { StaffListing } from 'components/StaffListing'
-import david from 'public/david-headshot.webp'
-import serena from 'public/serena-headshot.webp'
-import nancy from 'public/nancy-headshot.webp'
-import hawi from 'public/hawi-headshot.webp'
+import { StaffListing } from '@/components/StaffListing'
+import david from '@/public/david-headshot.webp'
+import serena from '@/public/serena-headshot.webp'
+import nancy from '@/public/nancy-headshot.webp'
+import hawi from '@/public/hawi-headshot.webp'
 
 export const metadata: Metadata = {
   title: 'Staff | Immigrant Connection PDX',

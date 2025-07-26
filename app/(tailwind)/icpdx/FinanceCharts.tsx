@@ -1,4 +1,4 @@
-import PieChart from 'components/PieChart'
+import PieChart from '@/components/PieChart'
 
 const incomeData = [
   { name: 'Donors', percentage: 10, color: 'var(--color-secondary-yellow)' },
