@@ -33,7 +33,13 @@ export default function EventCard({ event }: EventCardProps) {
   return (
     <Card className="h-full overflow-hidden pt-0">
       <CardHeader className="relative h-48">
-        <Image src={image_url} alt={name} fill className="object-cover" />
+        <Image
+          src={image_url}
+          alt={name}
+          fill
+          className="object-cover"
+          priority
+        />
       </CardHeader>
       <CardContent className="flex-1">
         <CardTitle>{name}</CardTitle>
