@@ -1,11 +1,10 @@
 import { Metadata } from 'next'
-import { Box } from '@mui/material'
-import Header from 'components/Header'
-import Footer from 'components/Footer'
-import Providers from 'providers'
-import { openSans, raleway } from 'utils/fonts'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import Providers from '@/providers'
+import { openSans, raleway } from '@/styles/fonts'
 
-import '../globals.css'
+import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'Columbia View Church',

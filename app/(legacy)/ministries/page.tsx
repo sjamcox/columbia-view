@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 import { Box, Button, Grid2 as Grid, Link, Typography } from '@mui/material'
 
-import ResponsiveImage from 'components/ResponsiveImage'
-import blakeFamily from 'public/blake-family.webp'
-import cheneyFamily from 'public/cheney-family.webp'
-import dunbarFamily from 'public/dunbar-family.webp'
-import jonesFamily from 'public/jones-family.webp'
+import ResponsiveImage from '@/components/ResponsiveImage'
+import blakeFamily from '@/public/blake-family.webp'
+import cheneyFamily from '@/public/cheney-family.webp'
+import dunbarFamily from '@/public/dunbar-family.webp'
+import jonesFamily from '@/public/jones-family.webp'
 
 export const metadata: Metadata = {
   title: 'Ministries | Columbia View Church',

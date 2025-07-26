@@ -1,5 +1,5 @@
-import { MergedEventAttributes } from 'types/calendar'
-import { getCalendarEvents } from 'queries/calendar'
+import { MergedEventAttributes } from '@/types/calendar'
+import { getCalendarEvents } from '@/queries/calendar'
 import EventCard from './EventCard'
 
 interface EventGridProps {

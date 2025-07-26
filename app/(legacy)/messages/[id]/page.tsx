@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { format } from 'date-fns'
 
-import AudioPlayer from 'components/AudioPlayer'
+import AudioPlayer from '@/components/AudioPlayer'
 
 export const metadata: Metadata = {
   title: 'Messages | Columbia View Church',
@@ -22,7 +22,7 @@ export default async function MessageDetails(props: {
 
   return (
     <main className="mt-20 flex flex-col items-center">
-      <time className="font-bold text-neutral-mid-gray">
+      <time className="text-neutral-mid-gray font-bold">
         {format(new Date(episode.published_at), 'PPP')}
       </time>
       <h1 className="text-center text-5xl font-bold sm:text-7xl">

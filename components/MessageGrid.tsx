@@ -1,6 +1,6 @@
 'use client'
 
-import type { EpisodeList } from 'types'
+import type { EpisodeList } from '@/types'
 
 import { useEffect } from 'react'
 import { useAnimate, stagger } from 'motion/react'

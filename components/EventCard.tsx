@@ -1,6 +1,7 @@
-import { MergedEventAttributes } from 'types/calendar'
+import { MergedEventAttributes } from '@/types/calendar'
 import { format } from 'date-fns'
 import Image from 'next/image'
+import { Card } from './ui/card'
 
 interface EventCardProps {
   event: MergedEventAttributes
@@ -26,7 +27,7 @@ export default function EventCard({ event }: EventCardProps) {
   const eventImage = image_url || '/images/default-event.jpg'
 
   return (
-    <div className="group overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md">
+    <Card>
       {/* Event Image */}
       <div className="relative h-48 bg-gray-100">
         <Image src={eventImage} alt={name} fill className="object-cover" />
@@ -75,6 +76,6 @@ export default function EventCard({ event }: EventCardProps) {
           )}
         </div>
       </div>
-    </div>
+    </Card>
   )
 }

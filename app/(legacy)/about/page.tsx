@@ -1,13 +1,13 @@
 import { Metadata } from 'next'
 import { Stack, Divider, Typography, Link, Box } from '@mui/material'
-import { StaffListing } from 'components/StaffListing'
-import david from 'public/david-church-headshot.webp'
-import serena from 'public/serena-church-headshot.webp'
-import nathaniel from 'public/nathaniel-church-headshot.webp'
-import hawi from 'public/hawi-church-headshot.webp'
-import jacob from 'public/jacob-church-headshot.webp'
-import jose from 'public/jose-church-headshot.webp'
-import mark from 'public/mark-church-headshot.webp'
+import { StaffListing } from '@/components/StaffListing'
+import david from '@/public/david-church-headshot.webp'
+import serena from '@/public/serena-church-headshot.webp'
+import nathaniel from '@/public/nathaniel-church-headshot.webp'
+import hawi from '@/public/hawi-church-headshot.webp'
+import jacob from '@/public/jacob-church-headshot.webp'
+import jose from '@/public/jose-church-headshot.webp'
+import mark from '@/public/mark-church-headshot.webp'
 
 const staff = [
   {

@@ -1,4 +1,4 @@
-import { EventInstanceResponse } from 'types/calendar'
+import type { EventInstanceResponse } from '@/types/calendar'
 
 export async function getCalendarEvents(
   count = 24

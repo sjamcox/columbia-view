@@ -1,5 +1,5 @@
 import { Container, Divider, Link, Typography } from '@mui/material'
-import Button from 'components/Button'
+import Button from '@/components/Button'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

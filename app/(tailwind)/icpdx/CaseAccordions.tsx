@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Accordion from 'components/Accordion'
+import Accordion from '@/components/Accordion'
 
 export default function CaseAccordions() {
   const [expanded, setExpanded] = useState<string>('east')
