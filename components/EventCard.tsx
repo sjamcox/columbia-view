@@ -1,4 +1,6 @@
 import type { MergedEventAttributes } from '@/types/calendar'
+import { format, parseISO } from 'date-fns'
+import { formatInTimeZone } from 'date-fns-tz'
 import Image from 'next/image'
 import {
   Card,
@@ -6,11 +8,11 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
+  CardMetadata,
   CardTitle,
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import Link from 'next/link'
-import EventTime from './EventTime'
+import { CalendarIcon, ClockIcon } from '@heroicons/react/16/solid'
 
 interface EventCardProps {
   event: MergedEventAttributes
@@ -26,6 +28,14 @@ export default function EventCard({ event }: EventCardProps) {
     image_url,
   } = event
 
+  const eventDate = parseISO(published_starts_at)
+  const formattedDate = format(eventDate, 'MMM d, yyyy')
+  const formattedTime = formatInTimeZone(
+    eventDate,
+    'America/Los_Angeles',
+    'h:mm a'
+  )
+
   return (
     <Card className="h-full overflow-hidden pt-0">
       <CardHeader className="relative h-48">
@@ -39,7 +49,14 @@ export default function EventCard({ event }: EventCardProps) {
       </CardHeader>
       <CardContent className="flex-1">
         <CardTitle>{name}</CardTitle>
-        <EventTime published_starts_at={published_starts_at} />
+        <div className="my-2 flex flex-col gap-1">
+          <CardMetadata icon={<CalendarIcon className="mr-2 h-4 w-4" />}>
+            {formattedDate}
+          </CardMetadata>
+          <CardMetadata icon={<ClockIcon className="mr-2 h-4 w-4" />}>
+            {formattedTime}
+          </CardMetadata>
+        </div>
         <CardDescription className="line-clamp-3">
           {summary && summary}
         </CardDescription>
