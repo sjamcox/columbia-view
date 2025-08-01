@@ -40,7 +40,18 @@ export default async function EventGrid({
     )
   }
 
-  const combinedEventAttributes: MergedEventAttributes[] = data
+  // Deduplicate events by base event ID, keeping the first occurrence
+  const seenEventIds = new Set<string>()
+  const deduplicatedData = data.filter((event) => {
+    const baseEventId = event.relationships?.event?.data.id
+    if (!baseEventId || seenEventIds.has(baseEventId)) {
+      return false
+    }
+    seenEventIds.add(baseEventId)
+    return true
+  })
+
+  const combinedEventAttributes: MergedEventAttributes[] = deduplicatedData
     .map((event) => {
       const eventData = included.find(
         (e) => e.id === event.relationships?.event?.data.id

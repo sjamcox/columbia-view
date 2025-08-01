@@ -20,7 +20,9 @@ interface EventCardProps {
 
 export default function EventCard({ event }: EventCardProps) {
   const {
+    all_day_event,
     published_starts_at,
+    published_ends_at,
     name,
     summary,
     featured,
@@ -28,10 +30,17 @@ export default function EventCard({ event }: EventCardProps) {
     image_url,
   } = event
 
-  const eventDate = parseISO(published_starts_at)
-  const formattedDate = format(eventDate, 'MMM d, yyyy')
+  const eventStartDate = parseISO(published_starts_at)
+  const eventEndDate = parseISO(published_ends_at)
+  const formattedStartDate = format(eventStartDate, 'MMM d, yyyy')
+  const formattedEndDate = format(eventEndDate, 'MMM d, yyyy')
+  const dateString =
+    formattedStartDate === formattedEndDate
+      ? formattedStartDate
+      : `${formattedStartDate} – ${formattedEndDate}`
+
   const formattedTime = formatInTimeZone(
-    eventDate,
+    eventStartDate,
     'America/Los_Angeles',
     'h:mm a'
   )
@@ -51,11 +60,13 @@ export default function EventCard({ event }: EventCardProps) {
         <CardTitle>{name}</CardTitle>
         <div className="my-2 flex flex-col gap-1">
           <CardMetadata icon={<CalendarIcon className="mr-2 h-4 w-4" />}>
-            {formattedDate}
+            {dateString}
           </CardMetadata>
-          <CardMetadata icon={<ClockIcon className="mr-2 h-4 w-4" />}>
-            {formattedTime}
-          </CardMetadata>
+          {!all_day_event && (
+            <CardMetadata icon={<ClockIcon className="mr-2 h-4 w-4" />}>
+              {formattedTime}
+            </CardMetadata>
+          )}
         </div>
         <CardDescription className="line-clamp-3">
           {summary && summary}
