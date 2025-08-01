@@ -5,6 +5,10 @@ module.exports = {
         protocol: 'https',
         hostname: 'images.planningcenterusercontent.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'registrations-production.s3.amazonaws.com',
+      },
     ],
   },
   async redirects() {
