@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import {
   Box,
-  Button,
+  Button as MuiButton,
   Container,
   Grid2 as Grid,
   Stack,
@@ -11,6 +11,8 @@ import Image from 'next/image'
 
 import ResponsiveImage from '@/components/ResponsiveImage'
 import ImageTile from '@/components/ImageTile'
+import EventGrid from '@/components/EventGrid'
+import Button from '@/components/Button'
 import baptism from '@/public/sunday/mark-baptism.webp'
 import worship from '@/public/sunday/worship-team-vertical.webp'
 import kids from '@/public/kids/kids-activity.webp'
@@ -78,7 +80,7 @@ export default function Index() {
                 each day. Regardless of your story, your doubts, or your
                 struggles; you are welcome at Columbia View! So come as you are.
               </Typography>
-              <Button
+              <MuiButton
                 href="/join-us"
                 variant="contained"
                 size="large"
@@ -86,8 +88,8 @@ export default function Index() {
                 sx={{ color: 'white', mt: 2, mr: 3 }}
               >
                 Join us this Sunday
-              </Button>
-              <Button
+              </MuiButton>
+              <MuiButton
                 href="https://columbiaview.churchcenter.com/people/forms/33687"
                 variant="contained"
                 size="large"
@@ -95,7 +97,7 @@ export default function Index() {
                 sx={{ color: 'white', mt: 2 }}
               >
                 New Family Registration
-              </Button>
+              </MuiButton>
             </Grid>
             <Grid sx={{ mb: { xs: 4, md: 0 } }} size={4}>
               <Box
@@ -230,6 +232,43 @@ export default function Index() {
           </Stack>
         </Container>
       </Box>
+
+      {/* Upcoming Events Section */}
+      <Box component="section">
+        <Container
+          sx={{
+            py: { xs: 4, md: 8 },
+            px: { xs: 3 },
+          }}
+        >
+          <Box>
+            <Typography
+              component="h2"
+              variant="h3"
+              color="primary"
+              sx={{
+                mb: 4,
+                textAlign: 'center',
+              }}
+            >
+              Upcoming Events
+            </Typography>
+          </Box>
+          <EventGrid limit={3} />
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              mt: 4,
+            }}
+          >
+            <Button href="/events" color="blue">
+              View All Events
+            </Button>
+          </Box>
+        </Container>
+      </Box>
+
       <Box
         component="section"
         sx={{ bgcolor: 'rgb(14, 73, 111)', borderRadius: '20px' }}
@@ -278,13 +317,13 @@ export default function Index() {
                 members. RightNow Media is a tool that you can use to help you
                 live out your faith in every area of your life.
               </Typography>
-              <Button
+              <MuiButton
                 href="https://app.rightnowmedia.org/join/columbiaviewchurch"
                 variant="contained"
                 color="secondary"
               >
                 Get Access Today
-              </Button>
+              </MuiButton>
             </Grid>
           </Grid>
         </Container>
@@ -383,7 +422,7 @@ export default function Index() {
                     in underserved communities of the Portland Metro area and
                     beyond.
                   </Typography>
-                  <Button
+                  <MuiButton
                     href="/immigrant-connection-pdx"
                     variant="contained"
                     size="large"
@@ -391,7 +430,7 @@ export default function Index() {
                     sx={{ color: 'white', mt: 2 }}
                   >
                     Learn more about our services
-                  </Button>
+                  </MuiButton>
                 </Box>
               </Grid>
               <Grid
