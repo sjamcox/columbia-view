@@ -250,8 +250,8 @@ export default function About() {
       >
         Annual Report
       </Typography>
-      <Link href="https://drive.google.com/file/d/1onBcSt0pbj3mL4w2MWeaJKn_vjhaDJ25/view">
-        View our 2022/2023 Annual Report
+      <Link href="https://www.canva.com/design/DAGnS8q59gI/qEwRiwwmrIOCGrXMuELH7w/view">
+        View our 2025 Annual Report
       </Link>
       <Typography component="h2" variant="h2" sx={{ my: 5 }}>
         Columbia View Staff
