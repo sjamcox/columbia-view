@@ -18,6 +18,11 @@ module.exports = {
         destination: 'https://columbiaview.churchcenter.com/giving',
         permanent: true,
       },
+      {
+        source: '/immigrant-connection-pdx/booking',
+        destination: '/immigrant-connection-pdx',
+        permanent: true,
+      },
     ]
   },
 }

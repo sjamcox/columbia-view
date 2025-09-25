@@ -102,8 +102,10 @@ export default function ImmigrantConnection() {
               <strong>We are currently receiving new clients!</strong>
             </Typography>
             <Alert severity="info" sx={{ mb: 4 }}>
-              Our office is not currently processing Asylum, U Visa, or VAWA
-              cases at this time. We apologize for any inconvenience.
+              Our office is not currently processing Asylum, U Visa, VAWA or
+              Employment-based immigration (ie. H-1B, L-1, O-1, TN, E-2, EB-1,
+              EB-2, EB-3, EB-4, EB-5, etc.) cases at this time. We apologize for
+              any inconvenience.
             </Alert>
             <Typography
               sx={{
@@ -180,7 +182,7 @@ export default function ImmigrantConnection() {
             <Button
               variant="contained"
               color="secondary"
-              href="https://app.acuityscheduling.com/schedule/ded43c4b/?categories[]=1.%20Initial%20Consultation%20%2F%20%20Asesorar%20y%20aconsejar%20-%20Consulta%20inicial"
+              href="https://immigrantconnectionpdx.as.me/?appointmentType=category:1.%20Initial%20Consultation%20%2F%20%20Consulta%20Inicial"
               sx={{ mb: 4, mt: 2 }}
             >
               Schedule an appointment
