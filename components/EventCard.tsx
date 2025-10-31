@@ -32,8 +32,16 @@ export default function EventCard({ event }: EventCardProps) {
 
   const eventStartDate = parseISO(published_starts_at)
   const eventEndDate = parseISO(published_ends_at)
-  const formattedStartDate = format(eventStartDate, 'MMM d, yyyy')
-  const formattedEndDate = format(eventEndDate, 'MMM d, yyyy')
+  const formattedStartDate = formatInTimeZone(
+    eventStartDate,
+    'America/Los_Angeles',
+    'MMM d, yyyy'
+  )
+  const formattedEndDate = formatInTimeZone(
+    eventEndDate,
+    'America/Los_Angeles',
+    'MMM d, yyyy'
+  )
   const dateString =
     formattedStartDate === formattedEndDate
       ? formattedStartDate
