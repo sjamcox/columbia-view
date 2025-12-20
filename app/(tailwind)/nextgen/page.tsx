@@ -209,7 +209,7 @@ export default function NextGen() {
           <div className="flex h-full items-center">
             <div>
               <h2 className="font-display text-primary-dark-blue mb-6 text-5xl font-bold uppercase">
-                Cirriculum
+                Curriculum
               </h2>
               <p className="mb-4 text-base">
                 Our church uses the Wonder Ink curriculum. Each kids' class
