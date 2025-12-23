@@ -8,7 +8,7 @@ interface FadeInProps {
   className?: string
   duration?: number
   delay?: number
-  marginTop?: number
+  yOffset?: number
 }
 
 export default function FadeIn({
@@ -16,12 +16,12 @@ export default function FadeIn({
   className = '',
   duration = 1.5,
   delay = 0,
-  marginTop = -40,
+  yOffset = 20,
 }: FadeInProps) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1, marginTop: marginTop }}
+      initial={{ opacity: 0, y: yOffset }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration, delay }}
       className={className}

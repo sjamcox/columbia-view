@@ -29,6 +29,7 @@ import together from '@/public/icons/together.svg'
 import celebrate from '@/public/icons/celebrate.svg'
 import Hero from '@/components/Hero'
 import Button from '@/components/ui/button'
+import FadeIn from '@/components/ui/fade-in'
 
 export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',
@@ -91,54 +92,54 @@ export default function ImmigrantConnection() {
             Our Values
           </h2>
           <div className="grid grid-cols-12 gap-y-8 sm:grid-rows-3 sm:gap-y-13">
-            <div className="col-start-2 col-end-12 sm:col-end-10">
+            <FadeIn className="col-start-2 col-end-12 sm:col-end-10">
               <ValueCard
                 title="Listening"
                 subtitle="with compassion"
                 description="Because the stories of immigrants are often filled with deep challenges and trauma, we listen with care, empathy, and understanding. We recognize the human side of every case, offering a safe space for each person's story."
                 icon={listen}
               />
-            </div>
-            <div className="col-start-2 col-end-12 sm:col-start-4">
+            </FadeIn>
+            <FadeIn className="col-start-2 col-end-12 sm:col-start-4">
               <ValueCard
                 title="Advising"
                 subtitle="with expertise"
                 description="Because immigration laws are constantly evolving, we continuously learn and adapt to provide our clients with the most accurate, up-to-date pathways. Our expertise is a bridge to clarity and confidence in the journey ahead."
                 icon={advise}
               />
-            </div>
-            <div className="col-start-2 col-end-12 sm:col-end-10">
+            </FadeIn>
+            <FadeIn className="col-start-2 col-end-12 sm:col-end-10">
               <ValueCard
                 title="Speaking"
                 subtitle="the truth"
                 description="Because the immigration journey is complex and every step matters, we are committed to building trust by being honest and transparent with our clients. Accurate immigration filings are the foundation of safe and successful futures."
                 icon={speak}
               />
-            </div>
-            <div className="col-start-2 col-end-12 sm:col-start-4">
+            </FadeIn>
+            <FadeIn className="col-start-2 col-end-12 sm:col-start-4">
               <ValueCard
                 title="Empowering"
                 subtitle="through knowledge"
                 description="Because navigating the immigration process can be overwhelming, we empower our clients with the knowledge and resources they need to take an active role in their journey, making informed decisions along the way."
                 icon={empower}
               />
-            </div>
-            <div className="col-start-2 col-end-12 sm:col-end-10">
+            </FadeIn>
+            <FadeIn className="col-start-2 col-end-12 sm:col-end-10">
               <ValueCard
                 title="Walking"
                 subtitle="with you"
                 description="Because the immigration process can be long and uncertain, we stand beside our clients throughout the journey, staying engaged, informed, and ready to support them every step of the way."
                 icon={together}
               />
-            </div>
-            <div className="col-start-2 col-end-12 sm:col-start-4">
+            </FadeIn>
+            <FadeIn className="col-start-2 col-end-12 sm:col-start-4">
               <ValueCard
                 title="Celebrating"
                 subtitle="the milestones"
                 description="Because the ultimate goal of immigration is stability, opportunity, and family reunification, we celebrate each step forward. Every milestone, big or small, brings us closer to the goal of building lasting futures."
                 icon={celebrate}
               />
-            </div>
+            </FadeIn>
           </div>
       </GradientSection>
       <Divider />
