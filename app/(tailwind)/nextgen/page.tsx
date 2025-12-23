@@ -4,6 +4,18 @@ import * as motion from 'motion/react-client'
 import Image from 'next/image'
 
 import { ImageSection } from '@/components/Section'
+import {
+  ContentSection,
+  GradientSection,
+  MediaSection,
+} from '@/components/ui/section'
+import {
+  DisplayHeading,
+  GradientText,
+  SectionHeading,
+} from '@/components/ui/typography'
+import OverlappingImageGrid from '@/components/ui/overlapping-image-grid'
+import FadeIn from '@/components/ui/fade-in'
 import Hero from '@/components/Hero'
 import wonderInk from '@/public/kids/wonder-ink.png'
 import kidsOnStage from '@/public/kids/kids-on-stage.webp'
@@ -30,13 +42,6 @@ export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',
 }
 
-const fadeIn = {
-  initial: { opacity: 0 },
-  whileInView: { opacity: 1, marginTop: -40 },
-  viewport: { once: true },
-  transition: { duration: 1.5 },
-}
-
 export default function NextGen() {
   return (
     <main>
@@ -53,13 +58,19 @@ export default function NextGen() {
           text: 'PRE-REGISTER',
         }}
       />
-      <section className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-25">
-        <h2 className="font-display from-primary-light-blue to-secondary-aqua mb-15 bg-gradient-to-b bg-clip-text text-center text-2xl/10 text-transparent lg:text-4xl/12">
-          Sundays are the primary day that Columbia View Kids gather to play,
-          learn from Scripture, pray, and be in community. Our classrooms are{' '}
-          <span className="font-bold">safe</span>,{' '}
-          <span className="font-bold">fun</span>, and{' '}
-          <span className="font-bold">Jesus-centered</span> environments.
+      <ContentSection>
+        <h2 className="mb-15 text-center text-2xl/10 lg:text-4xl/12">
+          <GradientText
+            from="from-primary-light-blue"
+            to="to-secondary-aqua"
+            className="font-display"
+          >
+            Sundays are the primary day that Columbia View Kids gather to play,
+            learn from Scripture, pray, and be in community. Our classrooms are{' '}
+            <span className="font-bold">safe</span>,{' '}
+            <span className="font-bold">fun</span>, and{' '}
+            <span className="font-bold">Jesus-centered</span> environments.
+          </GradientText>
         </h2>
         <div className="grid gap-10 md:grid-cols-3 lg:gap-15">
           <KeywordCard
@@ -87,12 +98,9 @@ export default function NextGen() {
             }}
           />
         </div>
-      </section>
-      <section className="from-secondary-green to-primary-light-blue bg-gradient-to-b">
-        <div className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-25">
-          <h2 className="font-display pb-10 text-center text-7xl/18 font-bold text-white uppercase md:pb-15">
-            Age Groups
-          </h2>
+      </ContentSection>
+      <GradientSection color="green-blue">
+        <DisplayHeading className="pb-10 md:pb-15">Age Groups</DisplayHeading>
           <div className="grid gap-10 md:grid-cols-3">
             <ImageBadgeCard
               title="Littles"
@@ -125,68 +133,48 @@ export default function NextGen() {
               }}
             />
           </div>
-        </div>
-      </section>
-      <section className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-25">
-        <div className="grid gap-10 md:grid-cols-2 md:gap-20 lg:gap-30">
-          <div className="flex h-full items-center">
-            <div>
-              <h2 className="font-display text-primary-dark-blue mb-6 text-5xl font-bold uppercase">
-                Check-In Process
-              </h2>
-              <p className="mb-4 text-base">
-                Our child check-in station is in front of our lobby as you first
-                enter the building. We require that all kids are registered and
-                checked in by a parent or guardian for their safety and
-                security. For new or visiting families, to enjoy a smooth
-                check-in process, please register in advance.
-              </p>
-              <p className="mb-8 text-base">
-                We offer care for <span className="font-bold">Littles</span> for
-                the length of the worship service.{' '}
-                <span className="font-bold">Mids</span> and{' '}
-                <span className="font-bold">Bigs</span> join the entire church
-                for the first two songs of corporate worship before being
-                dismissed to their classrooms for the remainder of the worship
-                service. We ask parents to pick up their kids from their classes
-                promptly when worship lets out.
-              </p>
-              <Button
-                color="blue"
-                href="https://columbiaview.churchcenter.com/people/forms/33687"
-                arrow
-              >
-                Pre-Register
-              </Button>
-            </div>
-          </div>
-          <div className="grid grid-cols-6">
-            <div className="col-start-3 col-end-7 aspect-4/3 overflow-hidden rounded-2xl shadow-2xl">
-              <Image
-                src={littlesRoomStaff}
-                alt="Staff and kids in the Littles room"
-                className="h-full object-cover"
-              />
-            </div>
-            <div className="col-start-1 col-end-5 -mt-12 aspect-4/3 overflow-hidden rounded-2xl bg-black shadow-2xl">
-              <Image
-                src={kidsBounceHouse}
-                alt="Smiling kids on a bounce house"
-                className="h-full object-cover"
-              />
-            </div>
-            <div className="col-start-3 col-end-7 -mt-12 aspect-4/3 overflow-hidden rounded-2xl bg-black shadow-2xl">
-              <Image
-                src={kidsPrayerHands}
-                alt="Toddler with prayer hands"
-                className="h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+        </GradientSection>
+      <MediaSection
+        media={
+          <OverlappingImageGrid
+            images={[
+              {
+                src: littlesRoomStaff,
+                alt: 'Staff and kids in the Littles room',
+              },
+              { src: kidsBounceHouse, alt: 'Smiling kids on a bounce house' },
+              { src: kidsPrayerHands, alt: 'Toddler with prayer hands' },
+            ]}
+          />
+        }
+      >
+        <SectionHeading>Check-In Process</SectionHeading>
+        <p className="mb-4 text-base">
+          Our child check-in station is in front of our lobby as you first enter
+          the building. We require that all kids are registered and checked in
+          by a parent or guardian for their safety and security. For new or
+          visiting families, to enjoy a smooth check-in process, please register
+          in advance.
+        </p>
+        <p className="mb-8 text-base">
+          We offer care for <span className="font-bold">Littles</span> for the
+          length of the worship service.{' '}
+          <span className="font-bold">Mids</span> and{' '}
+          <span className="font-bold">Bigs</span> join the entire church for the
+          first two songs of corporate worship before being dismissed to their
+          classrooms for the remainder of the worship service. We ask parents to
+          pick up their kids from their classes promptly when worship lets out.
+        </p>
+        <Button
+          color="blue"
+          href="https://columbiaview.churchcenter.com/people/forms/33687"
+          arrow
+        >
+          Pre-Register
+        </Button>
+      </MediaSection>
       <ImageSection src={kidsPaint} alt="Paper covered in different paints">
-        <div className="to-secondary-yellow h-full w-full bg-gradient-to-r from-0%">
+        <div className="to-secondary-yellow h-full w-full bg-linear-to-r from-0%">
           <div className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-30">
             <p className="font-display text-right text-4xl/tight font-semibold text-white lg:text-6xl/tight">
               biblical teaching,
@@ -197,8 +185,9 @@ export default function NextGen() {
           </div>
         </div>
       </ImageSection>
-      <section className="mx-auto w-full max-w-6xl px-6 py-15 lg:py-25">
-        <div className="mb-20 grid gap-10 lg:grid-cols-2 lg:gap-45">
+      <MediaSection
+        reverse
+        media={
           <div className="aspect-5/3 self-center overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src={wonderInk}
@@ -206,34 +195,27 @@ export default function NextGen() {
               className="h-full object-cover"
             />
           </div>
-          <div className="flex h-full items-center">
-            <div>
-              <h2 className="font-display text-primary-dark-blue mb-6 text-5xl font-bold uppercase">
-                Curriculum
-              </h2>
-              <p className="mb-4 text-base">
-                Our church uses the Wonder Ink curriculum. Each kids' class
-                explores the core biblical truths of: God Knows Me, Jesus Loves
-                Me, The Holy Spirit Leads Me, and I am a Child of God in
-                age-appropriate ways. We'll journey through the story of the
-                scriptures every year.
-              </p>
-              <p className="mb-8 text-base">
-                Parents are encouraged to create an online account for ongoing
-                access to lesson videos, discussion questions, and more
-                discipleship materials to be utilized during the week.
-              </p>
-              <Button color="blue" href="https://app.wonderink.org/" arrow>
-                Sign Up with Wonder Ink
-              </Button>
-            </div>
-          </div>
-        </div>
+        }
+      >
+        <SectionHeading>Curriculum</SectionHeading>
+        <p className="mb-4 text-base">
+          Our church uses the Wonder Ink curriculum. Each kids' class explores
+          the core biblical truths of: God Knows Me, Jesus Loves Me, The Holy
+          Spirit Leads Me, and I am a Child of God in age-appropriate ways.
+          We'll journey through the story of the scriptures every year.
+        </p>
+        <p className="mb-8 text-base">
+          Parents are encouraged to create an online account for ongoing access
+          to lesson videos, discussion questions, and more discipleship
+          materials to be utilized during the week.
+        </p>
+        <Button color="blue" href="https://app.wonderink.org/" arrow>
+          Sign Up with Wonder Ink
+        </Button>
+      </MediaSection>
+      <ContentSection>
         <div className="mx-auto grid max-w-3xl gap-10 lg:grid-cols-9 lg:gap-0">
-          <motion.div
-            className="row-start-1 row-end-2 sm:col-start-1 sm:col-end-7 lg:col-end-5"
-            {...fadeIn}
-          >
+          <FadeIn className="row-start-1 row-end-2 sm:col-start-1 sm:col-end-7 lg:col-end-5">
             <IconFeatureCard
               title="Gods Know Me"
               description="God, the Creator of all, knows me. He has always known me. He has had me in mind from the very beginning. He made me, and I am His masterpiece. He made me in His own image to do the amazing things He has prepared for me to do."
@@ -247,11 +229,8 @@ export default function NextGen() {
               }}
               color="aqua"
             />
-          </motion.div>
-          <motion.div
-            className="row-start-2 row-end-3 sm:col-start-4 sm:col-end-10 lg:col-start-6"
-            {...fadeIn}
-          >
+          </FadeIn>
+          <FadeIn className="row-start-2 row-end-3 sm:col-start-4 sm:col-end-10 lg:col-start-6">
             <IconFeatureCard
               title="Jesus Loves Me"
               description="Jesus’ perfect life, death, resurrection, and promised return are God’s love story. Jesus came to fulfill God’s promises to His children. Through Jesus, I have salvation. Jesus loves me no matter what. His love for me has no beginning and no end, and I get to love Him back. Jesus is God’s love in person. God’s love is big and generous, and it is for me! Jesus is the way to God’s love. Choosing to follow Jesus means choosing God’s love and God’s way."
@@ -265,11 +244,8 @@ export default function NextGen() {
               }}
               color="green"
             />
-          </motion.div>
-          <motion.div
-            className="row-start-3 row-end-4 sm:col-start-1 sm:col-end-7 lg:col-end-5"
-            {...fadeIn}
-          >
+          </FadeIn>
+          <FadeIn className="row-start-3 row-end-4 sm:col-start-1 sm:col-end-7 lg:col-end-5">
             <IconFeatureCard
               title="The Holy Spirit Leads Me"
               description={[
@@ -286,11 +262,8 @@ export default function NextGen() {
               }}
               color="yellow"
             />
-          </motion.div>
-          <motion.div
-            className="row-start-4 row-end-5 sm:col-start-4 sm:col-end-10 lg:col-start-6"
-            {...fadeIn}
-          >
+          </FadeIn>
+          <FadeIn className="row-start-4 row-end-5 sm:col-start-4 sm:col-end-10 lg:col-start-6">
             <IconFeatureCard
               title="I Am a Child of God"
               description={[
@@ -307,14 +280,12 @@ export default function NextGen() {
               }}
               color="red"
             />
-          </motion.div>
+          </FadeIn>
         </div>
-      </section>
-      <section className="from-secondary-yellow to-secondary-green bg-gradient-to-b">
-        <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-15 lg:py-25">
-          <h2 className="font-display pb-4 text-center text-7xl/18 font-bold text-white uppercase">
-            Join The Team
-          </h2>
+      </ContentSection>
+      <GradientSection color="yellow-green">
+        <div className="mx-auto flex max-w-6xl flex-col items-center">
+          <DisplayHeading className="pb-4">Join The Team</DisplayHeading>
           <p className="mb-8 max-w-3xl text-center text-xl/relaxed text-white">
             Each week it takes a team of faithful volunteers to provide a
             high-quality experience for our kids. There are 3 ways you can serve
@@ -326,7 +297,7 @@ export default function NextGen() {
             Apply to Serve
           </Button>
         </div>
-      </section>
+      </GradientSection>
     </main>
   )
 }

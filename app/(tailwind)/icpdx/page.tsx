@@ -85,7 +85,7 @@ export default function ImmigrantConnection() {
         </div>
       </section>
       <Divider />
-      <section className="from-primary-dark-blue to-secondary-blue-black w-full bg-gradient-to-b">
+      <section className="from-primary-dark-blue to-secondary-blue-black w-full bg-linear-to-b">
         <div className="mx-auto flex w-full max-w-6xl flex-col px-6 py-15 lg:py-25">
           <h2 className="font-display mb-10 text-center text-6xl/16 font-bold text-white uppercase md:text-7xl/28">
             Our Values
@@ -266,7 +266,7 @@ export default function ImmigrantConnection() {
         </div>
       </section>
       <Divider />
-      <section className="from-secondary-green to-primary-light-blue w-full bg-gradient-to-b">
+      <section className="from-secondary-green to-primary-light-blue w-full bg-linear-to-b">
         <div className="mx-auto flex w-full max-w-5xl flex-col px-6 py-15 lg:py-25">
           <p className="mb-20 text-center text-2xl/snug font-light text-white md:text-4xl/snug">
             Since receiving recognition and accreditation from the Department of
@@ -342,7 +342,7 @@ export default function ImmigrantConnection() {
         <PartnerList />
       </section>
       <Divider />
-      <section className="from-secondary-yellow to-secondary-green w-full bg-gradient-to-b">
+      <section className="from-secondary-yellow to-secondary-green w-full bg-linear-to-b">
         <div className="mx-auto flex min-h-100 w-full max-w-6xl flex-col items-start justify-end gap-6 px-6 py-15 lg:py-25">
           <p className="font-display text-5xl font-bold text-white">
             2023 Annual Report
