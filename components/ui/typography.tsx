@@ -26,19 +26,24 @@ export function DisplayHeading({ children, className = '' }: TypographyProps) {
 }
 
 interface GradientTextProps extends TypographyProps {
-  from: string
-  to: string
+  color: 'blue-aqua' | 'green-blue' | 'yellow-green' | 'dark-blue'
+}
+
+const gradientVariants = {
+  'blue-aqua': 'from-primary-light-blue to-secondary-aqua',
+  'green-blue': 'from-secondary-green to-primary-light-blue',
+  'yellow-green': 'from-secondary-yellow to-secondary-green',
+  'dark-blue': 'from-primary-dark-blue to-secondary-blue-black',
 }
 
 export function GradientText({
   children,
-  from,
-  to,
+  color,
   className = '',
 }: GradientTextProps) {
   return (
     <span
-      className={`bg-linear-to-b bg-clip-text text-transparent ${from} ${to} ${className}`}
+      className={`bg-linear-to-b bg-clip-text text-transparent ${gradientVariants[color]} ${className}`}
     >
       {children}
     </span>

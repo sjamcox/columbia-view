@@ -23,12 +23,14 @@ export function ContentSection({
 interface GradientSectionProps {
   children: ReactNode
   className?: string
-  color: 'green-blue' | 'yellow-green'
+  color: 'green-blue' | 'yellow-green' | 'blue-aqua' | 'dark-blue'
 }
 
 const gradientVariants = {
   'green-blue': 'from-secondary-green to-primary-light-blue',
   'yellow-green': 'from-secondary-yellow to-secondary-green',
+  'blue-aqua': 'from-primary-light-blue to-secondary-aqua',
+  'dark-blue': 'from-primary-dark-blue to-secondary-blue-black',
 }
 
 export function GradientSection({

@@ -61,8 +61,7 @@ export default function NextGen() {
       <ContentSection>
         <h2 className="mb-15 text-center text-2xl/10 lg:text-4xl/12">
           <GradientText
-            from="from-primary-light-blue"
-            to="to-secondary-aqua"
+            color="blue-aqua"
             className="font-display"
           >
             Sundays are the primary day that Columbia View Kids gather to play,
