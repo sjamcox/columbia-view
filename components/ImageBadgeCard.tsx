@@ -1,23 +1,25 @@
 import ImageCard, { ImageCardProps } from '@/components/ImageCard'
 
-export type AgeCardProps = {
+export type ImageBadgeCardProps = {
   title: string
-  ages: string
-  color: 'aqua' | 'green' | 'red'
+  badgeText: string
+  color: 'aqua' | 'green' | 'red' | 'yellow' | 'blue'
   description: string
 } & Omit<ImageCardProps, 'children'>
 
-export default function AgeCard({
+export default function ImageBadgeCard({
   title,
-  ages,
+  badgeText,
   color,
   description,
   imageProps,
-}: AgeCardProps) {
+}: ImageBadgeCardProps) {
   const colorVariants = {
     aqua: 'bg-secondary-aqua',
     green: 'bg-secondary-green',
     red: 'bg-secondary-red',
+    yellow: 'bg-secondary-yellow',
+    blue: 'bg-primary-light-blue',
   }
 
   return (
@@ -29,7 +31,7 @@ export default function AgeCard({
         <div
           className={`mb-3 px-3 py-1 ${colorVariants[color]} w-fit rounded-full`}
         >
-          <p className="text-sm font-semibold text-white uppercase">{ages}</p>
+          <p className="text-sm font-semibold text-white uppercase">{badgeText}</p>
         </div>
         <p className="text-base text-white">{description}</p>
       </div>

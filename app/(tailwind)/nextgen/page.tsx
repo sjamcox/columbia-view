@@ -22,9 +22,9 @@ import heartIcon from '@/public/icons/heart-hand.svg'
 import compassIcon from '@/public/icons/compass.svg'
 import crownIcon from '@/public/icons/crown.svg'
 import KeywordCard from '@/components/KeywordCard'
-import AgeCard from './AgeCard'
+import ImageBadgeCard from '@/components/ImageBadgeCard'
 import Button from '@/components/Button'
-import CoreTruth from './CoreTruth'
+import IconFeatureCard from '@/components/IconFeatureCard'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',
@@ -94,9 +94,9 @@ export default function NextGen() {
             Age Groups
           </h2>
           <div className="grid gap-10 md:grid-cols-3">
-            <AgeCard
+            <ImageBadgeCard
               title="Littles"
-              ages="3 Months - 2 Years"
+              badgeText="3 Months - 2 Years"
               color="aqua"
               description={`At this age, we know your child is all about exploring. They’re constantly moving, touching, and investigating as they learn about the world around them. Our group leaders nurture this curiosity in each child, meeting their needs, praying over them, and getting all the snuggles in.`}
               imageProps={{
@@ -104,9 +104,9 @@ export default function NextGen() {
                 alt: 'Wobbler riding a car toy',
               }}
             />
-            <AgeCard
+            <ImageBadgeCard
               title="Mids"
-              ages="3 Years - 5 Years"
+              badgeText="3 Years - 5 Years"
               color="green"
               description={`During this stage, it’s important for kids to lean into their creativity as they begin to discover how God created them and the world they live in. In the preschool classrooms, our group leaders help cultivate this natural wonder through worship, video-based Bible stories, and hands-on activities.`}
               imageProps={{
@@ -114,9 +114,9 @@ export default function NextGen() {
                 alt: 'Toddler smiling playing with blocks',
               }}
             />
-            <AgeCard
+            <ImageBadgeCard
               title="Bigs"
-              ages="6 Years - 12 Years"
+              badgeText="6 Years - 12 Years"
               color="red"
               description={`In this age group, kids are focused on harnessing their influence. Our group leaders help develop a passion for loving others and making a difference in the elementary environment. We engage kids through worship, video-based Bible stories, and hands-on critical thinking activities.`}
               imageProps={{
@@ -234,14 +234,14 @@ export default function NextGen() {
             className="row-start-1 row-end-2 sm:col-start-1 sm:col-end-7 lg:col-end-5"
             {...fadeIn}
           >
-            <CoreTruth
+            <IconFeatureCard
               title="Gods Know Me"
               description="God, the Creator of all, knows me. He has always known me. He has had me in mind from the very beginning. He made me, and I am His masterpiece. He made me in His own image to do the amazing things He has prepared for me to do."
               icon={{
                 src: fingerprintIcon,
                 alt: 'fingerprint icon',
               }}
-              scripture={{
+              highlight={{
                 text: 'I am KNOWN by the Creator and that means I BELONG. I get to be part of His family.',
                 verse: 'Psalm 139:13-14 NIrV',
               }}
@@ -252,14 +252,14 @@ export default function NextGen() {
             className="row-start-2 row-end-3 sm:col-start-4 sm:col-end-10 lg:col-start-6"
             {...fadeIn}
           >
-            <CoreTruth
+            <IconFeatureCard
               title="Jesus Loves Me"
               description="Jesus’ perfect life, death, resurrection, and promised return are God’s love story. Jesus came to fulfill God’s promises to His children. Through Jesus, I have salvation. Jesus loves me no matter what. His love for me has no beginning and no end, and I get to love Him back. Jesus is God’s love in person. God’s love is big and generous, and it is for me! Jesus is the way to God’s love. Choosing to follow Jesus means choosing God’s love and God’s way."
               icon={{
                 src: heartIcon,
                 alt: 'heart in hand icon',
               }}
-              scripture={{
+              highlight={{
                 text: 'I am LOVED by Jesus, and I get to share His LOVE too.',
                 verse: 'John 13:34, 35 NIrV',
               }}
@@ -270,7 +270,7 @@ export default function NextGen() {
             className="row-start-3 row-end-4 sm:col-start-1 sm:col-end-7 lg:col-end-5"
             {...fadeIn}
           >
-            <CoreTruth
+            <IconFeatureCard
               title="The Holy Spirit Leads Me"
               description={[
                 'God gives me the gift of His Holy Spirit when I choose to live for Jesus. The Holy Spirit invites me to live in God’s Kingdom—now and not yet.',
@@ -280,7 +280,7 @@ export default function NextGen() {
                 src: compassIcon,
                 alt: 'compass icon',
               }}
-              scripture={{
+              highlight={{
                 text: 'Because I am LED by the Holy Spirit, I can FOLLOW Him',
                 verse: 'Romans 8:14, 15a NIrV',
               }}
@@ -291,7 +291,7 @@ export default function NextGen() {
             className="row-start-4 row-end-5 sm:col-start-4 sm:col-end-10 lg:col-start-6"
             {...fadeIn}
           >
-            <CoreTruth
+            <IconFeatureCard
               title="I Am a Child of God"
               description={[
                 'God’s amazing story changes my own. Because God knows me, Jesus loves me, and the Holy Spirit leads me, I get to be a wonder-filled reflection of God to the world. I get to know who I truly am and who I was made to be.',
@@ -301,7 +301,7 @@ export default function NextGen() {
                 src: crownIcon,
                 alt: 'crown icon',
               }}
-              scripture={{
+              highlight={{
                 text: 'I am a WONDER. I get to BE part of God’s story, and my life TELLS of God’s wonder.',
                 verse: '1 Peter 2:9 NIrV',
               }}

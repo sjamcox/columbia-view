@@ -1,28 +1,27 @@
 import type { StaticImageData } from 'next/image'
-
 import Image from 'next/image'
 
-export type CoreTruthProps = {
+export type IconFeatureCardProps = {
   title: string
   description: string | string[]
   icon: {
     src: StaticImageData | string
     alt: string
   }
-  scripture: {
+  highlight?: {
     text: string
-    verse: string
+    verse?: string
   }
-  color: 'aqua' | 'green' | 'yellow' | 'red'
+  color: 'aqua' | 'green' | 'yellow' | 'red' | 'blue'
 }
 
-export default function CoreTruth({
+export default function IconFeatureCard({
   title,
   description,
   icon,
-  scripture,
+  highlight,
   color = 'aqua',
-}: CoreTruthProps) {
+}: IconFeatureCardProps) {
   const colorVariants = {
     aqua: {
       text: 'text-secondary-aqua',
@@ -44,6 +43,11 @@ export default function CoreTruth({
       background: 'bg-secondary-red',
       icon: 'fill-secondary-red',
     },
+    blue: {
+      text: 'text-primary-light-blue',
+      background: 'bg-primary-light-blue',
+      icon: 'fill-primary-light-blue',
+    },
   }
 
   return (
@@ -59,8 +63,8 @@ export default function CoreTruth({
       </h3>
       <div className="mb-4 flex flex-col gap-4 text-center">
         {Array.isArray(description) ? (
-          description.map((string) => (
-            <p key={string} className="text-base">
+          description.map((string, i) => (
+            <p key={i} className="text-base">
               {string}
             </p>
           ))
@@ -68,12 +72,14 @@ export default function CoreTruth({
           <p className="text-base">{description}</p>
         )}
       </div>
-      <div
-        className={`rounded-lg p-3 text-center text-base text-white italic ${colorVariants[color].background}`}
-      >
-        <p>{scripture.text}</p>
-        <p>{scripture.verse}</p>
-      </div>
+      {highlight && (
+        <div
+          className={`rounded-lg p-3 text-center text-base text-white italic ${colorVariants[color].background}`}
+        >
+          <p>{highlight.text}</p>
+          {highlight.verse && <p>{highlight.verse}</p>}
+        </div>
+      )}
     </div>
   )
 }
