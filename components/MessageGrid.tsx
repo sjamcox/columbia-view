@@ -11,8 +11,8 @@ export default function MessageGrid({ messages }: { messages: EpisodeList }) {
   const [scope, animate] = useAnimate()
 
   useEffect(() => {
-    animate('section', { opacity: 1, marginTop: 0 }, { delay: stagger(0.05) })
-  }, [])
+    animate('article', { opacity: 1, marginTop: 0 }, { delay: stagger(0.05) })
+  }, [animate])
 
   return (
     <div

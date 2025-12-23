@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 
-import * as motion from 'motion/react-client'
 import Image from 'next/image'
 
 import { ImageSection } from '@/components/Section'
