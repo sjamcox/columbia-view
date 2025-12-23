@@ -22,9 +22,9 @@ import heartIcon from '@/public/icons/heart-hand.svg'
 import compassIcon from '@/public/icons/compass.svg'
 import crownIcon from '@/public/icons/crown.svg'
 import KeywordCard from '@/components/KeywordCard'
-import ImageBadgeCard from '@/components/ImageBadgeCard'
-import Button from '@/components/Button'
-import IconFeatureCard from '@/components/IconFeatureCard'
+import ImageBadgeCard from '@/components/ui/image-badge-card'
+import Button from '@/components/ui/button'
+import IconFeatureCard from '@/components/ui/icon-feature-card'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',

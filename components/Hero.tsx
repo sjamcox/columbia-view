@@ -1,7 +1,7 @@
-import type { ButtonProps } from './Button'
+import type { ButtonProps } from './ui/button'
 
 import { ImageSection, ImageSectionProps } from './Section'
-import Button from './Button'
+import Button from './ui/button'
 
 export type HeroProps = {
   buttonProps?: Omit<ButtonProps, 'children'> & { text: string }

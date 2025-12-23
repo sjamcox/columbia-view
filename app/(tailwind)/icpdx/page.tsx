@@ -27,7 +27,7 @@ import empower from '@/public/icons/empower.svg'
 import together from '@/public/icons/together.svg'
 import celebrate from '@/public/icons/celebrate.svg'
 import Hero from '@/components/Hero'
-import Button from '@/components/Button'
+import Button from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',
