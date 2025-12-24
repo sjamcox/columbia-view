@@ -1,29 +1,33 @@
-import { ReactNode } from 'react'
+import { ComponentPropsWithoutRef, ReactNode } from 'react'
 
-interface SectionProps {
-  children: ReactNode
-  className?: string
-  as?: 'section' | 'div'
+interface SectionProps extends ComponentPropsWithoutRef<'section'> {
+  as?: 'section' | 'div' | 'article' | 'main'
 }
 
 export function ContentSection({
   children,
   className = '',
   as: Component = 'section',
+  ...props
 }: SectionProps) {
   return (
     <Component
       className={`mx-auto w-full max-w-6xl px-6 py-15 lg:py-25 ${className}`}
+      {...props}
     >
       {children}
     </Component>
   )
 }
 
-interface GradientSectionProps {
-  children: ReactNode
-  className?: string
-  color: 'green-blue' | 'yellow-green' | 'blue-aqua' | 'dark-blue'
+interface GradientSectionProps extends ComponentPropsWithoutRef<'section'> {
+  color:
+    | 'green-blue'
+    | 'yellow-green'
+    | 'blue-aqua'
+    | 'dark-blue'
+    | 'green-yellow'
+    | 'yellow-orange'
 }
 
 const gradientVariants = {
@@ -31,16 +35,20 @@ const gradientVariants = {
   'yellow-green': 'from-secondary-yellow to-secondary-green',
   'blue-aqua': 'from-primary-light-blue to-secondary-aqua',
   'dark-blue': 'from-primary-dark-blue to-secondary-blue-black',
+  'green-yellow': 'from-secondary-green to-secondary-yellow',
+  'yellow-orange': 'from-secondary-yellow to-orange-400',
 }
 
 export function GradientSection({
   children,
   className = '',
   color,
+  ...props
 }: GradientSectionProps) {
   return (
     <section
-      className={`${gradientVariants[color]} bg-linear-to-b ${className}`}
+      className={`bg-linear-to-b ${gradientVariants[color]} ${className}`}
+      {...props}
     >
       <ContentSection as="div">{children}</ContentSection>
     </section>
@@ -59,9 +67,10 @@ export function MediaSection({
   reverse = false,
   className = '',
   mediaClassName = '',
+  ...props
 }: MediaSectionProps) {
   return (
-    <ContentSection className={className}>
+    <ContentSection className={className} {...props}>
       <div className="grid gap-10 md:grid-cols-2 md:gap-20 lg:gap-30">
         <div
           className={`flex h-full items-center ${reverse ? 'md:order-2' : ''}`}
