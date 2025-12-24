@@ -14,8 +14,8 @@ export const menu: MenuItem[] = [
     text: 'Get Involved',
     subnav: [
       {
-        text: 'Join Us',
-        href: '/join-us',
+        text: 'Plan Your Visit',
+        href: '/plan-your-visit',
       },
       {
         text: 'Service Opportunities',

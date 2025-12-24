@@ -23,6 +23,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: '/join-us',
+        destination: '/plan-your-visit',
+        permanent: true,
+      },
+      {
         source: '/immigrant-connection-pdx/booking',
         destination: '/immigrant-connection-pdx',
         permanent: true,

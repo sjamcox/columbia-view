@@ -24,13 +24,13 @@ export default function Button({
   color = 'light',
   ...rest
 }: ButtonProps) {
-  const minWidth = arrow ? 'min-w-75' : 'min-w-50'
+  const minWidth = arrow ? 'md:min-w-75' : 'md:min-w-50'
   const justify = arrow ? 'justify-between' : 'justify-center'
 
   return (
     <Link {...rest}>
       <div
-        className={`flex w-fit items-center gap-15 rounded-full px-7 py-5 ${colorVariants[color]} ${minWidth} ${justify} transition-transform duration-300 ease-in-out hover:scale-103`}
+        className={`flex w-fit items-center gap-4 rounded-full px-7 py-5 md:gap-15 ${colorVariants[color]} ${minWidth} ${justify} transition-transform duration-300 ease-in-out hover:scale-103`}
       >
         <p className="text-base font-semibold text-white uppercase">
           {children}

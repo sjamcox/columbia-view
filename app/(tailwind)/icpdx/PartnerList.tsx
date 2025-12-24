@@ -14,7 +14,7 @@ function PartnerTile({ name, subtitle, children }: PartnerTileProps) {
         {subtitle && <p>{subtitle}</p>}
       </div>
       {children && (
-        <div className="from-primary-light-blue to-secondary-aqua rounded-xl bg-gradient-to-r p-0.5 text-base">
+        <div className="from-primary-light-blue to-secondary-aqua rounded-xl bg-linear-to-r p-0.5 text-base">
           <div className="rounded-xl bg-white p-5 text-base">{children}</div>
         </div>
       )}

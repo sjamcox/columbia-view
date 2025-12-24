@@ -17,7 +17,7 @@ export default function ValueCard({
 }: ValueCardProps) {
   return (
     <div className="flex flex-col items-center sm:flex-row sm:gap-7">
-      <div className="from-primary-light-blue to-secondary-aqua border-primary-dark-blue z-10 flex h-30 w-30 shrink-0 items-center justify-center rounded-full bg-gradient-to-b max-sm:border-5">
+      <div className="from-primary-light-blue to-secondary-aqua border-primary-dark-blue z-10 flex h-30 w-30 shrink-0 items-center justify-center rounded-full bg-linear-to-b max-sm:border-5">
         <Image src={icon} alt="" />
       </div>
       <div className="rounded-2xl bg-white p-7 max-sm:-mt-3 max-sm:text-center">

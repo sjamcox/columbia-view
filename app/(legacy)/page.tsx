@@ -81,7 +81,7 @@ export default function Index() {
                 struggles; you are welcome at Columbia View! So come as you are.
               </Typography>
               <MuiButton
-                href="/join-us"
+                href="/plan-your-visit"
                 variant="contained"
                 size="large"
                 color="secondary"
