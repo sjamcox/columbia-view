@@ -1,6 +1,6 @@
-import { Metadata } from 'next'
-import { Container, Divider, Stack, Typography } from '@mui/material'
-import { StaffListing } from '@/components/StaffListing'
+import type { Metadata } from 'next'
+import Image from 'next/image'
+
 import david from '@/public/david-headshot.webp'
 import serena from '@/public/serena-headshot.webp'
 import nancy from '@/public/nancy-headshot.webp'
@@ -41,25 +41,52 @@ const staff = [
   },
 ]
 
-export default function Staff() {
+export default function StaffPage() {
   return (
-    <Container maxWidth="md">
-      <Typography component="h1" variant="h2" sx={{ my: 5 }}>
+    <main className="mx-auto max-w-4xl px-6 py-12">
+      <h1 className="font-display mb-16 text-center text-4xl font-bold text-neutral-800 lg:text-5xl">
         Immigrant Connection Staff
-      </Typography>
-      <Stack
-        divider={
-          <Divider orientation="horizontal" flexItem sx={{ color: 'blue' }} />
-        }
-        spacing={6}
-        sx={{
-          alignItems: 'center',
-        }}
-      >
+      </h1>
+
+      <div className="space-y-16">
         {staff.map((member) => (
-          <StaffListing key={member.name} member={member} />
+          <div
+            key={member.name}
+            className="flex flex-col items-center gap-8 md:flex-row md:items-start md:gap-12"
+          >
+            {/* Image Card */}
+            <div className="relative shrink-0">
+              <div className="relative h-64 w-64 overflow-hidden rounded-2xl shadow-xl md:h-72 md:w-72">
+                <Image
+                  src={member.image}
+                  alt={`Photo of ${member.name}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 256px, 288px"
+                />
+              </div>
+              {/* Decorative accent */}
+              <div className="absolute -bottom-4 -right-4 -z-10 h-64 w-64 rounded-2xl bg-secondary-aqua/20 md:-bottom-6 md:-right-6 md:h-72 md:w-72" />
+            </div>
+
+            {/* Content */}
+            <div className="text-center md:text-left">
+              <h3 className="font-display mb-2 text-2xl font-bold text-primary-dark-blue">
+                {member.name}
+              </h3>
+              
+              <div className="mb-4 space-y-1 text-secondary-aqua">
+                <p className="font-bold uppercase tracking-wide text-sm">{member.title}</p>
+                <p className="font-medium text-sm">Languages: {member.languages}</p>
+              </div>
+
+              <p className="text-base leading-relaxed text-neutral-dark-gray">
+                {member.bio}
+              </p>
+            </div>
+          </div>
         ))}
-      </Stack>
-    </Container>
+      </div>
+    </main>
   )
 }
