@@ -60,7 +60,7 @@ export default function Footer() {
             fontSize: 14,
           }}
         >
-          © 2024 Columbia View Church | All Rights Reserved
+          © {new Date().getFullYear()} Columbia View Church | All Rights Reserved
         </Typography>
       </Container>
     </Box>
