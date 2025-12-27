@@ -9,6 +9,7 @@ export type ButtonProps = {
   arrow?: boolean
   children: string
   color?: ColorVariant
+  className?: string
 } & LinkProps
 
 const colorVariants = {
@@ -22,13 +23,14 @@ export default function Button({
   arrow = false,
   children,
   color = 'light',
+  className = '',
   ...rest
 }: ButtonProps) {
   const minWidth = arrow ? 'md:min-w-75' : 'md:min-w-50'
   const justify = arrow ? 'justify-between' : 'justify-center'
 
   return (
-    <Link {...rest}>
+    <Link className={className} {...rest}>
       <div
         className={`flex w-fit items-center gap-4 rounded-full px-7 py-5 md:gap-15 ${colorVariants[color]} ${minWidth} ${justify} transition-transform duration-300 ease-in-out hover:scale-103`}
       >
