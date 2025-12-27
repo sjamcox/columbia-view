@@ -55,6 +55,7 @@ export function GradientSection({
   )
 }
 
+
 interface MediaSectionProps extends SectionProps {
   media: ReactNode
   reverse?: boolean
@@ -80,5 +81,41 @@ export function MediaSection({
         <div className={mediaClassName}>{media}</div>
       </div>
     </ContentSection>
+  )
+}
+
+import type { StaticImageData } from 'next/image'
+import Image from 'next/image'
+
+export interface ImageSectionProps {
+  children: ReactNode
+  src: StaticImageData | string
+  alt: string
+  color?: 'red' | 'blue'
+  className?: string
+}
+
+export function ImageSection({
+  children,
+  src,
+  alt,
+  color,
+  className = '',
+}: ImageSectionProps) {
+  const colorVariants = {
+    blue: 'from-primary-dark-blue to-primary-light-blue',
+    red: 'from-secondary-yellow to-secondary-red',
+  }
+
+  return (
+    <section className={`relative overflow-hidden ${className}`}>
+      <Image src={src} alt={alt} fill priority className="object-cover" />
+      {color && (
+        <div
+          className={`${colorVariants[color]} absolute inset-0 bg-linear-to-b opacity-50`}
+        />
+      )}
+      <div className="relative">{children}</div>
+    </section>
   )
 }

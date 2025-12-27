@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 
 import Link from 'next/link'
 
-import { ImageSection } from '@/components/Section'
-import { GradientSection } from '@/components/ui/section'
+import { ImageSection, GradientSection } from '@/components/ui/section'
 import { ExpenseChart, IncomeChart } from './FinanceCharts'
 import Image from 'next/image'
 import Divider from '@/components/Divider'

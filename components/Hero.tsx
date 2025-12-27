@@ -1,6 +1,6 @@
 import type { ButtonProps } from './ui/button'
 
-import { ImageSection, ImageSectionProps } from './Section'
+import { ImageSection, type ImageSectionProps } from '@/components/ui/section'
 import Button from './ui/button'
 
 export type HeroProps = {

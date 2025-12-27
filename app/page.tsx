@@ -180,38 +180,30 @@ export default function Page() {
       </section>
 
       <section>
-        <div className="container mx-auto px-0 py-12 md:px-4 md:py-24">
-          <div className="relative flex flex-col items-center overflow-hidden rounded-[20px] md:h-[460px] md:flex-row md:overflow-hidden">
-            <div className="absolute flex w-full flex-col">
-                <div className="w-full md:w-1/2"></div>
-                <div className="w-full md:w-1/2">
-                    <div className="relative h-0 w-full pb-[60%] md:h-[460px] md:pb-0">
-                         <Image
-                            src={immigrantFamily}
-                            alt="Immigrant mother and daughter smiling"
-                            fill
-                            className="absolute inset-0 object-cover rounded-none md:rounded-[10px]"
-                        />
-                    </div>
-                </div>
+        <div className="container mx-auto px-4 py-12 md:py-24">
+          <div className="grid grid-cols-1 items-stretch gap-0 overflow-hidden rounded-[20px] md:grid-cols-12 md:gap-8">
+            <div className="z-10 bg-[rgb(14,73,111)] p-8 text-white md:col-span-7 md:rounded-[10px] lg:p-16">
+              <div className="max-w-[500px]">
+                <h2 className="mb-8 text-[1.7rem] font-bold md:text-[2.3rem] lg:text-[2.8rem]">
+                  Immigrant Connection PDX
+                </h2>
+                <p className="mb-8 text-lg leading-relaxed">
+                  Providing church-based, low-cost immigration legal services in
+                  underserved communities of the Portland Metro area and beyond.
+                </p>
+                <Button href="/immigrant-connection-pdx" color="blue">
+                  Learn more about our services
+                </Button>
+              </div>
             </div>
 
-            <div className="relative w-full md:absolute flex">
-                <div className="bg-[rgb(14,73,111)] p-8 text-white w-full md:w-7/12 md:rounded-[10px] z-10">
-                    <div className="max-w-[500px]">
-                        <h2 className="mb-8 text-[1.7rem] font-bold md:text-[2.3rem] lg:text-[2.8rem]">
-                            Immigrant Connection PDX
-                        </h2>
-                        <p className="mb-8">
-                            Providing church-based, low-cost immigration legal services
-                            in underserved communities of the Portland Metro area and
-                            beyond.
-                        </p>
-                        <Button href="/immigrant-connection-pdx" color="blue">
-                            Learn more about our services
-                        </Button>
-                    </div>
-                </div>
+            <div className="relative min-h-[300px] md:col-span-5 md:min-h-full">
+              <Image
+                src={immigrantFamily}
+                alt="Immigrant mother and daughter smiling"
+                fill
+                className="object-cover md:rounded-[10px]"
+              />
             </div>
           </div>
         </div>

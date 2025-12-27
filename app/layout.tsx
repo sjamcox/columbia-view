@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import Providers from '@/providers'
+import Header from '@/components/features/header'
+import Footer from '@/components/features/footer'
+
 import { openSans, raleway } from '@/styles/fonts'
 
 import '@/styles/globals.css'
@@ -20,11 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${openSans.variable} ${raleway.variable}`}>
       <body>
-        <Providers>
           <Header />
           {children}
           <Footer />
-        </Providers>
       </body>
     </html>
   )

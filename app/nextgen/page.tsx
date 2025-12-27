@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 
 import Image from 'next/image'
 
-import { ImageSection } from '@/components/Section'
 import {
   ContentSection,
   GradientSection,
   MediaSection,
+  ImageSection,
 } from '@/components/ui/section'
 import {
   DisplayHeading,
