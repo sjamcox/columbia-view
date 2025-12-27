@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Header from '@/components/features/header'
 import Footer from '@/components/features/footer'
 import ChurchSchema from '@/components/features/seo/church-schema'
+import GoogleAnalytics from '@/components/features/analytics/google'
 
 import { openSans, raleway } from '@/styles/fonts'
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${openSans.variable} ${raleway.variable}`}>
       <body>
+          <GoogleAnalytics />
           <ChurchSchema />
           <Header />
           {children}
