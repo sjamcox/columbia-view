@@ -3,6 +3,9 @@ import Button from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Jobs | Immigrant Connection PDX',
+  alternates: {
+    canonical: '/immigrant-connection-pdx/jobs',
+  },
 }
 
 export default function JobsPage() {

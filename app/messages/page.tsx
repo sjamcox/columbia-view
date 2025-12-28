@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: 'Messages | Columbia View Church',
   description:
     'Explore the latest teachings from Columbia View Church. Listen to sermons focused on biblical truth and practical application for everyday life.',
+  alternates: {
+    canonical: '/messages',
+  },
 }
 
 export default async function Messages() {

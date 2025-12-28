@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: 'Ministries | Columbia View Church',
   description:
     'Discover ways to connect, serve, and grow in faith through our worship services, NextGen kids ministry, life groups, and global missions.',
+  alternates: {
+    canonical: '/ministries',
+  },
 }
 
 export default function Ministries() {

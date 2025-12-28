@@ -8,6 +8,9 @@ import hawi from '@/public/hawi-headshot.webp'
 
 export const metadata: Metadata = {
   title: 'Staff | Immigrant Connection PDX',
+  alternates: {
+    canonical: '/immigrant-connection-pdx/staff',
+  },
 }
 
 const staff = [

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
 import Slideshow from '@/components/Slideshow'
 import EventGrid from '@/components/EventGrid'
 import Button from '@/components/ui/button'
@@ -42,6 +43,12 @@ function ImageTile({
       </div>
     </Link>
   )
+}
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
 }
 
 export default function Page() {

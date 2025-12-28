@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: 'About | Columbia View Church',
   description:
     'Learn about our vision, mission, beliefs, and meet the staff at Columbia View Church. We invite you to belong, believe, and become.',
+  alternates: {
+    canonical: '/about',
+  },
 }
 
 const staff = [

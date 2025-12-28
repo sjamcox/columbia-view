@@ -39,6 +39,9 @@ import IconFeatureCard from '@/components/ui/icon-feature-card'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',
+  alternates: {
+    canonical: '/nextgen',
+  },
 }
 
 export default function NextGen() {

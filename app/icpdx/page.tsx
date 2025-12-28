@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   title: 'Partner With Us | Immigrant Connection',
   description:
     'Immigrant Connection is committed to seeing immigrant families in East Portland thrive. See how you can get involved today.',
+  alternates: {
+    canonical: '/icpdx',
+  },
 }
 
 export default function ImmigrantConnection() {

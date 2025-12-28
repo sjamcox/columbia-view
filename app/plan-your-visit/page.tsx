@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: 'Plan Your Visit | Columbia View Church',
   description:
     "We're excited to have you join us for worship! Find service times, what to expect, parking information, and everything you need to know for your first visit.",
+  alternates: {
+    canonical: '/plan-your-visit',
+  },
 }
 
 export default function PlanYourVisit() {

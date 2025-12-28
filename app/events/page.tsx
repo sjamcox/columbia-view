@@ -1,4 +1,12 @@
 import EventGrid from '@/components/EventGrid'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Events | Columbia View Church',
+  alternates: {
+    canonical: '/events',
+  },
+}
 
 export default function EventsPage() {
   return (

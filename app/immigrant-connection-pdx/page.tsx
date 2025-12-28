@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: 'Immigrant Connection PDX | Low-Cost Immigration Legal Services',
   description:
     "We're a church-based, low-cost immigration legal services office in East Portland. We serve those seeking legal assistance with issues relating to immigration.",
+  alternates: {
+    canonical: '/immigrant-connection-pdx',
+  },
 }
 
 
