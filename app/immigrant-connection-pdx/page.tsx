@@ -81,7 +81,7 @@ export default function ImmigrantConnection() {
               Visas.
             </p>
             <p>
-              A $40 office visit/legal consultation fee is due at your first
+              A $60 office visit/legal consultation fee is due at your first
               appointment and must be paid prior to speaking with the
               Immigration Legal Representative. This is in addition to any legal
               or filing fees that will be required for your case.
@@ -120,7 +120,7 @@ export default function ImmigrantConnection() {
                 </a>{' '}
                 to schedule an appointment.
               </strong>{' '}
-              An initial consultation costs $40.
+              An initial consultation costs $60.
             </p>
             <p>
               We are a part of the Immigrant Connection National Network of
