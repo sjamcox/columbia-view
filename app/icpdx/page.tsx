@@ -61,14 +61,29 @@ export default function ImmigrantConnection() {
         }}
       />
       <Divider />
-      <section className="mx-auto flex w-full max-w-6xl justify-center px-6 pt-12">
-        <Button
-          color="blue"
-          href="https://columbiaview.churchcenter.com/giving"
-        >
-          Support Our Mission
-        </Button>
-      </section>
+      <GradientSection color="dark-blue">
+        <div className="flex flex-col items-center gap-10">
+          <div className="flex flex-col gap-6 text-center text-white">
+            <h2 className="font-display text-4xl font-bold uppercase md:text-5xl">
+              Support Local Immigrant Families
+            </h2>
+            <p className="max-w-4xl text-lg sm:text-xl">
+              Your gift funds trusted, affordable immigration legal services for
+              individuals and families in 2026. Every dollar supports case
+              preparation, legal support, and ongoing client care—helping
+              immigrant neighbors navigate a complex system with clarity and
+              dignity. Help us fully fund our 2026 operating needs.
+            </p>
+          </div>
+          <GivingProgressBar raised={2985} goal={10000} />
+          <Button
+            color="blue"
+            href="https://columbiaview.churchcenter.com/giving"
+          >
+            Give Today
+          </Button>
+        </div>
+      </GradientSection>
       <section className="mx-auto grid w-full max-w-6xl grid-cols-12 gap-x-2 px-6 py-15 max-md:gap-y-10 lg:py-25">
         <div className="relative h-fit overflow-hidden rounded-2xl max-md:col-span-12 md:col-start-2 md:col-end-7">
           <Image
@@ -404,30 +419,7 @@ export default function ImmigrantConnection() {
           </Testimonial>
         </div>
       </section>
-      <Divider />
-      <GradientSection color="dark-blue">
-        <div className="flex flex-col items-center gap-10">
-          <div className="flex flex-col gap-6 text-center text-white">
-            <h2 className="font-display text-4xl font-bold uppercase md:text-5xl">
-              Support Local Immigrant Families
-            </h2>
-            <p className="max-w-4xl text-lg sm:text-xl">
-              Your gift funds trusted, affordable immigration legal services for
-              individuals and families in 2026. Every dollar supports case
-              preparation, legal support, and ongoing client care—helping
-              immigrant neighbors navigate a complex system with clarity and
-              dignity. Help us fully fund our 2026 operating needs.
-            </p>
-          </div>
-          <GivingProgressBar raised={2985} goal={10000} />
-          <Button
-            color="blue"
-            href="https://columbiaview.churchcenter.com/giving"
-          >
-            Give Today
-          </Button>
-        </div>
-      </GradientSection>
+
       <Divider />
       <section className="mx-auto flex w-full max-w-5xl flex-col px-6 py-15 lg:py-25">
         <h2 className="text-primary-dark-blue font-display mb-2 text-center text-4xl/tight font-bold uppercase md:text-7xl/20">
