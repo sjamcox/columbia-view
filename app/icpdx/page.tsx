@@ -2,7 +2,11 @@ import type { Metadata } from 'next'
 
 import Link from 'next/link'
 
-import { ImageSection, GradientSection } from '@/components/ui/section'
+import {
+  ImageSection,
+  GradientSection,
+  ContentSection,
+} from '@/components/ui/section'
 import { ExpenseChart, IncomeChart } from './FinanceCharts'
 import Image from 'next/image'
 import Divider from '@/components/Divider'
@@ -11,6 +15,8 @@ import CaseAccordions from './CaseAccordions'
 import Testimonial from './Testimonial'
 import ClientsChart from './ClientsChart'
 import PartnerList from './PartnerList'
+import ProcessStep from './process-step'
+import GivingProgressBar from './giving-progress-bar'
 import immigrantSuccess from '@/public/immigrant-success-stories.webp'
 import icpdxLogo from '@/public/logos/icpdx-logo-white.svg'
 import icpdxStaff from '@/public/icpdx/icpdx-staff-conf.jpeg'
@@ -145,6 +151,89 @@ export default function ImmigrantConnection() {
           </div>
       </GradientSection>
       <Divider />
+      <ContentSection>
+        <div className="mb-16 md:mb-24">
+          <h2 className="text-primary-dark-blue font-display mb-6 text-6xl/16 font-bold uppercase md:text-7xl/28">
+            Our Process
+          </h2>
+          <p className="max-w-3xl text-lg text-neutral-600 md:text-xl">
+            Immigration is complicated. Our process is not.
+          </p>
+          <p className="mt-6 max-w-4xl text-base text-neutral-600">
+            We walk each client through the immigration journey step by
+            step—from first conversation to final outcome. While each case is
+            unique and the experience of every client will be slightly different
+            depending on their situation, below is a high level overview of what
+            someone can expect from ICPDX:
+          </p>
+        </div>
+        <div className="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+          <ProcessStep number="1" title="Initial Consultation">
+            <p>
+              Clients schedule an initial legal consultation and meet with an
+              Accredited Representative.
+            </p>
+            <p>
+              We prepare in advance, listen to the client’s story, assess
+              whether a legal pathway exists, and explain options honestly and
+              clearly—including both risks and rewards.
+            </p>
+          </ProcessStep>
+          <ProcessStep number="2" title="Client Service Agreement">
+            <p>
+              If a pathway exists and the client chooses to move forward, a
+              formal client services agreement is signed. We provide a clear
+              scope of services, timeline, costs, and responsibilities for both
+              the client and our office—ensuring transparency and clarity for
+              everyone involved.
+            </p>
+          </ProcessStep>
+          <ProcessStep number="3" title="Case Built">
+            <p>
+              Clients submit required forms, questionnaires, and supporting
+              documents. Once everything is received and verified, our team
+              builds the case—completing forms carefully, conducting legal
+              research as needed, and reviewing for accuracy, quality, and
+              compliance.
+            </p>
+          </ProcessStep>
+          <ProcessStep number="4" title="Case Submitted">
+            <p>
+              Applications are reviewed, signed, and submitted to the
+              government. Every filing follows a consistent quality-control
+              process.
+            </p>
+          </ProcessStep>
+          <ProcessStep number="5" title="Ongoing Support">
+            <p>
+              We stay engaged with clients after submission. We track government
+              notices, respond to requests, and prepare clients for interviews
+              when required. Immigration cases often take months or years—we
+              remain engaged throughout.
+            </p>
+          </ProcessStep>
+          <ProcessStep number="6" title="Decision & Case Closed">
+            <p>
+              While we prepare strong, lawful applications, final decisions
+              always rest with the government. We celebrate with clients when
+              their cases are approved and immigration benefits are granted. A
+              formal closing letter is submitted to the client.
+            </p>
+          </ProcessStep>
+        </div>
+      </ContentSection>
+      <Divider />
+      <ImageSection src={immigrationClass} alt="" color="red">
+        <div className="mx-auto flex min-h-150 w-full max-w-6xl items-end px-6 py-15 lg:py-25">
+          <p className="font-display bg-primary-dark-blue max-w-4xl p-10 text-2xl font-semibold text-white italic">
+            "Arriving in the U.S. is only the beginning of a long and often
+            difficult journey for immigrants and refugees who face the daunting
+            task of navigating the "maze with moving walls" that is the
+            immigration system."
+          </p>
+        </div>
+      </ImageSection>
+      <Divider />
       <section className="mx-auto w-full max-w-6xl flex-col px-6 py-15 lg:py-25">
         <h2 className="font-display mb-8 text-center text-3xl/tight font-light md:mb-16 md:text-5xl/tight">
           A case for why{' '}
@@ -178,16 +267,64 @@ export default function ImmigrantConnection() {
         </div>
       </section>
       <Divider />
-      <ImageSection src={immigrationClass} alt="" color="red">
-        <div className="mx-auto flex min-h-150 w-full max-w-6xl items-end px-6 py-15 lg:py-25">
-          <p className="font-display bg-primary-dark-blue max-w-4xl p-10 text-2xl font-semibold text-white italic">
-            "Arriving in the U.S. is only the beginning of a long and often
-            difficult journey for immigrants and refugees who face the daunting
-            task of navigating the "maze with moving walls" that is the
-            immigration system."
+      <GradientSection color="green-blue">
+          <p className="mb-20 text-center text-2xl/snug font-light text-white md:text-4xl/snug">
+            Since receiving recognition and accreditation from the Department of Justice in 2020, our office has provided immigration legal services for over{' '}
+            <span className="font-semibold">
+              1,500+ foreign-born individuals
+            </span>{' '}
+            from over <span className="font-semibold">65 countries</span>{' '}
+            resulting in nearly{' '}
+            <span className="font-semibold">600 immigration cases</span> being
+            submitted to the government with a{' '}
+            <span className="font-semibold">
+              99% immigration benefit approval rating
+            </span>
+            .
           </p>
-        </div>
-      </ImageSection>
+          <div className="flex flex-col gap-20">
+            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
+              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
+                Clients Served
+              </p>
+              <ClientsChart />
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
+              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
+                Income
+              </p>
+              <IncomeChart />
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
+              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
+                Expenses
+              </p>
+              <ExpenseChart />
+            </div>
+            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
+              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
+                Average Cost
+              </p>
+              <div>
+                <p className="font-display mb-2 text-4xl text-white md:text-7xl">
+                  4–10x less
+                </p>
+                <p className="text-white">
+                  than traditional attorneys. What would cost our clients $4,000
+                  from a fully barred lawyer we can do for $400.
+                </p>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <Button
+                color="light"
+                href="https://columbiaview.churchcenter.com/giving"
+              >
+                Support Our Mission
+              </Button>
+            </div>
+          </div>
+      </GradientSection>
       <Divider />
       <section className="mx-auto flex w-full max-w-6xl flex-col px-6 py-15 lg:py-25">
         <h2 className="text-primary-dark-blue font-display text-center text-4xl/tight font-bold uppercase md:text-7xl/20">
@@ -268,65 +405,28 @@ export default function ImmigrantConnection() {
         </div>
       </section>
       <Divider />
-      <GradientSection color="green-blue">
-          <p className="mb-20 text-center text-2xl/snug font-light text-white md:text-4xl/snug">
-            Since receiving recognition and accreditation from the Department of
-            Justice in 2020, our office has provided immigration legal services
-            for over{' '}
-            <span className="font-semibold">
-              1,200+ foreign-born individuals
-            </span>{' '}
-            from over <span className="font-semibold">60 countries</span>{' '}
-            resulting in nearly{' '}
-            <span className="font-semibold">500 immigration cases</span> being
-            submitted to the government with a{' '}
-            <span className="font-semibold">
-              99.8% immigration benefit approval rating
-            </span>
-            .
-          </p>
-          <div className="flex flex-col gap-20">
-            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
-              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
-                Clients Served
-              </p>
-              <ClientsChart />
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
-              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
-                Income
-              </p>
-              <IncomeChart />
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
-              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
-                Expenses
-              </p>
-              <ExpenseChart />
-            </div>
-            <div className="grid gap-8 md:grid-cols-2 md:grid-rows-1 md:gap-20">
-              <p className="font-display text-4xl font-bold text-white uppercase md:text-right md:text-7xl">
-                Average Cost
-              </p>
-              <div>
-                <p className="font-display mb-2 text-4xl text-white md:text-7xl">
-                  4–10x less
-                </p>
-                <p className="text-white">
-                  than traditional attorneys. What would cost our clients $4,000
-                  from a fully barred lawyer we can do for $400.
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <Button
-                color="light"
-                href="https://columbiaview.churchcenter.com/giving"
-              >
-                Support Our Mission
-              </Button>
-            </div>
+      <GradientSection color="dark-blue">
+        <div className="flex flex-col items-center gap-10">
+          <div className="flex flex-col gap-6 text-center text-white">
+            <h2 className="font-display text-4xl font-bold uppercase md:text-5xl">
+              Support Local Immigrant Families
+            </h2>
+            <p className="max-w-4xl text-lg sm:text-xl">
+              Your gift funds trusted, affordable immigration legal services for
+              individuals and families in 2026. Every dollar supports case
+              preparation, legal support, and ongoing client care—helping
+              immigrant neighbors navigate a complex system with clarity and
+              dignity. Help us fully fund our 2026 operating needs.
+            </p>
           </div>
+          <GivingProgressBar raised={2985} goal={10000} />
+          <Button
+            color="blue"
+            href="https://columbiaview.churchcenter.com/giving"
+          >
+            Give Today
+          </Button>
+        </div>
       </GradientSection>
       <Divider />
       <section className="mx-auto flex w-full max-w-5xl flex-col px-6 py-15 lg:py-25">
