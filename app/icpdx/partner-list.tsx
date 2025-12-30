@@ -7,8 +7,8 @@ type PartnerTileProps = {
 function PartnerTile({ name, subtitle, children }: PartnerTileProps) {
   return (
     <div className="flex flex-col">
-      <div className="text-neutral-mid-gray px-4 pb-4">
-        <p className="text-primary-dark-blue font-display text-3xl font-semibold">
+      <div className="text-white/80 px-4 pb-4">
+        <p className="text-white font-display text-3xl font-semibold">
           {name}
         </p>
         {subtitle && <p>{subtitle}</p>}

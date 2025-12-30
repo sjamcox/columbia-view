@@ -7,14 +7,14 @@ import {
   GradientSection,
   ContentSection,
 } from '@/components/ui/section'
-import { ExpenseChart, IncomeChart } from './FinanceCharts'
+import { ExpenseChart, IncomeChart } from './finance-charts'
 import Image from 'next/image'
 import Divider from '@/components/Divider'
-import ValueCard from './ValueCard'
-import CaseAccordions from './CaseAccordions'
-import Testimonial from './Testimonial'
-import ClientsChart from './ClientsChart'
-import PartnerList from './PartnerList'
+import ValueCard from './value-card'
+import CaseAccordions from './case-accordions'
+import Testimonial from './testimonial'
+import ClientsChart from './clients-chart'
+import PartnerList from './partner-list'
 import ProcessStep from './process-step'
 import GivingProgressBar from './giving-progress-bar'
 import immigrantSuccess from '@/public/immigrant-success-stories.webp'
@@ -167,7 +167,7 @@ export default function ImmigrantConnection() {
       </GradientSection>
       <Divider />
       <ContentSection>
-        <div className="mb-16 md:mb-24">
+        <div className="mb-8 md:mb-12">
           <h2 className="text-primary-dark-blue font-display mb-6 text-6xl/16 font-bold uppercase md:text-7xl/28">
             Our Process
           </h2>
@@ -182,7 +182,7 @@ export default function ImmigrantConnection() {
             someone can expect from ICPDX:
           </p>
         </div>
-        <div className="grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-x-8 gap-y-8 md:grid-cols-2 lg:grid-cols-3">
           <ProcessStep number="1" title="Initial Consultation">
             <p>
               Clients schedule an initial legal consultation and meet with an
@@ -421,18 +421,21 @@ export default function ImmigrantConnection() {
       </section>
 
       <Divider />
-      <section className="mx-auto flex w-full max-w-5xl flex-col px-6 py-15 lg:py-25">
-        <h2 className="text-primary-dark-blue font-display mb-2 text-center text-4xl/tight font-bold uppercase md:text-7xl/20">
+      <GradientSection color="blue-aqua">
+        <h2 className="text-white font-display mb-2 text-center text-4xl/tight font-bold uppercase md:text-7xl/20">
           Partner
           <br />
           Organizations
         </h2>
-        <small className="text-neutral-mid-gray mb-12 max-w-150 self-center text-center text-base md:mb-16">
+        <div className="flex flex-col items-center">
+
+        <p className="text-white/80 mb-12 max-w-150 self-center text-center text-base md:mb-16">
           A heartfelt thank you to each of the organizations below for their
           support. Together we are able to accomplish so much.
-        </small>
+        </p>
+        </div>
         <PartnerList />
-      </section>
+      </GradientSection>
       <Divider />
       <GradientSection color="yellow-green">
         <div className="mx-auto flex min-h-50 w-full max-w-6xl flex-col items-start justify-end gap-6">
