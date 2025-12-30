@@ -37,6 +37,11 @@ export default function ClientsChart() {
       clients: 350,
       submissions: 200,
     },
+    {
+      year: '2025',
+      clients: 355,
+      submissions: 160,
+    },
   ]
 
   return (
