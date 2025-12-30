@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/section'
 import { ExpenseChart, IncomeChart } from './finance-charts'
 import Image from 'next/image'
-import Divider from '@/components/Divider'
+import Divider from '@/components/ui/divider'
 import ValueCard from './value-card'
 import CaseAccordions from './case-accordions'
 import Testimonial from './testimonial'
@@ -419,7 +419,6 @@ export default function ImmigrantConnection() {
           </Testimonial>
         </div>
       </section>
-
       <Divider />
       <GradientSection color="blue-aqua">
         <h2 className="text-white font-display mb-2 text-center text-4xl/tight font-bold uppercase md:text-7xl/20">
