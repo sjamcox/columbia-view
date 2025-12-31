@@ -125,7 +125,7 @@ export default function PartnerList() {
       <div className="max-w-3xl self-end">
         <PartnerTile name="Parklane Christian Reformed Church">
           <p className="mb-3 italic">
-            "I am so thankful for the work and ministryof Immigrant Connection
+            "I am so thankful for the work and ministry of Immigrant Connection
             PDX in our community. This is a deeply needed work in our
             neighborhood that serves our brothers and sisters who are in
             difficult situations. Please join me in praying for and supporting

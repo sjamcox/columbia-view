@@ -11,6 +11,10 @@ module.exports = {
       },
       {
         protocol: 'https',
+        hostname: 'groups-production.s3.amazonaws.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'd3wo5wojvuv7l.cloudfront.net',
       },
     ],
