@@ -25,7 +25,7 @@ type PieChartProps = {
 export default function PieChart({ data }: PieChartProps) {
   const [activeIndex, setActiveIndex] = useState<number | undefined>()
 
-  const onHover = (_: any, index: number) => {
+  const onHover = (_: unknown, index: number) => {
     setActiveIndex(index)
   }
 

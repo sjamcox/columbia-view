@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { X } from 'lucide-react'
 import {
   Sheet,
   SheetContent,
@@ -63,7 +62,7 @@ export const NavDrawer = ({ menu, open, setOpen }: NavDrawerProps) => {
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <div className="flex flex-col gap-2 pl-4 py-2">
-                        {link.subnav && link.subnav.map((item: any) => (
+                        {link.subnav && link.subnav.map((item) => (
                           <Link
                             key={item.text}
                             href={item.href}
