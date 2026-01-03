@@ -1,3 +1,4 @@
+import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
@@ -21,7 +22,7 @@ function ImageTile({
   headline,
 }: {
   link: string
-  image: any
+  image: StaticImageData
   alt: string
   headline: string
 }) {
