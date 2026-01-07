@@ -75,7 +75,7 @@ export default function ImmigrantConnection() {
               dignity. Help us fully fund our 2026 operating needs.
             </p>
           </div>
-          <GivingProgressBar raised={3582} goal={10000} />
+          <GivingProgressBar raised={10110} goal={10000} />
           <Button
             color="blue"
             href="https://columbiaview.churchcenter.com/giving"
