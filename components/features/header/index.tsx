@@ -81,11 +81,11 @@ export default function Header() {
                 return (
                   <NavParent key={item.text} text={item.text}>
                     {item.subnav.map((subItem) => (
-                      <Link key={subItem.text} href={subItem.href} passHref legacyBehavior>
-                        <DropdownMenuItem className="cursor-pointer font-semibold text-[#333333]">
+                      <DropdownMenuItem key={subItem.text} asChild className="cursor-pointer font-semibold text-[#333333]">
+                        <Link href={subItem.href}>
                            {subItem.text}
-                        </DropdownMenuItem>
-                      </Link>
+                        </Link>
+                      </DropdownMenuItem>
                     ))}
                   </NavParent>
                 )
