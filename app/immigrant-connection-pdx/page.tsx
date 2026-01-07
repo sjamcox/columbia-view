@@ -59,14 +59,12 @@ export default function ImmigrantConnection() {
           </p>
 
           {/* Alert */}
-          <div className="mb-8 flex gap-4 rounded-md bg-secondary-yellow/25 p-4 text-blue-900">
+          <div className="mb-4 flex gap-4 rounded-md bg-secondary-red/25 p-4 text-blue-900">
             <InformationCircleIcon className="h-6 w-6 shrink-0" />
-            <div>
-              Our office is not currently processing Asylum, U Visa, VAWA or
-              Employment-based immigration (ie. H-1B, L-1, O-1, TN, E-2, EB-1,
-              EB-2, EB-3, EB-4, EB-5, etc.) cases at this time. We apologize for
-              any inconvenience.
-            </div>
+            <p>
+              <b>Our office does not do employment-based immigration</b> (including H-1B, L-1, O-1, TN, E-2, EB-1, EB-2, EB-3, EB-4, EB-5, etc.)
+We are also not processing Asylum, U Visa, or VAWA cases at this time. We apologize for any inconvenience.
+            </p>
           </div>
 
           <div className="space-y-6 text-base text-neutral-dark-gray">
