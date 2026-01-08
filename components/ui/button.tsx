@@ -33,7 +33,7 @@ export default function Button({
   return (
     <Link className={className} {...rest}>
       <div
-        className={`flex w-fit items-center gap-4 rounded-full px-7 py-5 md:gap-15 ${colorVariants[color]} ${minWidth} ${justify} transition-transform duration-300 ease-in-out hover:scale-103`}
+        className={`flex w-fit items-center gap-2 rounded-full px-5 py-3 transition-transform duration-300 ease-in-out hover:scale-103 md:gap-15 md:px-7 md:py-5 ${colorVariants[color]} ${minWidth} ${justify}`}
       >
         <p className="text-base font-semibold text-white uppercase">
           {children}
