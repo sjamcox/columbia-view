@@ -12,7 +12,7 @@ export default function HeroVideo() {
         muted
         playsInline
         poster='/videos/hero-poster.jpg'
-        className="h-auto min-h-[60vh] w-full object-cover md:min-h-[70vh]"
+        className="h-auto min-h-[calc(60vh+100px)] w-full object-cover md:min-h-[80vh]"
         style={{ aspectRatio: '16/9' }}
       >
         <source src="/videos/hero-banner-1.mp4" type="video/mp4" />
