@@ -3,7 +3,7 @@ import type { LinkProps } from 'next/link'
 import { ArrowRightIcon } from '@heroicons/react/16/solid'
 import Link from 'next/link'
 
-type ColorVariant = 'light' | 'dark' | 'blue'
+type ColorVariant = 'light' | 'dark' | 'blue' | 'lime'
 
 export type ButtonProps = {
   arrow?: boolean
@@ -17,6 +17,7 @@ const colorVariants = {
     'bg-gradient-to-b from-secondary-blue-black/20 to-neutral-dark-gray/20',
   dark: 'bg-gradient-to-b from-secondary-blue-black/40 to-neutral-dark-gray/40',
   blue: 'bg-gradient-to-r from-primary-light-blue to-secondary-aqua',
+  lime: 'bg-gradient-to-r from-secondary-yellow to-secondary-green',
 }
 
 export default function Button({

@@ -2,7 +2,7 @@ import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
-import Slideshow from '@/components/Slideshow'
+import HeroVideo from '@/components/HeroVideo'
 import EventGrid from '@/components/EventGrid'
 import Button from '@/components/ui/button'
 
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <Slideshow />
+      <HeroVideo />
       <section>
         <div className="container mx-auto overflow-hidden px-4 py-8 md:overflow-visible md:py-24">
           <div className="flex flex-col-reverse justify-between md:flex-row">
