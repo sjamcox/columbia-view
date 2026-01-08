@@ -11,6 +11,7 @@ export default function HeroVideo() {
         loop
         muted
         playsInline
+        poster='/videos/hero-poster.jpg'
         className="h-auto min-h-[60vh] w-full object-cover md:min-h-[70vh]"
         style={{ aspectRatio: '16/9' }}
       >
