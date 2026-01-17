@@ -136,6 +136,52 @@ We are also not processing Asylum, U Visa, or VAWA cases at this time. We apolog
             </p>
           </div>
 
+          {/* Virtual Consultation Scheduling Policy */}
+          <div className="mt-8 rounded-xl bg-secondary-aqua/10 p-8">
+            <h3 className="mb-4 text-xl font-bold text-neutral-800">
+              Virtual Consultation Scheduling Policy
+            </h3>
+            <p className="mb-4 text-base text-neutral-dark-gray">
+              Because consultation slots are limited, please review the following
+              policy before booking.
+            </p>
+            <div className="space-y-4 text-base text-neutral-dark-gray">
+              <div>
+                <p className="mb-2 font-semibold text-neutral-800">Payment</p>
+                <p>
+                  Full payment is required at the time of booking to reserve your
+                  virtual consultation.
+                </p>
+              </div>
+              <div>
+                <p className="mb-2 font-semibold text-neutral-800">
+                  Cancellations
+                </p>
+                <p>
+                  Same-day cancellations or no-shows: No refund. Cancellations
+                  made more than 24 hours in advance: 50% refund. Credit card
+                  processing fees are non-refundable.
+                </p>
+              </div>
+              <div>
+                <p className="mb-2 font-semibold text-neutral-800">
+                  Rescheduling
+                </p>
+                <p>
+                  You may reschedule one time at no charge if requested more than
+                  24 hours in advance. Same-day reschedule requests are treated as
+                  same-day cancellations and are not refundable. Any additional
+                  reschedule requests require booking and paying for a new
+                  consultation.
+                </p>
+              </div>
+            </div>
+            <p className="mt-4 text-base text-neutral-dark-gray">
+              Thank you for helping us serve as many clients as possible with care
+              and fairness.
+            </p>
+          </div>
+
           <div className="mt-8 mb-8">
             <Button
               href="https://immigrantconnectionpdx.as.me/?appointmentType=category:1.%20Initial%20Consultation%20%2F%20%20Consulta%20Inicial"
