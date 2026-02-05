@@ -8,6 +8,7 @@ import worship from '@/public/sunday/worship-team.webp'
 import testimony from '@/public/sunday/mark-baptism-testimony.webp'
 import kidsSermon from '@/public/sunday/sermon-in-a-sack.webp'
 import communion from '@/public/sunday/sermon-communion-table.webp'
+import discoverColumbia from '@/public/discover-columbia.jpeg'
 import AccordionSection from './accordion-section'
 
 export const metadata: Metadata = {
@@ -132,6 +133,46 @@ export default function PlanYourVisit() {
 
       {/* What to Expect Accordion */}
       <AccordionSection />
+
+      {/* Discover Columbia Section */}
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        <div className="relative min-h-[400px] md:min-h-[600px]">
+          <Image
+            src={discoverColumbia}
+            alt="People laughing at Discover Columbia luncheon"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="flex flex-col justify-center bg-primary-dark-blue p-8 text-white lg:p-20">
+          <h2 className="font-display mb-8 text-4xl font-bold lg:text-6xl">
+            Discover Columbia
+          </h2>
+          <div className="space-y-6 text-lg/relaxed font-light opacity-90 lg:text-xl">
+            <p>
+              This is a luncheon hosted by our Columbia View team to help you
+              discover more about our church. Lunch will be held immediately
+              following Sunday service at the nearby Rockwood Market Hall.
+            </p>
+            <p>
+              Learn more about what we offer at the church and how we desire to
+              come alongside you in your spiritual journey. There is no
+              commitment required, we just want to share more about ourselves
+              and have fun doing it.
+            </p>
+            <p>We hope to see you soon!</p>
+          </div>
+          <div className="mt-10">
+            <Button
+              href="https://columbiaview.churchcenter.com/registrations/events/3430643"
+              color="blue"
+              arrow
+            >
+              Register for Discover Columbia
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <GradientSection color="blue-aqua">
