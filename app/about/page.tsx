@@ -28,37 +28,60 @@ const staff = [
     name: 'David Rannabargar',
     title: 'Lead Pastor & ICPDX Director',
     image: david,
-    bio: "As a young dad of three\u2014Kariss (7), Charlee (4), and Korban (2)\u2014David knows the beautiful chaos of raising a family while working full time as both Lead Pastor of Columbia View and Site Director for Immigrant Connection PDX. He\u2019s been married to his wife, Serena (\u201cTita\u201d), for 9 years, and treasures the joys and challenges of this season of life. David accepted the call to become lead pastor of Columbia View Church in 2020 and his heartbeat from the beginning has been helping people cultivate community, faith, and apprenticeship to Jesus through the local church. When he\u2019s not in the middle of ministry or parenting, you\u2019ll find David building magnet tile towers with his kids, running through the neighborhood with a podcast in his ears, savoring a great cup of coffee with friends, hiking Portland\u2019s trails, or tackling another home remodel project (with mixed results on completion!).",
+    bio: [
+      "As a young dad of three\u2014Kariss (7), Charlee (4), and Korban (2)\u2014David knows the beautiful chaos of raising a family while working full time as both Lead Pastor of Columbia View and Site Director for Immigrant Connection PDX. He\u2019s been married to his wife, Serena (\u201cTita\u201d), for 9 years, and treasures the joys and challenges of this season of life.",
+      "David accepted the call to become lead pastor of Columbia View Church in 2020 and his heartbeat from the beginning has been helping people cultivate community, faith, and apprenticeship to Jesus through the local church.",
+      "When he\u2019s not in the middle of ministry or parenting, you\u2019ll find David building magnet tile towers with his kids, running through the neighborhood with a podcast in his ears, savoring a great cup of coffee with friends, hiking Portland\u2019s trails, or tackling another home remodel project (with mixed results on completion!).",
+    ],
   },
   {
     name: 'Serena Rannabargar',
     title: 'Missions & Spiritual Formation',
     image: serena,
-    bio: "As a mom of three young kids\u2014Kariss (7), Charlee (4), and Korban (2)\u2014Serena knows life is full of giggles, meltdowns, and everything in between. She\u2019s been married to David for 9 years and loves adventuring outdoors and staying active as a way to keep up with her busy family. Serena grew up in Honduras as a missionary kid, which gave her a heart for people from all walks of life. In 2020, she founded Columbia View\u2019s Immigrant Connection ministry and continues to welcome immigrants in Jesus\u2019 name as a lead DOJ Accredited Representative and provides spiritual leadership to the women\u2019s ministry in the church. Whether she\u2019s serving at church, working with immigrants, supporting clients in the mental health field, or hiking with her family, Serena\u2019s joy is helping others know they are seen, loved, and valued by Jesus.",
-  },
-  {
-    name: 'Hawi Jaldo',
-    title: 'Love INC EMC Board Member',
-    image: hawi,
-    bio: "As a young professional working on her master\u2019s in public health, Hawi Jaldo loves people and has a big heart for helping others feel seen, valued, and cared for. Growing up in an immigrant family of four shaped her with compassion, kindness, and empathy\u2014qualities that continue to guide the way she serves today. Hawi represents our church as a board member with Love INC of East Multnomah County and also serves as a legal assistant with Immigrant Connection PDX. She feels grateful to live out her faith by walking alongside people, meeting practical needs, and helping neighbors experience the love of Jesus in tangible ways. Outside of her work and ministry, Hawi enjoys life\u2019s simple pleasures\u2014sipping a warm cup of chai, watching a gorgeous sunset, or wandering through fields of flowers.",
-  },
-  {
-    name: 'Jacob Ioanas-Small',
-    title: 'Multimedia',
-    image: jacob,
-    bio: "As a young dad of twin girls working full-time with the Multnomah County Sheriff\u2019s Office, Jacob knows what it means to juggle family life, work, and ministry. He and his wife, Cosmina, have been married for 2 years and are learning the joyful (and coffee-fueled) rhythm of raising twins. At Columbia View, Jacob serves on the worship and multimedia team, where he loves helping create spaces for people to connect with Jesus through music and technology. Whether it\u2019s dialing in Sunday morning sound or quietly serving behind the scenes, Jacob brings a servant\u2019s heart and steady joy to the life of our church. In his free time, you\u2019ll probably find Jacob at a food cart, by the river, on a scenic drive, or cracking jokes with friends.",
+    bio: [
+      "As a mom of three young kids\u2014Kariss (7), Charlee (4), and Korban (2)\u2014Serena knows life is full of giggles, meltdowns, and everything in between. She\u2019s been married to David for 9 years and loves adventuring outdoors and staying active as a way to keep up with her busy family.",
+      "Serena grew up in Honduras as a missionary kid, which gave her a heart for people from all walks of life. In 2020, she founded Columbia View\u2019s Immigrant Connection ministry and continues to welcome immigrants in Jesus\u2019 name as a lead DOJ Accredited Representative and provides spiritual leadership to the women\u2019s ministry in the church.",
+      "Whether she\u2019s serving at church, working with immigrants, supporting clients in the mental health field, or hiking with her family, Serena\u2019s joy is helping others know they are seen, loved, and valued by Jesus.",
+    ],
   },
   {
     name: 'Johan Noya',
     title: 'Worship Leader',
     image: johan,
-    bio: 'As a husband to Dani and dad to their 5-year-old daughter, Johan knows the joy and busyness of family life. His story began in Indonesia, and when his family moved to the U.S. during his childhood, he experienced firsthand what it means to adapt, belong, and grow in a new culture. At Columbia View, Johan serves as our main worship leader. His passion is helping people grow in their worship to Jesus\u2014not just through singing on Sundays, but in learning to live with hearts and lives centered on God every day. He loves developing others and creating spaces where people of all backgrounds can encounter the presence of God together.',
+    bio: [
+      'As a husband to Dani and dad to their 5-year-old daughter, Johan knows the joy and busyness of family life. His story began in Indonesia, and when his family moved to the U.S. during his childhood, he experienced firsthand what it means to adapt, belong, and grow in a new culture.',
+      'At Columbia View, Johan serves as our main worship leader. His passion is helping people grow in their worship to Jesus\u2014not just through singing on Sundays, but in learning to live with hearts and lives centered on God every day. He loves developing others and creating spaces where people of all backgrounds can encounter the presence of God together.',
+    ],
   },
   {
     name: 'Russelle Brandom',
     title: 'Kids Ministry',
     image: russelle,
-    bio: 'As a proud mom of both biological and adopted kids, and wife to her husband Ken of 30 years, Russelle knows what it means to juggle family, work, and faith. Growing up as a military kid, she learned early on the value of adaptability, resilience, and community\u2014qualities she carries into her life and ministry today. At Columbia View, Russelle serves as our Kids Director. Her heart is to help children know that they are deeply loved by Jesus and to support parents as they raise the next generation in faith. Outside of church, Russelle and Ken run their own small business and still somehow find time to care for their neighbors and community.',
+    bio: [
+      'As a proud mom of both biological and adopted kids, and wife to her husband Ken of 30 years, Russelle knows what it means to juggle family, work, and faith.',
+      'Growing up as a military kid, she learned early on the value of adaptability, resilience, and community\u2014qualities she carries into her life and ministry today.',
+      'At Columbia View, Russelle serves as our Kids Director. Her heart is to help children know that they are deeply loved by Jesus and to support parents as they raise the next generation in faith. Outside of church, Russelle and Ken run their own small business and still somehow find time to care for their neighbors and community.',
+    ],
+  },
+  {
+    name: 'Jacob Ioanas-Small',
+    title: 'Multimedia',
+    image: jacob,
+    bio: [
+      "As a young dad of twin girls working full-time with the Multnomah County Sheriff\u2019s Office, Jacob knows what it means to juggle family life, work, and ministry. He and his wife, Cosmina, have been married for 2 years and are learning the joyful (and coffee-fueled) rhythm of raising twins.",
+      "At Columbia View, Jacob serves on the worship and multimedia team, where he loves helping create spaces for people to connect with Jesus through music and technology. Whether it\u2019s dialing in Sunday morning sound or quietly serving behind the scenes, Jacob brings a servant\u2019s heart and steady joy to the life of our church.",
+      "In his free time, you\u2019ll probably find Jacob at a food cart, by the river, on a scenic drive, or cracking jokes with friends.",
+    ],
+  },
+  {
+    name: 'Hawi Jaldo',
+    title: 'Love INC EMC Board Member',
+    image: hawi,
+    bio: [
+      "As a young professional working on her master\u2019s in public health, Hawi Jaldo loves people and has a big heart for helping others feel seen, valued, and cared for. Growing up in an immigrant family of four shaped her with compassion, kindness, and empathy\u2014qualities that continue to guide the way she serves today.",
+      "Hawi represents our church as a board member with Love INC of East Multnomah County and also serves as a legal assistant with Immigrant Connection PDX. She feels grateful to live out her faith by walking alongside people, meeting practical needs, and helping neighbors experience the love of Jesus in tangible ways.",
+      "Outside of her work and ministry, Hawi enjoys life\u2019s simple pleasures\u2014sipping a warm cup of chai, watching a gorgeous sunset, or wandering through fields of flowers.",
+    ],
   },
 ]
 
@@ -248,36 +271,37 @@ export default function About() {
           </h2>
 
           <div className="grid gap-10 md:grid-cols-2 lg:gap-15">
-            {staff.map((member) => (
-              <div
-                key={member.name}
-                className="overflow-hidden rounded-2xl bg-white shadow-lg"
-              >
-                <div className="flex flex-col sm:flex-row">
-                  <div className="relative aspect-4/3 w-full shrink-0 sm:aspect-3/4 sm:w-1/2">
-                    <Image
-                      src={member.image}
-                      alt={`Photo of ${member.name}`}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 300px"
-                    />
+            {staff.map((member, i) => (
+              <FadeIn key={member.name} delay={i * 0.05}>
+                <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
+                  <div className="flex flex-col sm:flex-row">
+                    <div className="relative aspect-square w-full shrink-0 sm:aspect-3/4 sm:w-2/5">
+                      <Image
+                        src={member.image}
+                        alt={`Photo of ${member.name}`}
+                        fill
+                        className="object-cover object-top"
+                        sizes="(max-width: 640px) 100vw, 240px"
+                      />
+                    </div>
+                    <div className="flex flex-col justify-center p-6 pb-3 sm:w-3/5 sm:pb-6">
+                      <h3 className="font-display mb-1 text-2xl font-bold text-primary-dark-blue">
+                        {member.name}
+                      </h3>
+                      <p className="text-sm font-bold uppercase tracking-wide text-secondary-aqua">
+                        {member.title}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex flex-col justify-center p-6 sm:w-1/2">
-                    <h3 className="font-display mb-1 text-2xl font-bold text-primary-dark-blue">
-                      {member.name}
-                    </h3>
-                    <p className="mb-4 text-sm font-bold uppercase tracking-wide text-primary-light-blue">
-                      {member.title}
-                    </p>
+                  <div className="space-y-3 bg-gray-50 p-6 pt-3 sm:pt-6">
+                    {member.bio.map((paragraph, j) => (
+                      <p key={j} className="text-base leading-loose text-neutral-dark-gray">
+                        {paragraph}
+                      </p>
+                    ))}
                   </div>
                 </div>
-                <div className="bg-gray-50 p-6">
-                  <p className="text-base/relaxed text-neutral-dark-gray">
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
 
