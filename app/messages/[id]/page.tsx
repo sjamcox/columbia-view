@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import { format } from 'date-fns'
 
-import AudioPlayer from '@/components/AudioPlayer'
+import YouTubePlayer from '@/components/YouTubePlayer'
 import { ContentSection } from '@/components/ui/section'
 import { getGradientForEpisode } from '@/utils/message-gradients'
+import { getYouTubeMessage } from '@/queries/youtube'
 
 export const metadata: Metadata = {
   title: 'Messages | Columbia View Church',
@@ -16,11 +17,7 @@ export default async function MessageDetails(props: {
   params: Promise<{ id: string }>
 }) {
   const params = await props.params
-  const response = await fetch(
-    `https://api.spreaker.com/v2/episodes/${params.id}`
-  )
-  const data = await response.json()
-  const { episode } = data.response
+  const episode = await getYouTubeMessage(params.id)
 
   const gradient = getGradientForEpisode(episode.episode_id)
 
@@ -47,9 +44,9 @@ export default async function MessageDetails(props: {
 
       <ContentSection>
         <div className="mx-auto max-w-4xl">
-          {/* Audio Player */}
+          {/* YouTube Player */}
           <div className="flex items-center justify-center mb-10">
-            <AudioPlayer src={episode.playback_url} />
+            <YouTubePlayer videoId={episode.id} />
           </div>
 
           {/* Message Description */}

@@ -61,10 +61,11 @@ The project uses a custom Tailwind 4 theme defined in `styles/globals.css`.
 
 ## ⚙️ Configuration & Environment
 
-For local development, the following environment variables are required in `.env.local`:
-
 - `PLANNING_CENTER_APP_ID`: Application ID from Planning Center.
 - `PLANNING_CENTER_SECRET`: Secret key from Planning Center.
+- `YOUTUBE_API_KEY`: API Key for YouTube Data API v3.
+- `YOUTUBE_CHANNEL_ID`: The ID of your YouTube channel.
+- `YOUTUBE_PLAYLIST_ID`: (Optional) The ID of the playlist containing your sermons.
 
 ## 🔄 Redirects & Routing
 
@@ -77,14 +78,14 @@ Key redirects are managed in `next.config.js`:
 
 1.  **Data Sources**:
     - **Events**: Fetched via Planning Center Calendar API (uses `tag_ids=24038`).
-    - **Messages**: Fetched via Spreaker API (uses `show_id=3172208`).
+    - **Messages**: Fetched via YouTube Data API v3 (uses playlist for recordings).
 2.  **SEO & Metadata**:
     - Global metadata is in `app/layout.tsx`.
     - Structured data (JSON-LD) is managed via the `ChurchSchema` component.
 3.  **Utility Functions**:
     - Use `@/utils/cn` for merging Tailwind classes safely (standard `clsx` + `tailwind-merge` pattern).
 4.  **Image Optimization**:
-    - Remote images from Planning Center and Spreaker are allowed in `next.config.js`.
+    - Remote images from Planning Center and YouTube are allowed in `next.config.js`.
 
 ## 📌 Current Strategic Priorities
 

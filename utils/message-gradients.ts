@@ -10,7 +10,16 @@ const gradientVariants = [
   'from-primary-light-blue to-secondary-green',
 ]
 
-// Function to get a consistent gradient based on episode ID
-export function getGradientForEpisode(episodeId: number): string {
+// Function to get a consistent gradient based on episode ID (works with number or string)
+export function getGradientForEpisode(episodeId: number | string): string {
+  if (typeof episodeId === 'string') {
+    // Generate a simple hash for string IDs
+    let hash = 0
+    for (let i = 0; i < episodeId.length; i++) {
+        hash = episodeId.charCodeAt(i) + ((hash << 5) - hash)
+    }
+    return gradientVariants[Math.abs(hash) % gradientVariants.length]
+  }
+  
   return gradientVariants[episodeId % gradientVariants.length]
 }

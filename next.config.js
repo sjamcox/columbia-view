@@ -15,7 +15,7 @@ module.exports = {
       },
       {
         protocol: 'https',
-        hostname: 'd3wo5wojvuv7l.cloudfront.net',
+        hostname: 'i.ytimg.com',
       },
     ],
   },
