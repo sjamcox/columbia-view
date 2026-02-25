@@ -28,7 +28,7 @@ const staff = [
     image: david,
     languages: 'English',
     bio: [
-      "David (M.Div) has provided vision and leadership for the ICPDX team and served as Columbia View Church's senior pastor since 2020. His passion is to see immigrants and refugees find belonging, hope, and opportunity as they navigate life in the U.S.",
+      "David (MDiv) has provided vision and leadership for the ICPDX team and served as Columbia View Church's senior pastor since 2020. His passion is to see immigrants and refugees find belonging, hope, and opportunity as they navigate life in the U.S.",
       "David's service comes from his belief that the gospel compels the church to love its neighbors in tangible, practical ways — including walking alongside immigrant families through the maze with moving walls that is the immigration legal system.",
       "Serving in one of Oregon's most diverse neighborhoods, David has seen firsthand the beauty of cultures coming together. His pastoral experience, paired with years of building relationships across cultural lines, fuels his desire to create a ministry where everyone feels welcomed and valued.",
     ],
