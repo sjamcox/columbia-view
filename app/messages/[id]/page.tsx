@@ -50,11 +50,17 @@ export default async function MessageDetails(props: {
           </div>
 
           {/* Message Description */}
-          {episode.description_html && (
-            <div
-              dangerouslySetInnerHTML={{ __html: episode.description_html }}
-              className="prose prose-lg mx-auto max-w-3xl prose-headings:font-display prose-headings:text-primary-dark-blue prose-a:text-primary-light-blue prose-a:no-underline hover:prose-a:underline"
-            />
+          {episode.description && (
+            <div className="mx-auto max-w-3xl rounded-xl bg-neutral-light-gray/40 p-6 md:p-8">
+              <h2 className="font-display mb-4 text-lg font-bold text-primary-dark-blue">
+                About This Message
+              </h2>
+              <div className="space-y-3 text-base leading-relaxed text-neutral-dark-gray">
+                {episode.description.split(/\n/).map((line) => (
+                  <p key={line}>{line || '\u00A0'}</p>
+                ))}
+              </div>
+            </div>
           )}
         </div>
       </ContentSection>
