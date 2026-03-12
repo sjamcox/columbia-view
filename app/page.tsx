@@ -1,7 +1,7 @@
 import type { StaticImageData } from 'next/image'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Metadata } from 'next'
 import HeroVideo from '@/components/HeroVideo'
 import EventGrid from '@/components/EventGrid'
 import Button from '@/components/ui/button'
@@ -13,7 +13,6 @@ import lifeGroup from '@/public/life-groups/ladies-group.webp'
 import smilingFamily from '@/public/icpdx/smiling-family.webp'
 import immigrantFamily from '@/public/icpdx/immigrant-family.webp'
 import rightnow from '@/public/right-now-media.webp'
-
 
 function ImageTile({
   link,
@@ -55,6 +54,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        href="/videos/hero-poster.jpg"
+        fetchPriority="high"
+      />
       <HeroVideo />
       <section>
         <div className="container mx-auto overflow-hidden px-4 py-8 md:overflow-visible md:py-24">
@@ -76,7 +81,10 @@ export default function Page() {
                 <Button href="/plan-your-visit" color="blue" className="mr-3">
                   Join us this Sunday
                 </Button>
-                <Button href="https://columbiaview.churchcenter.com/people/forms/33687" color="blue">
+                <Button
+                  href="https://columbiaview.churchcenter.com/people/forms/33687"
+                  color="blue"
+                >
                   New Family Registration
                 </Button>
               </div>
@@ -179,7 +187,10 @@ export default function Page() {
                 members. RightNow Media is a tool that you can use to help you
                 live out your faith in every area of your life.
               </p>
-              <Button href="https://app.rightnowmedia.org/join/columbiaviewchurch" color="blue">
+              <Button
+                href="https://app.rightnowmedia.org/join/columbiaviewchurch"
+                color="blue"
+              >
                 Get Access Today
               </Button>
             </div>

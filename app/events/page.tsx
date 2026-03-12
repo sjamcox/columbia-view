@@ -3,6 +3,8 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Events | Columbia View Church',
+  description:
+    'Join us for upcoming events and activities at Columbia View Church in Portland, OR. From community gatherings to worship nights, there is something for everyone.',
   alternates: {
     canonical: '/events',
   },

@@ -4,6 +4,8 @@ import Button from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Jobs | Immigrant Connection PDX',
+  description:
+    'View open positions at Immigrant Connection PDX, a DOJ-recognized immigration legal services office in East Portland. Join our team and make a difference.',
   alternates: {
     canonical: '/immigrant-connection-pdx/jobs',
   },

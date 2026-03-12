@@ -39,6 +39,8 @@ import IconFeatureCard from '@/components/ui/icon-feature-card'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',
+  description:
+    'Safe, fun, and Jesus-centered programming for kids ages 3 months to 12 years every Sunday at 10 AM at Columbia View Church in Portland, OR.',
   alternates: {
     canonical: '/nextgen',
   },

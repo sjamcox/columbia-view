@@ -17,6 +17,8 @@ import jacqueline from '@/public/icpdx/staff/jacqueline-carrillo-headshot.png'
 
 export const metadata: Metadata = {
   title: 'Staff | Immigrant Connection PDX',
+  description:
+    'Meet the DOJ-accredited representatives and legal team at Immigrant Connection PDX, providing low-cost immigration services in Portland, OR.',
   alternates: {
     canonical: '/immigrant-connection-pdx/staff',
   },

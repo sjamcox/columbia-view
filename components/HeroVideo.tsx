@@ -1,5 +1,3 @@
-'use client'
-
 import Button from '@/components/ui/button'
 
 export default function HeroVideo() {
@@ -11,7 +9,7 @@ export default function HeroVideo() {
         loop
         muted
         playsInline
-        poster='/videos/hero-poster.jpg'
+        poster="/videos/hero-poster.jpg"
         className="h-auto min-h-[calc(60vh+100px)] w-full object-cover md:min-h-[70vh]"
         style={{ aspectRatio: '16/9' }}
       >
