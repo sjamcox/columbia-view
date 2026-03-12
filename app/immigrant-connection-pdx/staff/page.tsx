@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
+import IcpdxSchema from '@/components/features/seo/icpdx-schema'
 import Hero from '@/components/Hero'
 import { ContentSection, GradientSection } from '@/components/ui/section'
 import Button from '@/components/ui/button'
@@ -92,6 +93,8 @@ const staff = [
 
 export default function StaffPage() {
   return (
+    <>
+    <IcpdxSchema />
     <main>
       <Hero
         title="Our Team"
@@ -164,5 +167,6 @@ export default function StaffPage() {
         </div>
       </GradientSection>
     </main>
+    </>
   )
 }

@@ -1,5 +1,3 @@
-'use client'
-
 import JsonLd from './json-ld'
 
 export default function ChurchSchema() {
@@ -25,7 +23,7 @@ export default function ChurchSchema() {
       latitude: '45.5338214',
       longitude: '-122.49106',
     },
-    telephone: '503.253.7939',
+    telephone: '+15032537939',
     email: 'office.cvwc@gmail.com',
     openingHoursSpecification: [
       {

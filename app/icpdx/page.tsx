@@ -32,6 +32,7 @@ import speak from '@/public/icons/speak.svg'
 import empower from '@/public/icons/empower.svg'
 import together from '@/public/icons/together.svg'
 import celebrate from '@/public/icons/celebrate.svg'
+import IcpdxSchema from '@/components/features/seo/icpdx-schema'
 import Hero from '@/components/Hero'
 import Button from '@/components/ui/button'
 import FadeIn from '@/components/ui/fade-in'
@@ -47,6 +48,8 @@ export const metadata: Metadata = {
 
 export default function ImmigrantConnection() {
   return (
+    <>
+    <IcpdxSchema />
     <main>
       <Hero
         title="Partner With Immigrant Connection PDX"
@@ -450,5 +453,6 @@ export default function ImmigrantConnection() {
         </div>
       </GradientSection>
     </main>
+    </>
   )
 }

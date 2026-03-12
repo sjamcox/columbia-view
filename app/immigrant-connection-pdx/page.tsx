@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { InformationCircleIcon } from '@heroicons/react/24/outline'
 
 import ServiceList from './ServiceList'
+import IcpdxSchema from '@/components/features/seo/icpdx-schema'
 import Button from '@/components/ui/button'
-import { ContentSection } from '@/components/ui/section'
 import icpdxLogo from '@/public/logos/icpdx-logo-transparent.png'
 import daca from '@/public/daca.webp'
 import family from '@/public/family.webp'
@@ -22,248 +22,252 @@ export const metadata: Metadata = {
   },
 }
 
-
 export default function ImmigrantConnection() {
   return (
-    <main className="mx-auto max-w-4xl px-6 py-12">
-      {/* Header */}
-      <div className="mb-6 flex flex-col-reverse justify-between gap-8 sm:flex-row sm:items-end">
-        <div className="w-full sm:w-2/3">
-          <h1 className="font-display text-5xl font-normal text-neutral-800 lg:text-6xl">
-            Immigrant Connection PDX
-          </h1>
-        </div>
-        <div className="flex w-full justify-center sm:w-1/3 sm:justify-end">
-          <div className="w-36 md:w-64">
-            <Image
-              src={icpdxLogo}
-              alt="Immigrant Connection PDX logo"
-              priority
-              className="h-auto w-full"
-            />
+    <>
+      <IcpdxSchema />
+      <main className="mx-auto max-w-4xl px-6 py-12">
+        {/* Header */}
+        <div className="mb-6 flex flex-col-reverse justify-between gap-8 sm:flex-row sm:items-end">
+          <div className="w-full sm:w-2/3">
+            <h1 className="font-display text-5xl font-normal text-neutral-800 lg:text-6xl">
+              Immigrant Connection PDX
+            </h1>
+          </div>
+          <div className="flex w-full justify-center sm:w-1/3 sm:justify-end">
+            <div className="w-36 md:w-64">
+              <Image
+                src={icpdxLogo}
+                alt="Immigrant Connection PDX logo"
+                priority
+                className="h-auto w-full"
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      <p className="mb-12 text-3xl font-normal text-neutral-dark-gray">
-        A Department of Justice recognized legal office that provides low-cost
-        immigration legal services.
-      </p>
+        <p className="mb-12 text-3xl font-normal text-neutral-dark-gray">
+          A Department of Justice recognized legal office that provides low-cost
+          immigration legal services.
+        </p>
 
-      {/* Main Content Grid */}
-      <div className="grid gap-10 lg:grid-cols-12">
-        {/* Left Column */}
-        <div className="lg:col-span-8">
-          <p className="mb-4 text-base">
-            <strong>We are currently receiving new clients!</strong>
-          </p>
+        {/* Main Content Grid */}
+        <div className="grid gap-10 lg:grid-cols-12">
+          {/* Left Column */}
+          <div className="lg:col-span-8">
+            <p className="mb-4 text-base">
+              <strong>We are currently receiving new clients!</strong>
+            </p>
 
-          {/* Alert */}
-          <div className="mb-4 flex gap-4 rounded-md bg-secondary-red/25 p-4 text-blue-900">
-            <InformationCircleIcon className="h-6 w-6 shrink-0" />
-            <p>
-              <b>Our office does not do employment-based immigration</b> (including H-1B, L-1, O-1, TN, E-2, EB-1, EB-2, EB-3, EB-4, EB-5, etc.)
-We are also not processing Asylum, U Visa, or VAWA cases at this time. We apologize for any inconvenience.
-            </p>
-          </div>
+            {/* Alert */}
+            <div className="mb-4 flex gap-4 rounded-md bg-secondary-red/25 p-4 text-blue-900">
+              <InformationCircleIcon className="h-6 w-6 shrink-0" />
+              <p>
+                <b>Our office does not do employment-based immigration</b>{' '}
+                (including H-1B, L-1, O-1, TN, E-2, EB-1, EB-2, EB-3, EB-4,
+                EB-5, etc.) We are also not processing Asylum, U Visa, or VAWA
+                cases at this time. We apologize for any inconvenience.
+              </p>
+            </div>
 
-          <div className="space-y-6 text-base text-neutral-dark-gray">
-            <p>
-              Immigrant Connection PDX is a church-based, low-cost, immigration
-              legal services office located in east Portland that provides legal
-              assistance to individuals who are seeking assistance with issues
-              relating to immigration, such as Family and Marriage Based
-              Petitions, Naturalization Petitions, Legal Permanent Resident and
-              Employment Authorization renewals, Adjustment of Status, Consular
-              Processing, DACA, TPS, Non-Immigrant Visas, and Religious Worker
-              Visas.
-            </p>
-            <p>
-              A $60 office visit/legal consultation fee is due at your first
-              appointment and must be paid prior to speaking with the
-              Immigration Legal Representative. This is in addition to any legal
-              or filing fees that will be required for your case.
-            </p>
-            <p>
-              If you need advice or assistance with any of these services, or
-              simply need help understanding what options you may have under the
-              law, you can schedule an initial consultation with one of our
-              Legal Representatives. During the consultation, we will carefully
-              review your case and make sure you understand the benefits and
-              risks associated with your situation, then offer you advice on how
-              to proceed.
-            </p>
-            <p>
-              Defensive Asylum is outside of the scope of our practice. Please
-              visit the{' '}
-              <a
-                href="https://www.ailalawyer.com/"
-                className="text-primary-light-blue hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                American Immigration Lawyers Association
-              </a>{' '}
-              (AILA) website for assistance regarding Defensive Asylum.
-            </p>
-            <p>
-              <strong>
-                Please click the “schedule an appointment” button below or call
-                our legal office at{' '}
+            <div className="space-y-6 text-base text-neutral-dark-gray">
+              <p>
+                Immigrant Connection PDX is a church-based, low-cost,
+                immigration legal services office located in east Portland that
+                provides legal assistance to individuals who are seeking
+                assistance with issues relating to immigration, such as Family
+                and Marriage Based Petitions, Naturalization Petitions, Legal
+                Permanent Resident and Employment Authorization renewals,
+                Adjustment of Status, Consular Processing, DACA, TPS,
+                Non-Immigrant Visas, and Religious Worker Visas.
+              </p>
+              <p>
+                A $60 office visit/legal consultation fee is due at your first
+                appointment and must be paid prior to speaking with the
+                Immigration Legal Representative. This is in addition to any
+                legal or filing fees that will be required for your case.
+              </p>
+              <p>
+                If you need advice or assistance with any of these services, or
+                simply need help understanding what options you may have under
+                the law, you can schedule an initial consultation with one of
+                our Legal Representatives. During the consultation, we will
+                carefully review your case and make sure you understand the
+                benefits and risks associated with your situation, then offer
+                you advice on how to proceed.
+              </p>
+              <p>
+                Defensive Asylum is outside of the scope of our practice. Please
+                visit the{' '}
                 <a
-                  href="tel:+19712022073"
+                  href="https://www.ailalawyer.com/"
                   className="text-primary-light-blue hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  971.202.2073
+                  American Immigration Lawyers Association
                 </a>{' '}
-                to schedule an appointment.
-              </strong>{' '}
-              An initial consultation costs $60.
-            </p>
-            <p>
-              We are a part of the Immigrant Connection National Network of
-              church-based, low-cost, immigration legal services offices. For
-              more info:{' '}
-              <a
-                href="https://www.icwelcome.org"
-                className="text-primary-light-blue hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
+                (AILA) website for assistance regarding Defensive Asylum.
+              </p>
+              <p>
+                <strong>
+                  Please click the “schedule an appointment” button below or
+                  call our legal office at{' '}
+                  <a
+                    href="tel:+19712022073"
+                    className="text-primary-light-blue hover:underline"
+                  >
+                    971.202.2073
+                  </a>{' '}
+                  to schedule an appointment.
+                </strong>{' '}
+                An initial consultation costs $60.
+              </p>
+              <p>
+                We are a part of the Immigrant Connection National Network of
+                church-based, low-cost, immigration legal services offices. For
+                more info:{' '}
+                <a
+                  href="https://www.icwelcome.org"
+                  className="text-primary-light-blue hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  icwelcome.org
+                </a>
+                .
+              </p>
+            </div>
+
+            {/* Virtual Consultation Scheduling Policy */}
+            <div className="mt-8 rounded-xl bg-secondary-aqua/10 p-8">
+              <h3 className="mb-4 text-xl font-bold text-neutral-800">
+                Virtual Consultation Scheduling Policy
+              </h3>
+              <p className="mb-4 text-base text-neutral-dark-gray">
+                Because consultation slots are limited, please review the
+                following policy before booking.
+              </p>
+              <div className="space-y-4 text-base text-neutral-dark-gray">
+                <div>
+                  <p className="mb-2 font-semibold text-neutral-800">Payment</p>
+                  <p>
+                    Full payment is required at the time of booking to reserve
+                    your virtual consultation.
+                  </p>
+                </div>
+                <div>
+                  <p className="mb-2 font-semibold text-neutral-800">
+                    Cancellations
+                  </p>
+                  <p>
+                    Same-day cancellations or no-shows: No refund. Cancellations
+                    made more than 24 hours in advance: 50% refund. Credit card
+                    processing fees are non-refundable.
+                  </p>
+                </div>
+                <div>
+                  <p className="mb-2 font-semibold text-neutral-800">
+                    Rescheduling
+                  </p>
+                  <p>
+                    You may reschedule one time at no charge if requested more
+                    than 24 hours in advance. Same-day reschedule requests are
+                    treated as same-day cancellations and are not refundable.
+                    Any additional reschedule requests require booking and
+                    paying for a new consultation.
+                  </p>
+                </div>
+              </div>
+              <p className="mt-4 text-base text-neutral-dark-gray">
+                Thank you for helping us serve as many clients as possible with
+                care and fairness.
+              </p>
+            </div>
+
+            <div className="mt-8 mb-8">
+              <Button
+                href="https://immigrantconnectionpdx.as.me/?appointmentType=category:1.%20Initial%20Consultation%20%2F%20%20Consulta%20Inicial"
+                color="blue"
               >
-                icwelcome.org
-              </a>
-              .
-            </p>
+                Schedule an appointment
+              </Button>
+            </div>
           </div>
 
-          {/* Virtual Consultation Scheduling Policy */}
-          <div className="mt-8 rounded-xl bg-secondary-aqua/10 p-8">
-            <h3 className="mb-4 text-xl font-bold text-neutral-800">
-              Virtual Consultation Scheduling Policy
-            </h3>
-            <p className="mb-4 text-base text-neutral-dark-gray">
-              Because consultation slots are limited, please review the following
-              policy before booking.
-            </p>
-            <div className="space-y-4 text-base text-neutral-dark-gray">
+          {/* Right Column - Sidebar */}
+          <div className="lg:col-span-4">
+            <div className="text-[15px] space-y-4 text-neutral-dark-gray">
+              <p className="font-bold text-black">Office Hours & Location</p>
+
               <div>
-                <p className="mb-2 font-semibold text-neutral-800">Payment</p>
-                <p>
-                  Full payment is required at the time of booking to reserve your
-                  virtual consultation.
-                </p>
+                <p>Mondays</p>
+                <p>11:00 am – 5:00 pm</p>
               </div>
+
               <div>
-                <p className="mb-2 font-semibold text-neutral-800">
-                  Cancellations
-                </p>
-                <p>
-                  Same-day cancellations or no-shows: No refund. Cancellations
-                  made more than 24 hours in advance: 50% refund. Credit card
-                  processing fees are non-refundable.
-                </p>
+                <p>Tuesdays, Wednesdays and Thursdays</p>
+                <p>9:00 am – 6:00 pm</p>
               </div>
+
               <div>
-                <p className="mb-2 font-semibold text-neutral-800">
-                  Rescheduling
+                <p>Columbia View Church</p>
+                <p>16700 NE Halsey St.</p>
+                <p>Portland, OR 97230</p>
+              </div>
+
+              <div>
+                <p>
+                  <a
+                    href="tel:+19712022073"
+                    className="text-primary-light-blue hover:underline"
+                  >
+                    971.202.2073
+                  </a>
                 </p>
                 <p>
-                  You may reschedule one time at no charge if requested more than
-                  24 hours in advance. Same-day reschedule requests are treated as
-                  same-day cancellations and are not refundable. Any additional
-                  reschedule requests require booking and paying for a new
-                  consultation.
+                  <a
+                    href="mailto:info.icpdx@gmail.com"
+                    className="text-primary-light-blue hover:underline"
+                  >
+                    info.icpdx@gmail.com
+                  </a>
                 </p>
               </div>
             </div>
-            <p className="mt-4 text-base text-neutral-dark-gray">
-              Thank you for helping us serve as many clients as possible with care
-              and fairness.
-            </p>
-          </div>
-
-          <div className="mt-8 mb-8">
-            <Button
-              href="https://immigrantconnectionpdx.as.me/?appointmentType=category:1.%20Initial%20Consultation%20%2F%20%20Consulta%20Inicial"
-              color="blue"
-            >
-              Schedule an appointment
-            </Button>
           </div>
         </div>
 
-        {/* Right Column - Sidebar */}
-        <div className="lg:col-span-4">
-          <div className="text-[15px] space-y-4 text-neutral-dark-gray">
-            <p className="font-bold text-black">Office Hours & Location</p>
-            
-            <div>
-              <p>Mondays</p>
-              <p>11:00 am – 5:00 pm</p>
-            </div>
+        {/* Services Section */}
+        <h2 className="mt-16 mb-8 text-center text-4xl font-bold text-neutral-800">
+          Services
+        </h2>
 
-            <div>
-              <p>Tuesdays, Wednesdays and Thursdays</p>
-              <p>9:00 am – 6:00 pm</p>
-            </div>
-
-            <div>
-              <p>Columbia View Church</p>
-              <p>16700 NE Halsey St.</p>
-              <p>Portland, OR 97230</p>
-            </div>
-
-            <div>
-              <p>
-                <a
-                  href="tel:+19712022073"
-                  className="text-primary-light-blue hover:underline"
-                >
-                  971.202.2073
-                </a>
-              </p>
-              <p>
-                <a
-                  href="mailto:info.icpdx@gmail.com"
-                  className="text-primary-light-blue hover:underline"
-                >
-                  info.icpdx@gmail.com
-                </a>
+        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
+          {[
+            { src: world, label: 'Naturalization / Citizenship' },
+            { src: family, label: 'Family-Based Petitions' },
+            { src: daca, label: 'DACA' },
+            { src: status, label: 'Adjustment of Status' },
+            { src: residence, label: 'Renew Permanent Resident Card' },
+            { src: visa, label: 'Work Authorization' },
+          ].map((item) => (
+            <div key={item.label} className="mt-4 flex flex-col items-center">
+              <Image
+                src={item.src}
+                alt={`Illustration for ${item.label}`}
+                width={128}
+                height={128}
+              />
+              <p className="mt-3 text-center text-base font-medium">
+                {item.label}
               </p>
             </div>
-          </div>
+          ))}
         </div>
-      </div>
 
-      {/* Services Section */}
-      <h2 className="mt-16 mb-8 text-center text-4xl font-bold text-neutral-800">
-        Services
-      </h2>
-
-      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
-        {[
-          { src: world, label: 'Naturalization / Citizenship' },
-          { src: family, label: 'Family-Based Petitions' },
-          { src: daca, label: 'DACA' },
-          { src: status, label: 'Adjustment of Status' },
-          { src: residence, label: 'Renew Permanent Resident Card' },
-          { src: visa, label: 'Work Authorization' },
-        ].map((item) => (
-          <div key={item.label} className="mt-4 flex flex-col items-center">
-            <Image
-              src={item.src}
-              alt={`Illustration for ${item.label}`}
-              width={128}
-              height={128}
-            />
-            <p className="mt-3 text-center text-base font-medium">
-              {item.label}
-            </p>
-          </div>
-        ))}
-      </div>
-
-      <ServiceList />
-    </main>
+        <ServiceList />
+      </main>
+    </>
   )
 }

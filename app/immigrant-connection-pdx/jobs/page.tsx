@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import IcpdxSchema from '@/components/features/seo/icpdx-schema'
 import Button from '@/components/ui/button'
 
 export const metadata: Metadata = {
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
 
 export default function JobsPage() {
   return (
+    <>
+    <IcpdxSchema />
     <main className="mx-auto max-w-4xl px-6 py-12">
       <h1 className="font-display mb-12 text-center text-5xl font-normal text-neutral-800 lg:text-6xl">
         Available Positions
@@ -79,5 +82,6 @@ export default function JobsPage() {
         </div>
       </div>
     </main>
+    </>
   )
 }
