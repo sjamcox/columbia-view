@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import HeroVideo from '@/components/HeroVideo'
+import EasterHero from '@/components/EasterHero'
 import EventGrid from '@/components/EventGrid'
 import Button from '@/components/ui/button'
 
@@ -54,13 +55,19 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <link
-        rel="preload"
-        as="image"
-        href="/videos/hero-poster.jpg"
-        fetchPriority="high"
-      />
-      <HeroVideo />
+      {new Date() < new Date('2026-04-06T00:00:00-07:00') ? (
+        <EasterHero />
+      ) : (
+        <>
+          <link
+            rel="preload"
+            as="image"
+            href="/videos/hero-poster.jpg"
+            fetchPriority="high"
+          />
+          <HeroVideo />
+        </>
+      )}
       <section>
         <div className="container mx-auto overflow-hidden px-4 py-8 md:overflow-visible md:py-24">
           <div className="flex flex-col-reverse justify-between md:flex-row">
