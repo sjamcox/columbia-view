@@ -37,16 +37,22 @@ export default function EasterHero() {
       {/* Slideshow */}
       <div className="relative min-h-[calc(60vh+100px)] w-full md:min-h-[70vh]">
         {slides.map((slide, i) => (
-          <Image
+          <div
             key={slide.alt}
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            priority={i === 0}
-            className={`object-cover transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
               i === current ? 'opacity-100' : 'opacity-0'
             }`}
-          />
+          >
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority={i === 0}
+              className={`object-cover transition-transform duration-[6000ms] ease-out ${
+                i === current ? 'scale-110' : 'scale-100'
+              }`}
+            />
+          </div>
         ))}
       </div>
 

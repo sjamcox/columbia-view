@@ -1,17 +1,16 @@
+import { InformationCircleIcon } from '@heroicons/react/24/outline'
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { InformationCircleIcon } from '@heroicons/react/24/outline'
-
-import ServiceList from './ServiceList'
 import IcpdxSchema from '@/components/features/seo/icpdx-schema'
 import Button from '@/components/ui/button'
-import icpdxLogo from '@/public/logos/icpdx-logo-transparent.png'
 import daca from '@/public/daca.webp'
 import family from '@/public/family.webp'
+import icpdxLogo from '@/public/logos/icpdx-logo-transparent.png'
 import residence from '@/public/residence.webp'
 import status from '@/public/status.webp'
 import visa from '@/public/visa.webp'
 import world from '@/public/world.webp'
+import ServiceList from './ServiceList'
 
 export const metadata: Metadata = {
   title: 'Immigrant Connection PDX | Low-Cost Immigration Legal Services',
@@ -26,7 +25,7 @@ export default function ImmigrantConnection() {
   return (
     <>
       <IcpdxSchema />
-      <main className="mx-auto max-w-4xl px-6 py-12">
+      <main className="mx-auto max-w-4xl px-6 py-12 pb-24 md:pb-12">
         {/* Header */}
         <div className="mb-6 flex flex-col-reverse justify-between gap-8 sm:flex-row sm:items-end">
           <div className="w-full sm:w-2/3">
@@ -185,7 +184,7 @@ export default function ImmigrantConnection() {
               </p>
             </div>
 
-            <div className="mt-8 mb-8">
+            <div className="mt-8 mb-8 hidden md:block">
               <Button
                 href="https://immigrantconnectionpdx.as.me/?appointmentType=category:1.%20Initial%20Consultation%20%2F%20%20Consulta%20Inicial"
                 color="blue"
@@ -267,7 +266,33 @@ export default function ImmigrantConnection() {
         </div>
 
         <ServiceList />
+
+        {/* Bottom CTA */}
+        <div className="mt-16 hidden flex-col items-center gap-4 rounded-xl bg-primary-dark-blue p-10 text-center md:flex">
+          <h3 className="font-display text-2xl font-bold text-white">
+            Ready to get started?
+          </h3>
+          <p className="text-white/80">
+            Schedule a consultation with one of our Legal Representatives.
+          </p>
+          <Button
+            href="https://immigrantconnectionpdx.as.me/?appointmentType=category:1.%20Initial%20Consultation%20%2F%20%20Consulta%20Inicial"
+            color="blue"
+          >
+            Schedule an appointment
+          </Button>
+        </div>
       </main>
+
+      {/* Floating mobile CTA */}
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-neutral-light-gray bg-white/95 p-3 backdrop-blur-sm md:hidden">
+        <a
+          href="https://immigrantconnectionpdx.as.me/?appointmentType=category:1.%20Initial%20Consultation%20%2F%20%20Consulta%20Inicial"
+          className="block w-full rounded-full bg-gradient-to-r from-primary-light-blue to-secondary-aqua py-4 text-center text-base font-semibold text-white uppercase"
+        >
+          Schedule an Appointment
+        </a>
+      </div>
     </>
   )
 }
