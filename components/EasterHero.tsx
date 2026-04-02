@@ -3,7 +3,6 @@
 import Image, { type StaticImageData } from 'next/image'
 import { useEffect, useState } from 'react'
 import Button from '@/components/ui/button'
-
 import bubbles from '@/public/easter/2025/bubbles-outside.webp'
 import david from '@/public/easter/2025/david-light.webp'
 import party from '@/public/easter/2025/easter-party.webp'
@@ -11,11 +10,19 @@ import jennifer from '@/public/easter/2025/jennifer-peace.webp'
 import noya from '@/public/easter/2025/noya-family.webp'
 import rannabargar from '@/public/easter/2025/rannabargar-family.webp'
 import selena from '@/public/easter/2025/selena-family.webp'
+import easterMountains from '@/public/easter/2026/EasterAtMountains_1600x1050_WebsiteBannerBkg.jpg'
+import lobbyGroup from '@/public/lobby-group.webp'
+import worshipJohan from '@/public/sunday/worship-johan-guitar.webp'
+import worshipTeam from '@/public/sunday/worship-team.webp'
 
 const slides: { src: StaticImageData; alt: string }[] = [
+  { src: easterMountains, alt: 'Easter at the mountains' },
   { src: david, alt: 'Pastor David speaking at Easter service' },
+  { src: worshipTeam, alt: 'Worship team leading Sunday service' },
   { src: bubbles, alt: 'Bubbles floating outside at Easter celebration' },
+  { src: lobbyGroup, alt: 'Community gathering in the church lobby' },
   { src: party, alt: 'Easter party celebration' },
+  { src: worshipJohan, alt: 'Johan leading worship on guitar' },
   { src: noya, alt: 'The Noya family at Easter' },
   { src: jennifer, alt: 'Jennifer at Easter service' },
   { src: rannabargar, alt: 'The Rannabargar family at Easter' },
@@ -60,17 +67,11 @@ export default function EasterHero() {
       <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-primary-dark-blue via-primary-dark-blue/60 to-transparent" />
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex items-end">
-        <div className="container mx-auto px-4 pb-24 md:pb-28 lg:pb-32">
-          <div className="max-w-3xl">
-            <h1 className="font-display relative mb-2 text-5xl font-black tracking-tight text-white md:text-7xl lg:text-8xl">
-              <span
-                aria-hidden="true"
-                className="absolute left-[3px] top-[3px] text-primary-light-blue md:left-[5px] md:top-[5px]"
-              >
-                Easter Sunday
-              </span>
-              <span className="relative">Easter Sunday</span>
+      <div className="absolute inset-0 flex items-end justify-center">
+        <div className="container mx-auto px-4 pb-24 text-center md:pb-28 lg:pb-32">
+          <div className="mx-auto max-w-3xl">
+            <h1 className="font-display mb-2 text-5xl font-black tracking-tight text-white md:text-7xl lg:text-8xl">
+              Easter Sunday
             </h1>
             <p className="font-display mb-3 text-3xl font-bold text-white drop-shadow-lg md:text-4xl lg:text-5xl">
               April 5, 2026
@@ -81,7 +82,7 @@ export default function EasterHero() {
             <p className="mb-8 text-lg text-white/70 drop-shadow-lg md:text-xl">
               Kids egg hunt after service
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap justify-center gap-4">
               <Button
                 href="https://columbiaview.churchcenter.com/registrations/events/3486581"
                 color="blue"

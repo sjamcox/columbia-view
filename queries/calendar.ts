@@ -1,15 +1,15 @@
 import type { EventInstanceResponse } from '@/types/calendar'
 
 export async function getCalendarEvents(
-  count = 24
+  count = 50
 ): Promise<EventInstanceResponse> {
   try {
     const today = new Date()
-    const threeMonthsFromNow = new Date()
-    threeMonthsFromNow.setMonth(today.getMonth() + 3)
+    const twoMonthsFromNow = new Date()
+    twoMonthsFromNow.setMonth(today.getMonth() + 2)
 
     const startDate = today.toISOString().split('T')[0]
-    const endDate = threeMonthsFromNow.toISOString().split('T')[0]
+    const endDate = twoMonthsFromNow.toISOString().split('T')[0]
 
     const appId = process.env.PLANNING_CENTER_APP_ID
     const secret = process.env.PLANNING_CENTER_SECRET
