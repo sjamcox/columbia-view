@@ -14,7 +14,7 @@ export async function getCalendarEvents({
     const futureDate = new Date(today)
     futureDate.setMonth(today.getMonth() + monthsAhead)
 
-    const startDate = today.toISOString().split('T')[0]
+    const startDateString = today.toISOString().split('T')[0]
     const endDateString = futureDate.toISOString().split('T')[0]
 
     const appId = process.env.PLANNING_CENTER_APP_ID
@@ -31,7 +31,7 @@ export async function getCalendarEvents({
     )
     url.searchParams.append('include', 'event')
     url.searchParams.append('where[tag_ids]', '24038')
-    url.searchParams.append('where[during][start]', startDate)
+    url.searchParams.append('where[during][start]', startDateString)
     url.searchParams.append('where[during][end]', endDateString)
     url.searchParams.append('order', 'starts_at,ends_at')
     url.searchParams.append('per_page', count.toString())
