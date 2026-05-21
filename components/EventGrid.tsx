@@ -4,20 +4,20 @@ import type { MergedEventAttributes } from '@/types/calendar'
 import EventCard from './EventCard'
 
 interface EventGridProps {
-  queryCount?: number
+  count?: number
   limit?: number
   monthsAhead?: number
   className?: string
 }
 
 export default async function EventGrid({
-  queryCount,
+  count,
   limit,
   monthsAhead,
   className = '',
 }: EventGridProps) {
   const { data, included } = await getCalendarEvents({
-    count: queryCount,
+    count,
     monthsAhead,
   })
 
