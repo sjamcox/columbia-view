@@ -1,7 +1,7 @@
-import type { MergedEventAttributes } from '@/types/calendar'
-import { getCalendarEvents } from '@/queries/calendar'
-import EventCard from './EventCard'
 import Link from 'next/link'
+import { getCalendarEvents } from '@/queries/calendar'
+import type { MergedEventAttributes } from '@/types/calendar'
+import EventCard from './EventCard'
 
 interface EventGridProps {
   fetchCount?: number
@@ -16,7 +16,7 @@ export default async function EventGrid({
   monthsAhead,
   className = '',
 }: EventGridProps) {
-  let { data, included } = await getCalendarEvents({
+  const { data, included } = await getCalendarEvents({
     count: fetchCount,
     monthsAhead,
   })
@@ -31,6 +31,7 @@ export default async function EventGrid({
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
+            <title>No events icon</title>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
