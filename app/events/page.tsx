@@ -1,5 +1,5 @@
+import type { Metadata } from 'next'
 import EventGrid from '@/components/EventGrid'
-import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Events | Columbia View Church',
@@ -20,7 +20,7 @@ export default function EventsPage() {
             Join us for upcoming events and activities at our community.
           </p>
         </div>
-        <EventGrid />
+        <EventGrid fetchCount={100} monthsAhead={4} />
       </div>
     </div>
   )

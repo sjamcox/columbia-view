@@ -4,15 +4,22 @@ import EventCard from './EventCard'
 import Link from 'next/link'
 
 interface EventGridProps {
+  fetchCount?: number
   limit?: number
+  monthsAhead?: number
   className?: string
 }
 
 export default async function EventGrid({
+  fetchCount,
   limit,
+  monthsAhead,
   className = '',
 }: EventGridProps) {
-  let { data, included } = await getCalendarEvents()
+  let { data, included } = await getCalendarEvents({
+    count: fetchCount,
+    monthsAhead,
+  })
 
   if (data.length === 0) {
     return (

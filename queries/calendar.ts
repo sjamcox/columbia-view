@@ -1,15 +1,21 @@
 import type { EventInstanceResponse } from '@/types/calendar'
 
-export async function getCalendarEvents(
-  count = 50
-): Promise<EventInstanceResponse> {
+interface GetCalendarEventsOptions {
+  count?: number
+  monthsAhead?: number
+}
+
+export async function getCalendarEvents({
+  count = 50,
+  monthsAhead = 2,
+}: GetCalendarEventsOptions = {}): Promise<EventInstanceResponse> {
   try {
     const today = new Date()
-    const twoMonthsFromNow = new Date()
-    twoMonthsFromNow.setMonth(today.getMonth() + 2)
+    const endDate = new Date(today)
+    endDate.setMonth(today.getMonth() + monthsAhead)
 
     const startDate = today.toISOString().split('T')[0]
-    const endDate = twoMonthsFromNow.toISOString().split('T')[0]
+    const endDateString = endDate.toISOString().split('T')[0]
 
     const appId = process.env.PLANNING_CENTER_APP_ID
     const secret = process.env.PLANNING_CENTER_SECRET
@@ -26,7 +32,7 @@ export async function getCalendarEvents(
     url.searchParams.append('include', 'event')
     url.searchParams.append('where[tag_ids]', '24038')
     url.searchParams.append('where[during][start]', startDate)
-    url.searchParams.append('where[during][end]', endDate)
+    url.searchParams.append('where[during][end]', endDateString)
     url.searchParams.append('order', 'starts_at,ends_at')
     url.searchParams.append('per_page', count.toString())
 
