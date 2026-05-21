@@ -20,7 +20,7 @@ export default function EventsPage() {
             Join us for upcoming events and activities at our community.
           </p>
         </div>
-        <EventGrid maxFetch={100} monthsAhead={4} />
+        <EventGrid monthsAhead={4} queryCount={100} />
       </div>
     </div>
   )

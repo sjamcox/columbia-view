@@ -1,3 +1,4 @@
+import { addMonths } from 'date-fns'
 import type { EventInstanceResponse } from '@/types/calendar'
 
 interface GetCalendarEventsOptions {
@@ -11,8 +12,7 @@ export async function getCalendarEvents({
 }: GetCalendarEventsOptions = {}): Promise<EventInstanceResponse> {
   try {
     const today = new Date()
-    const endDate = new Date(today)
-    endDate.setMonth(today.getMonth() + monthsAhead)
+    const endDate = addMonths(today, monthsAhead)
 
     const startDateString = today.toISOString().split('T')[0]
     const endDateString = endDate.toISOString().split('T')[0]
