@@ -5,11 +5,11 @@ export async function getCalendarEvents(
 ): Promise<EventInstanceResponse> {
   try {
     const today = new Date()
-    const twoMonthsFromNow = new Date()
-    twoMonthsFromNow.setMonth(today.getMonth() + 2)
+    const fourMonthsFromNow = new Date()
+    fourMonthsFromNow.setMonth(today.getMonth() + 4)
 
     const startDate = today.toISOString().split('T')[0]
-    const endDate = twoMonthsFromNow.toISOString().split('T')[0]
+    const endDate = fourMonthsFromNow.toISOString().split('T')[0]
 
     const appId = process.env.PLANNING_CENTER_APP_ID
     const secret = process.env.PLANNING_CENTER_SECRET
