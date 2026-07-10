@@ -1,19 +1,19 @@
-import type { StaticImageData } from 'next/image'
 import type { Metadata } from 'next'
+import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import Link from 'next/link'
-import HeroVideo from '@/components/HeroVideo'
+import AvivaKidsHero from '@/components/AvivaKidsHero'
 import EasterHero from '@/components/EasterHero'
 import EventGrid from '@/components/EventGrid'
+import HeroVideo from '@/components/HeroVideo'
 import Button from '@/components/ui/button'
-
-import baptism from '@/public/sunday/mark-baptism.webp'
-import worship from '@/public/sunday/worship-team-vertical.webp'
+import immigrantFamily from '@/public/icpdx/immigrant-family.webp'
+import smilingFamily from '@/public/icpdx/smiling-family.webp'
 import kids from '@/public/kids/kids-activity.webp'
 import lifeGroup from '@/public/life-groups/ladies-group.webp'
-import smilingFamily from '@/public/icpdx/smiling-family.webp'
-import immigrantFamily from '@/public/icpdx/immigrant-family.webp'
 import rightnow from '@/public/right-now-media.webp'
+import baptism from '@/public/sunday/mark-baptism.webp'
+import worship from '@/public/sunday/worship-team-vertical.webp'
 
 function ImageTile({
   link,
@@ -53,10 +53,25 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
+  const now = new Date()
+  const showEaster = now < new Date('2026-04-06T00:00:00-07:00')
+  // Aviva Kids event is Aug 8, 2026; revert to the default hero the next morning.
+  const showAviva = !showEaster && now < new Date('2026-08-09T00:00:00-07:00')
+
   return (
     <>
-      {new Date() < new Date('2026-04-06T00:00:00-07:00') ? (
+      {showEaster ? (
         <EasterHero />
+      ) : showAviva ? (
+        <>
+          <link
+            rel="preload"
+            as="image"
+            href="/videos/hero-aviva-kids-poster.jpg"
+            fetchPriority="high"
+          />
+          <AvivaKidsHero />
+        </>
       ) : (
         <>
           <link
