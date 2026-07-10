@@ -13,6 +13,7 @@ export default function HeroVideo() {
         className="h-auto min-h-[calc(60vh+100px)] w-full object-cover md:min-h-[70vh]"
         style={{ aspectRatio: '16/9' }}
       >
+        <source src="/videos/hero-banner-1.webm" type="video/webm" />
         <source src="/videos/hero-banner-1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
