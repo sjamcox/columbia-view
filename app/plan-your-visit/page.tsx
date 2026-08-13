@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import Hero from '@/components/Hero'
-import { ContentSection, GradientSection } from '@/components/ui/section'
 import Button from '@/components/ui/button'
-import worship from '@/public/sunday/worship-team.webp'
-import testimony from '@/public/sunday/mark-baptism-testimony.webp'
-import kidsSermon from '@/public/sunday/sermon-in-a-sack.webp'
-import communion from '@/public/sunday/sermon-communion-table.webp'
+import { ContentSection, GradientSection } from '@/components/ui/section'
 import discoverColumbia from '@/public/discover-columbia.jpeg'
+import testimony from '@/public/sunday/mark-baptism-testimony.webp'
+import communion from '@/public/sunday/sermon-communion-table.webp'
+import kidsSermon from '@/public/sunday/sermon-in-a-sack.webp'
+import worship from '@/public/sunday/worship-team.webp'
 import AccordionSection from './accordion-section'
 
 export const metadata: Metadata = {
@@ -75,8 +75,8 @@ export default function PlanYourVisit() {
               Bringing Kids?
             </h2>
             <p className="mb-6 text-lg/relaxed text-neutral-dark-gray">
-              We have nursery care for infants through age 3, and engaging kids
-              programming for ages 4-12. All volunteers are background checked
+              We have nursery care for infants through age 2, and engaging kids
+              programming for ages 3-12. All volunteers are background checked
               and trained. Your kids will be safe, have fun, and learn about
               Jesus!
             </p>

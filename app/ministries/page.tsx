@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import Hero from '@/components/Hero'
-import { ContentSection, GradientSection } from '@/components/ui/section'
 import Button from '@/components/ui/button'
+import { ContentSection, GradientSection } from '@/components/ui/section'
 import blakeFamily from '@/public/blake-family.webp'
 import cheneyFamily from '@/public/cheney-family.webp'
 import dunbarFamily from '@/public/dunbar-family.webp'
@@ -50,7 +50,9 @@ export default function Ministries() {
             </div>
 
             <div className="rounded-2xl bg-linear-to-br from-primary-light-blue to-secondary-aqua p-8 text-white shadow-lg">
-              <h3 className="mb-4 text-xl font-bold">Service Time & Location</h3>
+              <h3 className="mb-4 text-xl font-bold">
+                Service Time & Location
+              </h3>
               <p className="mb-2 text-lg font-semibold">10:00 AM</p>
               <p className="mb-6 opacity-90">In the sanctuary</p>
               <p className="text-sm opacity-90">
@@ -70,7 +72,10 @@ export default function Ministries() {
         </div>
 
         {/* NextGen */}
-        <div id="nextgen" className="scroll-mt-32 rounded-3xl bg-secondary-green/5 p-8 lg:p-12">
+        <div
+          id="nextgen"
+          className="scroll-mt-32 rounded-3xl bg-secondary-green/5 p-8 lg:p-12"
+        >
           <div className="mx-auto max-w-4xl">
             <div className="mb-10 text-center">
               <h2 className="font-display mb-6 text-3xl font-bold text-primary-dark-blue lg:text-4xl">
@@ -78,8 +83,8 @@ export default function Ministries() {
               </h2>
               <p className="mb-8 text-xl/relaxed text-neutral-dark-gray">
                 We have nursery staff on-site for families with infants through
-                age 3. We also offer kids programming for age 4 - grade 5 during
-                the preaching portion of our worship service. All nursery and
+                age 2. We also offer kids programming for ages 3-12 during the
+                preaching portion of our worship service. All nursery and
                 children volunteers are background checked and trained.
               </p>
             </div>
@@ -88,8 +93,12 @@ export default function Ministries() {
               <h3 className="mb-3 text-lg font-bold text-primary-dark-blue">
                 Ages & Locations
               </h3>
-              <p className="mb-2 text-neutral-dark-gray">Ages 0-3 in the nursery</p>
-              <p className="text-neutral-dark-gray">Age 4-Grade 5 in the kids room</p>
+              <p className="mb-2 text-neutral-dark-gray">
+                Ages 0-2 in the nursery
+              </p>
+              <p className="text-neutral-dark-gray">
+                Ages 3-12 in the kids room
+              </p>
             </div>
 
             <div className="flex justify-center">
@@ -143,12 +152,12 @@ export default function Ministries() {
                 Immigrant Connection
               </h2>
               <p className="mb-6 text-lg/relaxed text-neutral-dark-gray">
-                Immigrant Connection PDX is a low-cost immigration legal services
-                office. Our Department of Justice Accredited Representatives
-                provide affordable immigration legal services for our clients. Our
-                vision is to build bridges for a hope-filled future, and our
-                mission is to provide affordable immigration legal services to
-                immigrants in our community.
+                Immigrant Connection PDX is a low-cost immigration legal
+                services office. Our Department of Justice Accredited
+                Representatives provide affordable immigration legal services
+                for our clients. Our vision is to build bridges for a
+                hope-filled future, and our mission is to provide affordable
+                immigration legal services to immigrants in our community.
               </p>
             </div>
 
@@ -315,10 +324,7 @@ export default function Ministries() {
                 the area of theological education, employment skills, and
                 discipleship.
               </p>
-              <Button
-                href="https://www.wgm.org/missionary/dunbar"
-                color="blue"
-              >
+              <Button href="https://www.wgm.org/missionary/dunbar" color="blue">
                 Learn More or Donate
               </Button>
             </div>

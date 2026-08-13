@@ -41,9 +41,9 @@ export default function AccordionSection() {
           >
             <p className="text-base/relaxed text-neutral-dark-gray">
               We have nursery staff on-site for families with infants through
-              age 3. We also offer kids programming for age 4 - grade 5 during
-              the preaching portion of our worship service. All nursery and
-              children volunteers are background checked and trained.
+              age 2. We also offer kids programming for ages 3-12 during the
+              preaching portion of our worship service. All nursery and children
+              volunteers are background checked and trained.
             </p>
           </Accordion>
 

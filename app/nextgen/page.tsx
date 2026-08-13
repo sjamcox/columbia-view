@@ -1,41 +1,40 @@
 import type { Metadata } from 'next'
 
 import Image from 'next/image'
-
+import Hero from '@/components/Hero'
+import KeywordCard from '@/components/KeywordCard'
+import Button from '@/components/ui/button'
+import FadeIn from '@/components/ui/fade-in'
+import IconFeatureCard from '@/components/ui/icon-feature-card'
+import ImageBadgeCard from '@/components/ui/image-badge-card'
+import OverlappingImageGrid from '@/components/ui/overlapping-image-grid'
 import {
   ContentSection,
   GradientSection,
-  MediaSection,
   ImageSection,
+  MediaSection,
 } from '@/components/ui/section'
 import {
   DisplayHeading,
   GradientText,
   SectionHeading,
 } from '@/components/ui/typography'
-import OverlappingImageGrid from '@/components/ui/overlapping-image-grid'
-import FadeIn from '@/components/ui/fade-in'
-import Hero from '@/components/Hero'
-import wonderInk from '@/public/kids/wonder-ink.png'
-import kidsOnStage from '@/public/kids/kids-on-stage.webp'
+import compassIcon from '@/public/icons/compass.svg'
+import crownIcon from '@/public/icons/crown.svg'
+import fingerprintIcon from '@/public/icons/fingerprint.svg'
+import heartIcon from '@/public/icons/heart-hand.svg'
+import bigsOutside from '@/public/kids/bigs-outside.webp'
 import kidsAroundTable from '@/public/kids/kids-around-table.webp'
 import kidsDecorating from '@/public/kids/kids-decorating-christmas.webp'
 import kidsPlayStructure from '@/public/kids/kids-on-play-structure.webp'
-import kidsPrayerHands from '@/public/kids/kids-prayer-hands.webp'
+import kidsOnStage from '@/public/kids/kids-on-stage.webp'
 import kidsPaint from '@/public/kids/kids-paint.webp'
-import kidsBounceHouse from '@/public/kids/outdoor-bounce-house.webp'
+import kidsPrayerHands from '@/public/kids/kids-prayer-hands.webp'
 import littleOnToy from '@/public/kids/little-on-toy.webp'
 import littlesRoomStaff from '@/public/kids/littles-room-staff.webp'
 import midWithBlocks from '@/public/kids/mid-with-blocks.webp'
-import bigsOutside from '@/public/kids/bigs-outside.webp'
-import fingerprintIcon from '@/public/icons/fingerprint.svg'
-import heartIcon from '@/public/icons/heart-hand.svg'
-import compassIcon from '@/public/icons/compass.svg'
-import crownIcon from '@/public/icons/crown.svg'
-import KeywordCard from '@/components/KeywordCard'
-import ImageBadgeCard from '@/components/ui/image-badge-card'
-import Button from '@/components/ui/button'
-import IconFeatureCard from '@/components/ui/icon-feature-card'
+import kidsBounceHouse from '@/public/kids/outdoor-bounce-house.webp'
+import wonderInk from '@/public/kids/wonder-ink.png'
 
 export const metadata: Metadata = {
   title: 'NextGen Ministries | Columbia View Church',
@@ -64,10 +63,7 @@ export default function NextGen() {
       />
       <ContentSection>
         <h2 className="mb-15 text-center text-2xl/10 lg:text-4xl/12">
-          <GradientText
-            color="blue-aqua"
-            className="font-display"
-          >
+          <GradientText color="blue-aqua" className="font-display">
             Sundays are the primary day that Columbia View Kids gather to play,
             learn from Scripture, pray, and be in community. Our classrooms are{' '}
             <span className="font-bold">safe</span>,{' '}
@@ -104,39 +100,39 @@ export default function NextGen() {
       </ContentSection>
       <GradientSection color="green-blue">
         <DisplayHeading className="pb-10 md:pb-15">Age Groups</DisplayHeading>
-          <div className="grid gap-10 md:grid-cols-3">
-            <ImageBadgeCard
-              title="Littles"
-              badgeText="3 Months - 2 Years"
-              color="aqua"
-              description={`At this age, we know your child is all about exploring. They’re constantly moving, touching, and investigating as they learn about the world around them. Our group leaders nurture this curiosity in each child, meeting their needs, praying over them, and getting all the snuggles in.`}
-              imageProps={{
-                src: littleOnToy,
-                alt: 'Wobbler riding a car toy',
-              }}
-            />
-            <ImageBadgeCard
-              title="Mids"
-              badgeText="3 Years - 5 Years"
-              color="green"
-              description={`During this stage, it’s important for kids to lean into their creativity as they begin to discover how God created them and the world they live in. In the preschool classrooms, our group leaders help cultivate this natural wonder through worship, video-based Bible stories, and hands-on activities.`}
-              imageProps={{
-                src: midWithBlocks,
-                alt: 'Toddler smiling playing with blocks',
-              }}
-            />
-            <ImageBadgeCard
-              title="Bigs"
-              badgeText="6 Years - 12 Years"
-              color="red"
-              description={`In this age group, kids are focused on harnessing their influence. Our group leaders help develop a passion for loving others and making a difference in the elementary environment. We engage kids through worship, video-based Bible stories, and hands-on critical thinking activities.`}
-              imageProps={{
-                src: bigsOutside,
-                alt: 'Fifth grader being goofy outside',
-              }}
-            />
-          </div>
-        </GradientSection>
+        <div className="grid gap-10 md:grid-cols-3">
+          <ImageBadgeCard
+            title="Littles"
+            badgeText="3 Months - 2 Years"
+            color="aqua"
+            description={`At this age, we know your child is all about exploring. They’re constantly moving, touching, and investigating as they learn about the world around them. Our group leaders nurture this curiosity in each child, meeting their needs, praying over them, and getting all the snuggles in.`}
+            imageProps={{
+              src: littleOnToy,
+              alt: 'Wobbler riding a car toy',
+            }}
+          />
+          <ImageBadgeCard
+            title="Mids"
+            badgeText="3 Years - 6 Years"
+            color="green"
+            description={`During this stage, it’s important for kids to lean into their creativity as they begin to discover how God created them and the world they live in. In the preschool classrooms, our group leaders help cultivate this natural wonder through worship, video-based Bible stories, and hands-on activities.`}
+            imageProps={{
+              src: midWithBlocks,
+              alt: 'Toddler smiling playing with blocks',
+            }}
+          />
+          <ImageBadgeCard
+            title="Bigs"
+            badgeText="7 Years - 12 Years"
+            color="red"
+            description={`In this age group, kids are focused on harnessing their influence. Our group leaders help develop a passion for loving others and making a difference in the elementary environment. We engage kids through worship, video-based Bible stories, and hands-on critical thinking activities.`}
+            imageProps={{
+              src: bigsOutside,
+              alt: 'Fifth grader being goofy outside',
+            }}
+          />
+        </div>
+      </GradientSection>
       <MediaSection
         media={
           <OverlappingImageGrid
@@ -161,12 +157,12 @@ export default function NextGen() {
         </p>
         <p className="mb-8 text-base">
           We offer care for <span className="font-bold">Littles</span> for the
-          length of the worship service.{' '}
-          <span className="font-bold">Mids</span> and{' '}
-          <span className="font-bold">Bigs</span> join the entire church for the
-          first two songs of corporate worship before being dismissed to their
-          classrooms for the remainder of the worship service. We ask parents to
-          pick up their kids from their classes promptly when worship lets out.
+          length of the worship service. <span className="font-bold">Mids</span>{' '}
+          and <span className="font-bold">Bigs</span> join the entire church for
+          the first two songs of corporate worship before being dismissed to
+          their classrooms for the remainder of the worship service. We ask
+          parents to pick up their kids from their classes promptly when worship
+          lets out.
         </p>
         <Button
           color="blue"
