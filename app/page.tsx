@@ -2,8 +2,6 @@ import type { Metadata } from 'next'
 import type { StaticImageData } from 'next/image'
 import Image from 'next/image'
 import Link from 'next/link'
-import AvivaKidsHero from '@/components/AvivaKidsHero'
-import EasterHero from '@/components/EasterHero'
 import EventGrid from '@/components/EventGrid'
 import HeroVideo from '@/components/HeroVideo'
 import Button from '@/components/ui/button'
@@ -53,36 +51,15 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  const now = new Date()
-  const showEaster = now < new Date('2026-04-06T00:00:00-07:00')
-  // Aviva Kids event is Aug 8, 2026; revert to the default hero the next morning.
-  const showAviva = !showEaster && now < new Date('2026-08-09T00:00:00-07:00')
-
   return (
     <>
-      {showEaster ? (
-        <EasterHero />
-      ) : showAviva ? (
-        <>
-          <link
-            rel="preload"
-            as="image"
-            href="/videos/hero-aviva-kids-poster.jpg"
-            fetchPriority="high"
-          />
-          <AvivaKidsHero />
-        </>
-      ) : (
-        <>
-          <link
-            rel="preload"
-            as="image"
-            href="/videos/hero-poster.jpg"
-            fetchPriority="high"
-          />
-          <HeroVideo />
-        </>
-      )}
+      <link
+        rel="preload"
+        as="image"
+        href="/videos/hero-poster.jpg"
+        fetchPriority="high"
+      />
+      <HeroVideo />
       <section>
         <div className="container mx-auto overflow-hidden px-4 py-8 md:overflow-visible md:py-24">
           <div className="flex flex-col-reverse justify-between md:flex-row">
