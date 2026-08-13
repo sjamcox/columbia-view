@@ -31,6 +31,7 @@ export type Show = {
 }
 
 export type Episode = EpisodeSummary & {
+  duration_iso?: string
   description_html?: string
   playback_url?: string // Fallback for Spreaker if needed
   videoId?: string
