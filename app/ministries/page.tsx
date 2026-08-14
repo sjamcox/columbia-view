@@ -13,7 +13,7 @@ import lobbyGroup from '@/public/lobby-group.webp'
 export const metadata: Metadata = {
   title: 'Ministries | Columbia View Church',
   description:
-    'Discover ways to connect, serve, and grow in faith through our worship services, NextGen kids ministry, life groups, and global missions.',
+    'Discover ways to connect, serve, and grow in faith through our worship services, NextGen kids ministry, discipleship groups, and global missions.',
   alternates: {
     canonical: '/ministries',
   },
@@ -109,18 +109,18 @@ export default function Ministries() {
           </div>
         </div>
 
-        {/* Life Groups */}
-        <div id="life-groups" className="scroll-mt-32">
+        {/* Discipleship Groups */}
+        <div id="discipleship-groups" className="scroll-mt-32">
           <div className="grid gap-10 md:grid-cols-3">
             <div className="md:col-span-2">
               <h2 className="font-display mb-6 text-3xl font-bold text-primary-dark-blue lg:text-4xl">
-                Life Groups
+                Discipleship Groups
               </h2>
               <p className="mb-6 text-lg/relaxed text-neutral-dark-gray">
-                Life groups are the heartbeat of our church as we seek to live
-                out the practice of Acts 2:42-47. All are welcome and encouraged
-                to join a Life Group that best fits them regardless of Biblical
-                experience.
+                Discipleship groups are the heartbeat of our church as we seek
+                to live out the practice of Acts 2:42-47. All are welcome and
+                encouraged to join a Discipleship Group that best fits them
+                regardless of Biblical experience.
               </p>
             </div>
 

@@ -65,7 +65,7 @@ This is the single highest-leverage change on the site. The teaching archive is 
 | 2.2 | Add `FAQPage` schema to `/plan-your-visit` | `app/plan-your-visit/accordion-section.tsx` + new schema component | Content already exists and already renders server-side, so it is crawlable — it just isn't marked up |
 | 2.3 | Rewrite accordion summaries as questions | `app/plan-your-visit/accordion-section.tsx` | `"On Arrival"` → `"What should I expect when I arrive?"`; `"Infants & Children"` → `"Is there childcare during the service?"`. Matches real query phrasing |
 | 2.4 | Add a factual block to the homepage | `app/page.tsx` | ~200 words: service time, address, neighborhood (Rockwood / East Portland / Gresham), denomination, what a first visit is like. Homepage AI-readiness is 15/100 because the copy is entirely aspirational |
-| 2.5 | Add static editorial content to `/events` | `app/events/page.tsx` | ~300 words on recurring rhythms (life groups, campout, potlucks, workdays) so the page says something when the Planning Center feed is empty. Currently ~30 words |
+| 2.5 | Add static editorial content to `/events` | `app/events/page.tsx` | ~300 words on recurring rhythms (discipleship groups, campout, potlucks, workdays) so the page says something when the Planning Center feed is empty. Currently ~30 words |
 | 2.6 | Add `Event` schema from Planning Center data | `app/events/page.tsx` | `name`, `startDate`, `endDate`, `location`, `description` — all already fetched |
 | 2.7 | Add contact info to `/plan-your-visit` | `app/plan-your-visit/page.tsx:184` | Page says "We'd love to hear from you" and gives no phone or email |
 

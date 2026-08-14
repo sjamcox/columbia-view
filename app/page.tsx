@@ -9,7 +9,7 @@ import Button from '@/components/ui/button'
 import immigrantFamily from '@/public/icpdx/immigrant-family.webp'
 import smilingFamily from '@/public/icpdx/smiling-family.webp'
 import kids from '@/public/kids/kids-activity.webp'
-import lifeGroup from '@/public/life-groups/ladies-group.webp'
+import discipleshipGroup from '@/public/life-groups/ladies-group.webp'
 import lobbyGroup from '@/public/lobby-group.webp'
 import baptism from '@/public/sunday/mark-baptism.webp'
 import worship from '@/public/sunday/worship-team-vertical.webp'
@@ -133,10 +133,10 @@ export default function Page() {
                 headline="NextGen Ministries"
               />
               <ImageTile
-                link="/ministries#life-groups"
-                image={lifeGroup}
-                alt="Two women smiling at life group"
-                headline="Life Groups"
+                link="/ministries#discipleship-groups"
+                image={discipleshipGroup}
+                alt="Two women smiling at discipleship group"
+                headline="Discipleship Groups"
               />
               <ImageTile
                 link="/immigrant-connection-pdx"
