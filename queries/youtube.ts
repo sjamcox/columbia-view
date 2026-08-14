@@ -1,4 +1,5 @@
-import type { Episode, EpisodeList } from '@/types/messages'
+import type { Episode, EpisodeList, EpisodeSummary } from '@/types/messages'
+import { isServiceWindow } from '@/utils/service-window'
 
 const YOUTUBE_API_KEY = process.env.YOUTUBE_API_KEY
 const YOUTUBE_PLAYLIST_ID = process.env.YOUTUBE_PLAYLIST_ID
@@ -54,6 +55,21 @@ export async function getYouTubeMessages(
   return []
 }
 
+/**
+ * The live stream currently on air, or null.
+ *
+ * Gated on the Sunday-morning service window because the underlying
+ * search.list call costs 100 quota units — see utils/service-window for the
+ * arithmetic. Outside the window this makes no request at all.
+ */
+export async function getActiveLiveStream(): Promise<EpisodeSummary | null> {
+  if (!isServiceWindow()) return null
+
+  const [stream] = await getYouTubeLiveStreams(1)
+
+  return stream ?? null
+}
+
 export async function getYouTubeLiveStreams(
   limit: number = 5
 ): Promise<EpisodeList> {
@@ -81,7 +97,6 @@ export async function getYouTubeLiveStreams(
   }
 
   const data = await response.json()
-  console.log({ data })
   return data.items.map((item: any) => ({
     episode_id: item.id.videoId,
     id: item.id.videoId,

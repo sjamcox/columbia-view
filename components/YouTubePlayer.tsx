@@ -3,7 +3,14 @@
 import Image from 'next/image'
 import { useState } from 'react'
 
-export default function YouTubePlayer({ videoId }: { videoId: string }) {
+export default function YouTubePlayer({
+  videoId,
+  thumbnailUrl,
+}: {
+  videoId: string
+  /** Overrides the default thumbnail; live streams often have no maxresdefault. */
+  thumbnailUrl?: string
+}) {
   const [activated, setActivated] = useState(false)
 
   if (activated) {
@@ -28,7 +35,9 @@ export default function YouTubePlayer({ videoId }: { videoId: string }) {
       aria-label="Play video"
     >
       <Image
-        src={`https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`}
+        src={
+          thumbnailUrl ?? `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`
+        }
         alt=""
         fill
         className="object-cover opacity-80 transition-opacity duration-300 group-hover:opacity-90"
