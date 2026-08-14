@@ -6,6 +6,9 @@ import EventGrid from '@/components/EventGrid'
 import HeroVideo from '@/components/HeroVideo'
 import LiveNow from '@/components/LiveNow'
 import Button from '@/components/ui/button'
+import FadeIn from '@/components/ui/fade-in'
+import { GradientSection } from '@/components/ui/section'
+import { GradientText } from '@/components/ui/typography'
 import immigrantFamily from '@/public/icpdx/immigrant-family.webp'
 import smilingFamily from '@/public/icpdx/smiling-family.webp'
 import kids from '@/public/kids/kids-activity.webp'
@@ -19,31 +22,85 @@ function ImageTile({
   image,
   alt,
   headline,
+  description,
 }: {
   link: string
   image: StaticImageData
   alt: string
   headline: string
+  description: string
 }) {
   return (
-    <Link href={link} className="group block h-full">
-      <div className="relative h-0 w-full overflow-hidden rounded pb-[133%] shadow-md">
+    <Link
+      href={link}
+      className="group block h-full rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary-light-blue"
+    >
+      <div className="relative h-0 w-full overflow-hidden rounded-xl pb-[133%] shadow-md transition-shadow duration-300 group-hover:shadow-xl">
         <Image
           src={image}
           alt={alt}
           fill
-          className="absolute inset-0 object-cover"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="absolute inset-0 object-cover transition-transform duration-500 ease-out group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
-        <div className="absolute bottom-0 left-0 z-10 h-[70%] w-full bg-linear-to-b from-transparent to-[rgba(0,0,0,0.35)]" />
-        <div className="absolute bottom-0 left-0 z-20 pb-2 pl-[22px] pr-5">
+        <div className="absolute inset-0 z-10 bg-linear-to-t from-black/80 via-black/25 to-transparent transition-opacity duration-300 group-hover:from-black/90" />
+        <div className="absolute inset-x-0 bottom-0 z-20 px-5 pb-4">
           <h3 className="text-[1.7rem] font-bold leading-tight text-white drop-shadow-md md:text-[33px]">
             {headline}
           </h3>
+          {/*
+            The description is always in the DOM — crawlable, and readable on
+            touch devices where there is no hover. On md+ it collapses to zero
+            height and expands on hover or keyboard focus. Animating
+            grid-template-rows avoids hardcoding a max-height per tile.
+          */}
+          <div className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-300 ease-out md:grid-rows-[0fr] md:group-focus-visible:grid-rows-[1fr] md:group-hover:grid-rows-[1fr] motion-reduce:transition-none">
+            <div className="overflow-hidden">
+              <p className="pt-2 text-sm/relaxed text-white/90 drop-shadow">
+                {description}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </Link>
   )
 }
+
+const ministryTiles = [
+  {
+    link: '/ministries#sunday-worship',
+    image: worship,
+    alt: 'Worship band playing',
+    headline: 'Sunday Worship',
+    description:
+      'A blend of hymns and contemporary worship, every Sunday at 10:00 am.',
+  },
+  {
+    link: '/nextgen',
+    image: kids,
+    alt: 'kids in sunday school',
+    headline: 'NextGen Ministries',
+    description:
+      'Safe, fun, Jesus-centered classrooms for kids 3 months through 12 years.',
+  },
+  {
+    link: '/ministries#discipleship-groups',
+    image: discipleshipGroup,
+    alt: 'Two women smiling at discipleship group',
+    headline: 'Discipleship Groups',
+    description:
+      'Small groups living out Acts 2:42-47 — all are welcome, whatever your experience.',
+  },
+  {
+    link: '/immigrant-connection-pdx',
+    image: smilingFamily,
+    alt: 'immigrant man with large hat',
+    headline: 'Immigrant Connection',
+    description:
+      'Department of Justice recognized, low-cost immigration legal services.',
+  },
+]
 
 export const metadata: Metadata = {
   alternates: {
@@ -110,58 +167,53 @@ export default function Page() {
         </div>
       </section>
 
-      <section>
-        <div className="container mx-auto px-4 py-8 md:py-24 md:pt-0">
-          <div className="flex flex-col items-center">
-            <h2 className="text-[2.1rem] font-bold text-neutral-dark-gray md:text-[3.1rem] lg:text-[4rem]">
+      <GradientSection color="blue-aqua">
+        <div className="flex flex-col items-center">
+          <FadeIn className="flex flex-col items-center">
+            {/* Sized explicitly rather than via DisplayHeading, whose 7xl is
+                too large for a headline this long. */}
+            <h2 className="font-display text-center text-[2.1rem] font-bold uppercase text-white md:text-[3.1rem] lg:text-[4rem]">
               Columbia View Ministries
             </h2>
-            <p className="mb-8 text-lg text-[#646263]">
+            <p className="mb-8 text-lg text-white/90">
               Check out the different ways to get involved
             </p>
-            <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              <ImageTile
-                link="/ministries#sunday-worship"
-                image={worship}
-                alt="Worship band playing"
-                headline="Sunday Worship"
-              />
-              <ImageTile
-                link="/nextgen"
-                image={kids}
-                alt="kids in sunday school"
-                headline="NextGen Ministries"
-              />
-              <ImageTile
-                link="/ministries#discipleship-groups"
-                image={discipleshipGroup}
-                alt="Two women smiling at discipleship group"
-                headline="Discipleship Groups"
-              />
-              <ImageTile
-                link="/immigrant-connection-pdx"
-                image={smilingFamily}
-                alt="immigrant man with large hat"
-                headline="Immigrant Connection"
-              />
-            </div>
+          </FadeIn>
+          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {ministryTiles.map((tile, index) => (
+              <FadeIn
+                key={tile.headline}
+                className="h-full"
+                duration={0.8}
+                delay={index * 0.12}
+              >
+                <ImageTile {...tile} />
+              </FadeIn>
+            ))}
           </div>
         </div>
-      </section>
+      </GradientSection>
 
       <section className="bg-neutral-light-gray/40">
         <div className="container mx-auto px-4 py-12 md:py-20">
           <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
-            <div className="relative h-[300px] w-full overflow-hidden rounded-[10px] md:h-[440px]">
-              <Image
-                src={lobbyGroup}
-                alt="Church members of all ages talking together in the lobby beside the coffee bar"
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+            <FadeIn className="relative">
+              {/* Offset panel, echoing the treatment in the hero section above */}
+              <div
+                className="absolute inset-0 hidden rounded-[10px] bg-neutral-light-blue md:-left-6 md:-top-6 md:block"
+                aria-hidden="true"
               />
-            </div>
-            <div>
+              <div className="relative h-[300px] w-full overflow-hidden rounded-[10px] md:h-[440px]">
+                <Image
+                  src={lobbyGroup}
+                  alt="Church members of all ages talking together in the lobby beside the coffee bar"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn delay={0.15}>
               <h2 className="font-display mb-6 text-2xl font-bold text-primary-dark-blue md:text-3xl">
                 We&rsquo;ll save you a seat
               </h2>
@@ -196,16 +248,18 @@ export default function Page() {
                   page.
                 </p>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
 
       <section>
         <div className="container mx-auto px-4 py-8 md:py-16">
-          <h2 className="mb-8 text-center text-[1.7rem] font-bold text-[#0E496F] md:text-[2.3rem] lg:text-[2.8rem]">
-            Upcoming Events
-          </h2>
+          <FadeIn>
+            <h2 className="font-display mb-8 text-center text-[1.7rem] font-bold md:text-[2.3rem] lg:text-[2.8rem]">
+              <GradientText color="blue-aqua">Upcoming Events</GradientText>
+            </h2>
+          </FadeIn>
           <EventGrid limit={3} />
           <div className="mt-8 flex justify-center">
             <Button href="/events" color="blue">
@@ -217,8 +271,8 @@ export default function Page() {
 
       <section>
         <div className="container mx-auto px-4 py-12 md:py-24">
-          <div className="grid grid-cols-1 items-stretch gap-0 overflow-hidden rounded-[20px] md:grid-cols-12 md:gap-8">
-            <div className="z-10 bg-[rgb(14,73,111)] p-8 text-white md:col-span-7 md:rounded-[10px] lg:p-16">
+          <FadeIn className="grid grid-cols-1 items-stretch gap-0 overflow-hidden rounded-[20px] md:grid-cols-12 md:gap-8">
+            <div className="z-10 bg-primary-dark-blue p-8 text-white md:col-span-7 md:rounded-[10px] lg:p-16">
               <div className="max-w-[500px]">
                 <h2 className="mb-8 text-[1.7rem] font-bold md:text-[2.3rem] lg:text-[2.8rem]">
                   Immigrant Connection PDX
@@ -241,7 +295,7 @@ export default function Page() {
                 className="object-cover md:rounded-[10px]"
               />
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
     </>
