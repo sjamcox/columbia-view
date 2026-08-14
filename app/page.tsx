@@ -4,12 +4,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import EventGrid from '@/components/EventGrid'
 import HeroVideo from '@/components/HeroVideo'
+import LiveNow from '@/components/LiveNow'
 import Button from '@/components/ui/button'
 import immigrantFamily from '@/public/icpdx/immigrant-family.webp'
 import smilingFamily from '@/public/icpdx/smiling-family.webp'
 import kids from '@/public/kids/kids-activity.webp'
 import lifeGroup from '@/public/life-groups/ladies-group.webp'
-import rightnow from '@/public/right-now-media.webp'
+import lobbyGroup from '@/public/lobby-group.webp'
 import baptism from '@/public/sunday/mark-baptism.webp'
 import worship from '@/public/sunday/worship-team-vertical.webp'
 
@@ -60,6 +61,7 @@ export default function Page() {
         fetchPriority="high"
       />
       <HeroVideo />
+      <LiveNow />
       <section>
         <div className="container mx-auto overflow-hidden px-4 py-8 md:overflow-visible md:py-24">
           <div className="flex flex-col-reverse justify-between md:flex-row">
@@ -147,6 +149,58 @@ export default function Page() {
         </div>
       </section>
 
+      <section className="bg-neutral-light-gray/40">
+        <div className="container mx-auto px-4 py-12 md:py-20">
+          <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
+            <div className="relative h-[300px] w-full overflow-hidden rounded-[10px] md:h-[440px]">
+              <Image
+                src={lobbyGroup}
+                alt="Church members of all ages talking together in the lobby beside the coffee bar"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h2 className="font-display mb-6 text-2xl font-bold text-primary-dark-blue md:text-3xl">
+                We&rsquo;ll save you a seat
+              </h2>
+              <div className="space-y-4 text-base/relaxed text-neutral-dark-gray md:text-lg/relaxed">
+                <p>
+                  We&rsquo;re a Wesleyan congregation in the Rockwood
+                  neighborhood of East Portland, just west of Gresham. Worship
+                  is every Sunday at 10:00 am, and we stream it live on{' '}
+                  <a
+                    href="https://www.youtube.com/@columbiaview.church"
+                    className="font-semibold text-primary-light-blue underline underline-offset-2"
+                  >
+                    our YouTube channel
+                  </a>{' '}
+                  if you&rsquo;d rather join from home.
+                </p>
+                <p>
+                  Services run a blend of hymns and contemporary worship, with
+                  coffee and something baked in the lobby when you arrive.
+                  Nursery care is ready for infants through age 2, and kids ages
+                  3 to 12 head to their own classrooms during the message.
+                </p>
+                <p>
+                  Parking, directions, and the rest of the practical details are
+                  on our{' '}
+                  <Link
+                    href="/plan-your-visit"
+                    className="font-semibold text-primary-light-blue underline underline-offset-2"
+                  >
+                    Plan Your Visit
+                  </Link>{' '}
+                  page.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div className="container mx-auto px-4 py-8 md:py-16">
           <h2 className="mb-8 text-center text-[1.7rem] font-bold text-[#0E496F] md:text-[2.3rem] lg:text-[2.8rem]">
@@ -157,42 +211,6 @@ export default function Page() {
             <Button href="/events" color="blue">
               View All Events
             </Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="rounded-[20px] bg-[rgb(14,73,111)]">
-        <div className="container mx-auto px-4 py-8 md:py-24">
-          <div className="grid items-center gap-12 sm:grid-cols-2">
-            <div>
-              <div className="relative w-full pb-[56.25%]">
-                {' '}
-                {/* 16:9 Aspect Ratio */}
-                <Image
-                  src={rightnow}
-                  alt=""
-                  fill
-                  className="absolute inset-0 object-contain"
-                />
-              </div>
-            </div>
-            <div>
-              <h2 className="mb-8 text-[1.7rem] font-bold text-white md:text-[2.3rem] lg:text-[2.8rem]">
-                RightNow Media
-              </h2>
-              <p className="mb-8 text-white">
-                RightNow Media is the world’s largest streaming library of video
-                Bible study resources and is now available to all Columbia View
-                members. RightNow Media is a tool that you can use to help you
-                live out your faith in every area of your life.
-              </p>
-              <Button
-                href="https://app.rightnowmedia.org/join/columbiaviewchurch"
-                color="blue"
-              >
-                Get Access Today
-              </Button>
-            </div>
           </div>
         </div>
       </section>
