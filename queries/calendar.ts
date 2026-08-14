@@ -1,4 +1,7 @@
-import type { EventInstanceResponse } from '@/types/calendar'
+import type {
+  EventInstanceResponse,
+  MergedEventAttributes,
+} from '@/types/calendar'
 
 export async function getCalendarEvents(
   count = 50
@@ -48,4 +51,47 @@ export async function getCalendarEvents(
     console.error('Error fetching calendar events:', error)
     return { data: [], included: [] }
   }
+}
+
+/**
+ * Collapse event instances onto their parent events.
+ *
+ * Planning Center returns one instance per occurrence, so a weekly event
+ * arrives many times over; only the soonest is kept. Shared by the events grid
+ * and the Event schema so the page and its structured data can't disagree
+ * about what's on the calendar.
+ */
+export async function getMergedCalendarEvents(
+  limit?: number
+): Promise<MergedEventAttributes[]> {
+  const { data, included } = await getCalendarEvents()
+
+  const seenEventIds = new Set<string>()
+  const deduplicatedData = data.filter((event) => {
+    const baseEventId = event.relationships?.event?.data.id
+    if (!baseEventId || seenEventIds.has(baseEventId)) {
+      return false
+    }
+    seenEventIds.add(baseEventId)
+    return true
+  })
+
+  return deduplicatedData
+    .map((event) => {
+      const eventData = included.find(
+        (e) => e.id === event.relationships?.event?.data.id
+      )
+
+      if (!eventData) {
+        throw new Error(`Event data not found for event ${event.id}`)
+      }
+
+      return {
+        id: event.id,
+        ...event.attributes,
+        ...eventData.attributes,
+      }
+    })
+    .filter((event) => event.visible_in_church_center)
+    .slice(0, limit)
 }

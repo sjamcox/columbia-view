@@ -1,5 +1,7 @@
+import type { Metadata } from 'next'
 import EventGrid from '@/components/EventGrid'
-import { Metadata } from 'next'
+import EventSchema from '@/components/features/seo/event-schema'
+import { getMergedCalendarEvents } from '@/queries/calendar'
 
 export const metadata: Metadata = {
   title: 'Events | Columbia View Church',
@@ -10,9 +12,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default function EventsPage() {
+export default async function EventsPage() {
+  const events = await getMergedCalendarEvents()
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <EventSchema events={events} />
       <div className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="mb-2 text-4xl font-bold text-gray-900">Events</h1>

@@ -1,7 +1,6 @@
-import type { MergedEventAttributes } from '@/types/calendar'
-import { getCalendarEvents } from '@/queries/calendar'
-import EventCard from './EventCard'
 import Link from 'next/link'
+import { getMergedCalendarEvents } from '@/queries/calendar'
+import EventCard from './EventCard'
 
 interface EventGridProps {
   limit?: number
@@ -12,9 +11,9 @@ export default async function EventGrid({
   limit,
   className = '',
 }: EventGridProps) {
-  let { data, included } = await getCalendarEvents()
+  const combinedEventAttributes = await getMergedCalendarEvents(limit)
 
-  if (data.length === 0) {
+  if (combinedEventAttributes.length === 0) {
     return (
       <div className={`py-12 text-center ${className}`}>
         <div className="text-gray-500">
@@ -39,36 +38,6 @@ export default async function EventGrid({
       </div>
     )
   }
-
-  // Deduplicate events by base event ID, keeping the first occurrence
-  const seenEventIds = new Set<string>()
-  const deduplicatedData = data.filter((event) => {
-    const baseEventId = event.relationships?.event?.data.id
-    if (!baseEventId || seenEventIds.has(baseEventId)) {
-      return false
-    }
-    seenEventIds.add(baseEventId)
-    return true
-  })
-
-  const combinedEventAttributes: MergedEventAttributes[] = deduplicatedData
-    .map((event) => {
-      const eventData = included.find(
-        (e) => e.id === event.relationships?.event?.data.id
-      )
-
-      if (!eventData) {
-        throw new Error(`Event data not found for event ${event.id}`)
-      }
-
-      return {
-        id: event.id,
-        ...event.attributes,
-        ...eventData.attributes,
-      }
-    })
-    .filter((event) => event.visible_in_church_center)
-    .slice(0, limit)
 
   return (
     <div
