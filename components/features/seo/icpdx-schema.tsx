@@ -42,10 +42,17 @@ export default function IcpdxSchema() {
     parentOrganization: {
       '@id': 'https://columbiaview.org/#church',
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Portland',
-    },
+    // Matches the service area published by 211info and findhelp, which
+    // previously credited ICPDX with more reach than the site claimed.
+    areaServed: [
+      { '@type': 'AdministrativeArea', name: 'Clackamas County, OR' },
+      { '@type': 'AdministrativeArea', name: 'Columbia County, OR' },
+      { '@type': 'AdministrativeArea', name: 'Multnomah County, OR' },
+      { '@type': 'AdministrativeArea', name: 'Washington County, OR' },
+      { '@type': 'AdministrativeArea', name: 'Yamhill County, OR' },
+      { '@type': 'AdministrativeArea', name: 'Clark County, WA' },
+      { '@type': 'AdministrativeArea', name: 'Skamania County, WA' },
+    ],
     sameAs: ['https://www.icwelcome.org'],
   }
 
