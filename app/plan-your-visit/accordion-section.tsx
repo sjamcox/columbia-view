@@ -3,12 +3,13 @@
 import { useState } from 'react'
 import Accordion from '@/components/ui/accordion'
 import { ContentSection } from '@/components/ui/section'
+import { visitFaqs } from './faqs'
 
 export default function AccordionSection() {
   const [expanded, setExpanded] = useState('')
 
   const handleClick = (panel: string) => {
-    panel === expanded ? setExpanded('') : setExpanded(panel)
+    setExpanded(panel === expanded ? '' : panel)
   }
 
   return (
@@ -18,70 +19,19 @@ export default function AccordionSection() {
           What to Expect During Your Visit
         </h2>
         <div className="flex flex-col gap-4">
-          <Accordion
-            summary="On Arrival"
-            color="aqua"
-            open={expanded === 'arrival'}
-            onClick={() => handleClick('arrival')}
-          >
-            <p className="text-base/relaxed text-neutral-dark-gray">
-              After parking in our parking lot, you will walk through the main
-              entrance double doors. You will be greeted by a few smiling faces
-              and offered complementary coffee and baked goods. Sunday morning
-              worship service begins at 10:00 am. Our people are very laid back
-              and friendly.
-            </p>
-          </Accordion>
-
-          <Accordion
-            summary="Infants & Children"
-            color="green"
-            open={expanded === 'children'}
-            onClick={() => handleClick('children')}
-          >
-            <p className="text-base/relaxed text-neutral-dark-gray">
-              We have nursery staff on-site for families with infants through
-              age 2. We also offer kids programming for ages 3-12 during the
-              preaching portion of our worship service. All nursery and children
-              volunteers are background checked and trained.
-            </p>
-          </Accordion>
-
-          <Accordion
-            summary="Parking"
-            color="yellow"
-            open={expanded === 'parking'}
-            onClick={() => handleClick('parking')}
-          >
-            <p className="text-base/relaxed text-neutral-dark-gray">
-              We have parking available at the front, side, and the back of the
-              building.
-            </p>
-          </Accordion>
-
-          <Accordion
-            summary="Music"
-            color="red"
-            open={expanded === 'music'}
-            onClick={() => handleClick('music')}
-          >
-            <p className="text-base/relaxed text-neutral-dark-gray">
-              We promote music that reflects the congregation, so we generally
-              worship with a blend of hymns and contemporary music.
-            </p>
-          </Accordion>
-
-          <Accordion
-            summary="Gathering Size"
-            color="aqua"
-            open={expanded === 'attendance'}
-            onClick={() => handleClick('attendance')}
-          >
-            <p className="text-base/relaxed text-neutral-dark-gray">
-              Our directory has around 100 names, and on a given Sunday we will
-              have between 50-60 people in attendance.
-            </p>
-          </Accordion>
+          {visitFaqs.map((faq) => (
+            <Accordion
+              key={faq.id}
+              summary={faq.question}
+              color={faq.color}
+              open={expanded === faq.id}
+              onClick={() => handleClick(faq.id)}
+            >
+              <p className="text-base/relaxed text-neutral-dark-gray">
+                {faq.answer}
+              </p>
+            </Accordion>
+          ))}
         </div>
       </div>
     </ContentSection>

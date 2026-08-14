@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-
+import FaqSchema from '@/components/features/seo/faq-schema'
 import Hero from '@/components/Hero'
 import Button from '@/components/ui/button'
 import { ContentSection, GradientSection } from '@/components/ui/section'
@@ -10,6 +10,7 @@ import communion from '@/public/sunday/sermon-communion-table.webp'
 import kidsSermon from '@/public/sunday/sermon-in-a-sack.webp'
 import worship from '@/public/sunday/worship-team.webp'
 import AccordionSection from './accordion-section'
+import { visitFaqs } from './faqs'
 
 export const metadata: Metadata = {
   title: 'Plan Your Visit | Columbia View Church',
@@ -132,6 +133,7 @@ export default function PlanYourVisit() {
       </ContentSection>
 
       {/* What to Expect Accordion */}
+      <FaqSchema faqs={visitFaqs} />
       <AccordionSection />
 
       {/* Discover Columbia Section */}
