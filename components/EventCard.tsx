@@ -1,7 +1,8 @@
-import type { MergedEventAttributes } from '@/types/calendar'
+import { CalendarIcon, ClockIcon } from '@heroicons/react/16/solid'
 import { format, parseISO } from 'date-fns'
 import { formatInTimeZone } from 'date-fns-tz'
 import Image from 'next/image'
+import { Badge } from '@/components/ui/badge'
 import {
   Card,
   CardContent,
@@ -11,8 +12,8 @@ import {
   CardMetadata,
   CardTitle,
 } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { CalendarIcon, ClockIcon } from '@heroicons/react/16/solid'
+import type { MergedEventAttributes } from '@/types/calendar'
+import { cleanEventSummary } from '@/utils/events'
 
 interface EventCardProps {
   event: MergedEventAttributes
@@ -77,7 +78,7 @@ export default function EventCard({ event }: EventCardProps) {
           )}
         </div>
         <CardDescription className="line-clamp-3">
-          {summary && summary}
+          {cleanEventSummary(summary)}
         </CardDescription>
       </CardContent>
       <CardFooter>

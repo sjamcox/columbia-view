@@ -1,14 +1,18 @@
 import type { MergedEventAttributes } from '@/types/calendar'
+import { cleanEventSummary } from '@/utils/events'
 import JsonLd from './json-ld'
 
-/** Planning Center descriptions can carry markup; schema wants plain text. */
+/**
+ * Planning Center descriptions carry markup, and its plain-text summaries carry
+ * parenthesised image and link URLs — neither belongs in structured data.
+ */
 function toPlainText(value: string | undefined): string | undefined {
   if (!value) return undefined
 
-  const text = value
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim()
+  const text = cleanEventSummary(value.replace(/<[^>]*>/g, ' ')).replace(
+    /\s+/g,
+    ' '
+  )
 
   return text || undefined
 }
