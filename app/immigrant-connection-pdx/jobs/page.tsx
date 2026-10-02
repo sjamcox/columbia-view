@@ -21,7 +21,7 @@ export default function JobsPage() {
         </h1>
 
         <div className="space-y-12">
-          {/* Job 1 */}
+          {/* Job */}
           <div className="rounded-2xl border border-neutral-light-gray bg-white p-8 shadow-sm">
             <h2 className="mb-2 text-2xl font-bold text-primary-dark-blue">
               DOJ Accredited Representative
@@ -37,42 +37,6 @@ export default function JobsPage() {
               color="blue"
               href="/icpdx/jobs/doj-accredited-representative.pdf"
               prefetch={false}
-            >
-              View Position Details
-            </Button>
-          </div>
-
-          {/* Job 2 */}
-          <div className="rounded-2xl border border-neutral-light-gray bg-white p-8 shadow-sm">
-            <h2 className="mb-2 text-2xl font-bold text-primary-dark-blue">
-              Bilingual Legal Assistant
-            </h2>
-            <p className="mb-6 text-base leading-relaxed text-neutral-dark-gray">
-              This Immigrant Connection PDX staff position starts as a legal
-              assistant under the supervision of a DOJ accredited representative
-              with the intention that within 12-18 months you will submit your
-              DOJ accreditation application.
-            </p>
-            <Button
-              color="blue"
-              href="https://columbiaview.churchcenter.com/people/forms/981496"
-            >
-              View Position Details
-            </Button>
-          </div>
-
-          {/* Job 3 */}
-          <div className="rounded-2xl border border-neutral-light-gray bg-white p-8 shadow-sm">
-            <h2 className="mb-2 text-2xl font-bold text-primary-dark-blue">
-              Admin Support
-            </h2>
-            <p className="mb-6 text-base leading-relaxed text-neutral-dark-gray">
-              Assists the Legal Team in preparing, submitting, and following-up
-              with client cases.
-            </p>
-            <Button
-              color="blue"
-              href="https://docs.google.com/document/d/1VGq-3iASNoAkeBKDCnC2CQ_aVHH_V99C/view"
             >
               View Position Details
             </Button>
