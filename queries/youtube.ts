@@ -6,6 +6,10 @@ const YOUTUBE_PLAYLIST_ID = process.env.YOUTUBE_PLAYLIST_ID
 const YOUTUBE_CHANNEL_ID = process.env.YOUTUBE_CHANNEL_ID
 const REFERER = 'https://columbiaview.org'
 
+// Extra results requested so filtered-out unaired streams don't shrink the
+// list. Free: list calls cost the same regardless of maxResults (max 50).
+const fetchCount = (limit: number) => Math.min(limit + 12, 50)
+
 export async function getYouTubeMessages(
   limit: number = 36
 ): Promise<EpisodeList> {
@@ -17,7 +21,7 @@ export async function getYouTubeMessages(
   // If we have a playlist ID, use the efficient playlistItems endpoint
   if (YOUTUBE_PLAYLIST_ID) {
     const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${limit}&playlistId=${YOUTUBE_PLAYLIST_ID}&key=${YOUTUBE_API_KEY}`,
+      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${fetchCount(limit)}&playlistId=${YOUTUBE_PLAYLIST_ID}&key=${YOUTUBE_API_KEY}`,
       {
         next: { revalidate: 1800 },
         headers: { Referer: REFERER },
@@ -26,16 +30,22 @@ export async function getYouTubeMessages(
 
     if (response.ok) {
       const data = await response.json()
-      return data.items.map((item: any) => ({
-        episode_id: item.snippet.resourceId.videoId,
-        id: item.snippet.resourceId.videoId,
-        title: item.snippet.title,
-        published_at: item.snippet.publishedAt,
-        image_url:
-          item.snippet.thumbnails?.high?.url ||
-          item.snippet.thumbnails?.default?.url,
-        description: item.snippet.description,
-      }))
+      const unaired = await getUnairedVideoIds(
+        data.items.map((item: any) => item.snippet.resourceId.videoId)
+      )
+      return data.items
+        .filter((item: any) => !unaired.has(item.snippet.resourceId.videoId))
+        .slice(0, limit)
+        .map((item: any) => ({
+          episode_id: item.snippet.resourceId.videoId,
+          id: item.snippet.resourceId.videoId,
+          title: item.snippet.title,
+          published_at: item.snippet.publishedAt,
+          image_url:
+            item.snippet.thumbnails?.high?.url ||
+            item.snippet.thumbnails?.default?.url,
+          description: item.snippet.description,
+        }))
     } else {
       const errorData = await response.json().catch(() => ({}))
       console.error(
@@ -113,7 +123,7 @@ export async function getYouTubeVideosBySearch(
   limit: number = 36
 ): Promise<EpisodeList> {
   const response = await fetch(
-    `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${YOUTUBE_CHANNEL_ID}&order=date&type=video&maxResults=${limit}&key=${YOUTUBE_API_KEY}`,
+    `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${YOUTUBE_CHANNEL_ID}&order=date&type=video&maxResults=${fetchCount(limit)}&key=${YOUTUBE_API_KEY}`,
     {
       next: { revalidate: 1800 },
       headers: { Referer: REFERER },
@@ -132,16 +142,21 @@ export async function getYouTubeVideosBySearch(
 
   const data = await response.json()
   console.log('getYouTubeVideosBySearch data:', JSON.stringify(data, null, 2))
-  return data.items.map((item: any) => ({
-    episode_id: item.id.videoId,
-    id: item.id.videoId,
-    title: item.snippet.title,
-    published_at: item.snippet.publishedAt,
-    image_url:
-      item.snippet.thumbnails?.high?.url ||
-      item.snippet.thumbnails?.default?.url,
-    description: item.snippet.description,
-  }))
+  // Scheduled and in-progress streams aren't messages yet. Abandoned scheduled
+  // streams stay "upcoming" forever and would otherwise duplicate the upload.
+  return data.items
+    .filter((item: any) => item.snippet.liveBroadcastContent === 'none')
+    .slice(0, limit)
+    .map((item: any) => ({
+      episode_id: item.id.videoId,
+      id: item.id.videoId,
+      title: item.snippet.title,
+      published_at: item.snippet.publishedAt,
+      image_url:
+        item.snippet.thumbnails?.high?.url ||
+        item.snippet.thumbnails?.default?.url,
+      description: item.snippet.description,
+    }))
 }
 
 type YouTubeVideoItem = {
@@ -150,11 +165,48 @@ type YouTubeVideoItem = {
     title: string
     publishedAt: string
     description: string
+    liveBroadcastContent: 'none' | 'upcoming' | 'live'
     thumbnails?: {
       high?: { url: string }
       default?: { url: string }
     }
   }
+}
+
+/**
+ * IDs of scheduled or in-progress live streams among the given videos.
+ *
+ * The uploads playlist includes scheduled broadcasts as soon as they're
+ * created, and an abandoned one stays "upcoming" forever — duplicating the
+ * real message. `playlistItems.list` doesn't expose broadcast state, so this
+ * asks `videos.list` (one quota unit per 50 IDs). On failure nothing is
+ * filtered rather than hiding every message.
+ */
+async function getUnairedVideoIds(ids: string[]): Promise<Set<string>> {
+  const unaired = new Set<string>()
+
+  for (let i = 0; i < ids.length; i += 50) {
+    const batch = ids.slice(i, i + 50)
+    const response = await fetch(
+      `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${batch.join(',')}&key=${YOUTUBE_API_KEY}`,
+      {
+        next: { revalidate: 1800 },
+        headers: { Referer: REFERER },
+      }
+    )
+
+    if (!response.ok) {
+      console.error('Failed to fetch YouTube broadcast state:', response.status)
+      continue
+    }
+
+    const data: { items?: YouTubeVideoItem[] } = await response.json()
+    for (const item of data.items ?? []) {
+      if (item.snippet.liveBroadcastContent !== 'none') unaired.add(item.id)
+    }
+  }
+
+  return unaired
 }
 
 /**
