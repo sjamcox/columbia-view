@@ -26,20 +26,33 @@ export default function JobsPage() {
             <h2 className="mb-2 text-2xl font-bold text-primary-dark-blue">
               DOJ Accredited Representative
             </h2>
-            <p className="mb-6 text-base leading-relaxed text-neutral-dark-gray">
-              Provides competent, ethical, client-centered immigration legal
-              services, from consultations and case strategy to filings and
-              representation before USCIS, while supervising Legal Assistants.
-              Partial accreditation, or willingness to complete our training
-              program toward it. 32-40 hours/week.
+            <p className="mb-4 text-base leading-relaxed text-neutral-dark-gray">
+              A DOJ Accredited Representative provides competent, ethical,
+              client-centered immigration legal services, from consultations and
+              case strategy to filings and representation before USCIS, while
+              supervising Legal Assistants. 32-40 hours/week.
             </p>
-            <Button
-              color="blue"
-              href="/icpdx/jobs/doj-accredited-representative.pdf"
-              prefetch={false}
-            >
-              View Position Details
-            </Button>
+            <p className="mb-6 text-base leading-relaxed text-neutral-dark-gray">
+              This Immigrant Connection PDX staff position starts as a legal
+              assistant under the supervision of a DOJ accredited representative
+              with the intention that within 12-18 months you will submit your
+              DOJ accreditation application.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button
+                color="blue"
+                href="/icpdx/jobs/doj-accredited-representative.pdf"
+                prefetch={false}
+              >
+                View Position Details
+              </Button>
+              <Button
+                color="blue"
+                href="https://columbiaview.churchcenter.com/people/forms/981496"
+              >
+                Apply
+              </Button>
+            </div>
           </div>
 
           {/* Contact Section */}
